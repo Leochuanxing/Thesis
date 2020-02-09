@@ -1,19 +1,19 @@
 \contentsline {chapter}{\numberline {第一章\hspace {.3em}}研究背景}{1}{chapter.1}% 
 \contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}抗原抗体的相互作用}{1}{section.1.1}% 
 \contentsline {subsection}{\numberline {1.1.}一些注意事项}{2}{subsection.1.1.1}% 
-\contentsline {subsection}{\numberline {1.2.}\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \TeX \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 资源}{2}{subsection.1.1.2}% 
-\contentsline {chapter}{\numberline {第二章\hspace {.3em}}正文行文}{3}{chapter.2}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}文章标题}{3}{section.2.1}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}章标题}{3}{section.2.2}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 3\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}节标题}{3}{section.2.3}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 4\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}子节标题}{3}{section.2.4}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 5\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}正文}{3}{section.2.5}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 6\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}章节}{3}{section.2.6}% 
-\contentsline {chapter}{\numberline {第三章\hspace {.3em}}公式排版}{4}{chapter.3}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}行内公式}{4}{section.3.1}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}行间公式}{4}{section.3.2}% 
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}表格和图片}{6}{chapter.4}% 
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}定理环境}{7}{chapter.5}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}题头}{7}{section.5.1}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}同章另一节的题头}{7}{section.5.2}% 
-\contentsline {chapter}{\numberline {第六章\hspace {.3em}}参考文献的写法}{8}{chapter.6}% 
+\contentsline {subsection}{\numberline {1.2.}\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \TeX \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 资源}{3}{subsection.1.1.2}% 
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}正文行文}{4}{chapter.2}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}文章标题}{4}{section.2.1}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}章标题}{4}{section.2.2}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 3\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}节标题}{4}{section.2.3}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 4\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}子节标题}{4}{section.2.4}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 5\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}正文}{4}{section.2.5}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 6\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}章节}{4}{section.2.6}% 
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}公式排版}{5}{chapter.3}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}行内公式}{5}{section.3.1}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}行间公式}{5}{section.3.2}% 
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}表格和图片}{7}{chapter.4}% 
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}定理环境}{8}{chapter.5}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}题头}{8}{section.5.1}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}同章另一节的题头}{8}{section.5.2}% 
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}参考文献的写法}{9}{chapter.6}% 

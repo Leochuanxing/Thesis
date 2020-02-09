@@ -28,6 +28,9 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{titlesec}
 
+\usepackage{graphicx}
+\usepackage{float}
+
 % 公式编号的计数格式, 在章内计数
 \numberwithin{equation}{chapter}
 
@@ -119,11 +122,21 @@ This is my English abstract.\\
 \section{抗原抗体的相互作用}
 人的免疫系统是人体抵抗外界病原入侵的重要系统， 它可以分为天然免疫(innate immunity)和获得性免疫(adaptive immunity). 天然免疫不具有特异性，或者最多也只能针对一大类的病原进行防御。它包括巨噬细胞、抑菌蛋白、NK细胞、补体系统、粒细胞等。天然免疫构成了人体防御的第一道防线。一旦病原突破第一道防线， 人体就要进行获得性免疫。获得性免疫是针对入侵的病原产生一系列的特异性的免疫反应，包括特异性的细胞免疫和体液免疫。获得性免疫的特异性，可以使得人体把主要的资源集中起来应对特定的病原，从而更高效。但是，自然界的病原千千万万，那么获得性免疫是如何识别这不同的病原的呢？
 
-对于特异性的细胞免疫来讲，他的特异性可以用下面的示意图来说明。
-\vspace{4cm}
+对于特异性的细胞免疫来讲，他的特异性可以用下面的图 \ref{Cell_Immune}来说明。
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{CellImmune.eps}
+\caption{特异性细胞免疫示意图}
+\label{Cell_Immune}
+\end{figure}
 
-对不同的病原体来讲，都有其独特的结构和成分，那些可以引起免疫反应的结构和成分，成为抗原(antigen). 体液免疫的特异性就是特定抗体对特定抗原的识别。
-\vspace{4cm}
+对不同的病原体来讲，都有其独特的结构和成分，那些可以引起免疫反应的结构和成分，成为抗原(antigen). 体液免疫的特异性就是特定抗体对特定抗原的识别, 如图\ref{SerumImmune}。
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{SerumImmune.eps}
+\caption{特异性体液免疫示意图}
+\label{SerumImmune}
+\end{figure}
 
 人类的抗体结构是一个二聚体，由两条重链(heavy chain)和两条轻链(light chain)组成。每条链又分为可变区(variable fragment)和不变区(constant fragment)。抗体的特异性则主要来自与可变区的互补决定区(CDR, complementarity determining region)如图。
 \vspace{4cm}
