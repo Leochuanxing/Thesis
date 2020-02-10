@@ -125,23 +125,57 @@ This is my English abstract.\\
 对于特异性的细胞免疫来讲，他的特异性可以用下面的图 \ref{Cell_Immune}来说明。
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.4]{CellImmune.eps}
-\caption{特异性细胞免疫示意图}
+\includegraphics[scale=0.3]{CellImmune.eps}
+\caption{特异性细胞免疫示意图。此图知识简要说明了细胞免疫的过程，真是的情况比这里要复杂的多，比如共刺激等。}
 \label{Cell_Immune}
 \end{figure}
 
 对不同的病原体来讲，都有其独特的结构和成分，那些可以引起免疫反应的结构和成分，成为抗原(antigen). 体液免疫的特异性就是特定抗体对特定抗原的识别, 如图\ref{SerumImmune}。
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{SerumImmune.eps}
-\caption{特异性体液免疫示意图}
+\includegraphics[scale=0.3]{SerumImmune.eps}
+\caption{特异性体液免疫示意图。此图知识简要说明了体液免疫过程中，抗体的的产生和对病抗原的识别，真实的过程比这要复杂的多，比如说 T helper 的作用等。 同时，抗体除了直接杀死病原体之外，还可以参与抗体介导的细胞毒性(antibody directed cell cytotoxicity)。}
 \label{SerumImmune}
 \end{figure}
 
-人类的抗体结构是一个二聚体，由两条重链(heavy chain)和两条轻链(light chain)组成。每条链又分为可变区(variable fragment)和不变区(constant fragment)。抗体的特异性则主要来自与可变区的互补决定区(CDR, complementarity determining region)如图。
+人类的抗体结构是一个二聚体，由两条重链(heavy chain)和两条轻链(light chain)组成。每条链又分为可变区(variable fragment)和不变区(constant fragment)。抗体的特异性则主要来自与可变区的互补决定区(CDR, complementarity determining region)如图\ref{AntibodySchematic}。
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{AntibodySchematic.eps}
+\caption{抗体结构示意图}
+\label{AntibodySchematic}
+\end{figure}
+
+互补决定区主要由6个比较短的氨基酸片段组成，它们分为来自重链和轻链的CDR1, CDR2和CDR3。氨基酸在这些区域上的不同序列决定了抗体的特异性和多样性。对于抗原和抗体相互作用的研究，可以在一定程度上简化为CDRs和抗原局部区域的相互作用。抗原上那些和抗体相互作用的部分又称为抗原表位(epitope). CDR多样性的来源主要有两个， 一个是不同基因片段的拼接，另外一个是细胞超突变(Somatic hypermutation)， 也就是这些区域比其他区域有更高的突变率，有时候还会在拼接的过程中加入或者丢失一些碱基。理论上讲，可以产生的多样性可以达到$10^{12}$数量级，甚至还要更多。所以，体液免疫是一个强大的免疫机制，几乎对所有抗原都可以产生对应特异性抗体。
+
+体液免疫早在很久以前就被用来和疾病斗争。早在宋朝的时候，智慧的中国人就用“种痘”来预防天花，就是利用的用毒性弱的毒株让人体产生抗体和免疫记忆。这就是最早的疫苗了，只是这时种的是人痘，具有极高的风险。1796年，英国人Edward Jener 用接种牛痘的方法来预防天花，极大的降低了接种的风险。1979年，世界卫生组织(WHO,world health organization) 宣布天花从地球上消除。这是，人类利用体液免疫的一次巨大成功，也是人类医学史上的壮举。自1796年以来，随着每次技术的进步，疫苗的数量和质量都会有很大的提升。
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Vaccine}
+\caption{疫苗的数量变化和疫苗开发技术的发展\cite{Vaccine}}
+\label{Vaccine}
+\end{figure}
+但是，并不是所有的传染病都能顺利开发出疫苗，比如说HIV-1\cite{HIV1-vaccine}。其中的一个原因在于抗原的多变性。但是，也发现了一些具有广谱作用的抗体，可以抵抗多种不同的毒株。对这些抗体的进一步分析发现，它们对可以识别HIV-1一些保守的的抗原表位(epitope)。知道了这些抗原表位之后，就可以通过抗原表位的嫁接(grafting) 或者把抗原表位整合的特殊设计的架构(scaffolding)中， 由此设计的疫苗会比传统意义的上的疫苗效果更好。抗原表位的确定除了可以通过实验手段的到，还可以通过计算的手段，通过一系列的模型预测。
+
+对抗原抗体相互作用的研究，除了可以帮助设计疫苗和预测抗原表位外，还可以促进对治疗性抗体(therapeutic antibody)的开发。随着单克隆抗体(monoclonal antibody)和人源化抗体(humanized antibody)技术的进步, 越来越多的治疗性抗体被注册成新的药物。到2020年2月初，已经被FDA(Food and Drug Administration)和EMA(European Medicines Agency)批准或正在审核的治疗性抗体就多达106个\cite{AntibodySociety}。更是开发出很多具有广谱抗癌作用的治疗性抗体，其中有很多是针对免疫过程中的检测点(checkpoint)开发的\cite{Blockade}。比如，在治疗美国前总统吉米卡特的癌症中起着至关重要作用的抗体 pembrolizumab 就是通过抑制PD1(programmed cell death protein 1)，从而实现免疫细胞对癌细胞的杀伤。鉴于传统小分子药物开发越来越困难，以及抗体的的多样性和相关技术的发展，治疗性抗体必将开辟人类药学史上一个新的时代\cite{Trend}。
+
+一个简单的单克隆抗体的生产过程大概如下：
 \vspace{4cm}
 
-互补决定区主要由三个比较短的氨基酸片段组成，它们分别称为CDR1, CDR2和CDR3。
+然而如果把这些由老鼠产生的单克隆抗体直接注射到人体内，往往会产生免疫反应。一个避免免疫反应的做法是把这些单克隆抗体的CDR区域的氨基酸序列安插到人类抗体对应的位置，这样的抗体就是人源化抗体。CDR序列的产生需要大量的实验，如果这个过程可以通过计算的手段来做比较准确的预测，则会对抗体的制备有深刻影响。同时， 即便是通过实验手段产生CDR序列，由于实验过程中一些比较难以控制的因素，产生的序列也未必能满足我们的要求。一个不易控制的因素是抗体的作用位点。对于一个抗原来讲，可能的抗原表位会有很多，其中的任何一个抗原表位都可能诱导免疫反应，产生抗体，而理想的抗体往往需要针对特定的抗原表位（如图）。
+\vspace{4cm}
+
+另外一个不易控制的因素是抗原抗体之间的亲和力(affinity)。一个可以用作治疗用的抗体往往要求具有足够高的亲和力,这直接关系到抗体的疗效。虽然免疫系统本身会筛选出亲和力比较高的抗体，但是无法保证这样的亲和力就满足要求。那么这就需要在原来抗体的基础上，对CDR序列进行一定的改造，从而提高亲和力，达到我们的要求。对抗原抗体的相互作用有足够的了解可以指导对这些序列的改造，从而大大节约抗体药物的研发和生产成本。
+
+对抗原抗体相互作用的研究，除了上面说的意义之外，还有很多外溢效应。比如说设计合适的抗体来催化一些反应，也就是抗体酶。再比如说，设计一些治疗性的多肽。从更大的范围讲，抗原抗体的相互作用是蛋白与蛋白相互作用的一部分，研究蛋白和蛋白相互作用的方法，在一定程度上可以用来研究抗原抗体的相互作用。但是抗原抗体的相互作用又有其特殊性，因为抗原抗体的相互作用主要表现为抗体的CDR loop 区和抗原表位的相互作用。
+
+
+\section{抗原抗体相互作用研究现状}
+对抗原抗体相互作用，比较早的是Cothia, 他第一次指出了抗体主要通过CDR区域和抗原相互作用，并且分析了CDR1和CDR2的经典结构。但是，这些都是描述性的，并不能对抗体的性质，以及什么样的抗原和什么样的抗体结合做出回答。接下来，很多人对已知相互作用的抗原抗体的氨基酸突变，通过突变后抗原抗体结合力的强弱，对氨基酸的重要性做出判断。
+
+\section{抗原表位预测}
+
+\section{亲和力预测}
 
 \subsection{一些注意事项}
 本模板提供的格式应该是数学论文写作中的一些通行格式. 目的是为初学者提供一个选择. 若有与指导老师讲的不一致
@@ -322,6 +356,23 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 
  \footnotesize
 \begin{thebibliography}{99}
+\bibitem{Vaccine} Gary J. Nabel, Designing Tomorrow’s Vaccines, 
+			\emph{N Engl J Med}, 6(2013), 368:551-560.	
+					
+\bibitem{HIV1-vaccine} Peter D. Kwong, John R. Mascola and Gary J. Nabel, Broadly neutralizing antibodies  and the search for an HIV-1 vaccine: the end of the beginning, 
+			\emph{Nat Rev Immunol}, (2013), 13:693-701.	
+			
+\bibitem{AntibodySociety} \texttt{https://www.antibodysociety.org/resources/approved-antibodies/}	
+
+\bibitem{Blockade} Drew M. Pardoll, The blockade of immune checkpoints in cancer immunotherapy, 
+			\emph{Nat Rev Cancer}, (2012), 12(4): 252–264.	
+			
+\bibitem{Trend} António L.Grilo, A.Mantalaris,The Increasingly Human and Profitable Monoclonal Antibody Market, 
+			\emph{ Trends in biotechnology} 37.1 (2019): 9-16.
+			
+			
+				
+			
 \bibitem{HTF} T. Hastie et al., The Element of Statistical
 Learning, Springer Series in Statistics, Springer-Verlag， 2001.
 \bibitem{ChenSX} S. Chen, Mach configuration in pseudo-stationary compressible
