@@ -171,15 +171,28 @@ This is my English abstract.\\
 
 
 \section{抗原抗体相互作用研究现状}
-对抗原抗体相互作用，比较早的是Cothia, 他第一次指出了抗体主要通过CDR区域和抗原相互作用，并且分析了CDR1和CDR2的经典结构。但是，这些都是描述性的，并不能对抗体的性质，以及什么样的抗原和什么样的抗体结合做出回答。接下来，很多人对已知相互作用的抗原抗体的氨基酸突变，通过突变后抗原抗体结合力的强弱，对氨基酸的重要性做出判断。
+对抗原抗体相互作用，比较早的是Cothia, 他第一次指出了抗体主要通过CDR区域和抗原相互作用，并且分析了CDR1和CDR2的经典结构。但是，这些都是描述性的，并不能对抗体的性质，以及什么样的抗原和什么样的抗体结合做出回答。接下来，大家开始对特定的抗原抗体复合物进行研究。其中对蛋清溶菌酶(hen egg white lysosome)和其抗体的相互作用的研究尤其多。Padlan 等解析了HyHEL-10 Fab和蛋清溶菌酶(HEL)的结构，认为抗原表位是不连续的，范德华力(van der Waals)和氢键(hydrogen bond)是相互作用的关键\cite{HyHEL1}；Yokota 等通过对HyHEL-10-HEL复合物中一些氨基酸的突变(L-Y50F, L-S91A, 和 L-S93A)来研究氢键的作用\cite{HyHEL2}，后来又研究了Arg的作用\cite{HyHEL7}；Pons 等通过Alanine scanning 研究了HyHEL-10-HEL中参与相互作用的各个氨基酸的重要性\cite{HyHEL3}；Shiroishi 等通过把Tyr 突变成 Phe 和 Ala 来研究 Tyr 在 HyHEL-10-HEL 中的作用\cite{HyHEL4}；同样，Shiroishi 等通过对 HyHEL-10-HEL 的分析，研究了盐桥(salt-bridge)的作用\cite{HyHEL5}；Kam-Morgan 等通过突变对HyHEL-10-HEL中抗原表位做了更为精细的研究\cite{HyHEL6}。除了HyHEL-10-HEL，还有许多文章对抗体HyHEL-63 和HEL 的复合物HyHEL-63-HEL，以及HyHEL-5-HEL 做了许多类似的研究\cite{HyHEL8,HyHEL9, HyHEL10, HyHEL11, HyHEL12, HyHEL13, HyHEL14, HyHEL15, HyHEL16}。除了针对HEL 和其抗体的研究之外，还有许多关于其他抗原抗体的研究。但是，所有这些研究，都是关于某一个具体的复合物在特定情况下的氨基酸的作用，或者某种相互作用力的贡献，从来没有一个系统的关于所有抗原抗体相互作用的描述。其中一个重要原因，是抗原抗体相互作用的构象(conformation)性质。也就是说，参与抗原抗体相互作用的氨基酸，特别是抗原表位上的氨基酸，并不是线性排列的，而是具有空间上的关系。就拿1918年H1N1流感大爆发时候流感病毒表面的血凝素(Hemagglutinin)SC1918/H1和它的抗体CR6261来说。
 
-\section{抗原表位预测}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{ConformationalEpitope}
+\caption{\textbf{A}是SC1918/H1 和 CR6261 复合物的结构。\textbf{B} 是 SC1918/H1 和抗体结合区域的放大图，其抗原表位都已经标出。此图由文献\cite{ConformationalEpitope}中的图片编辑而成。 }
+\label{ConformationalEpitope}
+\end{figure}
+从图\ref{ConformationalEpitope} \textbf{B}中可以看出，在序列上，这些氨基酸并在序列不连续，然而在空间上却比较临近，形成有效的抗原表位，这就是抗原表位的构象性质。根据 Saba Ferdous 等最近对488个B-cell epitope 的研究，只有大概4\%的是线性的。如果把有不小于3个的氨基酸参与相互作用，并且这些氨基酸在序列上的距离不大于3的位置定为一个区域(region)，那么只有约14\%的抗原表位只有一个区域\cite{ConformationalEpitope1}，也就是说，抗原的表位是高度的非线性的。
+
+虽然抗原表位的非线性特征，给抗原抗体的研究带了的巨大的困难。但是，鉴于抗原表位在抗体设计和疫苗研发中的重要性，对抗原表位预测的努力一直没有停止。从实验的角度来讲，主要有结构生物学的方法和突变的方法。结构生物学的方法是通过分析抗原抗体复合物的结构，来判断哪些是抗原表位。突变的方法则是通过在不同的位点引入突变来确定，究竟哪些氨基酸在抗原抗体的结合过程中起关键作用\cite{EpitopePred1}。除了上面的实验手段，利用计算手段对抗原表位的预测，一直在发展。较早期，大家认为抗原表位和非抗原表位的区别是显著的\cite{EpitopePred2}，很多方法都是集中与对任意给定的抗原来寻找它的抗原表位。
+%%%%这里要一些具体的方法和细节%%%%%
+
+可是，理论上讲，一个抗原的任何区域都有可能被抗体识别，也就是任何区域都有可能是抗原表位，所以对一个抗原来讲，预测给定抗体的抗原表位才更有意义\cite{EpitopePred3}。
+%%这里也要一些方法的细节
 
 \section{亲和力预测}
 
+\section{本论文的主要内容}
+
 \subsection{一些注意事项}
-本模板提供的格式应该是数学论文写作中的一些通行格式. 目的是为初学者提供一个选择. 若有与指导老师讲的不一致
-之处, 则更可能是我们打印错误, 此时请和教务员联系.
+本模板提供的格式应该是数学论文写作中的一些通行格式. 
 
 \CTeX 套装的~2.8 版似乎并不稳定. 请大家下载其他稳定的版本. 
 
@@ -347,12 +360,6 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 
 \textbf{``致谢"本身不作为一章，致谢内容的字体大小不宜与作为标题的``致谢"两字的大小有很大的反差. 这一点尤其请使用word模板的同学注意. } 一般说来, 杂志论文的致谢在文章正文结束、参考文献前(即本模板中它所处的位置);  学位论文的致谢在最后一页，并宜单独成页; 书籍的致谢在序言结尾.
 
-感谢~2001 级的何力同学和李湛同学根据学校关于毕业论文的格式要求于~2005 年设计了本模板.
-感谢~2004 级的张越同学在~2008 年对模板进行了修改.
-
-欢迎其他同对模板进行修改, 以适宜新的编译环境等. 特别, 我们欢迎尽量简单的新模板.
-
-相关事宜请和楼红卫老师或杜雅倩老师联系. 
 
  \footnotesize
 \begin{thebibliography}{99}
@@ -370,9 +377,72 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 \bibitem{Trend} António L.Grilo, A.Mantalaris,The Increasingly Human and Profitable Monoclonal Antibody Market, 
 			\emph{ Trends in biotechnology} 37.1 (2019): 9-16.
 			
+\bibitem{HyHEL1}Padlan, Eduardo A., et al. Structure of an antibody-antigen complex: crystal structure of the HyHEL-10 Fab-lysozyme complex. 
+			\emph{PNAS}, (1989), 86(15):5938-5942.		
 			
+\bibitem{HyHEL2}Yokota, Akiko, et al. The Role of Hydrogen Bonding via Interfacial Water Molecules in Antigen-Antibody Complexation THE HyHEL-10-HEL INTERACTION. 
+	\emph{Journal of Biological Chemistry}, (2003), 7(278):5410-5418.
+	
+\bibitem{HyHEL7}Yokota, Akiko, et al. Contribution of asparagine residues to the stabilization of a proteinaceous antigen-antibody complex, HyHEL-10-hen egg white lysozyme.
+	\emph{Journal of Biological Chemistry},(2010), 285(10): 7686-7696.
+	
+\bibitem{HyHEL3}Pons Jaume, Arvind Rajpal, and Jack F. Kirsch. Energetic analysis of an antigen/antibody interface: alanine scanning mutagenesis and double mutant cycles on the HyHEL-10/lysozyme interaction.
+	 \emph{Protein Science},(1999), 8(5): 958-968.
+	 
+\bibitem{HyHEL4}Shiroishi, Mitsunori, et al. Structural Consequences of Mutations in Interfacial Tyr Residues of a Protein Antigen-Antibody Complex THE CASE OF HyHEL-10-HEL.
+	\emph{Journal of Biological Chemistry},(2007), 282(9): 6783-6791.
+	
+\bibitem{HyHEL5}Shiroishi, Mitsunori, et al. Structural Evidence for Entropic Contribution of Salt Bridge Formation to a Protein Antigen-Antibody Interaction THE CASE OF HEN LYSOZYME-HyHEL-10 Fv COMPLEX.
+	\emph{Journal of Biological Chemistry}，(2001)，276(25): 23042-23050.
+	
+\bibitem{HyHEL6}Kam-Morgan, L. N., et al. High-resolution mapping of the HyHEL-10 epitope of chicken lysozyme by site-directed mutagenesis. 		
+	\emph{PNAS},(1993),90(9): 3958-3962.
+	
+	
+\bibitem{HyHEL8} Novotny, Jiri, Robert E. Bruccoleri, and Frederick A. Saul. On the attribution of binding energy in antigen-antibody complexes McPC 603, D1. 3, and HyHEL-5.
+	\emph{Biochemistry},(1989), 28(11): 4735-4749.
+	
+\bibitem{HyHEL9}Li, Yili, et al. Three-dimensional structures of the free and antigen-bound Fab from monoclonal antilysozyme antibody HyHEL-63.
+	\emph{Biochemistry}, (2000),  39(21): 6296-6309.
+	
+\bibitem{HyHEL10}Hibbits, Kari A., Davinder S. Gill, and Richard C. Willson. Isothermal titration calorimetric study of the association of hen egg lysozyme and the anti-lysozyme antibody HyHEL-5.
+	\emph{Biochemistry},(1994),33(12): 3584-3590.
+	
+\bibitem{HyHEL11} Cohen, GERsoN H., S. Sheriff, and DAVID R. Davies. Refined structure of the monoclonal antibody HyHEL-5 with its antigen hen egg-white lysozyme.
+	\emph{Acta Crystallographica Section D: Biological Crystallography}, (1996), 52(2): 315-326.
 				
-			
+\bibitem{HyHEL12} Li, Yili, et al. Dissection of binding interactions in the complex between the anti-lysozyme antibody HyHEL-63 and its antigen. 	
+	\emph{Biochemistry},(2003), 42(1): 11-22.
+
+\bibitem{HyHEL13}Xavier, K. Asish, et al. Involvement of water molecules in the association of monoclonal antibody HyHEL-5 with bobwhite quail lysozyme.
+	\emph{Biophysical journal},(1997),  73(4) : 2116-2125.
+
+\bibitem{HyHEL14}Slagle, S. P., R. E. Kozack, and S. Subramaniam. Role of electrostatics in antibody-antigen association: anti-hen egg lysozyme/lysozyme complex (HyHEL-5/HEL).
+	\emph{Journal of Biomolecular Structure and Dynamics},(1994), 12(2) : 439-456.
+	
+\bibitem{HyHEL15}Cohen, Gerson H., et al. Water molecules in the antibody–antigen interface of the structure of the Fab HyHEL-5–lysozyme complex at 1.7 A resolution: comparison with results from isothermal titration calorimetry.
+	\emph{Acta Crystallographica Section D: Biological Crystallography},  (2005), 61(5): 628-633.
+	
+\bibitem{HyHEL16}Wibbenmeyer, Jamie A., et al. Salt links dominate affinity of antibody HyHEL-5 for lysozyme through enthalpic contributions.
+	\emph{Journal of Biological Chemistry}, (1999), 274(38) : 26838-26842.
+	
+\bibitem{ConformationalEpitope}Ekiert, Damian C., et al. Antibody recognition of a highly conserved influenza virus epitope.
+\emph{Science},(2009),  324(5924): 246-251.
+
+\bibitem{ConformationalEpitope1}，S Ferdous, S Kelm, TS Baker, J Shi, ACR Martin, B-cell epitopes: Discontinuity and conformational analysis
+ 	\emph{Molecular immunology}, (2019), 114:643-650.
+ 	
+\bibitem{EpitopePred1}G. E. Morris, Epitope mapping,
+	\emph{Methods in Molecular Biology}, (2005), 295:255–268. 
+	
+\bibitem{EpitopePred2}Rubinstein, Nimrod D., et al. Computational characterization of B-cell epitopes.
+	\emph{Molecular immunology},(2008), 45(12):3477-3489.
+	
+\bibitem{EpitopePred3}Sela-Culang, Inbal, Yanay Ofran, and Bjoern Peters. Antibody specific epitope prediction—emergence of a new paradigm.
+	\emph{Current opinion in virology},(2015), 11 : 98-102.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
 \bibitem{HTF} T. Hastie et al., The Element of Statistical
 Learning, Springer Series in Statistics, Springer-Verlag， 2001.
 \bibitem{ChenSX} S. Chen, Mach configuration in pseudo-stationary compressible
