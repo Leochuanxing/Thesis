@@ -31,6 +31,9 @@
 \usepackage{graphicx}
 \usepackage{float}
 
+\usepackage{enumitem}
+
+\usepackage{siunitx}
 % 公式编号的计数格式, 在章内计数
 \numberwithin{equation}{chapter}
 
@@ -181,11 +184,33 @@ This is my English abstract.\\
 \end{figure}
 从图\ref{ConformationalEpitope} \textbf{B}中可以看出，在序列上，这些氨基酸并在序列不连续，然而在空间上却比较临近，形成有效的抗原表位，这就是抗原表位的构象性质。根据 Saba Ferdous 等最近对488个B-cell epitope 的研究，只有大概4\%的是线性的。如果把有不小于3个的氨基酸参与相互作用，并且这些氨基酸在序列上的距离不大于3的位置定为一个区域(region)，那么只有约14\%的抗原表位只有一个区域\cite{ConformationalEpitope1}，也就是说，抗原的表位是高度的非线性的。
 
-虽然抗原表位的非线性特征，给抗原抗体的研究带了的巨大的困难。但是，鉴于抗原表位在抗体设计和疫苗研发中的重要性，对抗原表位预测的努力一直没有停止。从实验的角度来讲，主要有结构生物学的方法和突变的方法。结构生物学的方法是通过分析抗原抗体复合物的结构，来判断哪些是抗原表位。突变的方法则是通过在不同的位点引入突变来确定，究竟哪些氨基酸在抗原抗体的结合过程中起关键作用\cite{EpitopePred1}。除了上面的实验手段，利用计算手段对抗原表位的预测，一直在发展。较早期，大家认为抗原表位和非抗原表位的区别是显著的\cite{EpitopePred2}，很多方法都是集中与对任意给定的抗原来寻找它的抗原表位。
-%%%%这里要一些具体的方法和细节%%%%%
+虽然抗原表位的非线性特征，给抗原抗体的研究带了的巨大的困难。但是，鉴于抗原表位在抗体设计和疫苗研发中的重要性，对抗原表位预测的努力一直没有停止。从实验的角度来讲，主要有结构生物学的方法和突变的方法。结构生物学的方法是通过分析抗原抗体复合物的结构，来判断哪些是抗原表位。突变的方法则是通过在不同的位点引入突变来确定，究竟哪些氨基酸在抗原抗体的结合过程中起关键作用\cite{EpitopePred1}。除了上面的实验手段，利用计算手段对抗原表位的预测，一直在发展。Rubinstein 等做了一个统计检验，$H_0$设定为抗原表位和非抗原表位没有差别，$H_a$设定为抗原表位和非抗原表位有差别。通过对大量抗原抗体的分析，认为抗原表位在氨基酸偏好、二级结构(secondary structure)、几何形状和进化的保守性上都和非抗原表位有显著区别\cite{EpitopePred2}。虽然这篇文章发表在2008年，但是比这早的以及在这之后的许多抗原表位预测方法的理论依据，都是对任意的抗原来预测它的抗原表位。例如，Hopp等通计算局部氨基酸序列的亲水性(hydrophilicity)来预测抗原表位,认为亲水性最高的区域要么是抗原表位要么和抗原表位相邻\cite{EpitopePred3}; Rubinstein等通过对一直的抗原表位的分析，用机器学习的方法来预测给定抗原的抗原表位；Jing Sun 等通过引入残基三角(residual triangle)的概念，计算每个氨基酸的倾向指数(propensity index)和集群系数(cluster coefficient)，由此来预测非线性抗原表位\cite{SEPPA}；Xu等对 CEP\cite{CEP},DiscoTope\cite{DiscoTope},PEPOP\cite{PEPOP}、ElliPro\cite{ElliPro}、 BEpro\cite{PEPITO} 和 SEPPA，六种预测方法在实验验证的数据集上进行了比较。即便是最好的SEPPA，其AUC 也只能达到0.62，原不满足实际需要\cite{EpitopePredEvaluation}。
 
-可是，理论上讲，一个抗原的任何区域都有可能被抗体识别，也就是任何区域都有可能是抗原表位，所以对一个抗原来讲，预测给定抗体的抗原表位才更有意义\cite{EpitopePred3}。
-%%这里也要一些方法的细节
+上面的方法都是对任意给定的抗原，来预测抗原表位，并不涉及到和抗原结合的抗体。理论上讲，一个抗原的任何区域都有可能被抗体识别，也就是任何区域都有可能是抗原表位，所以对一个抗原来讲，预测给定抗体的抗原表位才更有意义\cite{EpitopePredNotAccurate}。Shinji Sog 构建了ASEP 指数用于抗原表位，这是第一次在给定抗体情况下对抗原表位的预测\cite{ASEP}。具体的过程可以概括如下：
+\begin{enumerate}[label=(\arabic*)]
+	\item 搜集训练集。在PDB 数据库中搜集抗原抗体复合物，同时搜集其他同源二聚体(homodimer)或者异源二聚体(heterodimer)作为抗原抗体复合物的参照，这里为了方便，我们称为参照复合物。
+	\item 计算氨基酸$x$在抗原表位中的出现频率$f_e(x)$：
+		$$f_e(x) = \frac{n_e(x)}{\sum_{y=1}^{20}n_e(y)}$$
+	其中，$n_e（x）$ 是训练集中抗原抗体复合物的抗原表位中$x$氨基酸的频率，分母中$n_e(y)$做类似的解读，指标 $y$ 从 1 遍历到 20 是指对20中不同氨基酸的频率求和。
+	\item 计算氨基酸$x$在参照复合物的表面氨基酸(surface residue)中的出现频率$f_s(x)$。这里的表面氨基酸被作者定义为出现在复合物表面但是又不参与复合物的相互作用。
+	$$f_s(x) = \frac{n_s(x)}{\sum_{y=1}^{20}n_s(y)}$$
+	其中，$n_s（x）$ 是参照复合物的表面氨基酸中$x$氨基酸的频率，分母中$n_s(y)$做类似的解读，指标 $y$ 从 1 遍历到 20 是指对20中不同氨基酸的频率求和。
+%	\item 计算氨基酸 $x$ 在抗原表位中的氨基酸倾向(propensity)$p_e(x)$
+%		$$p_e(x)=\text{log}\left(\frac{f_e(x)}{f_s(x)}\right)$$
+	\item 给定抗原中一个特定位置的抗原表位氨基酸$x$，定义抗原抗体氨基酸对为$xy$， 其中$y$为距离$x$最近的位于抗体上的氨基酸。计算抗原抗体氨基酸对$xy$的出现率$f_{ep}(xy)$:
+	$$f_{ep}(xy)=\frac{n_{ep}(xy)}{\sum_{z=1}^{20}n_{ep}(xz)}\times f_e(x)$$
+	\item 用传统的不依赖于抗原的方法DiscoTope 来预测给定抗原的抗原表位,这里我们简称为传统预测抗原表位。
+	\item 计算传统预测抗原表位中氨基酸$x$的氨基酸频率$f^{'}_e(x)$:
+	$$f^{'}_e(x)=\sum\limits_{y=1}^{20}[f_{ep}(xy)\times n_p(y)]$$
+	其中$n_p(y)$是给定抗体的抗体表位(paratope)中氨基酸$y$的出现频率。
+	\item 计算传统预测抗原表位中氨基酸$x$抗体特意的抗原表位倾向ASEP(antibody-specific epitope propensity), $p_e^{'}(x)$:
+	$$p_e^{'}(x)=\text{log}\left(\frac{f_e^{'}(x)}{f_s(x)}\right)$$
+	\item 对于传统预测抗原表位中的氨基酸$i$，计算:
+	$$\text{ASEP}(i) = \sum\limits_{x=1}^{20}p_e^{'}(x)c_i(x)$$
+	其中$c_i(x)$是指在传统预测抗原表位中的氨基酸$\alpha$碳与$i$的$\alpha$碳距离小于10\si{\angstrom}的类型为$x$的氨基酸的个数。这里也就是对$i$附近的$p_e^{'}(x)$根据不同氨基酸的频率进行加权。
+	\item 对传统预测抗原表位中的每个氨基酸都计算ASEP， 然后排序，取舍。ASEP越高越可能为抗原表位。	
+\end{enumerate}
+	在上面的步骤中，(4)通过加权形式，把抗原表位和抗体表位结合在一起，从而在后面的计算过程中实现了在给定抗体情况下对抗原表位的ASEP打分。这个简单的加权，比之前仅仅依靠抗原对抗原表位做出的预测有了明显提高。
 
 \section{亲和力预测}
 
@@ -437,9 +462,40 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 	
 \bibitem{EpitopePred2}Rubinstein, Nimrod D., et al. Computational characterization of B-cell epitopes.
 	\emph{Molecular immunology},(2008), 45(12):3477-3489.
+
+\bibitem{EpitopePred3} Hopp, T. P., Woods, K. R. Prediction of protein antigenic determinants from amino acid sequences. 
+	\emph{PNAS},(1981), 78(6), 3824-3828.
 	
-\bibitem{EpitopePred3}Sela-Culang, Inbal, Yanay Ofran, and Bjoern Peters. Antibody specific epitope prediction—emergence of a new paradigm.
+\bibitem{EpitopePred4} Rubinstein, N. D., Mayrose, I., Pupko, T.  A machine-learning approach for predicting B-cell epitopes.
+	\emph{Molecular immunology}, (2009)， 46(5), 840-847.
+\bibitem{SEPPA}Sun, J., Wu, D., Xu, T., Wang, X., Xu, X., Tao, L., ..., Cao, Z. W., SEPPA: a computational server for spatial epitope prediction of protein antigens. 
+	\emph{Nucleic acids research}, (2009), 37(suppl\_2), W612-W616.
+	
+\bibitem{CEP}Kulkarni-Kale, U., Bhosle, S.,  Kolaskar, A. S.,CEP: a conformational epitope prediction server. 
+	\emph{Nucleic acids research}, (2005), 33(suppl\_2), W168-W171.
+	
+\bibitem{DiscoTope}Haste Andersen, P., Nielsen, M., Lund, O. Prediction of residues in discontinuous B-cell epitopes using protein 3D structures. 
+	\emph{Protein Science}, (2006), 15(11), 2558-2567.
+	
+\bibitem{PEPOP} Moreau, V., Fleury, C., Piquer, D., Nguyen, C., Novali, N., Villard, S., ..., Molina, F. PEPOP: computational design of immunogenic peptides. 
+	\emph{Bmc Bioinformatics},(2008), 9(1), 71.
+	
+\bibitem{ElliPro}Ponomarenko, J., Bui, H. H., Li, W., Fusseder, N., Bourne, P. E., Sette, A., Peters, B.  ElliPro: a new structure-based tool for the prediction of antibody epitopes. 
+	\emph{BMC bioinformatics}, (2008), 9(1), 514.
+	
+\bibitem{PEPITO} Sweredoski, M. J., Baldi, P. PEPITO: improved discontinuous B-cell epitope prediction using multiple distance thresholds and half sphere exposure.
+ 	\emph{Bioinformatics}, (2008), 24(12), 1459-1460.
+	
+\bibitem{EpitopePredEvaluation}Xu, X., Sun, J., Liu, Q., Wang, X., Xu, T., Zhu, R., ... Cao, Z., Evaluation of spatial epitope computational tools based on experimentally-confirmed dataset for protein antigens.
+	\emph{Chinese Science Bulletin}, (2010), 55(20), 2169-2174.
+		
+\bibitem{EpitopePredNotAccurate}Sela-Culang, Inbal, Yanay Ofran, and Bjoern Peters. Antibody specific epitope prediction—emergence of a new paradigm.
 	\emph{Current opinion in virology},(2015), 11 : 98-102.
+	
+\bibitem{ASEP}Soga, S., Kuroda, D., Shirai, H., Kobori, M., Hirayama, N., Use of amino acid composition to predict epitope residues of individual antibodies. 
+	\emph{Protein Engineering, Design \& Selection}, (2010). 23(6), 441-448.
+	
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
