@@ -211,7 +211,67 @@ This is my English abstract.\\
 	\item 对传统预测抗原表位中的每个氨基酸都计算ASEP， 然后排序，取舍。ASEP越高越可能为抗原表位。	
 \end{enumerate}
 	在上面的步骤中，(4)通过加权形式，把抗原表位和抗体表位结合在一起，从而在后面的计算过程中实现了在给定抗体情况下对抗原表位的ASEP打分。这个简单的加权，比之前仅仅依靠抗原对抗原表位做出的预测有了明显提高。
+	
+	Konrad Krawczy等在它们对蛋白与蛋白相互作用研究的基础上设计了在给定抗体情况下抗原表位的预测方法：EpiPred\cite{EpiPred}。该方法在抗原表位预测的时候，结合了抗原表位和抗体表位在空间上的互补性和一个由 i-Patch 转化而来的打分。一个氨基酸对的i-Patch 值的大概计算方法如下，具体详细的计算请参考文献\cite{iPatch1,iPatch2}。
+	\begin{enumerate}[label = (\arabic*)]
+		\item 为了减少可能出现的氨基酸对的数目，把氨基酸进行分类，文献\cite{iPatch2}把氨基酸分成7类。
+		\item 计算两个氨基酸类$(C_1, C_2)$之间的倾向性(propensity)$P(C_1, C_2)$。
+		\begin{align*}
+				R_{con}(C_1, C_2)&=\frac{f_{con}(C_1, C_2)/f_{all}(C_1, C_2)}{\sum\limits_{i=1}^{7}\sum\limits_{j \neq i} f_{con}(C_i, C_j)/f_{all}(C_i, C_j)}\\
+		R_{non}(C_1, C_2)&=\frac{f_{non}(C_1, C_2)/f_{all}(C_1, C_2)}{\sum\limits_{i=1}^{7}\sum\limits_{j\neq i} f_{non}(C_i, C_j)/f_{all}(C_i, C_j)}\\
+		P(C_1, C_2) &= \frac{R_{con}(C_1, C_2)}{R_{con}(C_1, C_2)}			
+		\end{align*}
+	其中$f_{con}(C_1, C_2)$是相互作用的氨基酸对$(x,y)\in C_1\times C_2$ 的频率。类似， $f_{non}(C_1, C_2)$ 和 $f_{all}(C_1, C_2)$ 分别是不相互作用的氨基酸对的频率和所有可能的氨基酸对的频率。
+	\item 根据氨基酸对 $(C_1, C_2)$ 附近氨基酸的分部情况，计算权重 $w(C_i|(C_1, C_2)),\; i = 1,2,\cdots, 7$
+		\begin{align*}
+		 		w_{con}(C_i|(C_1, C_2))&=\frac{f_{con}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{con}(C_i))/f_{all}(C_i)}I_{\{C_i \in N\}}\\
+		 		w_{non}(C_i|(C_1, C_2))&=\frac{f_{non}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{non}(C_i))/f_{all}(C_i)}I_{\{C_i \in N\}}\\
+		 		w(C_i|(C_1, C_2)) &= w_{con}(C_i|(C_1, C_2))/w_{non}(C_i|(C_1, C_2))		
+		\end{align*}
+		其中 $f_{con}(C_i)$ 为属于类别$C_i$的参与相互作用的氨基酸出现的频率， $N$为$(C_1, C_2)$ 附近氨基酸的类别的集合,在这里，“附近”可以根据具体情况选择的距离范围来决定。$I$为示性函数(characteristic function)。
+	\item 计算一个抗原表面的氨基酸$x$可以成为抗原表位的i-Patch分数。
+	$$\text{i-Patch}(x) = \frac{1}{|para|}\sum\limits_{C_i\in N(C_x,C_y)}\sum\limits_{y\in para}w(C_i|(C_x, C_y))P(C_x, C_y)$$
+	其中$para$是给定抗体的抗体表位氨基酸的集合，$C_x$ 和 $C_y$ 分别是 $x$ 和 $y$ 所在的氨基酸类，$N(C_x,C_y)$ 为氨基酸对 $(x, y)$ 附近氨基酸类别的集合。“附近”的界定和 $(3)$ 同。
+	\end{enumerate}
+从上面的计算可以看出，i-Patch 考虑了给定抗体的抗体表位，同时也以权重的形式，考虑了氨基酸对周围氨基酸的影响。
 
+Liang Zhao 和 Jinyan Li 设计了Bepar(\textbf{B}-cell \textbf{e}pitope \textbf{p}rediction through \textbf{a}ssociation \textbf{r}ules)\cite{Bepar}。其大概方法如图\ref{Bepar}：
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{BeparFlowChart}
+	\caption{此图源自文献\cite{Bepar}}
+	\label{Bepar}
+\end{figure}
+其中涉及到抗原表位和抗体表位相互作用的部分有相对组成(relative composition) 、Cooperativity 和 Cooccurrent pattern 。 它们的计算如下：
+\begin{enumerate}[label=(\arabic*)]
+	\item Relative composition 的计算
+		$$R_{ij}=2\times P_{ij}\times\log\frac{P_{ij}}{Q_{ij}}$$
+		其中，$ij$ 表示第 $i$ 个CDR上的氨基酸 $j$ 。$P_{ij}$ 表示氨基酸 $j$ 在第 $i$ 个CDR上所占的比例，$Q_{ij}$ 表示氨基酸 $j$ 在所有CDR上所占的比例。 同样抗原表位氨基酸 Relative composition 的计算如下：
+		$$R_{j}=2\times P_{j}\times\log\frac{P_{j}}{Q_{j}}$$
+		其中 $P_{j}$ 是抗原表位中氨基酸 $j$ 在所有抗原表位氨基酸中的比例， $Q_j$ 是氨基酸 $j$ 在所有抗原氨基酸中的比例。
+	\item Cooperativity 的计算
+	$$C_{i, jk}=\frac{P_{i, jk}}{Q_{i, jk}}$$
+	$C_{i, jk}$ 表示在第 $i$ 个CDR上，两个相邻的氨基酸 $jk$ 的 Cooperativity 。$P_{i, jk}$ 表示两个相邻的氨基酸在 $jk$ 在第 $i$ 个CDR上所占的比例， $Q_{i, jk}$ 表示两个相邻的氨基酸在 $jk$ 在所有CDR上所占的比例。
+	\item Association Rule 的计算， 具体可以参看文献\cite{AssociationRule}。大概的做法是把抗原表位和抗体表位的相互作用看成二部图然后寻找同一个抗原抗体复合物中出现的二部图的相似性。
+\end{enumerate}
+Relative composition 被用来寻找种子，然后通过 Cooperativity 和 Association Rule 进行扩展。
+
+Inbal Sela-Culang 等开发了基于给定抗体序列的抗原表位的预测方法：PEASE\cite{}。该方法通过抽取氨基酸对的10个特征，然后构建 Random Forest 来预测。这10个特征分别是：
+\begin{enumerate}
+	\item 氨基酸对中，来自抗原的氨基酸C端一侧相邻的4个氨基酸和N端一侧相邻的4个氨基酸。
+	\item 氨基酸对中，来自抗体的氨基酸C端一侧相邻的4个氨基酸和N端一侧相邻的4个氨基酸。
+	\item 氨基酸对中，来自抗原的氨基酸的 solvent accessibility。
+	\item 氨基酸对中，来自抗原的氨基酸的二级结构(secondary structure)。
+	\item 氨基酸对中，来自抗体的氨基酸是来自于轻链还是重链。
+	\item CDR的序号，是1、2还是3。
+	\item 氨基酸对中，来自抗体的氨基酸在CDR中的位置。
+	\item 氨基酸对中，来自抗原的氨基酸的无序状态(disorder state)。
+	\item 氨基酸对中，来自抗原的氨基酸的作用热点的分类(classification of the interaction hotspot)。
+	\item 氨基酸对的 Contact potential, 计算如下：
+	$$E_{ij}=\log_{2}\left[\frac{f^{ij}}{\sum\limits_{i=1}^{20}\sum\limits_{j=1}^{20}f^{ij}}\middle/\left(\frac{f^{j}}{\sum\limits_{j=1}^{20}f^{j}}\times\frac{f^i}{\sum\limits_{i=1}^{20}f^{i}}\right)\right]$$
+	其中，$i$表示抗体表位上的氨基酸，$j$表示抗原表位上的氨基酸，$f^i$表示氨基酸$i$在抗体表位上出现的频率， $f^j$表示氨基酸$j$在抗原表位上出现的频率,$f^{ij}$表示氨基酸 $i$ 和 $j$ 相互作用的频率， $E_{ij}$ 为要计算的Contact potential 。
+\end{enumerate}
+以上的这四种方法，是我能够了解到的基于抗体的抗原表位预测方法，虽然这些方法是为了预测抗原的表位，但是也可以看成对抗原抗体相互作用的探索。如果仔细观察这些方法，它们主要是对氨基酸对进行分析，也就是对1个抗原表位氨基酸和1个抗体表位氨基酸进行分析，而且这些分析多是基于出现的频率大小。
 \section{亲和力预测}
 
 \section{本论文的主要内容}
@@ -495,7 +555,26 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 \bibitem{ASEP}Soga, S., Kuroda, D., Shirai, H., Kobori, M., Hirayama, N., Use of amino acid composition to predict epitope residues of individual antibodies. 
 	\emph{Protein Engineering, Design \& Selection}, (2010). 23(6), 441-448.
 	
+\bibitem{EpiPred}Krawczyk, K., Liu, X., Baker, T., Shi, J., Deane, C. M. Improving B-cell epitope prediction and its application to global antibody-antigen docking. 
+	\emph{Bioinformatics},(2014),30(16), 2288-2294.	
+	
+\bibitem{PEASE}Sela-Culang, I., Ashkenazi, S., Peters, B., Ofran, Y.  PEASE: predicting B-cell epitopes utilizing antibody sequence.
+ 	\emph{Bioinformatics},(2015), 31(8), 1313-1315.
+ 	
+\bibitem{EpiPred}Krawczyk, K. , Liu, X. , Baker, T. , Shi, J. ,  Deane, C. M.,Improving b-cell epitope prediction and its application to global antibody-antigen docking. 
+	\emph{Bioinformatics}, (2014), 30(16), 2288-2294.
 
+\bibitem{iPatch1} Konrad Krawczyk1, Terry Baker, Jiye Shi, Charlotte M.Deane, Antibody i-Patch prediction of the antibody binding site improves rigid local antibody–antigen docking,
+	\emph{Protein Engineering, Design \& Selection}, 26(2013), no.10, pp. 621--629.
+	
+\bibitem{iPatch2}Hamer, R. , Luo, Q. , Armitage, J. P. , Reinert, G. , Deane, C. M. , I-patch: interprotein contact prediction using local network information. 
+	\emph{Proteins Structure Function \& Bioinformatics}, (2010), 78(13), 2781-2797.
+
+\bibitem{Bepar}Zhao, L. , Li, J., Mining for the antibody-antigen interacting associations that predict the b cell epitopes. 
+	\emph{BMC Structural Biology}, (2010), 10 Suppl 1(Suppl 1), S6.
+	
+\bibitem{AssociationRule}Coenen F, Goulbourne G, Leng P, Tree Structures for Mining Association Rules. 
+	\emph{Data Min. Knowl. Discov.}, (2004), 8:25-51
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			

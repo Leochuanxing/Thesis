@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  13 FEB 2020 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  15 FEB 2020 11:39
 entering extended mode
 **./Liu_Chuanxing_Thesis.tex
 (Liu_Chuanxing_Thesis.tex
@@ -876,7 +876,11 @@ File: extended.enc 2015/04/18 4.8.4
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cjk\extended.chr"
 File: extended.chr 2015/04/18 4.8.4
 )
-(Liu_Chuanxing_Thesis.aux)
+(Liu_Chuanxing_Thesis.aux
+
+LaTeX Warning: Label `EpiPred' multiply defined.
+
+)
 \openout1 = `Liu_Chuanxing_Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -1309,75 +1313,106 @@ n/12.045/57 N A \C19/rm/m/n/12.045/61 ¿ \C19/rm/m/n/12.045/40  \C19/rm/m/n/12.
 ody-specific
  []
 
-[7] [8]
+[7]
+Overfull \hbox (7.56425pt too wide) in paragraph at lines 223--225
+\C19/rm/m/n/12.045/52 Ù \C19/rm/m/n/12.045/64 ¥$\OML/cmm/m/it/12.045 f[]\OT1/cm
+r/m/n/12.045 (\OML/cmm/m/it/12.045 C[]; C[]\OT1/cmr/m/n/12.045 )$\C19/rm/m/n/12
+.045/55 ´ \C19/rm/m/n/12.045/59 ƒ \C19/rm/m/n/12.045/44 p \C19/rm/m/n/12.045/65
+ Š \C19/rm/m/n/12.045/62 ^ \C19/rm/m/n/12.045/40  \C19/rm/m/n/12.045/36 R \C19
+/rm/m/n/12.045/44 Ä \C19/rm/m/n/12.045/56 Œ \C19/rm/m/n/12.045/40 é$\OT1/cmr/m/
+n/12.045 (\OML/cmm/m/it/12.045 x; y\OT1/cmr/m/n/12.045 ) \OMS/cmsy/m/n/12.045 2
+ \OML/cmm/m/it/12.045 C[] \OMS/cmsy/m/n/12.045  \OML/cmm/m/it/12.045 C[]$ \C19
+/rm/m/n/12.045/40  \C19/rm/m/n/12.045/52 ª \C19/rm/m/n/12.045/49 Ç|\C19/rm/m/n
+/12.045/25 "| \C19/rm/m/n/12.045/48 a \C19/rm/m/n/12.045/56 q|\C19/rm/m/n/12.04
+5/26 §|  $\OML/cmm/m/it/12.045 f[]\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 C[]
+; C[]\OT1/cmr/m/n/12.045 )$
+ []
+
+[8]
+<BeparFlowChart.png, id=414, 286.06876pt x 419.5675pt>
+File: BeparFlowChart.png Graphic file (type png)
+<use BeparFlowChart.png>
+Package pdftex.def Info: BeparFlowChart.png  used on input line 241.
+(pdftex.def)             Requested size: 171.64258pt x 251.74243pt.
+ [9] [10 <./BeparFlowChart.png>] [11] [12]
 µÚ¶þÕÂ
-[9
+[13
 
 ]
 µÚÈýÕÂ
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-272.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 272.
+332.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 332.
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbackslash' on input line 272.
+(Font)              for symbol `textbackslash' on input line 332.
 
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 280.
+(amsmath)                 on input line 340.
 
-[10
+[14
 
 ]
 LaTeX Font Info:    Trying to load font information for C19+zhfs on input line 
-303.
+363.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhfs.fd
 "
 File: c19zhfs.fd 2009/09/23 4.8.2
-) [11]
+) [15]
 µÚËÄÕÂ
-[12
+[16
 
 ]
 µÚÎåÕÂ
 LaTeX Font Info:    Trying to load font information for C19+zhkai on input line
- 351.
+ 411.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhkai.f
 d"
 File: c19zhkai.fd 2009/09/23 4.8.2
-) [13
+) [17
 
 ]
 µÚÁùÕÂ
-[14
+[18
 
-] [15
+] [19
 
-]<<c1929.cmap>><<c1930.cmap>> [16
+]<<c1929.cmap>><<c1930.cmap>> [20
 
-] [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 522.
- [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 522.
+] [21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 601.
+ [22pdfTeX warning (ext4): destination with the same identifier (name{cite.EpiP
+red}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.601 \end{document}
+                    ]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 601.
  (Liu_Chuanxing_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 522.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 522.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 601.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 601.
 Package rerunfilecheck Info: File `Liu_Chuanxing_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 695DA16DDB3B3C7D443887565543FF6D;2036.
 
+
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 522.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 601.
  ) 
 Here is how much of TeX's memory you used:
- 29111 strings out of 492453
- 534578 string characters out of 3121009
- 660561 words of memory out of 3000000
- 32729 multiletter control sequences out of 15000+200000
+ 29177 strings out of 492453
+ 535508 string characters out of 3121009
+ 661831 words of memory out of 3000000
+ 32767 multiletter control sequences out of 15000+200000
  602494 words of font info for 285 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,11n,67p,1704b,902s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1423,22 +1458,23 @@ msfonts/cm/cmbx10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmbx12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/leo/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/leo/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/leo/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/leo/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/
 Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr9.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/leo/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/leo/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/leo/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:
-/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
-t9.pfb>
-Output written on Liu_Chuanxing_Thesis.pdf (20 pages, 3309243 bytes).
+0.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr9.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/leo/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/leo/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/leo/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/
+Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt
+12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmtt9.pfb>
+Output written on Liu_Chuanxing_Thesis.pdf (24 pages, 3449709 bytes).
 PDF statistics:
- 892 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 949 PDF objects out of 1000 (max. 8388607)
+ 138 named destinations out of 1000 (max. 500000)
+ 347 words of extra memory for PDF output out of 10000 (max. 10000000)
 
