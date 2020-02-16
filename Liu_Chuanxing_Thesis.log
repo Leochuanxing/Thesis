@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  15 FEB 2020 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  16 FEB 2020 23:07
 entering extended mode
 **./Liu_Chuanxing_Thesis.tex
 (Liu_Chuanxing_Thesis.tex
@@ -1334,101 +1334,119 @@ File: BeparFlowChart.png Graphic file (type png)
 <use BeparFlowChart.png>
 Package pdftex.def Info: BeparFlowChart.png  used on input line 241.
 (pdftex.def)             Requested size: 171.64258pt x 251.74243pt.
- [9] [10 <./BeparFlowChart.png>] [11] [12]
+ [9] [10 <./BeparFlowChart.png>] [11]
+
+LaTeX Warning: Citation `HotSpotComp' on page 12 undefined on input line 276.
+
+<HotSpot.png, id=454, 712.6625pt x 313.17pt>
+File: HotSpot.png Graphic file (type png)
+<use HotSpot.png>
+Package pdftex.def Info: HotSpot.png  used on input line 282.
+(pdftex.def)             Requested size: 356.33038pt x 156.58461pt.
+[12 <./HotSpot.png>] [13] [14]
 第二章
-[13
+[15
 
 ]
 第三章
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-332.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 332.
+343.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 343.
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbackslash' on input line 332.
+(Font)              for symbol `textbackslash' on input line 343.
 
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 340.
+(amsmath)                 on input line 351.
 
-[14
+[16
 
 ]
 LaTeX Font Info:    Trying to load font information for C19+zhfs on input line 
-363.
+374.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhfs.fd
 "
 File: c19zhfs.fd 2009/09/23 4.8.2
-) [15]
+) [17]
 第四章
-[16
+[18
 
 ]
 第五章
 LaTeX Font Info:    Trying to load font information for C19+zhkai on input line
- 411.
+ 422.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhkai.f
 d"
 File: c19zhkai.fd 2009/09/23 4.8.2
-) [17
+) [19
 
 ]
 第六章
-[18
+[20
 
-] [19
+] [21
 
-]<<c1929.cmap>><<c1930.cmap>> [20
+]<<c1929.cmap>><<c1930.cmap>> [22
 
-] [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 601.
- [22pdfTeX warning (ext4): destination with the same identifier (name{cite.EpiP
-red}) has been already used, duplicate ignored
+] [23] [24pdfTeX warning (ext4): destination with the same identifier (name{cit
+e.EpiPred}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.601 \end{document}
-                    ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 601.
+l.618 	
+       ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 661.
+ [25]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 661.
  (Liu_Chuanxing_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 601.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 601.
-Package rerunfilecheck Info: File `Liu_Chuanxing_Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 695DA16DDB3B3C7D443887565543FF6D;2036.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 661.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 661.
 
+
+Package rerunfilecheck Warning: File `Liu_Chuanxing_Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Liu_Chuanxing_Thesis.out':
+(rerunfilecheck)             Before: 695DA16DDB3B3C7D443887565543FF6D;2036
+(rerunfilecheck)             After:  2863B278CDE69C7D6DC05EB3570C9D7B;2457.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 601.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 661.
  ) 
 Here is how much of TeX's memory you used:
- 29177 strings out of 492453
- 535508 string characters out of 3121009
- 661831 words of memory out of 3000000
- 32767 multiletter control sequences out of 15000+200000
- 602494 words of font info for 285 fonts, out of 3000000 for 9000
+ 29267 strings out of 492453
+ 536983 string characters out of 3121009
+ 675562 words of memory out of 3000000
+ 32833 multiletter control sequences out of 15000+200000
+ 602764 words of font info for 286 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,11n,67p,1704b,902s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,11n,67p,2626b,902s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
 imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS
 /Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
-/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai
+/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai
 .ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Font
 s/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WIND
 OWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf>
 <C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/sim
 kai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/F
-onts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/W
-INDOWS/Fonts/simfang.ttf><C:/WINDOWS/Fonts/simfang.ttf><C:/WINDOWS/Fonts/simfan
-g.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
-ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
+onts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simfang.ttf><C:/
+WINDOWS/Fonts/simfang.ttf><C:/WINDOWS/Fonts/simfang.ttf><C:/WINDOWS/Fonts/simsu
+n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
+ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WIN
 DOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc
 ><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
 msun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
@@ -1472,9 +1490,9 @@ AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/
 Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt
 12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmtt9.pfb>
-Output written on Liu_Chuanxing_Thesis.pdf (24 pages, 3449709 bytes).
+Output written on Liu_Chuanxing_Thesis.pdf (27 pages, 4393291 bytes).
 PDF statistics:
- 949 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
- 347 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1006 PDF objects out of 1200 (max. 8388607)
+ 161 named destinations out of 1000 (max. 500000)
+ 352 words of extra memory for PDF output out of 10000 (max. 10000000)
 

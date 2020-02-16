@@ -257,7 +257,7 @@ Liang Zhao 和 Jinyan Li 设计了Bepar(\textbf{B}-cell \textbf{e}pitope \textbf{p}r
 Relative composition 被用来寻找种子，然后通过 Cooperativity 和 Association Rule 进行扩展。
 
 Inbal Sela-Culang 等开发了基于给定抗体序列的抗原表位的预测方法：PEASE\cite{}。该方法通过抽取氨基酸对的10个特征，然后构建 Random Forest 来预测。这10个特征分别是：
-\begin{enumerate}
+\begin{enumerate}[label=(\arabic*)]
 	\item 氨基酸对中，来自抗原的氨基酸C端一侧相邻的4个氨基酸和N端一侧相邻的4个氨基酸。
 	\item 氨基酸对中，来自抗体的氨基酸C端一侧相邻的4个氨基酸和N端一侧相邻的4个氨基酸。
 	\item 氨基酸对中，来自抗原的氨基酸的 solvent accessibility。
@@ -271,20 +271,31 @@ Inbal Sela-Culang 等开发了基于给定抗体序列的抗原表位的预测方法：PEASE\cite{}。该
 	$$E_{ij}=\log_{2}\left[\frac{f^{ij}}{\sum\limits_{i=1}^{20}\sum\limits_{j=1}^{20}f^{ij}}\middle/\left(\frac{f^{j}}{\sum\limits_{j=1}^{20}f^{j}}\times\frac{f^i}{\sum\limits_{i=1}^{20}f^{i}}\right)\right]$$
 	其中，$i$表示抗体表位上的氨基酸，$j$表示抗原表位上的氨基酸，$f^i$表示氨基酸$i$在抗体表位上出现的频率， $f^j$表示氨基酸$j$在抗原表位上出现的频率,$f^{ij}$表示氨基酸 $i$ 和 $j$ 相互作用的频率， $E_{ij}$ 为要计算的Contact potential 。
 \end{enumerate}
-以上的这四种方法，是我能够了解到的基于抗体的抗原表位预测方法，虽然这些方法是为了预测抗原的表位，但是也可以看成对抗原抗体相互作用的探索。如果仔细观察这些方法，它们主要是对氨基酸对进行分析，也就是对1个抗原表位氨基酸和1个抗体表位氨基酸进行分析，而且这些分析多是基于出现的频率大小。
+以上的这四种方法，是我能够了解到的基于抗体的抗原表位预测方法，虽然这些方法是为了预测抗原的表位，但是也可以看成对抗原抗体相互作用的探索。如果仔细观察这些方法，它们主要是对氨基酸对进行分析，也就是对1个抗原表位氨基酸和1个抗体表位氨基酸进行分析，而且这些分析多是基于出现的频率大小。并没有综合运用氨基酸与氨基酸之间的替换矩阵(substitutionn matrix)，也没有涉及到多个氨基酸与多个氨基酸之间的对应关系。鉴于此，本论文就是在这些方面做了改进，建立了一个更有效的模型。
+
+蛋白质和蛋白质的相互作用主要集中在几个关键的氨基酸上，这几个关键的氨基酸被称为热点(hot-spot)\cite{HotSpot}。最早提出热点的概念，是 Clackson 等在研究人生长激素(hGH)和它的一个受体hGHbp 相互作用时提出的\cite{HotSpot0} 。通常来讲，这些热点上的每个氨基酸对亲和力的贡献都在 2kJ/mol 以上，而且相互作用的两个蛋白的热点是相互对应的，不但结构互补，亲水性也相同，带电荷也往往相反。系统的分析表明，热点的氨基酸组成个蛋白中氨基酸的组成有明显的不同\cite{HotSpotComp}。Tryptophan(21\%), Arginine(13.3\%) 和 Tyrosine(12.3\%) 是含量最高的三种氨基酸。
+
+抗原与抗体的相互作用作为蛋白质之间相互作用的一个特例，热点的概念也同样适用。多数的情况下，抗原抗体的亲和力是由少数几个热点氨基酸决定， 比如文献\cite{AntibodyGenHot1}的研究。通过实验手段确定抗原抗体的热点，往往通过 Alanine Scanning 。 也有通过计算的方法来确定热点\cite{HotSpotPred1, HotSpotPred2}。
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{HotSpot}
+\caption{A 为抗体 cAB-Lys3 和上面的热点； B 为抗原 HEL(蛋清溶菌酶)上的热点。图片来自\cite{HotSpotPred2}，绿色代表加强抗原抗体的相互作用，红色代表减弱抗原抗体的相互作用。}
+\label{HotSpot}
+\end{figure}
+从图\ref{HotSpot}可以看出，热点只有少数的几个氨基酸，而且往往是短的在序列上相邻的氨基酸组成。在图\ref{HotSpot}A 中热点为 Y103, A104, S105, Y106 。B 中也有类似情况。既然这样，如果我们只研究抗原热点和抗体热点之间的关系，就可以把问题在一定程度上化简为一个短的氨基酸序列和另外一个短的氨基酸序列的相互作用。
 \section{亲和力预测}
+自然产生的抗体，往往在亲和力(affinity)上有一定的限制\cite{AffinityLimit}。为了获得更好的疗效，在治疗性抗体的生产和设计过程中，往往要涉及到亲和力成熟(affinity maturation)。所谓的亲和力的成熟就是说，在原来抗体的基础上，通过改造CDR上氨基酸的序列，从而使得抗原和抗体之间有更高的亲和力\cite{AffinityMaturation}。传统的实验手段，比如说突变和各种各样的展示技术，可以被用来寻找具有更高亲和力的抗体\cite{PhageDisplay}, 有不少的亲和力(affinity)可以被提高到nM的级别\cite{PhageDisplay1}。但是这些实验的手段，需要很大的工作量，也会持续很长的时间。也有一些通过计算的手段，来指导CDR上氨基酸的序列的改造。这样的方法也比较多，比如通过分子模拟、通过自由能的扰动(free energy perturbation)\cite{EnergyPerturb1},通过 potential-of-mean force(PMF)\cite{EnergyPerturb2}，虽然目前现在这些通过计算提高亲和力的方法效果还不是太理想，但是，这是一片广阔的天地\cite{Insilico1}。首先，计算的方法可以大大提高速度。传统方法几个月才能完成的事情，计算的方法可能几天就可以完成。其次，随着数据量的积累和计算水平的提高，计算的结果必然会越来越准确。通过计算的方法解决亲和力的问题，概括的讲来，大概有两个思路，一个是统计学的角度，一个是从物理化学原理的角度。上面说的分子模拟等方法都是从物理化学的角度，来进行的计算。也可以从统计学的角度来解决这个问题，比如说观察到观察到A和B经常相互作用，而A和C不经常相互作用。如果把C突变成B就很有可能增加分子的亲和力。Lippow等\cite{Lippow}，集中分析氨基酸与氨基酸之间的静电作用，高效的把抗EGFR的治疗性抗体Erbitux 的亲和力提高10倍，达到52pM ； 把抗蛋清溶菌酶的抗体D44.1 的亲和力提高了140倍，达到30pM ；同时他们方法的有效性还在治疗性抗体Avastin 的已知亲和力的突变，以及抗荧光蛋白(fluorescein) 的抗体 4-4-20 的已知亲和力的突变中，得到验证。这个结果是惊人的， 是计算机辅助亲和力成熟的一次成功。但是，这个方法需要抗原和抗体复合物的结构，同时也只分析了一对一的静电相互作用，并没有涉及到多个氨基酸协同作用和其他种类的相互作用力的情况。Sarah Sirin 等\cite{AB-Bind}构建了一个抗原抗体复合物突变数据库，涉及到32个复合物，1101个突变，并且每个突变都有实验手段得到的亲和力。通过比较 dDFIRE, DFIRE, STATIUM, Rosetta, FoldX, Discovery Studio, 在预测亲和力上的表现，Sarah Sirin 等认为，总的来说，目前的预测方法效果都不够好， 实际 $\Delta\Delta G$ (吉布斯自由能的变化)和预测的 $\Delta\Delta G$ 之间的相关系数 $r$ 在 0.16 到 0.45 之间，很难满足实际的需求，但是在作出亲和力是增加还是减小这样的二分类判断时候，这些方法具有一定的意义。在上面的方法中， FoldX 和 Discovery Studio 是效果较好的两个。在上面的所有方法中，STATIUM 使用了统计学的方法，通过计算两个氨基酸之间 $C^\alpha$ 和 $C^\beta$ 之间的距离和夹角的关系，来计算氨基酸之间的 STATIUM potential，进而估计突变对亲和力的影响\cite{STATIUM}。
 
 \section{本论文的主要内容}
+\subsection{数据的提取}
+\subsection{RBFN模型的构建}
+\subsection{RBFN模型的应用}
+\subsection{一个新的RBFN 中心（center）的选取方法}
+\subsection{讨论}
 
-\subsection{一些注意事项}
-本模板提供的格式应该是数学论文写作中的一些通行格式. 
 
-\CTeX 套装的~2.8 版似乎并不稳定. 请大家下载其他稳定的版本. 
 
-\subsection{~\TeX~ 资源}
-~\TeX~的下载：\href{http://www.ctex.org/HomePage}{http://www.ctex.org/HomePage}
-
-~\TeX~的论坛： \href{http://bbs.ctex.org/}{http://bbs.ctex.org/}
 
 
 \chapter{正文行文}
@@ -575,6 +586,55 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 	
 \bibitem{AssociationRule}Coenen F, Goulbourne G, Leng P, Tree Structures for Mining Association Rules. 
 	\emph{Data Min. Knowl. Discov.}, (2004), 8:25-51
+	
+\bibitem{HotSpot}Moreira I S , Fernandes P A , Ramos M J . Hot spots—A review of the protein–protein interface determinant amino-acid residues. 
+	\emph{Proteins}, 2007, 68(4):803-812.
+	
+\bibitem{HotSpot0}Clackson T , Wells J . A hot spot of binding energy in a hormone-receptor interface. 
+	\emph{Science}, (1995), 267(5196):383-386.
+	
+\bibitem{HotSpotConser}Keskin O, Ma B, Nussinov R. Hot regions in protein–protein interactions: the organization and contribution of structurally conserved hot spot residues. J Mol Biol 2005;345:1281–1294.
+
+\bibitem{AntibodyGenHot1}  Dall Acqua W , Goldman E R , Lin W , et al. A Mutational Analysis of Binding Interactions in an Antigen-Antibody Protein-Protein complex,
+	\emph{Biochemistry}, (1998), 37(22):7981-7991.
+	
+\bibitem{HotSpotPred1} Moreira, I.S., Fernandes, P.A. and Ramos, M.J., Hot spot computational identification: Application to the complex formed between the hen egg white lysozyme (HEL) and the antibody HyHEL-10. 
+	\emph{Int. J. Quantum Chem.}, (2007), 107: 299-310. 
+	
+\bibitem{HotSpotPred2}Lafont, V., Schaefer, M., Stote, R.H., Altschuh, D. and Dejaegere, A., Protein-protein recognition and interaction hot spots in an antigen-antibody complex: Free energy decomposition identifies “efficient amino acids”. 
+	\emph{Proteins}, (2007), 67: 418-434.
+	
+\bibitem{AffinityLimit}Foote, J.,  Eisen, H.N. Kinetic and affinity limits on antibodies produced during immune responses. 
+	\emph{Proc. Natl. Acad. Sci}, (1995), 92, 1254-1256.
+	
+\bibitem{AffinityMaturation}5 Presta LG, Selection, design, and engineering of therapeutic antibodies. 
+	\emph{J Allergy Clin Immunol}, (2005),  116(4):731-736
+	
+\bibitem{PhageDisplay} Chames P, Coulon S, Baty D. Improving the affinity and the fine specificity of an anti-cortisol antibody by parsimonious mutagenesis and phage display. 
+	\emph{J Immunol}, (1998), 161(10):5421–9.
+	
+\bibitem{PhageDisplay1}Lee CV, Liang WC, Dennis MS, Eigenbrot C, Sidhu SS, Fuh G. High-affinity human antibodies from phage-displayed synthetic Fab libraries with a single framework scaffold. 
+	\emph{J Mol Biol}, (2004), 340(5):1073–93.
+	
+\bibitem{EnergyPerturb1}Chipot C, Pohorille A. Calculating Free Energy Differences Using Perturbation Theory. Free Energy Calculations 
+	\emph{Springer Series in CHEMICAL PHYSICS: Springer}, (2007). p. 33–75.
+	
+\bibitem{EnergyPerturb2}Roux B. The calculation of the potential of mean force using computer simulations.
+	\emph{Computer Physics Communications},(1995);91(1–3):275–82
+	
+\bibitem{Insilico1}Cannon DA, Shan L, Du Q, et al. Experimentally guided computational antibody affinity maturation with de novo docking, modelling and rational design. 
+	\emph{PLoS Comput Biol}, (2019), 15(5):e1006980. 
+	
+\bibitem{Lippow}Lippow S M , Wittrup K D , Tidor B . Computational design of antibody-affinity improvement beyond in vivo maturation.
+	\emph{Nature Biotechnology}, (2007), 25(10):1171-1176.
+	
+\bibitem{AB-Bind}AB-Bind: Antibody binding mutational database for computational affinity predictions. 
+	\emph{Protein Science}, (2016), 25(2):393-409.
+	
+\bibitem{STATIUM}DeBartolo J, Dutta S, Reich L, Keating AE, Predictive Bcl-2 family binding models rooted in experiment or structure. 
+	\emph{J Mol Biol} (2012), 422:124–144.
+	
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
