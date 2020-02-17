@@ -162,11 +162,15 @@ This is my English abstract.\\
 
 对抗原抗体相互作用的研究，除了可以帮助设计疫苗和预测抗原表位外，还可以促进对治疗性抗体(therapeutic antibody)的开发。随着单克隆抗体(monoclonal antibody)和人源化抗体(humanized antibody)技术的进步, 越来越多的治疗性抗体被注册成新的药物。到2020年2月初，已经被FDA(Food and Drug Administration)和EMA(European Medicines Agency)批准或正在审核的治疗性抗体就多达106个\cite{AntibodySociety}。更是开发出很多具有广谱抗癌作用的治疗性抗体，其中有很多是针对免疫过程中的检测点(checkpoint)开发的\cite{Blockade}。比如，在治疗美国前总统吉米卡特的癌症中起着至关重要作用的抗体 pembrolizumab 就是通过抑制PD1(programmed cell death protein 1)，从而实现免疫细胞对癌细胞的杀伤。鉴于传统小分子药物开发越来越困难，以及抗体的的多样性和相关技术的发展，治疗性抗体必将开辟人类药学史上一个新的时代\cite{Trend}。
 
-一个简单的单克隆抗体的生产过程大概如下：
-\vspace{4cm}
+一个简单的单克隆抗体的生产过程大概如图\cite{MonoclonalAntibody}：
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{MonoclonalAntibody}
+\caption{单克隆抗体制备示意图}
+\label{MonoclonalAntibody}
+\end{figure}
 
-然而如果把这些由老鼠产生的单克隆抗体直接注射到人体内，往往会产生免疫反应。一个避免免疫反应的做法是把这些单克隆抗体的CDR区域的氨基酸序列安插到人类抗体对应的位置，这样的抗体就是人源化抗体。CDR序列的产生需要大量的实验，如果这个过程可以通过计算的手段来做比较准确的预测，则会对抗体的制备有深刻影响。同时， 即便是通过实验手段产生CDR序列，由于实验过程中一些比较难以控制的因素，产生的序列也未必能满足我们的要求。一个不易控制的因素是抗体的作用位点。对于一个抗原来讲，可能的抗原表位会有很多，其中的任何一个抗原表位都可能诱导免疫反应，产生抗体，而理想的抗体往往需要针对特定的抗原表位（如图）。
-\vspace{4cm}
+然而如果把这些由老鼠产生的单克隆抗体直接注射到人体内，往往会产生免疫反应。一个避免免疫反应的做法是把这些单克隆抗体的CDR区域的氨基酸序列安插到人类抗体对应的位置，这样的抗体就是人源化抗体。CDR序列的产生需要大量的实验，如果这个过程可以通过计算的手段来做比较准确的预测，则会对抗体的制备有深刻影响。同时， 即便是通过实验手段产生CDR序列，由于实验过程中一些比较难以控制的因素，产生的序列也未必能满足我们的要求。一个不易控制的因素是抗体的作用位点。对于一个抗原来讲，可能的抗原表位会有很多，其中的任何一个抗原表位都可能诱导免疫反应，产生抗体，而理想的抗体往往需要针对特定的抗原表位。
 
 另外一个不易控制的因素是抗原抗体之间的亲和力(affinity)。一个可以用作治疗用的抗体往往要求具有足够高的亲和力,这直接关系到抗体的疗效。虽然免疫系统本身会筛选出亲和力比较高的抗体，但是无法保证这样的亲和力就满足要求。那么这就需要在原来抗体的基础上，对CDR序列进行一定的改造，从而提高亲和力，达到我们的要求。对抗原抗体的相互作用有足够的了解可以指导对这些序列的改造，从而大大节约抗体药物的研发和生产成本。
 
@@ -224,11 +228,11 @@ This is my English abstract.\\
 	其中$f_{con}(C_1, C_2)$是相互作用的氨基酸对$(x,y)\in C_1\times C_2$ 的频率。类似， $f_{non}(C_1, C_2)$ 和 $f_{all}(C_1, C_2)$ 分别是不相互作用的氨基酸对的频率和所有可能的氨基酸对的频率。
 	\item 根据氨基酸对 $(C_1, C_2)$ 附近氨基酸的分部情况，计算权重 $w(C_i|(C_1, C_2)),\; i = 1,2,\cdots, 7$
 		\begin{align*}
-		 		w_{con}(C_i|(C_1, C_2))&=\frac{f_{con}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{con}(C_i))/f_{all}(C_i)}I_{\{C_i \in N\}}\\
-		 		w_{non}(C_i|(C_1, C_2))&=\frac{f_{non}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{non}(C_i))/f_{all}(C_i)}I_{\{C_i \in N\}}\\
+		 		w_{con}(C_i|(C_1, C_2))&=\frac{f_{con}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{con}(C_i))/f_{all}(C_i)}\chi_{\{C_i \in N\}}\\
+		 		w_{non}(C_i|(C_1, C_2))&=\frac{f_{non}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{non}(C_i))/f_{all}(C_i)}\chi_{\{C_i \in N\}}\\
 		 		w(C_i|(C_1, C_2)) &= w_{con}(C_i|(C_1, C_2))/w_{non}(C_i|(C_1, C_2))		
 		\end{align*}
-		其中 $f_{con}(C_i)$ 为属于类别$C_i$的参与相互作用的氨基酸出现的频率， $N$为$(C_1, C_2)$ 附近氨基酸的类别的集合,在这里，“附近”可以根据具体情况选择的距离范围来决定。$I$为示性函数(characteristic function)。
+		其中 $f_{con}(C_i)$ 为属于类别$C_i$的参与相互作用的氨基酸出现的频率， $N$为$(C_1, C_2)$ 附近氨基酸的类别的集合,在这里，“附近”可以根据具体情况选择的距离范围来决定。$\chi$为示性函数(characteristic function)。
 	\item 计算一个抗原表面的氨基酸$x$可以成为抗原表位的i-Patch分数。
 	$$\text{i-Patch}(x) = \frac{1}{|para|}\sum\limits_{C_i\in N(C_x,C_y)}\sum\limits_{y\in para}w(C_i|(C_x, C_y))P(C_x, C_y)$$
 	其中$para$是给定抗体的抗体表位氨基酸的集合，$C_x$ 和 $C_y$ 分别是 $x$ 和 $y$ 所在的氨基酸类，$N(C_x,C_y)$ 为氨基酸对 $(x, y)$ 附近氨基酸类别的集合。“附近”的界定和 $(3)$ 同。
@@ -288,21 +292,89 @@ Inbal Sela-Culang 等开发了基于给定抗体序列的抗原表位的预测方法：PEASE\cite{}。该
 自然产生的抗体，往往在亲和力(affinity)上有一定的限制\cite{AffinityLimit}。为了获得更好的疗效，在治疗性抗体的生产和设计过程中，往往要涉及到亲和力成熟(affinity maturation)。所谓的亲和力的成熟就是说，在原来抗体的基础上，通过改造CDR上氨基酸的序列，从而使得抗原和抗体之间有更高的亲和力\cite{AffinityMaturation}。传统的实验手段，比如说突变和各种各样的展示技术，可以被用来寻找具有更高亲和力的抗体\cite{PhageDisplay}, 有不少的亲和力(affinity)可以被提高到nM的级别\cite{PhageDisplay1}。但是这些实验的手段，需要很大的工作量，也会持续很长的时间。也有一些通过计算的手段，来指导CDR上氨基酸的序列的改造。这样的方法也比较多，比如通过分子模拟、通过自由能的扰动(free energy perturbation)\cite{EnergyPerturb1},通过 potential-of-mean force(PMF)\cite{EnergyPerturb2}，虽然目前现在这些通过计算提高亲和力的方法效果还不是太理想，但是，这是一片广阔的天地\cite{Insilico1}。首先，计算的方法可以大大提高速度。传统方法几个月才能完成的事情，计算的方法可能几天就可以完成。其次，随着数据量的积累和计算水平的提高，计算的结果必然会越来越准确。通过计算的方法解决亲和力的问题，概括的讲来，大概有两个思路，一个是统计学的角度，一个是从物理化学原理的角度。上面说的分子模拟等方法都是从物理化学的角度，来进行的计算。也可以从统计学的角度来解决这个问题，比如说观察到观察到A和B经常相互作用，而A和C不经常相互作用。如果把C突变成B就很有可能增加分子的亲和力。Lippow等\cite{Lippow}，集中分析氨基酸与氨基酸之间的静电作用，高效的把抗EGFR的治疗性抗体Erbitux 的亲和力提高10倍，达到52pM ； 把抗蛋清溶菌酶的抗体D44.1 的亲和力提高了140倍，达到30pM ；同时他们方法的有效性还在治疗性抗体Avastin 的已知亲和力的突变，以及抗荧光蛋白(fluorescein) 的抗体 4-4-20 的已知亲和力的突变中，得到验证。这个结果是惊人的， 是计算机辅助亲和力成熟的一次成功。但是，这个方法需要抗原和抗体复合物的结构，同时也只分析了一对一的静电相互作用，并没有涉及到多个氨基酸协同作用和其他种类的相互作用力的情况。Sarah Sirin 等\cite{AB-Bind}构建了一个抗原抗体复合物突变数据库，涉及到32个复合物，1101个突变，并且每个突变都有实验手段得到的亲和力。通过比较 dDFIRE, DFIRE, STATIUM, Rosetta, FoldX, Discovery Studio, 在预测亲和力上的表现，Sarah Sirin 等认为，总的来说，目前的预测方法效果都不够好， 实际 $\Delta\Delta G$ (吉布斯自由能的变化)和预测的 $\Delta\Delta G$ 之间的相关系数 $r$ 在 0.16 到 0.45 之间，很难满足实际的需求，但是在作出亲和力是增加还是减小这样的二分类判断时候，这些方法具有一定的意义。在上面的方法中， FoldX 和 Discovery Studio 是效果较好的两个。在上面的所有方法中，STATIUM 使用了统计学的方法，通过计算两个氨基酸之间 $C^\alpha$ 和 $C^\beta$ 之间的距离和夹角的关系，来计算氨基酸之间的 STATIUM potential，进而估计突变对亲和力的影响\cite{STATIUM}。
 
 \section{本论文的主要内容}
-\subsection{数据的提取}
-\subsection{RBFN模型的构建}
-\subsection{RBFN模型的应用}
-\subsection{一个新的RBFN 中心（center）的选取方法}
-\subsection{讨论}
+本论文可以概括为通过对热点的研究，来建立抗原抗体相互作用的模型。中间涉及的内容，从数据的收集，到模型的检验，还有不同模型的比较。可以成如下几点：
+\begin{enumerate}[label=(\arabic*)]
+	\item \textbf{数据的提取和初步分析}。在第一章最后的部分说，多数情况下，抗原抗体的相互作用由几个关键的氨基酸决定，这些关键的氨基酸往往是一些短的相邻的氨基酸。那么如何找出这些氨基酸？这是本论文解决的第一个问题。
+	\item\textbf{RBFN(径向基函数网络) 模型的构建}。找到了相互作用的短的氨基酸序列的相互作用关系后，如何刻画这个关系？本论文首先通过氨基酸替换矩阵(BLOSUM62),定义了短的氨基酸序列对之间的距离，用径向基函数网络对这个关系进行了刻画。然后，对这个模型进行了检验。
+	\item \textbf{RBFN 模型的应用}。建好的模型可以用来做什么？本论文用这个模型做了两件事，一是通过模型来验证抗原表位和抗体表位的不同，二是通过模型来预测突变后，抗原抗体亲和力的变化。
+	\item\textbf{RBFN center 的选取}。在构建 RBFN 模型时候，一个重要的步骤就是选取合适的中心(center)。本论文设计了一个更为高效的选取方法，显著好于目前已知的方法。
+\end{enumerate}
 
 
 
 
 
-\chapter{正文行文}
-\section{文章标题}
-使用文章标题样式, 是居中, 黑体, 一号字.
+\chapter{数据的提取和初步分析}
+\section{数据提取}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{DataExtraction}
+\caption{数据提取流程}
+\label{DataExtraction}
+\end{figure}
+\begin{enumerate}[label=(\arabic*)]
+	\item \textbf{抗原抗体复合物的选取}。抗原抗体符合物通过由 Oxford Protein Informatics Group 维护的网站下载\cite{SAbDab}。下载时候设定复合物的分辨率不小于3\si{\angstrom} 并且抗原的不小于5个氨基酸的长度。一共收集了1624个抗原抗体复合物，并把最近提交的 10\% 的复合物作为 testing set。 
+	\item \textbf{提取所有相互作用的氨基酸对}。这里所有相互作用的氨基酸对，是指在CDR上的所有的氨基酸和抗原上的氨基酸之间所有可能的相互作用。这里涉及到CDR区域的界定和相互作用的定义。
+	\begin{enumerate}
+		\item CDR 区域的定义方法比较多\cite{CDRDefine1}， 它们有一定程度上的差别，但是总体一致。 Andrew C. R. Martin 教授的团队在给出了确定CDR区域不同方法之间的差别，并给出了一些判断准则(www.bioinf.org.uk/abs)。单单从序列上看，轻链上面的CDR 区域的判断规则为：
+		\begin{enumerate}
+			\item 第一个CDR(CDRL1) 大概从第24位开始，长为10-17。
+			\item 第二个CDR(CDRL2) 从CDR1后的第16个氨基酸始，长为7。
+			\item 第三个CDR(CDRL3)从CDR2后的第33个氨基酸始，长为7-11。
+		\end{enumerate}
+为了涵盖可能的CDR区域，CDRL1的位置，其区域应该设定为24-41，同样CDRL2的区域设定为50-64， CDRL3的区域设定为90-108。可以总结为表格\ref{CDRL_Range}：
+\begin{table}[htbp]\centering
+\begin{tabular}{llll}
+\hline\hline
+                    & CDRL1      & CDRL2     & CDRL3 \\
+\hline
+Starting   & Approximately 24       & 16 residues after CDRL1      & 33 residues after CDRL2 \\
+Length       & 10 to 17 residues      & 7 residues       & 7 to 11 residues       \\
+Max-CDRL& 24 to 41       & 50 to 64        & 90 to 108       \\
+\hline
+\end{tabular}
+\caption{轻链上CDR区域的确定}\label{CDRL_Range}
+\end{table}
+上面的定义方式，在包含轻链上所有可能CDR 的同时，也会包含非CDR区域。但是这个对后面数据的分析很小，一则因为抗原抗体的相互作用多数发生在CDR区域和抗体之间，二则当后面抽取最关键的氨基酸时，又进一步的把范围限制在CDR上，所以非CDR区域的氨基酸，即便被包含进去，后面被选来作为数据的可能性也很小。所以，这里宁愿把CDR的范围定大，也不定小。同样的原因，我们可以确定重链上CDR的范围(表\ref{CDRH_Range})。
+\begin{table}[htbp]\centering
+\begin{tabular}{llll}
+\hline\hline
+                    & CDRH1      & CDRH2     & CDRH3 \\
+\hline
+Starting   & Approximately 26       & 15 residues after CDRH1      & 33 residues after CDRH2 \\
+Length       & 10 to 12 residues      & 16 to 19 residues       & 3 to 25 residues       \\
+Max-CDRH& 26 to 38       & 51 to 72        & 100 to 130       \\
+\hline
+\end{tabular}
+\caption{轻链上CDR区域的确定}\label{CDRH_Range}
+\end{table}
+		\item \textbf{相互作用氨基酸对的确定}。如果分别位于CDR 和 抗原上的两个氨基酸，存在距离不大于 4\si{\angstrom} 的原子(氢原子除外)，那么就认为这两个氨基酸相互作用。为了便于这里的陈述和后面进一步的应用，我们定义两个氨基酸间的作用数(contact number)CN:
+		$$\text{CN}(A,B)=\sum\limits_{a\in A}\sum\limits_{b\in B} \chi\{d(a,b) \leq 4\}$$
+			其中A，B 分别表是两个氨基酸，在 $a\in A$ 中， A 表示氨基酸 A 上除氢原子外所有原子的集合；$a\in A$ 做同样解释。 $d(a,b)$ 表示原子 a 和 b 之间的欧式距离，以 \si{\angstrom} 为单位。CDR 上的氨基酸 A 和 抗原上的氨基酸 B 是相互作用的氨基酸对，则是说 $\text{CN}(A, B)>1$ 。
+	\end{enumerate}
+确定了CDR的范围并定义了相互作用的氨基酸对之后，提取所有相互作用的氨基酸对则可以顺利进行。看一个例子。
+\item \textbf{去除重复}。为了避免同一个抗原抗体复合物被反复抽取数据，需要对复合物去重。然而，同一个抗原可以被不同的抗体识别，所以不能从抗原的角度进行性去重。从抗体的结构上可以知道，抗体和抗体之间的差别主要体现在可变区上，更进一步的说，主要体现在CDR区域上，所以，只要两个抗体的CDR区域差别足够大，就可以认定为不同的抗体，也就是，要从CDR区域的相似度上去重。这里，我们把同一个抗体上的轻链和重链分别作为独立的两条链来考虑。设 LA, LB 分别为两条轻链。首先把 LA，LB 链上的三个CDR区域分别拼接起来，分别记为 CDR-LA, CDR-LB，然后进行比较，把打分规则定义为：
+	\begin{enumerate}
+		\item 相同的两个氨基酸得分为1
+		\item 不同的两个氨基酸得分为0
+		\item 空缺(gap)的得分为0
+		\item extended gap 得分为0
+	\end{enumerate}
+上面的规则可以不严格的概括为，计算相同氨基酸的数目。把通过上面的规则得到的分数记为 S(LA, LB)。 然后计算 LA 和 LB 之间的距离 D(LA, LB)。
+$$\text{D(LA, LB)} = 1 - \text{S(LA, LB)}/N$$
+其中$N=\text{min}(Len(\text{CDR-LA}), Len(\text{CDR-LB}))$, $Len$ 表示计算氨基酸序列的长度。 上面的公式可以简单的该概括为，对S(LA, LB) 进行 Normalization, 然后转化为距离。
 
-\section{章标题}
+定义好距离，我们就根据这个距离对不同的轻链进行聚类(hierarchical cluster)， 通过分析在不同截断距离 (cut-off distance) 下的聚类情况来决定去重的截断距离。小面图是分类数目和截断距离之间的关系。
+\vspace{4cm}
+
+从图中可以看出，当截断距离是0.1时，聚类数目的减少速度明显减缓。 根据 elbow method, 0.1是一个比较好的截断距离。
+
+当重链和轻链按照 0.1 的截断距离进行分类后，需要从每个类别中选出一个代表，作为有效数据使用。选取规则定义如下：
+\vspace{4cm}
+
+\item \textbf{组合成相互作用的氨基酸序列}
+\end{enumerate}
+\section{数据分析}
 使用三号字, 黑体, 居中对齐.
 
 \section{节标题}
@@ -633,6 +705,14 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 	
 \bibitem{STATIUM}DeBartolo J, Dutta S, Reich L, Keating AE, Predictive Bcl-2 family binding models rooted in experiment or structure. 
 	\emph{J Mol Biol} (2012), 422:124–144.
+	
+\bibitem{SAbDab}Dunbar,J., Krawczyk, K.,Leem, J.,Baker, T.,Fuchs, A.,Georges,G., Jiye Shi and Deane, C. M. SAbDab: the structural antibody database. 
+	\emph{Nucleic acids research}, (2013), 42, D1140–D1146.
+	
+\bibitem{CDRDefine1}Allazikani B, Lesk A M, Chothia C. Standard conformations for the canonical structures of immunoglobulins.
+	\emph{Journal of Molecular Biology}, (1997), 273(4):927-948.
+	
+
 	
 
 
