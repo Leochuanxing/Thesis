@@ -31,6 +31,10 @@
 \usepackage{graphicx}
 \usepackage{float}
 
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{hhline}
+
 \usepackage{enumitem}
 
 \usepackage{siunitx}
@@ -67,6 +71,25 @@
 \newtheorem{proposition}[definition]{\hspace{2em}命题}
 \newtheorem{corollary}[definition]{\hspace{2em}推论}
 \newtheorem{remark}{\hspace{2em}注}[chapter]
+
+\newcommand{\ver}[1]{
+\begin{turn}{90}
+\parbox{3cm}{\vspace{2mm}
+\centering #1
+\vspace{2mm}
+}
+\end{turn}
+}
+
+\newcommand{\cell}[1]{\parbox{1.5cm}{\vspace{2mm}
+\centering #1
+\vspace{2mm}
+}}
+
+\newcommand{\scell}[1]{\parbox{0.6cm}{\vspace{2mm}
+\centering #1
+\vspace{2mm}
+}}
 %类似地定义其他“题头”. 这里“注”的编号与定义、定理等是分开的
 
 \def\theequation{\arabic{chapter}.\arabic{equation}}
@@ -78,6 +101,7 @@
 \author{刘传省\\学号：17210180030\\专业：计算系统生物学}
 
 \date{}
+
 %%%%%%%%%%%%%%%%%%%导言区设置完毕
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -437,6 +461,146 @@ Match-type          & Core \\
 \end{table}
 \end{enumerate}
 \section{数据的初步分析}
+从抗原抗体符合物中抽取出Core之后，对这次额Core的中氨基酸简单的统计分析就可以得出很多有意思的结论。有些结论已经被以往的研究证实，有些则是全新的，还有些是在原有结论的基础上，有了进一步的发展。
+\begin{enumerate}[label=(\arabic*)]
+	\item \textbf{Core 的分布}
+	
+	我们从上面数据提取的过程，可以察觉到随着抗原氨基酸序列长度或者抗体氨基酸序列长度的增加，可以被抽取的Core的数目越来越少，这也符合一个简单的逻辑事实，那就是如果可以抽取较长的氨基酸序列的Core, 那么就一定可以抽取较短的氨基酸序列的Core(表\ref{Cover_over_MatchType})。
+	\begin{table}[H]
+\renewcommand{\arraystretch}{2}
+\centering
+\begin{tabular}{c|c||ccc}
+\hline
+\multicolumn{2}{c}{}&\multicolumn{3}{c}{Length of Antigen Amino Acids}\\
+\hhline{~~---}
+\multicolumn{2}{c}{}&\cell{1}&\cell{2}&\cell{3}\\
+\hhline{~~===}
+\multirow{3}{*}{\ver{Length of Antibody Amino Acids}}
+&\scell{1}&\cell{1577}&\cell{1432}&\cell{934}\\
+\hhline{~~---}
+&\scell{2}&\cell{1454}&\cell{1316}&\cell{915}\\
+\hhline{~~---}
+&\scell{3}&\cell{1219}&\cell{1130}&\cell{805}\\
+\hline
+\end{tabular}
+\caption{不同 match-type 下 Core 的数目。每行代表不同的抗体氨基酸的长度，每列代表不同的抗原氨基酸的长度。比如，match-type 为（2，1） 时 Core 的数目是1454。}
+\renewcommand{\arraystretch}{1}
+\label{Cover_over_MatchType}
+\end{table}
+为了更为直观的表示 Core 的数目随着氨基酸长度的变化，可以把表\ref{Cover_over_MatchType}的数据画成三维坐标图\ref{F_core_match_t}。
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Core_districution_over_Match_type.eps}
+\caption{Core 的数目按不同 match-type 的分布}
+\label{F_core_match_t}
+\end{figure}
+从图\ref{F_core_match_t} 可以明显的看出，随着氨基酸序列长度的增加，Core 的数目在减少。
+
+过去的研究表明重链上的CDR3区域在抗原抗体识别的过程中往往扮演着比其他的CDR更为重要的角色，有时甚至于决定性的作用，那么重链上的CDR3也应该比其他的CDR抽取更多的Core。
+
+\begin{table}[H]\centering
+\begin{tabular}{ccccc ccccc}
+\hline\hline
+&(1,1)&(1,2)&(1,3)&(2,1)&(2,2)&(2,3)&(3,1)&(3,2)&(3,3) \\
+\hline
+CDRH1&203&189&132&173&149&112&157&152&109\\
+CDRH2&328&261&153&253&213&127&229&191&109\\
+CDRH3&424&454&343&487&490&387&428&418&341\\
+CDRL1&280&198&107&174&137&74&140&115&61\\
+CDRL2&84&59&32&61&44&24&27&23&14\\
+CDRL3&258&271&167&306&283&192&238&231&171\\
+\hline
+\end{tabular}
+\caption{不同 match-type 的 Core 在不同CDR上的分布}\label{Core_CDR}
+\end{table}
+从表\ref{Core_CDR}中的数据也可以看出，在绝对数量上，重链上CDR3占有明显的多数。如果我们把重链和轻链的数据分开，它们的CDR3都占有明显优势。从提取CDR的范围上说，CDR3 比 CDR1 和 CDR2 都要长，尽管本论文认为不是长度造成的，为了严谨，有必要在 Normalize 之后再比较（表\ref{P_value_CDR3_Domi}）。
+\begin{table}[H]\centering
+\resizebox{0.9\textwidth}{10mm}{
+\begin{tabular}{ccccc ccccc}
+\hline\hline
+&(1,1)&(1,2)&(1,3)&(2,1)&(2,2)&(2,3)&(3,1)&(3,2)&(3,3) \\
+\hline
+CDRH3&0.944&0.025&6.14E-5&5.74E-5&3.51E-10&4.84E-14&6.79E-4&5.44E-6&1.49E-11 \\
+CDRL3&0.226&5.41E-8&9.73E-8&1.89E-15&0&0&6.3E-15&0&0\\
+\hline
+\end{tabular}
+}
+\caption{表中列出的是对不同的 match-type 情况下做假设检验，得到的P值。对于给定的 match-type 和抗体链（轻链或者重链）， $H_0:$ CDR3 上 Core 的密度大于 其他两个CDR。这里密度，是用Core 的数目除以 CDR 的长度。 }
+\label{P_value_CDR3_Domi}
+\end{table}
+从表\ref{P_value_CDR3_Domi}可以看出，除了 match-type 为 （1，1）的情况外，其他 match-type 下， CDR3 上 Core 的密度明显大于其他 CDR。这从另外一个角度验证了 CDR3 在抗原抗体作用过程中的重要性。
+\item \textbf{Core 中氨基酸的分布}
+如果观察所有 Core 中抗原氨基酸和抗体氨基酸的分布（图\ref{AA_distr_all}），会发现有明显差异。
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{aa_distribution_overall.eps}
+\caption{抗原氨基酸和抗体氨基酸在所有Core中的分布情况}
+\label{AA_distr_all}
+\end{figure}
+从图\ref{AA_distr_all}中可以发现，TYR 在 Core 中抗体氨基酸的分布明显偏高，所占比例竟然超出了20\%！对于 match-type 为（1，1）的 Core 来讲，频率最高的前8个分别为 ([TYR], [ARG]), ([TYR], [LYS]), ([TYR], [HIS]), ([TYR], [ASN]), ([TYR], [GLU]), ([TYR], [PRO]), ([TYR], [ASP], ([TYR], [GLN])， 在抗体氨基酸竟然全部是TYR！如果把不同 match-type 下的抗体氨基酸的分布分别来考虑，从表\ref{Top_5_Antibody}可以看出，在任何 match-type 的情况下， TYR 的比例在 Core 的抗体氨基酸中分布比例都是最高的。文献\cite{TYR_important1, TYR_important2} 对 TYR 的重要性也有过描述。其中一个解释，是说 TYR 的侧链有一个羟基苯，苯环的疏水作用，使得羟基形成的氢键非常牢固。
+
+\begin{table}[H]\centering
+\begin{tabular}{ccccc c}
+\hline\hline
+Match-type&\multicolumn{5}{c}{Top five most frequent antibody amino acids}\\
+\hline
+(1,1)&(TYR, 0.361)&(TRP, 0.120)&(ARG, 0.091)&(SER, 0.073)&(ASN, 0.068)\\
+(1,2)& (TYR, 0.357)& (TRP, 0.120)& (ASN, 0.074)& (ARG, 0.071)& (SER, 0.067)\\
+(1,3)& (TYR, 0.336)& (TRP, 0.108)& (ASN, 0.096)&(ARG, 0.077)&(SER, 0.07)\\
+(2,1)& (TYR, 0.208)& (SER, 0.142)&(GLY, 0.102)&(ASN, 0.079)&(THR, 0.070)\\
+(2,2)& (TYR, 0.237)&(SER, 0.123)&(GLY, 0.100)&(ASN, 0.071)&(THR, 0.066)\\
+(2,3)& (TYR, 0.234)& (SER, 0.124)& (ASN, 0.090)& (GLY, 0.090)& (TRP, 0.060)\\
+(3,1)& (TYR, 0.176)& (SER, 0.138)& (GLY, 0.115)& (ASN, 0.074)& (THR, 0.074)\\
+(3,2)& (TYR, 0.190)& (SER, 0.136)& (GLY, 0.112)& (THR, 0.073)& (ASP, 0.070)\\
+(3,3)& (TYR, 0.193)& (SER, 0.128)& (GLY, 0.111)& (ASN, 0.075)& (THR, 0.065)\\
+\hline
+\end{tabular}
+\caption{不同 match-type 下，前五个分布频率最高的抗体氨基酸}
+\label{Top_5_Antibody}
+\end{table}
+\end{enumerate}
+如果仔细观察表格\ref{Top_5_Antibody}，我们发现当抗体氨基酸的序列的长度从1变成2或者3时候，前三个频率最高的氨基酸由 TYR, TRP, ASN/ARG 变成 TYR, SER, GLY(match-type 是 （2，3） 时候，GLY处于第四位，但是和第三位的 GLN 在比例上很近) 。GLY 和 SER 的侧链很小，方便调节局部的构象，所以可以推断 GLY 和 SER 协同 TYR 参与对抗原表位的识别。Sara Birtalan 等研究发现，只用 TYR, SER 和 GLY 这三种氨基酸就可以造出亲和力近于pM的抗体\cite{Tyr_Ser_Gly}。这个结论在表\ref{Top_5_Antibody}中得到充分的支持。Frederic A. Fellouse 等用 TYR, SER, GLY 和 ASP 四种氨基酸构建抗体 library, 成功筛选出抗 hVEGF 的特异性抗体\cite{Four_aa_Lib}，并指出了TYR的主导作用\cite{Four_Tyr_Dom}。表\ref{Top_5_Antibody} 也为这些结论提供了充分的支持。在为已有的结论提供支持的同时，也可以指导新的抗体 Library 的建立。根据上面的表格，如果想用四个氨基酸来建设抗体 Library， 显然最好的选择是 TYR, SER, GLY 和 ASN， 而不是Frederic A. Fellouse 等使用的TYR, SER, GLY 和 ASP。
+
+表\ref{Top_5_Antigen}给出了 Core 中抗原表位氨基酸在不同 match-type 下的分布。 可以看出来，在所有的 match-type 情况下，ARG 和 ASP 的出现频率一直位于 Core 中抗原氨基酸的前5。而且当抗原氨基酸的长度由1变成2或3的时候，GLY忽然从前5名之外变成出现频率最高的氨基酸（在match-type(2,3)下，GLY 位于第二的位置，但是和出现频率最高的 ASN 相差只有0.001）。除了 GLY 之外，其他排在前5的氨基酸，都是亲水，而且多由比较长的侧链。由此可以说，在 GLY 的调节下，具有比较大的亲水的氨基酸往往可以称为抗原表位，特别是 ARG 和 ASP。
+\begin{table}[H]\centering
+\begin{tabular}{ccccc c}
+\hline\hline
+Match-type&\multicolumn{5}{c}{Top five most frequent antigen amino acids}\\
+\hline
+(1,1)& (ARG, 0.139)& (ASP, 0.091)& (LYS, 0.083)& (GLU, 0.083)& (ASN, 0.078)\\
+(1,2)& (ARG, 0.131)& (ASP, 0.094)& (GLU, 0.094)& (ASN, 0.087)& (LYS, 0.085)\\
+(1,3)& (ARG, 0.130)& (GLU, 0.092)& (ASP, 0.092)& (LYS, 0.089)& (GLN, 0.084)\\
+(2,1)& (GLY, 0.097)& (ASP, 0.076)& (ASN, 0.073)& (ARG, 0.070)& (LYS, 0.069)\\
+(2,2)& (GLY, 0.088)& (ASN, 0.081)& (ASP, 0.076)& (ARG, 0.071)& (LYS, 0.069)\\
+(2,3)& (ASN, 0.080)& (GLY, 0.079)& (ASP, 0.075)& (LYS, 0.074)& (GLU, 0.069)\\
+(3,1)& (GLY, 0.108)& (ASN, 0.082)& (SER, 0.067)& (THR, 0.065)& (ALA, 0.064)\\
+(3,2)& (GLY, 0.103)& (ASN, 0.084)& (ASP, 0.068)& (THR, 0.068)& (SER, 0.067)\\
+(3,3)& (GLY, 0.105)& (ASN, 0.083)& (SER, 0.070)& (ASP, 0.067)& (THR, 0.066)\\
+\hline
+\end{tabular}
+\caption{不同 match-type 下，前五个分布频率最高的抗原氨基酸}
+\label{Top_5_Antigen}
+\end{table}
+为了更进一步说明 Core 中抗原氨基酸的分布情况，本论文把 Core 中频率最高的5个抗原氨基酸 和频率最低的5个氨基酸，和 它们在所有抗原氨基酸中的分布情况做了对比，看看它们这些分布的富集和稀释是不是显著（表\ref{Top_5_Antigen_Q}）。
+\begin{table}[H]\centering
+\begin{tabular}{ccccc c}
+\hline\hline
+Match-type&\multicolumn{5}{c}{Top 5 enriched residues in the Core Antigen residues}\\
+\hline
+(1,1)& (ARG, 0.0E+00)& (HIS, 0.0E+00)& (TRP, 0.0E+00)& (ASP, 1.6E-12)& (GLN, 1.4E-07)\\
+(2,1)& (ARG, 0.0E+00)& (TRP, 6.8E-14)& (ASP, 3.8E-13)& (GLU, 3.3E-09)& (HIS, 5.3E-09)\\
+(3,1)& (ARG, 0.0E+00)& (GLN, 2.3E-13)& (TRP, 5.7E-12)& (ASP, 2.2E-10)& (GLU, 3.0E-07)\\
+(1,2)& (ARG, 1.5E-09)& (ASP, 7.6E-09)& (GLY, 6.1E-08)& (HIS, 3.4E-05)& (ASN, 4.8E-04) \\
+(2,2)& (ARG, 1.6E-09)& (ASP, 3.4E-08)& (ASN, 4.3E-07)& (GLY, 7.9E-04)& (HIS, 1.0E-03) \\
+(3,2)& (ARG, 1.6E-06)& (ASP, 1.2E-06)& (ASN, 9.0E-06)& (TRP, 9.6E-06)& (GLN, 2.7E-04) \\
+(1,3)& (GLY, 4.9E-14)& (ASN, 7.0E-08)& (ARG, 5.3E-05)& (ASP, 4.7E-03)& (PRO, 1.5E-02) \\
+(2,3)& (GLY, 1.6E-10)& (ASN, 6.7E-09)& (ASP, 1.9E-04)& (ARG, 1.1E-03)& (HIS, 2.6E-02)\\
+(3,3)& (GLY, 2.0E-10)& (ASN, 2.1E-07)& (ASP, 1.3E-03)& (ARG, 5.4E-03)& (LYS, 4.1E-01)\\
+\hline
+\end{tabular}
+\caption{和所有抗原氨基酸相比，富集最为显著的抗原氨基酸（按照q value 排序）}
+\label{Top_5_Antigen_Q}
+\end{table}
 
 \chapter{RBFN 的构建}
 
@@ -768,6 +932,20 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 \bibitem{CDRDefine1}Allazikani B, Lesk A M, Chothia C. Standard conformations for the canonical structures of immunoglobulins.
 	\emph{Journal of Molecular Biology}, (1997), 273(4):927-948.
 	
+\bibitem{TYR_important1} Fellouse, F. A., Barthelemy, P. A., Kelley, R. F., and Sidhu, S. S. Tyrosine plays a dominant functional role in the paratope of a synthetic antibody derived from a four amino acid code. 
+	\emph{Journal of molecular biology},  (2006), 357, 100–114. 
+	
+\bibitem{TYR_important2} Tsumoto, K., Ogasahara, K., Ueda, Y., Watanabe, K., Yutani, K., and Kumagai, I. Role of Tyr residues in the contact region of antilysozyme monoclonal antibody HyHEL10 for antigen binding. 
+	\emph{Journal of Biological Chemistry},  (1995), 270, 18551–18557.
+	
+\bibitem{Tyr_Ser_Gly}Sara Birtalan, Yingnan Zhang, Frederic A. Fellouse, The Intrinsic Contributions of Tyrosine, Serine, Glycine and Arginine to the Affinity and Specificity of Antibodies. 
+	\emph{Journal of Molecular Biology}, (2008), 377(5):0-1528.
+	
+\bibitem{Four_aa_Lib}Fellouse, F. A . Synthetic antibodies from a four-amino-acid code: A dominant role for tyrosine in antigen recognition. 
+	\emph{Proceedings of the National Academy of Sciences}, (2004), 101(34):12467-12472.
+	
+\bibitem{Four_Tyr_Dom}Fellouse, Frederic A. , et al. Tyrosine Plays a Dominant Functional Role in the Paratope of a Synthetic Antibody Derived from a Four Amino Acid Code.
+	\emph{Journal of Molecular Biology}, (2006), 357(1):0-114.
 
 	
 
