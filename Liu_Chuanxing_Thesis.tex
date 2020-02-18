@@ -349,7 +349,11 @@ Max-CDRH& 26 to 38       & 51 to 72        & 100 to 130       \\
 \caption{轻链上CDR区域的确定}\label{CDRH_Range}
 \end{table}
 		\item \textbf{相互作用氨基酸对的确定}。如果分别位于CDR 和 抗原上的两个氨基酸，存在距离不大于 4\si{\angstrom} 的原子(氢原子除外)，那么就认为这两个氨基酸相互作用。为了便于这里的陈述和后面进一步的应用，我们定义两个氨基酸间的作用数(contact number)CN:
-		$$\text{CN}(A,B)=\sum\limits_{a\in A}\sum\limits_{b\in B} \chi\{d(a,b) \leq 4\}$$
+	\begin{equation}
+	\text{CN}(A,B)=\sum\limits_{a\in A}\sum\limits_{b\in B} \chi\{d(a,b) \leq 4\}
+	\label{CN}
+    \end{equation}			
+%		$$\text{CN}(A,B)=\sum\limits_{a\in A}\sum\limits_{b\in B} \chi\{d(a,b) \leq 4\}$$
 			其中A，B 分别表是两个氨基酸，在 $a\in A$ 中， A 表示氨基酸 A 上除氢原子外所有原子的集合；$a\in A$ 做同样解释。 $d(a,b)$ 表示原子 a 和 b 之间的欧式距离，以 \si{\angstrom} 为单位。CDR 上的氨基酸 A 和 抗原上的氨基酸 B 是相互作用的氨基酸对，则是说 $\text{CN}(A, B)>1$ 。
 	\end{enumerate}
 确定了CDR的范围并定义了相互作用的氨基酸对之后，提取所有相互作用的氨基酸对则可以顺利进行。看一个例子。
@@ -364,15 +368,60 @@ Max-CDRH& 26 to 38       & 51 to 72        & 100 to 130       \\
 $$\text{D(LA, LB)} = 1 - \text{S(LA, LB)}/N$$
 其中$N=\text{min}(Len(\text{CDR-LA}), Len(\text{CDR-LB}))$, $Len$ 表示计算氨基酸序列的长度。 上面的公式可以简单的该概括为，对S(LA, LB) 进行 Normalization, 然后转化为距离。
 
-定义好距离，我们就根据这个距离对不同的轻链进行聚类(hierarchical cluster)， 通过分析在不同截断距离 (cut-off distance) 下的聚类情况来决定去重的截断距离。小面图是分类数目和截断距离之间的关系。
-\vspace{4cm}
+定义好距离，我们就根据这个距离对不同的轻链进行聚类(hierarchical cluster)， 通过分析在不同截断距离 (cut-off distance) 下的聚类情况来决定去重的截断距离。图\ref{ElbowMethod}是分类数目和截断距离之间的关系。
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{ElbowMethod.eps}
+\caption{截断距离和聚类数之间的关系。A为 testing set 中重链的聚类情况，B 为 testing set 中轻链的聚类情况， C 为 training set 中重链的聚类情况， D 为 training set 中轻链的聚类情况。}
+\label{ElbowMethod}
+\end{figure}
 
 从图中可以看出，当截断距离是0.1时，聚类数目的减少速度明显减缓。 根据 elbow method, 0.1是一个比较好的截断距离。
 
 当重链和轻链按照 0.1 的截断距离进行分类后，需要从每个类别中选出一个代表，作为有效数据使用。选取规则定义如下：
-\vspace{4cm}
-
+	$$\text{T}(C)=\sum\limits_{A\in C}\sum\limits_{B\in Ag}\text{CN}(A,B)$$
+其中 C 为一个轻链或者重链，在 $A\in C$ 中 C 表示轻链或者重链CDR上氨基酸的集合， CN 的定义见公式(\ref{CN})。 在每个分类中选取代表性的重链或者轻链的时候，选择$\text{T}(C)$ 最大的一个。表格\ref{All_Contact_aa} 给出了被选中的一个重链和其对应的抗原之间的所有相互作用的氨基酸对。
+\begin{table}[H]\centering
+\begin{tabular}{cccc}
+\hline\hline
+ 标记        & 抗体氨基酸位置      & 抗原氨基酸位置     & CN \\
+\hline
+h1HA &30 & 16 &7\\
+h1HA &30& 14& 3\\
+h1HA&30&17&7 \\
+h2HA&52&16&9\\
+h2HA& 52&15&2\\
+h3HA& 99&196&1\\
+h3HA& 99& 198&4\\
+h3HA&100&196&3\\
+h3HA&101&196&8\\
+h3HA&101&15&4\\
+h3HA&101&13&1\\
+h3HA&101&14&3\\
+h3HA&101&190& 3\\
+h3HA&101&198&6\\
+h3HA&102&196&5\\
+h3HA&102&197&3\\
+\hline
+\end{tabular}
+\caption{来自于抗原抗体复合物 1adq(一个PDB编号) 重链和其对应抗原之间所有坑能相互作用的氨基酸。上面使用的是本论文涉及的四坐标体系(four coordinate system)，这四个坐标分别是 \textbf{标记}，\textbf{抗体氨基酸位置}，\textbf{抗原氨基酸位置} 和 \textbf{CN}。标记，给出抗体链的名称，抗原链的名称和CDR序号；CN如公式(\ref{CN})定义。(h1HA, 30, 16, 7)表示在复合物 1adq 的重链 H 上的 30 位氨基酸和抗原链 A 上 16 位氨基酸相互作用，请 CN 值为 7，并且这个相互作用位于重链的第一个CDR上。}
+\label{All_Contact_aa}
+\end{table}
 \item \textbf{组合成相互作用的氨基酸序列}
+既然最终的目的是要选出其关键作用的短的相互作用的氨基酸序列，那么就要把表\ref{All_Contact_aa} 中所有可能相互作用的氨基酸按照不同的长度连连接起来。先来定义一个概念： 匹配类型(match-type)。所谓匹配类型就是相互作用的连续的抗体氨基酸的长度和相互作用的连续的抗原氨基酸的长度所组成的一个二维坐标。比如 (2,3) 就表示 2 个连续的抗体氨基酸和 3 个连续的抗原氨基酸相互作用。在本论文中匹配类型的取值范围是$\{(i,j):i,j=1,2,3\}$。对表\ref{All_Contact_aa}中的数据进行组合：
+	\begin{enumerate}
+		\item 匹配类型为(1,1)的有: ([30],[16],7), ([30], [14],3), ([30], [17], 7), ([52], [16], 9), ([52], [15], 2), ([99], [196], 1), ([99], [198], 4), ([100], [196], 3), ([101], [196], 8), ([101], [15], 4), ([101], [13], 1), ([101], [14], 3), ([101], [190], 3), ([101], [198], 6), ([102], [196], 5), ([102], [197], 3)。这里最后一个坐标为CN值，方便下一步Core的选取。([30],[16],7) 表示抗体上30位的氨基酸和抗原上16位的氨基酸相互作用，其CN值为7。
+		\item 匹配类型为(1,2)的有：([30], [16,17], 14), ([52], [15, 16], 11), ([101], [13, 14], 4), ([101], [14, 15], 7), ([102], [196, 197], 8)。
+		\item 匹配类型为(1,3)
+		\item 匹配类型为(2,1)
+		\item 匹配类型为(2,2)
+		\item 匹配类型为(2,3)
+		\item 匹配类型为(3,1)
+		\item 匹配类型为(3,2)
+		\item 匹配类型为(3,3)
+	\end{enumerate}
+\item \textbf{选出 core}
+通过计算的方法找关键的相互作用的氨基酸方法比较多，有的从物理化学的角度进行计算，有的计算接触氨基酸之间接触面积的大小。本论文通过计算CN的大小来判断一个氨基酸是不是起着关键作用。
 \end{enumerate}
 \section{数据分析}
 使用三号字, 黑体, 居中对齐.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  18 FEB 2020 00:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  18 FEB 2020 08:17
 entering extended mode
 **./Liu_Chuanxing_Thesis.tex
 (Liu_Chuanxing_Thesis.tex
@@ -1429,65 +1429,86 @@ Overfull \hbox (7.72018pt too wide) in paragraph at lines 340--349
 
 [15
 
- <./DataExtraction-eps-converted-to.pdf>] [16] [17] [18]
+ <./DataExtraction-eps-converted-to.pdf>] [16]
+Package epstopdf Info: Source file: <ElbowMethod.eps>
+(epstopdf)                    date: 2020-02-18 06:40:04
+(epstopdf)                    size: 2489066 bytes
+(epstopdf)             Output file: <ElbowMethod-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-18 06:47:25
+(epstopdf)                    size: 76562 bytes
+(epstopdf)             Command: <epstopdf --outfile=ElbowMethod-eps-converted-t
+o.pdf ElbowMethod.eps>
+(epstopdf)             \includegraphics on input line 374.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./ElbowMethod-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<ElbowMethod-eps-converted-to.pdf, id=562, 794.97pt x 614.295pt>
+File: ElbowMethod-eps-converted-to.pdf Graphic file (type pdf)
+<use ElbowMethod-eps-converted-to.pdf>
+Package pdftex.def Info: ElbowMethod-eps-converted-to.pdf  used on input line 3
+74.
+(pdftex.def)             Requested size: 317.98236pt x 245.71364pt.
+[17 <./ElbowMethod-eps-converted-to.pdf>] [18] [19] [20]
 第三章
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-415.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 415.
+464.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 464.
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbackslash' on input line 415.
+(Font)              for symbol `textbackslash' on input line 464.
 
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 423.
+(amsmath)                 on input line 472.
 
-[19
+[21
 
 ]
 LaTeX Font Info:    Trying to load font information for C19+zhfs on input line 
-446.
+495.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhfs.fd
 "
 File: c19zhfs.fd 2009/09/23 4.8.2
-) [20]
+) [22]
 第四章
-[21
+[23
 
 ]
 第五章
 LaTeX Font Info:    Trying to load font information for C19+zhkai on input line
- 494.
+ 543.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhkai.f
 d"
 File: c19zhkai.fd 2009/09/23 4.8.2
-) [22
+) [24
 
 ]
 第六章
-[23
+[25
 
-] [24
+] [26
 
-]<<c1929.cmap>><<c1930.cmap>> [25
+]<<c1929.cmap>><<c1930.cmap>> [27
 
-] [26] [27pdfTeX warning (ext4): destination with the same identifier (name{cit
+] [28] [29pdfTeX warning (ext4): destination with the same identifier (name{cit
 e.EpiPred}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.690 	
+l.739 	
        ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 741.
- [28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 741.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 790.
+ [30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 790.
  (Liu_Chuanxing_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 741.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 741.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 790.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 790.
 Package rerunfilecheck Info: File `Liu_Chuanxing_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A5450BCA06F9D176AFEE402D5EAC0CD5;1865.
 
@@ -1500,13 +1521,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 741.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 790.
  ) 
 Here is how much of TeX's memory you used:
- 29411 strings out of 492453
- 539562 string characters out of 3121009
- 675799 words of memory out of 3000000
- 32933 multiletter control sequences out of 15000+200000
+ 29447 strings out of 492453
+ 540132 string characters out of 3121009
+ 676496 words of memory out of 3000000
+ 32953 multiletter control sequences out of 15000+200000
  604654 words of font info for 293 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,11n,67p,2626b,1060s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1568,9 +1589,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/leo/AppData/Local
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Us
 ers/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.
 pfb>
-Output written on Liu_Chuanxing_Thesis.pdf (30 pages, 4515678 bytes).
+Output written on Liu_Chuanxing_Thesis.pdf (32 pages, 4602546 bytes).
 PDF statistics:
- 1090 PDF objects out of 1200 (max. 8388607)
- 182 named destinations out of 1000 (max. 500000)
- 346 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1130 PDF objects out of 1200 (max. 8388607)
+ 197 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
