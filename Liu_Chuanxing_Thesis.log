@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  18 FEB 2020 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  20 FEB 2020 17:41
 entering extended mode
 **./Liu_Chuanxing_Thesis.tex
 (Liu_Chuanxing_Thesis.tex
@@ -1143,8 +1143,8 @@ File: c19rm.fd 2019/05/29 v2.4.16 Chinese font definition (CTEX)
 ap>><<c1963.cmap>><<c1960.cmap>><<c1946.cmap>><<c1937.cmap>><<c1947.cmap>><<c19
 57.cmap>><<c1959.cmap>><<c1944.cmap>><<c1965.cmap>><<c1962.cmap>><<c1953.cmap>>
 <<c1943.cmap>><<c1948.cmap>><<c1958.cmap>><<c1964.cmap>><<c1954.cmap>><<c1941.c
-map>><<c1955.cmap>><<c1938.cmap>><<c1945.cmap>><<c1942.cmap>><<c1956.cmap>><<c1
-952.cmap>>)
+map>><<c1955.cmap>><<c1938.cmap>><<c1945.cmap>><<c1956.cmap>><<c1936.cmap>><<c1
+942.cmap>>)
 \tf@toc=\write4
 \openout4 = `Liu_Chuanxing_Thesis.toc'.
 
@@ -1163,14 +1163,14 @@ LaTeX Font Info:    Trying to load font information for C19+zhhei on input line
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhhei.f
 d"
 File: c19zhhei.fd 2009/09/23 4.8.2
-)<<c1936.cmap>><<c1939.cmap>><<c1926.cmap>>
+)<<c1939.cmap>><<c1926.cmap>>
 Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
 quanjiao) on input line 129.
  [0
 
 ]
 µÚÒ»ÕÂ
-<<c1950.cmap>><<c1925.cmap>>
+<<c1950.cmap>><<c1925.cmap>><<c1952.cmap>>
 Package epstopdf Info: Source file: <CellImmune.eps>
 (epstopdf)                    date: 2020-02-10 20:55:42
 (epstopdf)                    size: 2969166 bytes
@@ -1185,7 +1185,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./CellImmune-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<CellImmune-eps-converted-to.pdf, id=193, 794.97pt x 614.295pt>
+<CellImmune-eps-converted-to.pdf, id=192, 794.97pt x 614.295pt>
 File: CellImmune-eps-converted-to.pdf Graphic file (type pdf)
 <use CellImmune-eps-converted-to.pdf>
 Package pdftex.def Info: CellImmune-eps-converted-to.pdf  used on input line 15
@@ -1205,7 +1205,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./SerumImmune-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<SerumImmune-eps-converted-to.pdf, id=195, 794.97pt x 614.295pt>
+<SerumImmune-eps-converted-to.pdf, id=194, 794.97pt x 614.295pt>
 File: SerumImmune-eps-converted-to.pdf Graphic file (type pdf)
 <use SerumImmune-eps-converted-to.pdf>
 Package pdftex.def Info: SerumImmune-eps-converted-to.pdf  used on input line 1
@@ -1228,7 +1228,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./AntibodySchematic-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<AntibodySchematic-eps-converted-to.pdf, id=222, 794.97pt x 614.295pt>
+<AntibodySchematic-eps-converted-to.pdf, id=220, 794.97pt x 614.295pt>
 File: AntibodySchematic-eps-converted-to.pdf Graphic file (type pdf)
 <use AntibodySchematic-eps-converted-to.pdf>
 Package pdftex.def Info: AntibodySchematic-eps-converted-to.pdf  used on input 
@@ -1264,7 +1264,7 @@ rm/m/n/12.045/40 ½ \C19/rm/m/n/12.045/53 « \C19/rm/m/n/12.045/64 Ì \C19/rm/m/n/
 
 [2 <./SerumImmune-eps-converted-to.pdf> <./AntibodySchematic-eps-converted-to.p
 df>]
-<Vaccine.png, id=262, 798.985pt x 389.455pt>
+<Vaccine.png, id=260, 798.985pt x 389.455pt>
 File: Vaccine.png Graphic file (type png)
 <use Vaccine.png>
 Package pdftex.def Info: Vaccine.png  used on input line 181.
@@ -1298,14 +1298,14 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./MonoclonalAntibody-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<MonoclonalAntibody-eps-converted-to.pdf, id=276, 794.97pt x 614.295pt>
+<MonoclonalAntibody-eps-converted-to.pdf, id=274, 794.97pt x 614.295pt>
 File: MonoclonalAntibody-eps-converted-to.pdf Graphic file (type pdf)
 <use MonoclonalAntibody-eps-converted-to.pdf>
 Package pdftex.def Info: MonoclonalAntibody-eps-converted-to.pdf  used on input
  line 192.
 (pdftex.def)             Requested size: 397.48402pt x 307.14674pt.
 [4 <./MonoclonalAntibody-eps-converted-to.pdf>]<<c1980.cmap>>
-<ConformationalEpitope.png, id=322, 1213.53375pt x 553.06625pt>
+<ConformationalEpitope.png, id=320, 1213.53375pt x 553.06625pt>
 File: ConformationalEpitope.png Graphic file (type png)
 <use ConformationalEpitope.png>
 Package pdftex.def Info: ConformationalEpitope.png  used on input line 209.
@@ -1390,7 +1390,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./BeparFlowChart-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<BeparFlowChart-eps-converted-to.pdf, id=416, 359.3425pt x 537.00626pt>
+<BeparFlowChart-eps-converted-to.pdf, id=414, 359.3425pt x 537.00626pt>
 File: BeparFlowChart-eps-converted-to.pdf Graphic file (type pdf)
 <use BeparFlowChart-eps-converted-to.pdf>
 Package pdftex.def Info: BeparFlowChart-eps-converted-to.pdf  used on input lin
@@ -1400,7 +1400,7 @@ e 269.
 
 LaTeX Warning: Citation `HotSpotComp' on page 12 undefined on input line 304.
 
-<HotSpot.png, id=466, 712.6625pt x 313.17pt>
+<HotSpot.png, id=464, 712.6625pt x 313.17pt>
 File: HotSpot.png Graphic file (type png)
 <use HotSpot.png>
 Package pdftex.def Info: HotSpot.png  used on input line 310.
@@ -1436,7 +1436,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./DataExtraction-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<DataExtraction-eps-converted-to.pdf, id=516, 719.68875pt x 82.3075pt>
+<DataExtraction-eps-converted-to.pdf, id=515, 719.68875pt x 82.3075pt>
 File: DataExtraction-eps-converted-to.pdf Graphic file (type pdf)
 <use DataExtraction-eps-converted-to.pdf>
 Package pdftex.def Info: DataExtraction-eps-converted-to.pdf  used on input lin
@@ -1481,7 +1481,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./ElbowMethod-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<ElbowMethod-eps-converted-to.pdf, id=562, 794.97pt x 614.295pt>
+<ElbowMethod-eps-converted-to.pdf, id=561, 794.97pt x 614.295pt>
 File: ElbowMethod-eps-converted-to.pdf Graphic file (type pdf)
 <use ElbowMethod-eps-converted-to.pdf>
 Package pdftex.def Info: ElbowMethod-eps-converted-to.pdf  used on input line 3
@@ -1504,7 +1504,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./Core_districution_over_Match_type-eps-converte
 d-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
-<Core_districution_over_Match_type-eps-converted-to.pdf, id=613, 722.7pt x 433.
+<Core_districution_over_Match_type-eps-converted-to.pdf, id=612, 722.7pt x 433.
 62pt>
 File: Core_districution_over_Match_type-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1528,7 +1528,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./aa_distribution_overall-eps-converted-to.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<aa_distribution_overall-eps-converted-to.pdf, id=666, 1084.05pt x 433.62pt>
+<aa_distribution_overall-eps-converted-to.pdf, id=665, 1084.05pt x 433.62pt>
 File: aa_distribution_overall-eps-converted-to.pdf Graphic file (type pdf)
 <use aa_distribution_overall-eps-converted-to.pdf>
 Package pdftex.def Info: aa_distribution_overall-eps-converted-to.pdf  used on 
@@ -1539,79 +1539,151 @@ Overfull \hbox (23.75717pt too wide) in paragraph at lines 543--558
  [][] 
  []
 
-[22 <./aa_distribution_overall-eps-converted-to.pdf>]
-Overfull \hbox (24.40823pt too wide) in paragraph at lines 566--581
- [][] 
- []
+[22 <./aa_distribution_overall-eps-converted-to.pdf>] [23]
 
-[23]
-Overfull \hbox (92.95517pt too wide) in paragraph at lines 586--601
- [][] 
- []
+LaTeX Warning: Reference `Top_5_Antigen_Q, Bottom_5_Antigen_Q' on page 24 undef
+ined on input line 586.
 
 [24]
+Package epstopdf Info: Source file: <The_Middle_aa.eps>
+(epstopdf)                    date: 2020-02-19 12:40:10
+(epstopdf)                    size: 41825 bytes
+(epstopdf)             Output file: <The_Middle_aa-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-19 12:41:32
+(epstopdf)                    size: 18305 bytes
+(epstopdf)             Command: <epstopdf --outfile=The_Middle_aa-eps-converted
+-to.pdf The_Middle_aa.eps>
+(epstopdf)             \includegraphics on input line 633.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./The_Middle_aa-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<The_Middle_aa-eps-converted-to.pdf, id=757, 1084.05pt x 433.62pt>
+File: The_Middle_aa-eps-converted-to.pdf Graphic file (type pdf)
+<use The_Middle_aa-eps-converted-to.pdf>
+Package pdftex.def Info: The_Middle_aa-eps-converted-to.pdf  used on input line
+ 633.
+(pdftex.def)             Requested size: 433.61232pt x 173.44492pt.
+[25 <./The_Middle_aa-eps-converted-to.pdf>]
 µÚÈýÕÂ
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-635.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 635.
+[26
 
-LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbackslash' on input line 635.
+] [27]
+Package epstopdf Info: Source file: <Coverage_Center.eps>
+(epstopdf)                    date: 2020-02-20 10:29:24
+(epstopdf)                    size: 2155630 bytes
+(epstopdf)             Output file: <Coverage_Center-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-20 10:35:36
+(epstopdf)                    size: 24680 bytes
+(epstopdf)             Command: <epstopdf --outfile=Coverage_Center-eps-convert
+ed-to.pdf Coverage_Center.eps>
+(epstopdf)             \includegraphics on input line 683.
+Package epstopdf Info: Output file is already uptodate.
 
-[25
 
-]
+pdfTeX warning: pdflatex (file ./Coverage_Center-eps-converted-to.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Coverage_Center-eps-converted-to.pdf, id=841, 338.26375pt x 480.79625pt>
+File: Coverage_Center-eps-converted-to.pdf Graphic file (type pdf)
+<use Coverage_Center-eps-converted-to.pdf>
+Package pdftex.def Info: Coverage_Center-eps-converted-to.pdf  used on input li
+ne 683.
+(pdftex.def)             Requested size: 169.13145pt x 240.39752pt.
+[28 <./Coverage_Center-eps-converted-to.pdf>] [29]
+Package epstopdf Info: Source file: <Discrimination.eps>
+(epstopdf)                    date: 2020-02-20 16:46:06
+(epstopdf)                    size: 2993618 bytes
+(epstopdf)             Output file: <Discrimination-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-20 17:10:18
+(epstopdf)                    size: 108928 bytes
+(epstopdf)             Command: <epstopdf --outfile=Discrimination-eps-converte
+d-to.pdf Discrimination.eps>
+(epstopdf)             \includegraphics on input line 745.
+Package epstopdf Info: Output file is already uptodate.
 
-Package amsmath Warning: Foreign command \over;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 643.
 
-LaTeX Font Info:    Trying to load font information for C19+zhfs on input line 
-666.
-("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhfs.fd
-"
-File: c19zhfs.fd 2009/09/23 4.8.2
-) [26]
+pdfTeX warning: pdflatex (file ./Discrimination-eps-converted-to.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<Discrimination-eps-converted-to.pdf, id=878, 504.88625pt x 511.9125pt>
+File: Discrimination-eps-converted-to.pdf Graphic file (type pdf)
+<use Discrimination-eps-converted-to.pdf>
+Package pdftex.def Info: Discrimination-eps-converted-to.pdf  used on input lin
+e 745.
+(pdftex.def)             Requested size: 403.90953pt x 409.53056pt.
+[30 <./Discrimination-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Integrated_Discriminate.eps>
+(epstopdf)                    date: 2020-02-20 17:04:36
+(epstopdf)                    size: 3546858 bytes
+(epstopdf)             Output file: <Integrated_Discriminate-eps-converted-to.p
+df>
+(epstopdf)                    date: 2020-02-20 17:12:06
+(epstopdf)                    size: 214550 bytes
+(epstopdf)             Command: <epstopdf --outfile=Integrated_Discriminate-eps
+-converted-to.pdf Integrated_Discriminate.eps>
+(epstopdf)             \includegraphics on input line 753.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Integrated_Discriminate-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Integrated_Discriminate-eps-converted-to.pdf, id=895, 530.98375pt x 530.98375p
+t>
+File: Integrated_Discriminate-eps-converted-to.pdf Graphic file (type pdf)
+<use Integrated_Discriminate-eps-converted-to.pdf>
+Package pdftex.def Info: Integrated_Discriminate-eps-converted-to.pdf  used on 
+input line 753.
+(pdftex.def)             Requested size: 424.78757pt x 424.78757pt.
+[31 <./Integrated_Discriminate-eps-converted-to.pdf>]
 µÚËÄÕÂ
-[27
+[32
 
 ]
 µÚÎåÕÂ
+LaTeX Font Info:    Trying to load font information for C19+zhfs on input line 
+838.
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhfs.fd
+"
+File: c19zhfs.fd 2009/09/23 4.8.2
+)
 LaTeX Font Info:    Trying to load font information for C19+zhkai on input line
- 714.
+ 839.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhkai.f
 d"
 File: c19zhkai.fd 2009/09/23 4.8.2
-) [28
+)
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 849.
+
+[33
 
 ]
 µÚÁùÕÂ
-[29
+[34
 
-] [30
+] [35
 
-]<<c1929.cmap>><<c1930.cmap>> [31
+]<<c1929.cmap>><<c1930.cmap>> [36
 
-] [32] [33pdfTeX warning (ext4): destination with the same identifier (name{cit
+] [37] [38pdfTeX warning (ext4): destination with the same identifier (name{cit
 e.EpiPred}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.910 	
-       ] [34]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 975.
- [35]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 975.
+l.1035 	
+        ] [39]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1112.
+ [40]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1112.
  (Liu_Chuanxing_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 975.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 975.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1112.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1112.
+
 Package rerunfilecheck Info: File `Liu_Chuanxing_Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: BA830E7F9BF7B968C884CF29C054FE6F;1743.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+(rerunfilecheck)             Checksum: 7999AF63355B9B69A66EEAB5A4AFE14C;2185.
 
 
 LaTeX Warning: There were undefined references.
@@ -1619,77 +1691,77 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 975.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1112.
  ) 
 Here is how much of TeX's memory you used:
- 29699 strings out of 492453
- 544395 string characters out of 3121009
- 670622 words of memory out of 3000000
- 33171 multiletter control sequences out of 15000+200000
- 604654 words of font info for 293 fonts, out of 3000000 for 9000
+ 29777 strings out of 492453
+ 546151 string characters out of 3121009
+ 674540 words of memory out of 3000000
+ 33219 multiletter control sequences out of 15000+200000
+ 604384 words of font info for 292 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,15n,67p,2626b,1060s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
 imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS
 /Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
-/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai
+/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai
 .ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Font
 s/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WIND
 OWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf>
 <C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/sim
 kai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/F
-onts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simfang.ttf><C:/
-WINDOWS/Fonts/simfang.ttf><C:/WINDOWS/Fonts/simfang.ttf><C:/WINDOWS/Fonts/simsu
-n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
-ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
-DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc
-><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/si
-msun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
-Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/
-WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
-ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
-/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
-WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><
-C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simh
-ei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fo
-nts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
-NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.tt
-c><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
-imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
-/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
-/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun
+onts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/W
+INDOWS/Fonts/simfang.ttf><C:/WINDOWS/Fonts/simfang.ttf><C:/WINDOWS/Fonts/simsun
 .ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Font
 s/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIND
 OWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc>
-<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sim
-sun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/F
+<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
+hei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/F
 onts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/W
-INDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.t
-tf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/
-simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOW
-S/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/Users/leo/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/leo/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users
-/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pf
-b><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi6.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/leo/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/leo/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/leo/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/User
-s/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.p
+INDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.t
+tc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/
+simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOW
+S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C
+:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsu
+n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
+ts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
+DOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc
+><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/si
+mhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/
+Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/
+WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
+ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
+/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
+WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><
+C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sims
+un.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
+nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
+NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.tt
+f><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
+imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
+/Fonts/simhei.ttf><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/leo/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/leo/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/leo/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Use
+rs/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.p
 fb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy6.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/leo/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/leo/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Liu_Chuanxing_Thesis.pdf (37 pages, 4595725 bytes).
+cm/cmr10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/leo/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/leo/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/leo/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Us
+ers/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmti9.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmtt12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Liu_Chuanxing_Thesis.pdf (42 pages, 4980055 bytes).
 PDF statistics:
- 1277 PDF objects out of 1440 (max. 8388607)
- 216 named destinations out of 1000 (max. 500000)
- 349 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1418 PDF objects out of 1440 (max. 8388607)
+ 245 named destinations out of 1000 (max. 500000)
+ 369 words of extra memory for PDF output out of 10000 (max. 10000000)
 

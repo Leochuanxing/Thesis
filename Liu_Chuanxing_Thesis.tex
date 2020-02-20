@@ -563,6 +563,7 @@ Match-type&\multicolumn{5}{c}{Top five most frequent antibody amino acids}\\
 
 表\ref{Top_5_Antigen}给出了 Core 中抗原表位氨基酸在不同 match-type 下的分布。 可以看出来，在所有的 match-type 情况下，ARG 和 ASP 的出现频率一直位于 Core 中抗原氨基酸的前5。而且当抗原氨基酸的长度由1变成2或3的时候，GLY忽然从前5名之外变成出现频率最高的氨基酸（在match-type(2,3)下，GLY 位于第二的位置，但是和出现频率最高的 ASN 相差只有0.001）。除了 GLY 之外，其他排在前5的氨基酸，都是亲水，而且多由比较长的侧链。由此可以说，在 GLY 的调节下，具有比较大的亲水的氨基酸往往可以称为抗原表位，特别是 ARG 和 ASP。
 \begin{table}[H]\centering
+\resizebox{\textwidth}{3cm}{
 \begin{tabular}{ccccc c}
 \hline\hline
 Match-type&\multicolumn{5}{c}{Top five most frequent antigen amino acids}\\
@@ -578,11 +579,13 @@ Match-type&\multicolumn{5}{c}{Top five most frequent antigen amino acids}\\
 (3,3)& (GLY, 0.105)& (ASN, 0.083)& (SER, 0.070)& (ASP, 0.067)& (THR, 0.066)\\
 \hline
 \end{tabular}
+}
 \caption{不同 match-type 下，前五个分布频率最高的抗原氨基酸}
 \label{Top_5_Antigen}
 \end{table}
-为了更进一步说明 Core 中抗原氨基酸的分布情况，本论文把 Core 中频率最高的5个抗原氨基酸 和频率最低的5个氨基酸，和 它们在所有抗原氨基酸中的分布情况做了对比，看看它们这些分布的富集和稀释是不是显著（表\ref{Top_5_Antigen_Q}）。
+为了更进一步说明 Core 中抗原氨基酸的分布情况，本论文把 Core 中频率最高的5个抗原氨基酸 和频率最低的5个氨基酸，和 它们在所有抗原氨基酸中的分布情况做了对比，看看它们这些分布的富集和稀释是不是显著（表\ref{Top_5_Antigen_Q, Bottom_5_Antigen_Q}）。从表\ref{Top_5_Antigen_Q}中也可以看出被富集的氨基酸除了GLY之外都是亲水性的氨基酸， 特别是ARG，GLY则帮助这些亲水性的氨基酸形成合适的结构。从表\ref{Bottom_5_Antigen_Q}中可以看到, 在所有的 match-type 中，VAL, LEU, ILE 和 CYS 位于被稀释的前五名之列。CYS容易被被氧化，形成二硫键，所以不适合做抗原表位。其他三个都是疏水性的氨基酸。观察表\ref{Bottom_5_Antigen_Q}, 几乎所有的都是疏水性的氨基酸（只有在 match-type(3,2)的第五名出现SER）。这些结果说明，亲水性有比较大的侧链的氨基酸容易形成抗原表位，而疏水性的不容易形成。这和普通的蛋白质和蛋白质之间的相互作用不同\cite{Hydrophobic}，同时也解释了水分子在抗原抗体相互作用过程中的重要性\cite{Add_water}。
 \begin{table}[H]\centering
+\resizebox{\textwidth}{3cm}{
 \begin{tabular}{ccccc c}
 \hline\hline
 Match-type&\multicolumn{5}{c}{Top 5 enriched residues in the Core Antigen residues}\\
@@ -598,84 +601,203 @@ Match-type&\multicolumn{5}{c}{Top 5 enriched residues in the Core Antigen residu
 (3,3)& (GLY, 2.0E-10)& (ASN, 2.1E-07)& (ASP, 1.3E-03)& (ARG, 5.4E-03)& (LYS, 4.1E-01)\\
 \hline
 \end{tabular}
-\caption{和所有抗原氨基酸相比，富集最为显著的抗原氨基酸（按照q value 排序）}
+}
+\caption{和所有抗原氨基酸相比，富集最为显著的抗原氨基酸（按照q value 排序）。富集是指和所有抗原氨基酸的分布相比，相对频率增高的氨基酸。}
 \label{Top_5_Antigen_Q}
 \end{table}
 
+\begin{table}[H]\centering
+\resizebox{\textwidth}{3cm}{
+\begin{tabular}{ccccc c}
+\hline\hline
+Match-type&\multicolumn{5}{c}{Top 5 diluted residues in the Core Antigen residues}\\
+\hline
+(1,1)& (VAL, 1.5E-15)&(ALA, 5.2E-14)&(LEU, 5.0E-12)&(ILE, 1.0E-11)&(CYS, 1.5E-08))\\
+(2,1)& (LEU, 8.5E-19)&(VAL, 1.3E-12)&(ALA, 1.1E-10)&(ILE, 2.5E-10)&(CYS, 2.1E-07)\\
+(3,1)& (LEU, 2.6E-16)&(VAL, 6.9E-10)&(ILE, 1.1E-07)&(ALA, 1.3E-07)&(CYS, 2.3E-06)\\
+(1,2)& (LEU, 9.7E-10)&(CYS, 3.8E-09)&(VAL, 9.6E-08)&(ILE, 5.0E-06)&(ALA, 1.8E-03) \\
+(2,2)& (LEU, 1.1E-11)&(VAL, 1.1E-07)&(CYS, 1.1E-07)&(ILE, 9.3E-05)&(ALA, 2.4E-03) \\
+(3,2)& (LEU, 1.3E-10)&(CYS, 5.0E-06)&(ILE, 7.9E-05)&(VAL, 1.7E-04)&(SER, 5.9E-03) \\
+(1,3)& (LEU, 1.2E-13)&(CYS, 1.1E-04)&(VAL, 1.2E-04)&(ILE, 1.4E-04)&(PHE, 1.7E-02) \\
+(2,3)& (LEU, 3.6E-12)&(VAL, 8.5E-04)&(ILE, 4.8E-03)&(CYS, 5.1E-03)&(PHE, 8.4E-03)\\
+(3,3)& (LEU, 5.4E-13)&(CYS, 1.8E-03)&(ILE, 9.0E-03)&(VAL, 1.1E-02)&(PHE, 5.6E-02)\\
+\hline
+\end{tabular}
+}
+\caption{和所有抗原氨基酸相比，释希最为显著的抗原氨基酸（按照q value 排序）。这里稀释是和所有抗原氨基酸的分布相比，相对频率下降的氨基酸。}
+\label{Bottom_5_Antigen_Q}
+\end{table}
+在所有的相互作用的抗原氨基酸和抗体氨基酸对中，如果两个参与相互作用的氨基酸，中间间隔一个氨基酸，我们把这样的氨基酸称为中间氨基酸(middle amino acid)。把所有的中间氨基酸都提取出来进行比较，可以画出图\ref{Middle_aa}。 通过分析发现，抗体上的中间氨基酸前频率最高的前5名分别是GLY, PRO, ILE, THR 和 SER ，抗原上的氨基酸则是 LEU，ILE, VAL, ALA, GLY。 前面的分析结果表明 LEU，ILE, VAL 是抗原表位所排斥的，所以，很有肯能 这些疏水性的氨基酸就像一个锚一样插入到抗原的内部，把两侧可以参与抗原抗体识别的氨基酸锚定在表面。在抗原的中间氨基酸中，PRO 占有比较大的比例，PRO 有形成转角的作用，很有可能协调它两侧的氨基酸共同参与对抗原的识别。
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{The_Middle_aa.eps}
+\caption{中间氨基酸的组成比例}
+\label{Middle_aa}
+\end{figure}
+
 \chapter{RBFN 的构建}
+Dash 等\cite{Quantifiable} 用10重不同的抗原免疫产生了4600多个$\alpha\beta$TCR, 通过对这些 $\alpha\beta$TCR 的分析， 作者数量化的刻画了抗原和$\alpha\beta$TCR之间的关系。但是到据我们所知， 到目前还没有类似的刻画抗原抗体作用的模型，本章内容就是区建立这样一个模型。
+\section{Core 之间距离的定义}
+径向基函数网络(RBFN, radial basis function network)要建立在径向基函数上，而径向基函数的输入值是一个距离。其含义就是，对于一个选定的center， 在径向基函数下，和它距离相同的点具有相同的性质，或者说这个 center 对它周围的影响只于距离有关。要建立 RBFN ， 第一步就是要定义距离，定义的好坏直接关系到RBFN的好坏。Dash 等\cite{Quantifiable} 在建立模型时候用到BLOSUM62， 但是却是一个截断的BLOSUM62，基本规则如下：
+\begin{enumerate}[label=(\arabic*)]
+	\item AAdist(a, a)=0
+	\item AAdist(a, b)=min(4,4-BLOSSUM62(a,b))
+	\item AAdist(a, -)= 4, if a is in CDR1 or CDR2
+	\item AAdist(a, -) = 8, if a is in CDR3
+\end{enumerate}
+在上面的规则中， AAdist 表示氨基酸和氨基酸之间的距离。- 表示空缺。上面的定义有两个不足。
+一是，上面的计算距离的时候是在 align 之后，然而 align 时候本身就有自己的打分规则，现在又再次进行打分，逻辑上不可行，不如直接用上面的规则进行align。二是，对 BLOSUM62 进行截断的理由不足。BLOSUM62 是通过大量同源氨基酸之间的比较得到的一个打分矩阵，反应的是氨基酸之间差异的一个综合分数，这个矩阵的最大值是 TRP 和 TRP 之间的相似分数 11， 最小值是 CYS 和 GLU 之间的相似分数 -4。如果用4 对BLOSUM62 进行截断，可能会使得本该反应出来的差异得不到充分反应。所以本论文没有对BLOSUM62进行截断。我们模型的功能是给定对短的抗体氨基酸的序列和短的抗原氨基酸的序列，来判定它们是否可以称为 Core, 也就是说是否能在抗原抗体的相互作用中扮演重要作用。所以我们定义短序列对和短序列对之间的距离。设（Ab1, Ag1） 和 （Ab2, Ag2）为 match-type（m, n） 的短序列对，那么它们之间的距离可以通过下面的步骤来定义：
+\begin{enumerate}[label=(\arabic*)]
+	\item 定义 Ab1 和 Ab2 之间的相似度，平移成非负值， 并 Normalize，如下：
+		\begin{align}
+			\label{sim}\mathrm{S_{Ab}} &= \mathrm{Aln}(\mathrm{Ab}_1, \mathrm{Ab}_2)\\		
+			\label{positive}\mathrm{S_{Ab}}^+ &= \frac{\mathrm{S_{Ab}} + 4\times m}{15 \times m}		
+		\end{align}
+		在公式(\ref{sim})中，Aln 表是序列比对（sequence alignment)的分数，序列比对所用的规则是：
+		\begin{align*}
+			\text{Substitution matrix} &= BLOSUM62\\
+			\text{gap} &= Hp_1\\
+			\text{extended gap} &= Hp_2\\
+		\end{align*}
+		在上面的规则中， 我们完全采用了 BLOSUM62； $Hp_1$ 和 $Hp_2$ 表示两个超参数（hyperparameter）， 它们的取值范围是 $\{-1, -2, -3, -4, -5\}$。在公式（\ref{positive}）中，$4\times m$ 和 $15\times m$ 来自于 Substitution Matrix 中最小的值是-4，最大值是11.
+		\item 以同样的方式定义 Ag1 和 Ag2 之间的相似度， 平移成非负，并 Normalize，得到 $\text{S}_{Ag}^+$
+		\item 定义 （Ab1, Ag1） 和 （Ab2, Ag2）之间的相似面积：
+			\begin{align}
+			S=\text{S}_{Ab}^+ \times \text{S}_{Ag}^+
+			\end{align}
+		 这里我们计算面积，而没有计算长度，是因为 $\text{S}_{Ab}^+ $ 和 $\text{S}_{Ag}^+$ 是协同作用的，而不是独立作用的。这个论断来自一个简单的事实， 当 (Ab1, Ag1) 有强烈的相互作用，并且 Ag2 和 Ag1 完全相反时， (Ab1, Ag2) 之间的相互作用应该是0。也就是说，Ab1 和 Ab2 之间的相似程度所起到的作用和 Ag1 和 Ag2 之间的相似性相关。反过来也一样。
+		 \item 计算（Ab1, Ag1） 和 （Ab2, Ag2）之间的距离：
+		 	\begin{align}
+				D= 1- S
+			\end{align}
+\end{enumerate}
+\section{RBFN模型}
+从抗原抗体复合中提取出来的 Core 是具有相互作用的正样本。每种 match-type 下的负样本是随机产生的并且不在正样本中的氨基酸序列对。本文在每种 match-type 下独立的产生10组负样本，每组负样本的样本量和正样本一样。\\
+RBFN 的径向基函数选择为高斯函数, 对于 center c 来说可以表示为如下：
+	$$f(x,r,c) = exp\{d(x,c)^2/r^2\}$$
+RBFN 可以表示为：
+$$\text{RBFN}(x)= \sum w_if(x,r_i,c_i)$$
+其中 $w_i$ 和 $r_i$ 是要在模型训练过程中确定的参数。对于 RBFN 的 center 的选取，本论文采用 Alexandridis 等在文献\cite{FastCenter} 中提供的方法。具体步骤可以概括流程图\ref{Coverage_Center}：
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{Coverage_Center.eps}
+	\caption{文献\cite{FastCenter}选取 center 的流程图}
+	\label{Coverage_Center}
+\end{figure}
 
-\section{正文}
-使用小四号字, 行距为20磅. 首行缩进两个字符宽. 建议标点符号用半角.
-例如句号用``句点". 输入时每个标点后打一个空格.
+从本质上来讲，上面的 center 选择方法是聚类的方法，首先对样本进行聚类，然后在每个类中任意选出一个代表。本论文就是采用的聚类方法，这样做不但可以根据半径的大小来确定 center, 而且可以根据所要选择 center 数目的多少来确定 center。
 
-\section{章节} 如果文章内容较多, 可以采用分章节. 如果内容较少, 可以只用节而不用章. 章节的编号方式(编号类型等的选择)要恰当.
+本论文尝试了两种观测值，一种是二分类观测，也就是从复合物中提取出来的观测值都定为1， 随机产生的负样本的观测值定为1。第二种是把每个 Core 的 CN 数作为观测值，负样本的 CN 数记为 0. 对于二分类的观测值，损失函数选为 Sigmoid函数并加上正则项， 对于 CN 作为观测值，用方差作为损失函数并加上正则项。对于训练集，本论文采用 5-fold 的交叉检验(cross validation)。这里我们总结以下超参数都是哪些。
+\begin{enumerate}[label = (\arabic*)]
+	\item 在距离定义规则中 gap 的分数 $Hp_1$, 取值范围是 $\{-1, -2, -3, -4, -5\}$
+	\item 在距离定义规则中 extended gap 的分数 $Hp_2$, 取值范围是 $\{-1, -2, -3, -4, -5\}$
+	\item 正则项的系数 $r$, 取值范围是 (0.0001, 0.001, 0.01, 0.1)
+	\item Center 数目占训练集的比例 $p$， 取值范围是 {0.8, 0.4, 0.2, 0.1, 0.05, 0.02}
+	\item 观测值选 Binary 类型 还是 Numerical 类型
+\end{enumerate}
+表\ref{Best_para_Numerical} 和 表\ref{Best_para_Binary} 分别给出了在 CN 为观测值 和 二分类为观测值情况下，交叉检验的最优表现和对应的超参数。 可以看出，二分类观测值在各种 match-type 下都优于 CN 观测值。本论文的模型确定为二分类模型，超参数取值也都对应于二分类模型下的最优取值。
+\begin{table}[H]\centering
+\begin{tabular}{ccccc c}
+\hline\hline
+match-type   &  $Hp_1$     & $Hp_2$    & $r$   & $p$&平均AUC\\
+\hline
+(1,1)  & -1  & -1 &0.0001&0.8&0.955\\
+(1,2)  & -1  & -1 & 0.001&0.8&0.842 \\
+(1,3)  & -1  & -1 &0.001&0.8&0.808\\
+(2,1)  & -1  & -1 &0.001&0.4&0.851\\
+(2,2)  & -1  & -1 &0.01&0.8&0.825\\
+(2,3)  & -1  & -1 &0.01&0.8&0.812\\
+(3,1)  & -1  & -1 &0.01&0.8&0.844\\
+(3,2)  & -1  & -1 &0.01&0.8&0.839\\
+(3,3)  & -1  & -1 &0.01&0.8&0.842\\
+\hline
+\end{tabular}
+\caption{在观测值为 CN 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均AUC来衡量的。}
+\label{Best_para_Numerical}
+\end{table}
 
-这部分介绍如何正确使用公式编排.
-\begin{equation}\label{N-L}
-F(b)-F(a)=\int^b_a F^\prime(x)\, dx.
-\end{equation}
+\begin{table}[H]\centering
+\begin{tabular}{ccccc c}
+\hline\hline
+match-type   &  $Hp_1$     & $Hp_2$    & $r$   & $p$&平均AUC\\
+\hline
+(1,1)  & -1  & -1 &0.0001&0.8&0.973\\
+(1,2)  & -1  & -1 & 0.0001&0.8&0.860\\
+(1,3)  & -1  & -1 &0.0001&0.8&0.834\\
+(2,1)  & -1  & -1 &0.0001&0.8&0.870\\
+(2,2)  & -1  & -1 &0.0001&0.8&0.842\\
+(2,3)  & -1  & -1 &0.001&0.8&0.836\\
+(3,1)  & -1  & -1 &0.0001&0.8&0.867\\
+(3,2)  & -1  & -1 &0.001&0.8&0.862\\
+(3,3)  & -1  & -1 &0.001&0.8&0.862\\
+\hline
+\end{tabular}
+\caption{在观测值为 0, 1 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均AUC来衡量的。}
+\label{Best_para_Binary}
+\end{table}
+
+鉴于样本量并不是特别大，在训练模型的时候选用的拟牛顿法（quasi-Newton）结合Ramijo 线搜索方法\cite{BFGS}。具体的程序和有关交叉检验和模型训练的结果请参看 \texttt{https://github.com/Leochuanxing/Paritope\_Epitope}
+
+\textbf{检验结果}
+正如前面所说的，在提取数据的时候有10\% 的抗原抗体复合物被留作正测试集，从中抽取的 Core 是正的测试集。负测试集的产生和负样本的生成采用同样的方法，随机生成并且不在正样本中的作为负测试集。在每一种 match-type 下，本论文独立的产生了 10 组负，且每组负测试集的大小和对应正测试集的大小一样。把正测试集分别和这10组负测试集混合产生 10 组测试集，然后用构建的 RBFN 模型进行区分，ROC 如图\ref{Discrimination}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{Discrimination.eps}
+	\caption{在不同 match-type 下 RBFN 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}
+	\label{Discrimination}
+\end{figure}
+从图\ref{Discrimination}中可以看出，对于所有 match-type， 平均 AUC 都不低于 0.8， 在 match-type 为 （1，1）时， 平均 AUC 高达 0.97！ 也就是说，任意给定一个氨基酸对和一个 match-type 为(1,1) 的 Core, 本论文的模型可以把二者区分开的概率是0.97。 在 match-type 为 （1，3）时表现最差，能够把真正的 Core 和随机产生的氨基酸序列对区分开的概率是0.8， 也已经比较高了。从这些结果中，可以看出 RBFN 模型比较好的刻画了 Core 的性质，也就是说比较好的刻画了抗原抗体相互作用过程中起关键作用的短的抗体氨基酸序列和短的抗原氨基酸序列之间的关系。当然更是可以得出，抗原和抗体关键氨基酸之间的作用是有规律的这样的推论。
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{Integrated_Discriminate.eps}
+\end{figure}
+
+%下面是另外的例子：第一个公式不标号, 请注意命令\texttt{\textbackslash
+%nonumber}的使用：
+%\begin{eqnarray}
+%\nonumber W_{i,a}^{\text{new}} & \leftarrow & W_{i,a} \sum_{\mu} \frac{V_{i,\mu}}{(WH)_{i,\mu}} H_{a,\mu} \\
+%H_{a,\mu}^{\text{new}} & \leftarrow & H_{a,\mu} \sum_{i} W_{i,a} \frac{V_{i,\mu}}{(WH)_{i,\mu}} \label{eq:renewh}\\
+%W_{i,a}^{\text{new}} & \leftarrow & \frac{W_{i,a}}{\sum_{j}W_{j,a}}
+%\end{eqnarray}
+%如果所有公式都不标号, 可以采用下面的环境:
+%\begin{eqnarray*}
+%(\arcsin x)^2 &=& \Big( \sum^\infty_{k=0}{C^k_{2k}\over
+%2k+1}{x^{2k+1}\over 2^{2k}}\Big)^2\\
+%&=& \sum^\infty_{k=0}\sum^\infty_{j=0}{C^k_{2k}C^j_{2j}\over
+%(2k+1)(2j+1)}{x^{2k+2j+2}\over 2^{2k+2j}}\\
+%& =& \sum^\infty_{n=0}\sum_{k+j=n}{C^k_{2k}C^j_{2j}\over
+%(2k+1)(2j+1)}{x^{2n+2}\over 2^{2n}}\\
+%& =& \sum^\infty_{n=0}{(2x)^{2n+2}\over 2C^{n+1}_{2n+2}(n+1)^2}.
+%\end{eqnarray*}
 
 
-\section{行内公式}
-如果~$x=y,y=z$, 那么我们可以推得~$x=z$. 如果式子过长,
-应该写成行间公式.
 
-\section{行间公式}
-如果~$x=y$, 那么
-$$
-f(x) = f(y)
-$$
-但是, 若~$x\neq y$, 我们也不能获得
-\begin{equation}\label{E1}
-f(x) \neq f(y)
-\end{equation}
-所以~(\ref{E1}) 不是~$x\ne y$ 的必要条件.
+%更多公式环境的使用以及一些数学符号的使用可以参考一些\LaTeX 的书籍.
+%\par 本模板中, 在每章开头, 公式标号重新计数.
+%一章中, 即使换节, 计数并不重新开始(比较(\ref{N-L}), (\ref{E1})), 请注意
+%公式编号的引用以及对应的超链接效果.
+%
+%若各节的公式需要重新编号, 可自行修改, 比如利用命令
+%\begin{verbatim}
+%\def\theequation{\arabic{chapter}.\arabic{section}.\arabic{equation}}
+%
+%(或 \def\theequation{3.2.\arabic{equation}})
+%
+%\setcounter{equation}{0}
+%\end{verbatim}
+%利用以上命令也可以解决诸如引入带撇的编号``3.1.3$^\prime$", 以及回到正常编号的重新编号问题.
+%
+%\def\theequation{\arabic{chapter}.\arabic{section}.\arabic{equation}}
+%\setcounter{equation}{0}
+%
+%上述命令下的公式编号:
+%\begin{equation}
+%\lim_{n\to +\infty}\Big(1+{1\over n}\Big)^n=e.
+%\end{equation}
+%定义、定理、例子等的编号格式也可以用类似命令.
 
-下面是另外的例子：第一个公式不标号, 请注意命令\texttt{\textbackslash
-nonumber}的使用：
-\begin{eqnarray}
-\nonumber W_{i,a}^{\text{new}} & \leftarrow & W_{i,a} \sum_{\mu} \frac{V_{i,\mu}}{(WH)_{i,\mu}} H_{a,\mu} \\
-H_{a,\mu}^{\text{new}} & \leftarrow & H_{a,\mu} \sum_{i} W_{i,a} \frac{V_{i,\mu}}{(WH)_{i,\mu}} \label{eq:renewh}\\
-W_{i,a}^{\text{new}} & \leftarrow & \frac{W_{i,a}}{\sum_{j}W_{j,a}}
-\end{eqnarray}
-如果所有公式都不标号, 可以采用下面的环境:
-\begin{eqnarray*}
-(\arcsin x)^2 &=& \Big( \sum^\infty_{k=0}{C^k_{2k}\over
-2k+1}{x^{2k+1}\over 2^{2k}}\Big)^2\\
-&=& \sum^\infty_{k=0}\sum^\infty_{j=0}{C^k_{2k}C^j_{2j}\over
-(2k+1)(2j+1)}{x^{2k+2j+2}\over 2^{2k+2j}}\\
-& =& \sum^\infty_{n=0}\sum_{k+j=n}{C^k_{2k}C^j_{2j}\over
-(2k+1)(2j+1)}{x^{2n+2}\over 2^{2n}}\\
-& =& \sum^\infty_{n=0}{(2x)^{2n+2}\over 2C^{n+1}_{2n+2}(n+1)^2}.
-\end{eqnarray*}
-
-
-
-更多公式环境的使用以及一些数学符号的使用可以参考一些\LaTeX 的书籍.
-\par 本模板中, 在每章开头, 公式标号重新计数.
-一章中, 即使换节, 计数并不重新开始(比较(\ref{N-L}), (\ref{E1})), 请注意
-公式编号的引用以及对应的超链接效果.
-
-若各节的公式需要重新编号, 可自行修改, 比如利用命令
-\begin{verbatim}
-\def\theequation{\arabic{chapter}.\arabic{section}.\arabic{equation}}
-
-(或 \def\theequation{3.2.\arabic{equation}})
-
-\setcounter{equation}{0}
-\end{verbatim}
-利用以上命令也可以解决诸如引入带撇的编号``3.1.3$^\prime$", 以及回到正常编号的重新编号问题.
-
-\def\theequation{\arabic{chapter}.\arabic{section}.\arabic{equation}}
-\setcounter{equation}{0}
-
-上述命令下的公式编号:
-\begin{equation}
-\lim_{n\to +\infty}\Big(1+{1\over n}\Big)^n=e.
-\end{equation}
-定义、定理、例子等的编号格式也可以用类似命令.
-
-\chapter{表格和图片}
+\chapter{RBFN 模型的应用}
 \begin{table}[htbp]\centering
 \begin{tabular}{llll}
 \hline\hline
@@ -705,8 +827,11 @@ outcome             & 12 600      & 208       & 1.65       \\
 一般的图例（含流程图, 交换图等）可由~MetaPost~
 或者~Asymptote~作出（当然作图工具不限于此）, 限于条件限制,
 模板不给出示例.
+\section{Core中抗原氨基酸和抗体氨基酸的区分}
 
-\chapter{定理环境}
+\section{预测突变对抗原抗体复合物亲和力的影响}
+
+\chapter{RBFN 一个新的 center 选取方法}
 
 \section{题头}
 同一章内定理、引理等``题头"可以采用连续/统一的标号, 这是由模板中的诸如
@@ -947,7 +1072,19 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 \bibitem{Four_Tyr_Dom}Fellouse, Frederic A. , et al. Tyrosine Plays a Dominant Functional Role in the Paratope of a Synthetic Antibody Derived from a Four Amino Acid Code.
 	\emph{Journal of Molecular Biology}, (2006), 357(1):0-114.
 
+\bibitem{Hydrophobic}Young, L., Jernigan, R. L., and Covell, D. G. A role for surface hydrophobicity in protein-protein recognition.
+ 	\emph{Protein Science}, (1994), 3, 717– 729. 
+ 
+\bibitem{Add_water}Bhat, T. N., Bentley, G. A., Boulot, G., Greene, M. I., Tello, D. W. D. A., Dall’Acqua, W., Souchon, H., Schwarz, F. P., Mariuzza, R. A. and Poljak, R. J.  Bound water molecules and conformational stabilization help mediate an antigen-antibody association. 
+	\emph{Proceedings of the National Academy of Sciences}, (1994), 91, 1089–1093.	
+
+\bibitem{Quantifiable}Dash P , Fiore-Gartland A J , Hertz T , et al. Quantifiable predictive features define epitope-specific T cell receptor repertoires. 
+	\emph{Nature}, (2017), 547(7661):89-93.
 	
+\bibitem{FastCenter}Alexandridis, Alex and Chondrodima, Eva and Giannopoulos, Nikolaos and Sarimveis, Haralambos. A fast and efficient method for training categorical radial basis function networks.
+	\emph{IEEE transactions on neural networks and learning systems}, (2016), 28(11):2831-2836.
+
+\bibitem{BFGS} Jorge Nocedal Stephen J. Wright, Numerical Optimization, Springer Series in Operations Research and Financial Engineering, 2006.
 
 
 
