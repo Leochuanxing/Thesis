@@ -168,21 +168,29 @@
 \newlabel{Best_para_Binary}{{3.2}{29}{在观测值为 0, 1 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均AUC来衡量的。}{table.3.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 在不同 match-type 下 RBFN 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}}{30}{figure.3.2}\protected@file@percent }
 \newlabel{Discrimination}{{3.2}{30}{在不同 match-type 下 RBFN 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}{figure.3.2}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第四章\hspace  {.3em}}RBFN 模型的应用}{32}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 在不同 match-type 下 整合 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}}{32}{figure.3.3}\protected@file@percent }
+\newlabel{Integrated}{{3.3}{32}{在不同 match-type 下 整合 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}{figure.3.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第四章\hspace  {.3em}}RBFN 模型的应用}{33}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces 这是个表格}}{32}{table.4.1}\protected@file@percent }
-\newlabel{tab:hh}{{4.1}{32}{这是个表格}{table.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core中抗原氨基酸和抗体氨基酸的区分}{32}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}预测突变对抗原抗体复合物亲和力的影响}{32}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {第五章\hspace  {.3em}}RBFN 一个新的 center 选取方法}{33}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core中抗原氨基酸和抗体氨基酸的区分}{33}{section.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces RBFN 用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}}{34}{figure.4.1}\protected@file@percent }
+\newlabel{reverse}{{4.1}{34}{RBFN 用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}{figure.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 整合模型用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。 }}{35}{figure.4.2}\protected@file@percent }
+\newlabel{Integrated_Reverse}{{4.2}{35}{整合模型用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}{figure.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces 各种情况下的AUC值。这些数值来自图 \ref  {Discrimination}, \ref  {Integrated}, \ref  {reverse}, \ref  {Integrated_Reverse}。R 表示 RBFN 模型，I 表示整合模型，T 表示正测试集， TR 表示由 T 中元素的抗原氨基酸序列和抗体氨基酸序列交换次序得到的测试集， N 表示随机生成的负样本。AUC(R,T,N) 表示用 RBFN模型（R）区分 T 和 N 时的 AUC 值。}}{36}{table.4.1}\protected@file@percent }
+\newlabel{AUC_Commutative}{{4.1}{36}{各种情况下的AUC值。这些数值来自图 \ref {Discrimination}, \ref {Integrated}, \ref {reverse}, \ref {Integrated_Reverse}。R 表示 RBFN 模型，I 表示整合模型，T 表示正测试集， TR 表示由 T 中元素的抗原氨基酸序列和抗体氨基酸序列交换次序得到的测试集， N 表示随机生成的负样本。AUC(R,T,N) 表示用 RBFN模型（R）区分 T 和 N 时的 AUC 值。}{table.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces 各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}}{36}{figure.4.3}\protected@file@percent }
+\newlabel{Commutative}{{4.3}{36}{各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}{figure.4.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}预测突变对抗原抗体复合物亲和力的影响}{37}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第五章\hspace  {.3em}}RBFN 一个新的 center 选取方法}{38}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}题头}{33}{section.5.1}\protected@file@percent }
-\newlabel{L1}{{5.1.}{33}{}{definition.5.1}{}}
-\newlabel{T1}{{5.2.}{33}{}{definition.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}同章另一节的题头}{33}{section.5.2}\protected@file@percent }
-\newlabel{P1}{{5.3.}{33}{}{definition.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}题头}{38}{section.5.1}\protected@file@percent }
+\newlabel{L1}{{5.1.}{38}{}{definition.5.1}{}}
+\newlabel{T1}{{5.2.}{38}{}{definition.5.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}同章另一节的题头}{38}{section.5.2}\protected@file@percent }
+\newlabel{P1}{{5.3.}{38}{}{definition.5.3}{}}
 \citation{HTF}
 \citation{ZhangC}
 \citation{ChenSX}
@@ -190,7 +198,7 @@
 \citation{Su}
 \citation{LiT}
 \citation{ChenSX}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第六章\hspace  {.3em}}参考文献的写法}{34}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第六章\hspace  {.3em}}参考文献的写法}{39}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
 \bibcite{Vaccine}{1}

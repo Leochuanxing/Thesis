@@ -748,10 +748,18 @@ match-type   &  $Hp_1$     & $Hp_2$    & $r$   & $p$&平均AUC\\
 \end{figure}
 从图\ref{Discrimination}中可以看出，对于所有 match-type， 平均 AUC 都不低于 0.8， 在 match-type 为 （1，1）时， 平均 AUC 高达 0.97！ 也就是说，任意给定一个氨基酸对和一个 match-type 为(1,1) 的 Core, 本论文的模型可以把二者区分开的概率是0.97。 在 match-type 为 （1，3）时表现最差，能够把真正的 Core 和随机产生的氨基酸序列对区分开的概率是0.8， 也已经比较高了。从这些结果中，可以看出 RBFN 模型比较好的刻画了 Core 的性质，也就是说比较好的刻画了抗原抗体相互作用过程中起关键作用的短的抗体氨基酸序列和短的抗原氨基酸序列之间的关系。当然更是可以得出，抗原和抗体关键氨基酸之间的作用是有规律的这样的推论。
 
+上面模型有一个让人诟病的地方，就是对每一种 match-type 都要建立一个模型，相当于9个模型。本文还做了一个把这些模型整合成一个模型的尝试。鉴于 match-type（1，1）情况下，模型的表现如此优秀，本文尝试以 match-type(1,1)的模型为基础来解释其他模型。假设 $([a_1, a_2], [b_1, b_2])$是一个 match-type(2,2) 的 Core， 那么这个 Core 可以组合成 4 个 match-type(1,1)的 Core. 
+$$([a_1], [b_1])\;\;\;([a_1], [b_2])\;\;\;([a_2], [b_1])\;\;\;([a_2], [b_2])$$
+设 $\text{RBFN}_{(1,1)}$ 为 match-type(1,1) 的 RBFN 模型， 那么 $([a_1, a_2], [b_1, b_2])$ 的模型返回值可以定义为
+$$\frac{\sum\limits_{i=1}^2\sum\limits_{j=1}^2\text{RBFN}_{(1,1)}([a_i], [b_j])}{4}$$
+对于其他 match-type 的 Core 也做如上面类似的定义。也就是说，用match-type(1,1)的模型来解释所有 match-type 的模型，本文称这个模型为整合模型。图\ref{Integrated}给出了整合模型的预测效果。
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{Integrated_Discriminate.eps}
+	\caption{在不同 match-type 下 整合 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}
+	\label{Integrated}
 \end{figure}
+从图\ref{Integrated}可以看出，整合模型和前面的RBFN模型在 match-type(1,1) 上的预测效果一样，这也是显然的。但是，对于其他的 match-type, 整合模型明显处于劣势，平均 AUC 差距为 4.6\% 。最高的为 match-type(3,3), 差距达到 8\% 。这些差距是巨大的。而且似乎，可以看出随着抗原氨基酸或者抗体氨基酸序列的增长，整合模型表现的越来越差。
 
 %下面是另外的例子：第一个公式不标号, 请注意命令\texttt{\textbackslash
 %nonumber}的使用：
@@ -798,37 +806,63 @@ match-type   &  $Hp_1$     & $Hp_2$    & $r$   & $p$&平均AUC\\
 %定义、定理、例子等的编号格式也可以用类似命令.
 
 \chapter{RBFN 模型的应用}
-\begin{table}[htbp]\centering
-\begin{tabular}{llll}
+前面一章建立了 RBFN 模型，并且这个模型在测试集上表现良好。同时还测试了一个整合模型，这个模型和RBFN模型相比，显得逊色。这一章将会把上面建立的模型用来解决两个问题，一个是区别 Core 的抗原氨基酸序列和抗体氨基酸序列，一个是预测突变对抗原抗体复合物的影响。在前面介绍本论文背景时，有不少篇幅是用来介绍抗原表位(epitope)预测的研究，其中原因就是因为抗原表位的预测需要对抗原抗体作用规律的研究，这也是本论文的核心。然而在这里，本论文并没有对把模型用于对抗原表位的预测。
+
+
+
+\section{Core中抗原氨基酸和抗体氨基酸的区分}
+在前一章建立的模型中，输入值是两个短的氨基酸序列组成的对(AbSeq, AgSeq), 其中 AbSeq 是短的抗体氨基酸序列，AgSeq 是短的抗原氨基酸序列。那么，从总体数据上来看，AbSeq 和 AgSeq 有没有区别呢？这就是本节内容所要解决的问题。
+
+设(AbSeq, AgSeq) 是 match-type(m, n) 的 Core， 如果 AbSeq 和 AgSeq 没有区别， 那么 (AgSeq, AbSeq) 和真正的 match-type(n, m) 的 Core 没有区别，自然在前一章中构建的模型不能对二者做出有效区分。这里，对于一个 match-type(m, n) 的测试集， 它是由 match-type(m, n) 的正测试集和match-type(n, m)的正测试集通过交换抗原序列和抗体序列的前后关系得到。为表述清楚，我们用下面的数学语言表示 match-type(n,m) 的测试集的生成。
+\begin{align*}
+	\text{TR}_{(n, m)} &= \{(AgSeq, AbSeq):(AbSeq, AbSeq)\in \text{T}_{(m, n)}\}\\
+	\text{T} &=\text{TR}_{(n, m)} \cup \text{T}_{(n, m)}\\
+\end{align*}
+在上面的表述中， $\text{T}_{(m, n)}$ 和 $ \text{T}_{(n, m)}$ 分别为前一章中 match-type(m,n) 和  match-type(n,m)的测试集， $\text{TR}_{(n, m)}$ 为 $\text{T}_{(m, n)}$ 中的元素通过交换抗原和抗体氨基酸序列的前后顺序得到，简称为 TR （reverse testing set）。 图\ref{reverse}  给出了 RBFN 模型的区分效果。
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{reverse.eps}
+	\caption{RBFN 用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}
+	\label{reverse}
+\end{figure}
+从图\ref{reverse}可以看出，在不同的 match-type 下，RBFN 模型可以对 T 与 TR 做出较好的区分，对应 ROC 的 AUC 值从 0.7 到 0.78 不等。这个结果说明，Core 中的抗原氨基酸序列和抗体氨基酸序列有明显的区别。但是，这个区分效果弱于 T 与随机产生的负测试集之间的区分效果（图\ref{Discrimination}），平均的AUC 差别为 9.6 \% 。这个差值可以理解为由 Core 中的抗原氨基酸序列和抗体氨基酸序列的相似性造成，也就是，从 AUC 的角度来讲，Core 中的抗原氨基酸序列和抗体氨基酸序列的相似性使得对它们的区分效果下降约9.6 \%。
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{Integrated_Reverse.eps}
+	\caption{整合模型用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。 }
+	\label{Integrated_Reverse}
+\end{figure}
+同时本论文还尝试用整合模型对 T 与 TR 做出区分（图\ref{Integrated_Reverse}）。由于整合模型在区分 T 与随机产生的负测试的表现上不如 RBFN 模型，也可以推测整合模型在区分 T 与 TR 时不如 RBFN 模型。整合模型和 RBFN 模型在区分 T 与 TR 时的 AUC 平均差距为 7.1\% 。整合模型在区分 T 与随机产生的负样本上的表现（图\ref{Integrated}）也优于在区分 T 与 TR 时的表现，平均 AUC  差距为 12.8\% 。
+
+更为有意思的是，这两个模型在区分 T 与 TR 以及 T 与 随机负样本 时的 AUC 差异似乎满足交换关系。为了更好的说明，先把各种情况下 AUC 的值列出来（表\ref{AUC_Commutative}）。
+\begin{table}[H]\centering
+\begin{tabular}{ccccc}
 \hline\hline
-Dataset             & Before      & After     & Percentage \\
+match-type & AUC(R,T,N)& AUC(R,T,TR)& AUC(I,T,N)&AUC(I,T,TR) \\
 \hline
-ALL/AML leukaemia   & 7129        & 1038      & 14.56      \\
-Breast Cancer       & 24 481      & 834       & 3.41       \\
-CNS embryonal tumous& 7129        & 74        & 1.04       \\
-Colon tumour        & 7129        & 135       & 1.89       \\
-Lung cancer         & 12 533      & 5365      & 42.81      \\
-Prostate cancer     & 12 600      & 3071      & 24.37      \\
-outcome             & 12 600      & 208       & 1.65       \\
+(1,1)  & 0.97   & 0.70  & 0.97    & 0.70 \\
+(1,2)  & 0.86   & 0.73  & 0.82    & 0.67 \\
+(1,3)  & 0.80   & 0.73  & 0.77    & 0.70 \\
+(2,1)  & 0.87   & 0.75  & 0.83    & 0.70 \\
+(2,2)  & 0.82   & 0.79  & 0.79    & 0.68 \\
+(2,3)  & 0.83   & 0.77  & 0.80    & 0.71 \\
+(3,1)  & 0.84   & 0.75  & 0.77    & 0.64 \\
+(3,2)  & 0.81   & 0.76  & 0.76    & 0.64 \\
+(3,3)  & 0.83   & 0.78  & 0.75    & 0.67 \\
 \hline
 \end{tabular}
-\caption{这是个表格}\label{tab:hh}
+\caption{各种情况下的AUC值。这些数值来自图 \ref{Discrimination}, \ref{Integrated}, \ref{reverse}, \ref{Integrated_Reverse}。R 表示 RBFN 模型，I 表示整合模型，T 表示正测试集， TR 表示由 T 中元素的抗原氨基酸序列和抗体氨基酸序列交换次序得到的测试集， N 表示随机生成的负样本。AUC(R,T,N) 表示用 RBFN模型（R）区分 T 和 N 时的 AUC 值。}
+\label{AUC_Commutative}
 \end{table}
-
-如果插图, 可以考虑下面的命令：
-\begin{verbatim}
-\includegraphics[options]{yourfile}
-\end{verbatim}
-具体命令参考~graphicx~宏包说明,
-值得注意的是用~PDF\, LATEX~编译是不支持插入~EPS~格式图片的,
-不过将~EPS~格式图片转换为~PDF~后就可以插入了. 限于条件限制, 本模板不给出插入图片的示例.
-\par
-论文中的数据图例可以由~MatLab~制作（比如数据模拟图）,
-一般的图例（含流程图, 交换图等）可由~MetaPost~
-或者~Asymptote~作出（当然作图工具不限于此）, 限于条件限制,
-模板不给出示例.
-\section{Core中抗原氨基酸和抗体氨基酸的区分}
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Commutative.pdf}
+	\caption{各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}
+	\label{Commutative}
+\end{figure}
+从图 \ref{Commutative} 可以看出 
+$$0.1277 + 0.0411 = 0.0722 + 0.0966$$
+ 竟然是交换的(commutative)! 这个现象并不 trivial, 单单从数学的角度似乎得不到这样的等式，同时通过比较在各种 match-type 下的数据也都不是严格成立。
 \section{预测突变对抗原抗体复合物亲和力的影响}
 
 \chapter{RBFN 一个新的 center 选取方法}
@@ -868,6 +902,22 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 \textbf{注意``参考文献"不写成论文的一章. }
 
 \chapter*{\heiti 致谢}
+%\begin{table}[htbp]\centering
+%\begin{tabular}{llll}
+%\hline\hline
+%Dataset             & Before      & After     & Percentage \\
+%\hline
+%ALL/AML leukaemia   & 7129        & 1038      & 14.56      \\
+%Breast Cancer       & 24 481      & 834       & 3.41       \\
+%CNS embryonal tumous& 7129        & 74        & 1.04       \\
+%Colon tumour        & 7129        & 135       & 1.89       \\
+%Lung cancer         & 12 533      & 5365      & 42.81      \\
+%Prostate cancer     & 12 600      & 3071      & 24.37      \\
+%outcome             & 12 600      & 208       & 1.65       \\
+%\hline
+%\end{tabular}
+%\caption{这是个表格}\label{tab:hh}
+%\end{table}
 
 请对帮助过你完成论文的老师、同学致谢. 也可以在此对您四年大学生活有重要帮助的人致谢.
 
