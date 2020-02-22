@@ -863,6 +863,17 @@ match-type & AUC(R,T,N)& AUC(R,T,TR)& AUC(I,T,N)&AUC(I,T,TR) \\
 从图 \ref{Commutative} 可以看出 
 $$0.1277 + 0.0411 = 0.0722 + 0.0966$$
  竟然是交换的(commutative)! 这个现象并不 trivial, 单单从数学的角度似乎得不到这样的等式，同时通过比较在各种 match-type 下的数据也都不是严格成立。
+ \begin{figure}[H]
+ \centering
+ \includegraphics[scale=0.5]{Commutative_Explanation.pdf}
+ \caption{对图 \ref{Commutative} 交换关系的解释}
+ \label{Commutative_Explanation}
+ \end{figure}
+ 图 \ref{Commutative_Explanation} 给出了交换关系的一个解释。这里接用心理学上阈限（sensory threshold）的概念，也就是两个刺激能够被感觉器官区分开的最小刺激强度的差。此处则用阈限来表示模型的好坏。那么，一个测试集中能够被区分开的样本的数目随着模型阈限的降低而增加。我们可以把测试集关于阈限的分布画出来，如图 \ref{Commutative_Explanation} 中的两个曲线，分别表示测试集 T 和 TR 以及 T 和 N 沿阈限的分布； 如图 \ref{Commutative_Explanation} 中的两条直线分别表示 RBFN 模型(R)和整合模型(I)，它们在 x 轴上的截距表示这两个模型的阈限。显然整合模型的阈限大于RBFN的阈限，也就是RBFN模型要优秀。我们把两个分布曲线在直线右侧的面积简单理解成这个模型在对应测试集中的AUC，那么这样就可以解释图 \ref{Commutative} 的交换关系。而且，这两个模型在区分度比较差的测试集（T 和 TR）上的 AUC 值差距比较大，在区分度比较高的测试集上差距比较小。这里，所谓的区分度，可以理解为阈限在一定意义下的平均。 如果上面的解释成立，那么当测试集的分布确定时候，我们就可以确定模型的差异。反过来，当模型的差异确定时，测试集之中个体的差异就有了一个衡量。
+ 
+ 这里只是对交换性质做出的一个大胆解释，除了本文的例子之外还没有用其他例子来验证，但是本文强烈怀疑，这个解释对多数的模型和测试集都成立。
+
+ 
 \section{预测突变对抗原抗体复合物亲和力的影响}
 
 \chapter{RBFN 一个新的 center 选取方法}
