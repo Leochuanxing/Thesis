@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  22 FEB 2020 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  23 FEB 2020 19:21
 entering extended mode
 **./Liu_Chuanxing_Thesis.tex
 (Liu_Chuanxing_Thesis.tex
@@ -1185,7 +1185,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./CellImmune-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<CellImmune-eps-converted-to.pdf, id=192, 794.97pt x 614.295pt>
+<CellImmune-eps-converted-to.pdf, id=202, 794.97pt x 614.295pt>
 File: CellImmune-eps-converted-to.pdf Graphic file (type pdf)
 <use CellImmune-eps-converted-to.pdf>
 Package pdftex.def Info: CellImmune-eps-converted-to.pdf  used on input line 15
@@ -1205,7 +1205,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./SerumImmune-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<SerumImmune-eps-converted-to.pdf, id=194, 794.97pt x 614.295pt>
+<SerumImmune-eps-converted-to.pdf, id=204, 794.97pt x 614.295pt>
 File: SerumImmune-eps-converted-to.pdf Graphic file (type pdf)
 <use SerumImmune-eps-converted-to.pdf>
 Package pdftex.def Info: SerumImmune-eps-converted-to.pdf  used on input line 1
@@ -1228,7 +1228,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./AntibodySchematic-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<AntibodySchematic-eps-converted-to.pdf, id=220, 794.97pt x 614.295pt>
+<AntibodySchematic-eps-converted-to.pdf, id=230, 794.97pt x 614.295pt>
 File: AntibodySchematic-eps-converted-to.pdf Graphic file (type pdf)
 <use AntibodySchematic-eps-converted-to.pdf>
 Package pdftex.def Info: AntibodySchematic-eps-converted-to.pdf  used on input 
@@ -1264,7 +1264,7 @@ rm/m/n/12.045/40 ½ \C19/rm/m/n/12.045/53 « \C19/rm/m/n/12.045/64 Ì \C19/rm/m/n/
 
 [2 <./SerumImmune-eps-converted-to.pdf> <./AntibodySchematic-eps-converted-to.p
 df>]
-<Vaccine.png, id=260, 798.985pt x 389.455pt>
+<Vaccine.png, id=270, 798.985pt x 389.455pt>
 File: Vaccine.png Graphic file (type png)
 <use Vaccine.png>
 Package pdftex.def Info: Vaccine.png  used on input line 181.
@@ -1298,14 +1298,14 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./MonoclonalAntibody-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<MonoclonalAntibody-eps-converted-to.pdf, id=274, 794.97pt x 614.295pt>
+<MonoclonalAntibody-eps-converted-to.pdf, id=284, 794.97pt x 614.295pt>
 File: MonoclonalAntibody-eps-converted-to.pdf Graphic file (type pdf)
 <use MonoclonalAntibody-eps-converted-to.pdf>
 Package pdftex.def Info: MonoclonalAntibody-eps-converted-to.pdf  used on input
  line 192.
 (pdftex.def)             Requested size: 397.48402pt x 307.14674pt.
 [4 <./MonoclonalAntibody-eps-converted-to.pdf>]<<c1980.cmap>>
-<ConformationalEpitope.png, id=320, 1213.53375pt x 553.06625pt>
+<ConformationalEpitope.png, id=330, 1213.53375pt x 553.06625pt>
 File: ConformationalEpitope.png Graphic file (type png)
 <use ConformationalEpitope.png>
 Package pdftex.def Info: ConformationalEpitope.png  used on input line 209.
@@ -1390,7 +1390,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./BeparFlowChart-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<BeparFlowChart-eps-converted-to.pdf, id=414, 359.3425pt x 537.00626pt>
+<BeparFlowChart-eps-converted-to.pdf, id=424, 359.3425pt x 537.00626pt>
 File: BeparFlowChart-eps-converted-to.pdf Graphic file (type pdf)
 <use BeparFlowChart-eps-converted-to.pdf>
 Package pdftex.def Info: BeparFlowChart-eps-converted-to.pdf  used on input lin
@@ -1400,7 +1400,7 @@ e 269.
 
 LaTeX Warning: Citation `HotSpotComp' on page 12 undefined on input line 304.
 
-<HotSpot.png, id=464, 712.6625pt x 313.17pt>
+<HotSpot.png, id=474, 712.6625pt x 313.17pt>
 File: HotSpot.png Graphic file (type png)
 <use HotSpot.png>
 Package pdftex.def Info: HotSpot.png  used on input line 310.
@@ -1436,7 +1436,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./DataExtraction-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<DataExtraction-eps-converted-to.pdf, id=515, 719.68875pt x 82.3075pt>
+<DataExtraction-eps-converted-to.pdf, id=525, 719.68875pt x 82.3075pt>
 File: DataExtraction-eps-converted-to.pdf Graphic file (type pdf)
 <use DataExtraction-eps-converted-to.pdf>
 Package pdftex.def Info: DataExtraction-eps-converted-to.pdf  used on input lin
@@ -1481,7 +1481,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./ElbowMethod-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<ElbowMethod-eps-converted-to.pdf, id=561, 794.97pt x 614.295pt>
+<ElbowMethod-eps-converted-to.pdf, id=571, 794.97pt x 614.295pt>
 File: ElbowMethod-eps-converted-to.pdf Graphic file (type pdf)
 <use ElbowMethod-eps-converted-to.pdf>
 Package pdftex.def Info: ElbowMethod-eps-converted-to.pdf  used on input line 3
@@ -1504,7 +1504,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./Core_districution_over_Match_type-eps-converte
 d-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
-<Core_districution_over_Match_type-eps-converted-to.pdf, id=612, 722.7pt x 433.
+<Core_districution_over_Match_type-eps-converted-to.pdf, id=622, 722.7pt x 433.
 62pt>
 File: Core_districution_over_Match_type-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1528,7 +1528,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./aa_distribution_overall-eps-converted-to.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<aa_distribution_overall-eps-converted-to.pdf, id=665, 1084.05pt x 433.62pt>
+<aa_distribution_overall-eps-converted-to.pdf, id=675, 1084.05pt x 433.62pt>
 File: aa_distribution_overall-eps-converted-to.pdf Graphic file (type pdf)
 <use aa_distribution_overall-eps-converted-to.pdf>
 Package pdftex.def Info: aa_distribution_overall-eps-converted-to.pdf  used on 
@@ -1559,7 +1559,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./The_Middle_aa-eps-converted-to.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<The_Middle_aa-eps-converted-to.pdf, id=757, 1084.05pt x 433.62pt>
+<The_Middle_aa-eps-converted-to.pdf, id=767, 1084.05pt x 433.62pt>
 File: The_Middle_aa-eps-converted-to.pdf Graphic file (type pdf)
 <use The_Middle_aa-eps-converted-to.pdf>
 Package pdftex.def Info: The_Middle_aa-eps-converted-to.pdf  used on input line
@@ -1584,7 +1584,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./Coverage_Center-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Coverage_Center-eps-converted-to.pdf, id=841, 338.26375pt x 480.79625pt>
+<Coverage_Center-eps-converted-to.pdf, id=851, 338.26375pt x 480.79625pt>
 File: Coverage_Center-eps-converted-to.pdf Graphic file (type pdf)
 <use Coverage_Center-eps-converted-to.pdf>
 Package pdftex.def Info: Coverage_Center-eps-converted-to.pdf  used on input li
@@ -1605,7 +1605,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./Discrimination-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Discrimination-eps-converted-to.pdf, id=878, 504.88625pt x 511.9125pt>
+<Discrimination-eps-converted-to.pdf, id=888, 504.88625pt x 511.9125pt>
 File: Discrimination-eps-converted-to.pdf Graphic file (type pdf)
 <use Discrimination-eps-converted-to.pdf>
 Package pdftex.def Info: Discrimination-eps-converted-to.pdf  used on input lin
@@ -1627,7 +1627,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./Integrated_Discriminate-eps-converted-to.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Integrated_Discriminate-eps-converted-to.pdf, id=897, 530.98375pt x 530.98375p
+<Integrated_Discriminate-eps-converted-to.pdf, id=907, 530.98375pt x 530.98375p
 t>
 File: Integrated_Discriminate-eps-converted-to.pdf Graphic file (type pdf)
 <use Integrated_Discriminate-eps-converted-to.pdf>
@@ -1650,7 +1650,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./reverse-eps-converted-to.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
-<reverse-eps-converted-to.pdf, id=915, 517.935pt x 515.9275pt>
+<reverse-eps-converted-to.pdf, id=925, 517.935pt x 515.9275pt>
 File: reverse-eps-converted-to.pdf Graphic file (type pdf)
 <use reverse-eps-converted-to.pdf>
 Package pdftex.def Info: reverse-eps-converted-to.pdf  used on input line 824.
@@ -1683,34 +1683,107 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./Integrated_Reverse-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Integrated_Reverse-eps-converted-to.pdf, id=923, 519.9425pt x 520.94624pt>
+<Integrated_Reverse-eps-converted-to.pdf, id=933, 519.9425pt x 520.94624pt>
 File: Integrated_Reverse-eps-converted-to.pdf Graphic file (type pdf)
 <use Integrated_Reverse-eps-converted-to.pdf>
 Package pdftex.def Info: Integrated_Reverse-eps-converted-to.pdf  used on input
  line 831.
 (pdftex.def)             Requested size: 415.95457pt x 416.75757pt.
 [34 <./reverse-eps-converted-to.pdf>]
-<Commutative.pdf, id=947, 794.97pt x 401.5pt>
+<Commutative.pdf, id=957, 794.97pt x 401.5pt>
 File: Commutative.pdf Graphic file (type pdf)
 <use Commutative.pdf>
 Package pdftex.def Info: Commutative.pdf  used on input line 859.
 (pdftex.def)             Requested size: 397.48402pt x 200.7495pt.
  [35 <./Integrated_Reverse-eps-converted-to.pdf>]
-<Commutative_Explanation.pdf, id=961, 545.03625pt x 382.42876pt>
+<Commutative_Explanation.pdf, id=971, 545.03625pt x 382.42876pt>
 File: Commutative_Explanation.pdf Graphic file (type pdf)
 <use Commutative_Explanation.pdf>
 Package pdftex.def Info: Commutative_Explanation.pdf  used on input line 868.
 (pdftex.def)             Requested size: 272.51746pt x 191.2139pt.
  [36 <./Commutative.pdf>]<<c1974.cmap>> [37 <./Commutative_Explanation.pdf>]
+Package epstopdf Info: Source file: <ContactingPairs.eps>
+(epstopdf)                    date: 2020-02-23 15:37:06
+(epstopdf)                    size: 2674126 bytes
+(epstopdf)             Output file: <ContactingPairs-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-23 15:44:28
+(epstopdf)                    size: 17764 bytes
+(epstopdf)             Command: <epstopdf --outfile=ContactingPairs-eps-convert
+ed-to.pdf ContactingPairs.eps>
+(epstopdf)             \includegraphics on input line 895.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./ContactingPairs-eps-converted-to.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<ContactingPairs-eps-converted-to.pdf, id=1022, 862.22125pt x 517.935pt>
+File: ContactingPairs-eps-converted-to.pdf Graphic file (type pdf)
+<use ContactingPairs-eps-converted-to.pdf>
+Package pdftex.def Info: ContactingPairs-eps-converted-to.pdf  used on input li
+ne 895.
+(pdftex.def)             Requested size: 431.10957pt x 258.96686pt.
+
+Overfull \hbox (66.12045pt too wide) in paragraph at lines 894--896
+[]  [] 
+ []
+
+[38]
+Package epstopdf Info: Source file: <Predictable.eps>
+(epstopdf)                    date: 2019-12-01 20:35:54
+(epstopdf)                    size: 1975166 bytes
+(epstopdf)             Output file: <Predictable-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-23 11:26:42
+(epstopdf)                    size: 20851 bytes
+(epstopdf)             Command: <epstopdf --outfile=Predictable-eps-converted-t
+o.pdf Predictable.eps>
+(epstopdf)             \includegraphics on input line 905.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Predictable-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<Predictable-eps-converted-to.pdf, id=1031, 391.4625pt x 206.7725pt>
+File: Predictable-eps-converted-to.pdf Graphic file (type pdf)
+<use Predictable-eps-converted-to.pdf>
+Package pdftex.def Info: Predictable-eps-converted-to.pdf  used on input line 9
+05.
+(pdftex.def)             Requested size: 234.8793pt x 124.06445pt.
+[39 <./ContactingPairs-eps-converted-to.pdf>] [40 <./Predictable-eps-converted-
+to.pdf>]
+Overfull \hbox (3.11514pt too wide) in paragraph at lines 928--940
+ [][] 
+ []
+
+Package epstopdf Info: Source file: <Affinity_Predict.eps>
+(epstopdf)                    date: 2020-02-23 18:46:44
+(epstopdf)                    size: 3697134 bytes
+(epstopdf)             Output file: <Affinity_Predict-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-23 18:52:03
+(epstopdf)                    size: 201633 bytes
+(epstopdf)             Command: <epstopdf --outfile=Affinity_Predict-eps-conver
+ted-to.pdf Affinity_Predict.eps>
+(epstopdf)             \includegraphics on input line 947.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Affinity_Predict-eps-converted-to.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Affinity_Predict-eps-converted-to.pdf, id=1066, 457.71pt x 909.3975pt>
+File: Affinity_Predict-eps-converted-to.pdf Graphic file (type pdf)
+<use Affinity_Predict-eps-converted-to.pdf>
+Package pdftex.def Info: Affinity_Predict-eps-converted-to.pdf  used on input l
+ine 947.
+(pdftex.def)             Requested size: 297.50798pt x 591.10138pt.
+[41] [42 <./Affinity_Predict-eps-converted-to.pdf>] [43]
 µÚÎåÕÂ
 LaTeX Font Info:    Trying to load font information for C19+zhfs on input line 
-883.
+985.
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhfs.fd
 "
 File: c19zhfs.fd 2009/09/23 4.8.2
 )
 LaTeX Font Info:    Trying to load font information for C19+zhkai on input line
- 884.
+ 986.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhkai.f
 d"
@@ -1719,34 +1792,34 @@ File: c19zhkai.fd 2009/09/23 4.8.2
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 894.
+(amsmath)                 on input line 996.
 
-[38
+[44
 
 ]
 µÚÁùÕÂ
-[39
+[45
 
-] [40
+] [46
 
-]<<c1929.cmap>><<c1930.cmap>> [41
+]<<c1929.cmap>><<c1930.cmap>> [47
 
-] [42] [43pdfTeX warning (ext4): destination with the same identifier (name{cit
+] [48] [49pdfTeX warning (ext4): destination with the same identifier (name{cit
 e.EpiPred}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1096 	
-        ] [44]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1173.
- [45]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1173.
+l.1198 	
+        ] [50]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1275.
+ [51]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1275.
  (Liu_Chuanxing_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1173.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1275.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1275.
 
 Package rerunfilecheck Info: File `Liu_Chuanxing_Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7999AF63355B9B69A66EEAB5A4AFE14C;2185.
+(rerunfilecheck)             Checksum: AFED526DCFF124D49104B0395BE99919;2453.
 
 
 LaTeX Warning: There were undefined references.
@@ -1754,13 +1827,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1173.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1275.
  ) 
 Here is how much of TeX's memory you used:
- 29860 strings out of 492453
- 547898 string characters out of 3121009
- 675388 words of memory out of 3000000
- 33278 multiletter control sequences out of 15000+200000
+ 29930 strings out of 492453
+ 549347 string characters out of 3121009
+ 676064 words of memory out of 3000000
+ 33323 multiletter control sequences out of 15000+200000
  605734 words of font info for 297 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,15n,67p,2626b,1060s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1824,9 +1897,9 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
 ><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmtt12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmtt9.pfb>
-Output written on Liu_Chuanxing_Thesis.pdf (47 pages, 6131977 bytes).
+Output written on Liu_Chuanxing_Thesis.pdf (53 pages, 6395169 bytes).
 PDF statistics:
- 1535 PDF objects out of 1728 (max. 8388607)
- 255 named destinations out of 1000 (max. 500000)
- 397 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1622 PDF objects out of 1728 (max. 8388607)
+ 277 named destinations out of 1000 (max. 500000)
+ 428 words of extra memory for PDF output out of 10000 (max. 10000000)
 

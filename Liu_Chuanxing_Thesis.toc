@@ -12,7 +12,9 @@
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}RBFN 模型的应用}{33}{chapter.4}% 
 \contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core中抗原氨基酸和抗体氨基酸的区分}{33}{section.4.1}% 
 \contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}预测突变对抗原抗体复合物亲和力的影响}{37}{section.4.2}% 
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}RBFN 一个新的 center 选取方法}{38}{chapter.5}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}题头}{38}{section.5.1}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}同章另一节的题头}{38}{section.5.2}% 
-\contentsline {chapter}{\numberline {第六章\hspace {.3em}}参考文献的写法}{39}{chapter.6}% 
+\contentsline {subsection}{\numberline {2.1.}可预测氨基酸对的提取}{38}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {2.2.}亲和力变化的预测}{40}{subsection.4.2.2}% 
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}RBFN 一个新的 center 选取方法}{44}{chapter.5}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}题头}{44}{section.5.1}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}同章另一节的题头}{44}{section.5.2}% 
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}参考文献的写法}{45}{chapter.6}% 

@@ -875,9 +875,111 @@ $$0.1277 + 0.0411 = 0.0722 + 0.0966$$
 
  
 \section{预测突变对抗原抗体复合物亲和力的影响}
+增加抗原和抗体的亲和力，在治疗性抗体的生产过程中起着至关重要的作用。实验室中的各种展示技术是筛选具有高亲和力抗体的有效手段，但是成本高，过程复杂。用计算的方法来设计高亲和力的抗体，可以大大提高筛选的效率。虽然目前计算的手段精确度有待提高，却是一个广阔的天地，是未来发展的方向。用计算的方法设计高亲和力的抗体，在一定意义上可以归结为对亲和力变化的预测，也就是，当有一系列可能的突变时，用计算的方法来判定那一个突变会增加抗原抗体的亲和力。Sirin 等比较了 7 个不同的方法\cite{AB-Bind}, 虽然这些方法的预测的亲和力(affinity) 和实际实验测得的亲和力的相关系数并不高，但是在单单判断一个突变是否会增加亲和力的问题上还是具有实际参考价值，特别是表现优秀的 FoldX 和 Discovery Studio。
+
+本论文从上面构建的RBFN模型出发，对突变的亲和力做出预测。一个基本的假设就是，如果突变使得抗原抗体相互作用的氨基酸朝着 Core 的方向变化，那么这个突变就可以增加抗原抗体的亲和力，否则就减弱抗原抗体的亲和力。那么，用 RBFN 模型进行亲和力变化预测的第一步就是找出相互作用的短的氨基酸序列。在现实的突变过程中，往往都是单个突变，然后逐次叠加， Sirin 等\cite{AB-Bind} 收集的数据中绝大多数为单位点突变（1101 个突变中有 645 个位单位点突变）。
+%同时考虑到 RBFN 中的 match-type(1,1)模型的准确性，以及在用 其他 match-type 下表现并不好，于是就采用了 match-type(1,1)下的RBFN模型。
+
+\subsection{可预测氨基酸对的提取}
+突变氨基酸对的提取分为三个步骤：复合物的筛选，相互作用氨基酸对的提取，可预测氨基酸对的组装和筛选。
+\begin{enumerate}[label = (\arabic*)]
+	\item 复合物的筛选。在数据库 AB-Bind 中的突变，有的来自于在PDB中有三维结构的复合物，有的则来自于和PDB中一些复合物相似的复合物。由于在相互作用的氨基酸对的提取过程中，需要抗原抗体复合物，我们则之选取哪些来自PDB中复合物的突变。一共有以下 17 个。
+\begin{center}
+1bj1, icz8, 1dqj, 1mhp, 1mlc, 1vfb, 1yy9, 2jel
+
+2ny7, 2nyy, 2nz9, 3bdy, 3be1, 3bn9, 3hfm, 3ngb, 1dvf
+\end{center}
+	\item 相互作用突变氨基酸对的提取。本论文在前面抽取 Core 的时候，选取在截断距离是 4\si{\angstrom} 的时候，CN 数值最大的那个氨基酸序列对。这里，由于我们的目的不是抽取 Core, 而是判断突变后，氨基酸对是不是更趋向 Core, 所以我们的截断距离选用了移动的截断距离。 这里， 截断距离的变化范围从 3\si{\angstrom} 变化到 8\si{\angstrom}， 且步长是0.25. 对于每一个突变位置，通过如图 \ref{ContactingPairs} 的过程找出相互作用的氨基酸对。
+	\begin{figure}[H]
+    	\hspace{3cm}
+    	\includegraphics[scale=0.5]{ContactingPairs.eps}
+    	\caption{相互作用突变氨基酸对的提取。}
+    	\label{ContactingPairs}
+    \end{figure}
+\item 可预测氨基酸对的组装和筛选。本论文对上一步得到的相互作用的氨基酸对进行了六种类型的组装和筛选。
+	\begin{enumerate}
+		\item one\_WithinRange\_False : 对于同一个突变复合物中所有突变氨基酸对，找出 CN 最大的一个作为预测亲和力的依据。这里所谓一个突变复合物是指有一个或者多个突变并且突变后抗原抗体复合物的亲和力通过实验测得。称一个突变复合物的野生型为野生复合物。
+		\item one\_WithinRange\_True 对于同一个突变复合物中所有突变氨基酸对，找出 CN 最大的一个, 同时，这个 CN 最大的氨基酸对中的抗体氨基酸必须位于 CDR 区域内。这里的 CDR 区域和本文提取 Core 时定义的 CDR 区域一致。选取规则可以概括为图 \ref{Predictable} 。
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Predictable.eps}
+			\caption{把突变氨基酸对的抗体氨基酸限定在 CDR 上。}
+			\label{Predictable}
+		\end{figure}
+		\item multiple\_WithinRange\_False :   同一个突变复合物中所有突变氨基酸对都作为判断依据。
+		\item multiple\_WithinRange\_True :   对同一个突变复合物中所有突变氨基酸对按照图 \ref{Predictable} 中的规则进行筛选。如果这个突变复合物中有一个突变氨基酸对不满足要求，那么这个这个突变符合物中的所有氨基酸对都不可预测。
+		\item flanked\_WithinRange\_False : 当 multiple\_WithinRange\_False 的氨基酸对选定后，每个氨基酸连同它前面和后面的氨基酸一起考虑。例如，（[Ab1], [Ag1]）是 multiple\_WithinRange\_False 中选定的可预测的氨基酸对，那么 （[Ab0, Ab1, Ab2], [Ag0, Ag1, Ag2]）就是 flanked\_WithinRange\_False 中选定的可以预测的氨基酸对。
+		\item flanked\_WithinRange\_True : 当 multiple\_WithinRange\_True 的氨基酸对选定后，每个氨基酸连同它前面和后面的氨基酸一起考虑。
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{亲和力变化的预测}
+当可以预测的氨基酸对提取出来之后，属于同一个突变复合物的氨基酸对放在一起。
+
+假设 (Mu1, Ag1), (Mu2, Ag2), (Ab1, Mu3) 为一个突变复合物中的可预测氨基酸对， (Wt1, Ag1), (Wt2, Ag2), (Ab1, Wt3) 为对应的野生型复合物中的可预测氨基酸对。这里可预测氨基酸对可以是六种类型中的任意一种 (one\_WithinRange\_True , one\_WithinRange\_False , multiple\_WithinRange\_True , multiple\_WithinRange\_False , flanked\_WithinRange\_True , flanked\_WithinRange\_False) 。那么，突变后亲和力的变化由下面的公式给出判断：
+\begin{align*}
+\text{RBFN}_{Mu}&=\frac{1}{3}[\text{RBFN(Mu1, Ag1)}+\text{RBFN(Mu2, Ag2)}+\text{RBFN((Ab1, Mu3))}]3\\
+\text{RBFN}_{Wt}&=\frac{1}{3}[\text{RBFN(Wt1, Ag1)}+\text{RBFN(Wt2, Ag2)}+\text{RBFN((Ab1, Wt3))}]3\\
+\Delta &= \text{RBFN}_{Mu} - \text{RBFN}_{Wt}
+\end{align*}
+如果 $\Delta > 0$ 则说明亲和力增加；如果 $\Delta < 0$ 则说明亲和力降低。
+
+\begin{table}[H]\centering
+\begin{tabular}{ccccc c}
+\hline\hline
+Mode            & $\Delta\Delta G < 0.5$  & $\Delta\Delta G >0$ & $\Delta\Delta G > 0.5$ & $\Delta\Delta G > 1$& n   \\
+\hline
+one\_WithinRange\_True & 0.531  &  0.605 &  0.620 &  0.710  & 467\\
+one\_WithinRange\_False & 0.526 &  0.603 &  0.619 &  0.713  & 497\\
+multiple\_WithinRange\_True & 0.525 & 0.599 & 0.606 & 0.693  & 463 \\
+multiple\_WithinRange\_False & 0.524 & 0.598 & 0.605 & 0.695 & 497\\
+flanked\_WithinRange\_True & 0.544 & 0.506 & 0.427 & 0.458 & 463\\
+flanked\_WithinRange\_False & 0.529 & 0.489 & 0.408 & 0.429 & 497\\
+\hline
+\end{tabular}
+\caption{$\Delta\Delta G$ 位于不同范围的突变复合物的亲和力的预测效果。 其中 $\Delta\Delta G$ 为吉布斯自由能的变化，单位是 KJ/mol 。 n 表示预测的突变复合物的数目。预测效果的好坏用 AUC 来衡量。}
+\label{Affinity_Pred}
+\end{table}
+从表格\ref{Affinity_Pred} 可以看出，one\_WithinRange\_True 和 one\_WithinRange\_False 为预测效果最好的两个，而且这两者，除了 $\Delta\Delta G > 1$ 的情况外， one\_WithinRange\_True 类型的预测效果稍优， 但是优势不明显。其中一个原因就是多数情况下，相互作用的氨基酸对都满足图 \ref{Predictable} 的要求。由于本文的模型是建立在 CDR 上的氨基酸和抗体氨基酸之间相互作用的基础上，为了保持一致，选择类型 one\_WithinRange\_True 对突变复合物亲和力的变化进行预测。
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.65]{Affinity_Predict.eps}
+		\caption{各种方法的预测效果。CN：指的是本文的方法，是 Contacting Number 首字母的缩写。其他的方法请参考文献 \cite{AB-Bind}。突变体复合物的选择是在 one\_WithinRang\_True 的类型下的突变体复合物。$\Delta\Delta G$ 的单位是 KJ/mol 。}
+		\label{Affinity_Predict}
+	\end{figure}
+
+图 \ref{Affinity_Predict} 给出了不同方法的预测效果。从图中可以看出，本文的方法 CN 和除 foldX 以及 Discovery Studio 外的其他五种方法在不同的 $\Delta\Delta G$ 的子集上互有优劣。为了准确的衡量本文的方法与其他方法相较之下的优劣，本文用 Bootstrap 的方法构建了 AUC 的置信区间，如表 \ref{Bootstrap}。从中可以看出，Discovery Studio 在 $\Delta\Delta G > 0$, FoldX 在 $\Delta\Delta G>0$, $\Delta\Delta G>0.5$, $\Delta\Delta G>1$ 都优于 CN ，所有其他情况和方法，在95\%置信区间意义下都不比CN 有明显优势。综合以上结果，bASA, dfir, dDfir, Rosetta, STATIUM 和 CN 在 one\_WithinRange\_True 得到的测试集中，旗鼓相当。
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccc}
+\hline\hline
+            & $\Delta\Delta G < 0.5$  & $\Delta\Delta G >0$ & $\Delta\Delta G > 0.5$ & $\Delta\Delta G > 1$  \\
+\hline
+CN&(0.43, 0.63)& (0.54, 0.66)&(0.53, 0.71)&(0.60, 0.80)
+\\
+bASA&(0.44, 0.64)& (0.58, 0.69)&(0.57, 0.74)&(0.54, 0.80)
+\\
+dfire&(0.45, 0.67)& (0.62, 0.73)&(0.63, 0.79)&(0.67, 0.84)
+\\
+dDfire&(0.50, 0.71)& (0.57, 0.68)&(0.54, 0.70)&(0.57, 0.78)
+\\
+Rosetta&(0.37, 0.68)& (0.57, 0.68)&(0.59, 0.76)&(0.67, 0.87)
+\\
+STATIUM&(0.42, 0.63)& (0.57, 0.68)&(0.58, 0.75)&(0.68, 0.87)
+\\
+D Studio&(0.48, 0.69)& (0.67, 0.77)&(0.70, 0.83)&(0.77, 0.92)
+\\
+FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
+\\
+\hline
+\end{tabular}
+\caption{Bootstrap 方法构建各种不同方法 AUC 95\% 的置信区间。Boostrap 的取样次数为 10,000 。D Studio 为 Discovery Studio 。}
+\label{Bootstrap}
+\end{table}
 
 \chapter{RBFN 一个新的 center 选取方法}
-
 \section{题头}
 同一章内定理、引理等``题头"可以采用连续/统一的标号, 这是由模板中的诸如
 ``\verb+\newtheorem{theorem}[definition]{定理}+ "这样的命令中的``\verb+ [definition]+"选项确定的, 它使所有定理采用和定义统一编号：
@@ -1106,8 +1208,8 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 \bibitem{Lippow}Lippow S M , Wittrup K D , Tidor B . Computational design of antibody-affinity improvement beyond in vivo maturation.
 	\emph{Nature Biotechnology}, (2007), 25(10):1171-1176.
 	
-\bibitem{AB-Bind}AB-Bind: Antibody binding mutational database for computational affinity predictions. 
-	\emph{Protein Science}, (2016), 25(2):393-409.
+\bibitem{AB-Bind}Sirin, Sarah, et al. AB-Bind: antibody binding mutational database for computational affinity predictions.
+	\emph{Protein Science}, (2016), 25(2): 393-409.
 	
 \bibitem{STATIUM}DeBartolo J, Dutta S, Reich L, Keating AE, Predictive Bcl-2 family binding models rooted in experiment or structure. 
 	\emph{J Mol Biol} (2012), 422:124–144.

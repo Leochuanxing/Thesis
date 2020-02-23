@@ -182,17 +182,33 @@
 \newlabel{AUC_Commutative}{{4.1}{36}{各种情况下的AUC值。这些数值来自图 \ref {Discrimination}, \ref {Integrated}, \ref {reverse}, \ref {Integrated_Reverse}。R 表示 RBFN 模型，I 表示整合模型，T 表示正测试集， TR 表示由 T 中元素的抗原氨基酸序列和抗体氨基酸序列交换次序得到的测试集， N 表示随机生成的负样本。AUC(R,T,N) 表示用 RBFN模型（R）区分 T 和 N 时的 AUC 值。}{table.4.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces 各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}}{36}{figure.4.3}\protected@file@percent }
 \newlabel{Commutative}{{4.3}{36}{各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}{figure.4.3}{}}
+\citation{AB-Bind}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 对图 \ref  {Commutative} 交换关系的解释}}{37}{figure.4.4}\protected@file@percent }
 \newlabel{Commutative_Explanation}{{4.4}{37}{对图 \ref {Commutative} 交换关系的解释}{figure.4.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}预测突变对抗原抗体复合物亲和力的影响}{37}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {第五章\hspace  {.3em}}RBFN 一个新的 center 选取方法}{38}{chapter.5}\protected@file@percent }
+\citation{AB-Bind}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.}可预测氨基酸对的提取}{38}{subsection.4.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 相互作用突变氨基酸对的提取。}}{39}{figure.4.5}\protected@file@percent }
+\newlabel{ContactingPairs}{{4.5}{39}{相互作用突变氨基酸对的提取。}{figure.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces 把突变氨基酸对的抗体氨基酸限定在 CDR 上。}}{40}{figure.4.6}\protected@file@percent }
+\newlabel{Predictable}{{4.6}{40}{把突变氨基酸对的抗体氨基酸限定在 CDR 上。}{figure.4.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.}亲和力变化的预测}{40}{subsection.4.2.2}\protected@file@percent }
+\citation{AB-Bind}
+\citation{AB-Bind}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces $\Delta \Delta G$ 位于不同范围的突变复合物的亲和力的预测效果。 其中 $\Delta \Delta G$ 为吉布斯自由能的变化，单位是 KJ/mol 。 n 表示预测的突变复合物的数目。预测效果的好坏用 AUC 来衡量。}}{41}{table.4.2}\protected@file@percent }
+\newlabel{Affinity_Pred}{{4.2}{41}{$\Delta \Delta G$ 位于不同范围的突变复合物的亲和力的预测效果。 其中 $\Delta \Delta G$ 为吉布斯自由能的变化，单位是 KJ/mol 。 n 表示预测的突变复合物的数目。预测效果的好坏用 AUC 来衡量。}{table.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces 各种方法的预测效果。CN：指的是本文的方法，是 Contacting Number 首字母的缩写。其他的方法请参考文献 \cite  {AB-Bind}。突变体复合物的选择是在 one\_WithinRang\_True 的类型下的突变体复合物。$\Delta \Delta G$ 的单位是 KJ/mol 。}}{42}{figure.4.7}\protected@file@percent }
+\newlabel{Affinity_Predict}{{4.7}{42}{各种方法的预测效果。CN：指的是本文的方法，是 Contacting Number 首字母的缩写。其他的方法请参考文献 \cite {AB-Bind}。突变体复合物的选择是在 one\_WithinRang\_True 的类型下的突变体复合物。$\Delta \Delta G$ 的单位是 KJ/mol 。}{figure.4.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Bootstrap 方法构建各种不同方法 AUC 95\% 的置信区间。Boostrap 的取样次数为 10,000 。D Studio 为 Discovery Studio 。}}{43}{table.4.3}\protected@file@percent }
+\newlabel{Bootstrap}{{4.3}{43}{Bootstrap 方法构建各种不同方法 AUC 95\% 的置信区间。Boostrap 的取样次数为 10,000 。D Studio 为 Discovery Studio 。}{table.4.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第五章\hspace  {.3em}}RBFN 一个新的 center 选取方法}{44}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}题头}{38}{section.5.1}\protected@file@percent }
-\newlabel{L1}{{5.1.}{38}{}{definition.5.1}{}}
-\newlabel{T1}{{5.2.}{38}{}{definition.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}同章另一节的题头}{38}{section.5.2}\protected@file@percent }
-\newlabel{P1}{{5.3.}{38}{}{definition.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}题头}{44}{section.5.1}\protected@file@percent }
+\newlabel{L1}{{5.1.}{44}{}{definition.5.1}{}}
+\newlabel{T1}{{5.2.}{44}{}{definition.5.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}同章另一节的题头}{44}{section.5.2}\protected@file@percent }
+\newlabel{P1}{{5.3.}{44}{}{definition.5.3}{}}
 \citation{HTF}
 \citation{ZhangC}
 \citation{ChenSX}
@@ -200,7 +216,7 @@
 \citation{Su}
 \citation{LiT}
 \citation{ChenSX}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第六章\hspace  {.3em}}参考文献的写法}{39}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第六章\hspace  {.3em}}参考文献的写法}{45}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
 \bibcite{Vaccine}{1}
