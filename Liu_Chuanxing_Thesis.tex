@@ -983,9 +983,18 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 \end{table}
 
 \chapter{讨论}
+
+本论文的核心就是通过对抗原抗体相互作用的 Core, 也就是抗原抗体相互作用的关键的氨基酸的研究，建立了抗原和抗体相互作用的一个数量关系。这是第一次。在这之前的研究都是零散的，不成体系的，很难推广的。其中最主要的原因是抗原抗体的相互作用的氨基酸是一个空间的关系，而不是线性的关系，而本文从 Core 的角度成功的绕过了这个障碍。本文的模型在区分 Core 中的抗原氨基酸和抗体氨基酸，以及预测突变对抗原抗体复合物亲和力的影响上，取得一定的成功。
+
+用 Core 的概念来研究抗原抗体的相互作用，据本论文所了解的知识范围来讲，也是第一次。Core 的概念是建立在另外一个重要的概念之上：CN(contact number)。当我们按照 4\si{\angstrom} 的距离进行截断，得到相互作用的氨基酸后，本论文用 CN 的大小来衡量相互作用的强弱。这个是首次，区别于以往 接触面积的度量方法\cite{rASA1, rASA2}。按照 CN 方法来定以关键的相互作用的氨基酸在直观上是合情合理的，最后建立的模型效果也对 CN 的有效性做了间接的证明。其实，也可以通过分析实验数据来对 CN 的有效性做最直接的判定。
+
+本论文模型成立的另外一个重要假设是 BLOSUM62 可以综合的反应氨基酸之间性质的差异。有很多文章通过单独研究某一种类型的相互作用，比如氢键，疏水作用，盐桥等，但是这些单独的相互作用很难对氨基酸的相互作用做一个全面的描述，同时也很难说一个全面的描述应该包含哪些类型的相互作用，还有就是这些单独的相互作用很难量化。本文认为， BLOSUM62 对氨基酸之间的差异做了一个全面综合的描述，因为 BLOSUM62 是在分析了大量同源氨基酸序列之间的替换关系后得到的。就好比一辆汽车，可以通过分析燃料的能量值、燃料的燃烧效率、摩擦力、汽车本身的重量、汽车的外形等得到最终汽车的拉力，也可以直接让汽车跑一跑，直接测得汽车得拉力。
+
+在建立 RBFN 模型得时候，有一个重要得环节，就是中心得选取。本论文采用了一个计算上更有效得由文献 \cite{FastCenter} 给出的方法。这个方法最终的确定，也经历了很多的探索。第一个要问的问题，有没有更好的方法？结合对径向基函数网络在生物上的应用的思考，本论文给出了下面初步的探索。
+
 用数学来研究生物问题，第一件要做的事情就是把生物对象之间的关系用数字来描述，这是数学模型的开始。距离，作为描述相互关系的一个指标，在生物问题上比较容易获得。比如说蛋白质之间的距离，可以通过它们所在的蛋白质作用网络来描述，也可以通过序列的相似性，由BLOSUM62来刻画。再比如说DNA序列之间的距离可以通过各种模型下核酸之间的替换概率来计算\cite{Sub_Mat1,Sub_Mat2,Sub_Mat3,Sub_Mat4}。再比如，生物网络各个节点之间的关系也可以通过距离来衡量。当有了距离之后，径向基函数网络就显得自然而然，因为它的输入值就是距离。在构建径向基函数网络的时候，一个重要的步骤就是中心(center)的选取。当中心选定之后，对每个样本的描述都由它和这些中心之间的关系决定。所以，选择好的中心，可以有效的压缩和描述数据。在生物学上，这些中心应该是具有重要生物意义的对象。比如，在研究癌症和基因之间的关系时，好的中心可能是对癌症产生重要影响的基因。Alexandridis 等给出了一个高效的选取 CRBFN 中心的方法\cite{FastCenter}。 基本思想就是对样本进行聚类，然后从每个聚类中随机抽取中心。这个方法受到随机因素的影响，特别是抽取的中心数目比较少时， 这种随机抽取的方法更是容易漏掉真正有重要意义的中心。所以，如果能在损失函数的指导下抽取中心，情况就会好很多。
 
-假设损失函数是 $L(C， W)$ , 其中$C = (c_1, c_2, \cdots, c_n)$ 是 n 个中心， $W=(w_1, w_2, \cdots, w_n)$ 是对应于这 n 个中心的系数。 那么中心 $c_i$ 的重要性可以由 $|\frac{\partial L}{\partial w_i}|$ 的大小来定义，$|\frac{\partial L}{\partial w_i}|$ 越大， $c_i$ 在模型中越重要。但是，优化模型时，$|\frac{\partial L}{\partial w_i}|$ 趋于 0 ，这样就不容易对不同中心的重要性做有效的区分。为了解决这个问题，可以对损失函数加上一个很小的正则项。
+假设损失函数是 $L(C, W)$ , 其中$C = (c_1, c_2, \cdots, c_n)$ 是 n 个中心， $W=(w_1, w_2, \cdots, w_n)$ 是对应于这 n 个中心的系数。 那么中心 $c_i$ 的重要性可以由 $|\frac{\partial L}{\partial w_i}|$ 的大小来定义，$|\frac{\partial L}{\partial w_i}|$ 越大， $c_i$ 在模型中越重要。但是，优化模型时，$|\frac{\partial L}{\partial w_i}|$ 趋于 0 ，这样就不容易对不同中心的重要性做有效的区分。为了解决这个问题，可以对损失函数加上一个很小的正则项。
 	\begin{align}
 	 	\label{eq1} L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2
 	\end{align}
@@ -1022,34 +1031,45 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 		\end{algorithmic}		
 	\end{algorithm}
 
-本论文采用了 Hamming, Eskin, Occurence Frequency, 和 Inverse Occurence Frequency 四种距离，Gaussian, Inverse Multi-Quadric, Markov 和 Thin Plate Spline 四种径向基函数， 在 Breast Cancer 数据上 \cite{BreastCancer} ， 对 LGM 和文献 \cite{FastCenter} 的方法进行比较。结果如图 \ref{Hamming_BRE}, \ref{Eskin_BRE}, \ref{OF_BRE}, \ref{IOF_BRE} 。
+本论文采用了 Hamming, Occurence Frequency\cite{OF_IOF}, Inverse Occurence\cite{OF_IOF} 和 Eskin\cite{Eskin}, Frequency 四种距离，Gaussian, Inverse Multi-Quadric, Markov 和 Thin Plate Spline 四种径向基函数， 在 Breast Cancer 数据上 \cite{BreastCancer} ， 对 LGM 和文献 \cite{FastCenter} 的方法（这里称之为 Random Cluster ）进行比较。比较的的标准采用 MCC(Matthews correlation coefficient)，结果如图 \ref{Hamming_BRE}, \ref{Eskin_BRE}, \ref{OF_BRE}, \ref{IOF_BRE} 。从这些图中可以看出，当中心的数目比较多时，LGM 和 Random Cluster 表现趋于一致，但是当中心的数目被压缩到很少，LGM 的表现要明显好于 Random Cluster. 
+
+这里只给出了在 Breast Cancer 数据上的比较结果， 在 本论文中 Core 的数据上，也有同样的结论，也就是当中心的数目比较少时，LGM 有明显优势，当中心数目比较多的时候，二者表现趋同。而且可以预料，这个结论是普遍成立的，因为 LGM 是有目的的去选择中心。 但是本论文的目的是构建好的模型，而不是选则最少的中心，所以采用了文献 \cite{FastCenter} 的方法，因为这种方法在计算上更高效。这也是 LGM 的一个重大缺点，特别是当数据集比较大的时候，LGM 显得笨拙。但是，这个问题可以采取折中的方法来解决，可以先采用 文献 \cite{FastCenter} 的方法 筛选出一部分中心，然后再利用 LGM 接着筛选。
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{Hamming_BRE.eps}
-	\caption{Hamming distance}
+	\includegraphics[scale=0.5]{Hamming_BRE.eps}
+	\caption{Hamming distance 的定义可以参看文献\cite{FastCenter}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite{FastCenter} 给出的方法。}
 	\label{Hamming_BRE}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{Eskin_BRE.eps}
-	\caption{Eskin}
+	\includegraphics[scale=0.5]{Eskin_BRE.eps}
+	\caption{Eskin distance 的定义可以参看文献\cite{Eskin}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite{FastCenter} 给出的方法。}
 	\label{Eskin_BRE}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{OF_BRE.eps}
-	\caption{OF}
+	\includegraphics[scale=0.5]{OF_BRE.eps}
+	\caption{OF 表示 Occurence Frequency ， 定义可以参看文献\cite{OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite{FastCenter} 给出的方法。}
 	\label{OF_BRE}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{IOF_BRE.eps}
-	\caption{Inverse Occurence Frequency}
+	\includegraphics[scale=0.5]{IOF_BRE.eps}
+	\caption{IOF 表示 Inverse Occurence Frequency ， 定义可以参看文献\cite{OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite{FastCenter} 给出的方法。}
 	\label{IOF_BRE}
 \end{figure}
+
+在预测突变对抗原抗体亲和力的影响时，不弱于其他的许多方法(STATIUM, Rosetta, dfire, dDfire, rASA)，但是也没有本质的提升，和其他的许多方法一样表现平平，不不能提供精准的预测，只能在某些时候，为现实的应用提供少许帮助。
+
+最后要说的是，本论文在创新的解决了抗原抗体相互作用领域的一些重要问题的同时，也提出了很多问题。CN 在判断相互作用强弱上的有效性可不可以通过实验测得的数据进行验证？虽然预计本文的模型被用来预测抗原表位会提高预测的准确性，能不能设计一种方法试试？Core 反映了短的氨基酸序列之间的相互作用，但是归根结底，抗原抗体的相互作用还是空间上的，能不能把 Core 的概念推广到空间上，建立更符合实际的模型？这些都是具有重要意义的问题，也都是可以解决的问题，并不是遥不可及。
+
+本论文有关的数据和代码，请参看 
+\begin{center}
+\texttt{https://github.com/Leochuanxing/Paritope\_Epitope}
+\end{center}
 
 
 
@@ -1102,10 +1122,6 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 %\end{tabular}
 %\caption{这是个表格}\label{tab:hh}
 %\end{table}
-
-请对帮助过你完成论文的老师、同学致谢. 也可以在此对您四年大学生活有重要帮助的人致谢.
-
-\textbf{``致谢"本身不作为一章，致谢内容的字体大小不宜与作为标题的``致谢"两字的大小有很大的反差. 这一点尤其请使用word模板的同学注意. } 一般说来, 杂志论文的致谢在文章正文结束、参考文献前(即本模板中它所处的位置);  学位论文的致谢在最后一页，并宜单独成页; 书籍的致谢在序言结尾.
 
 
  \footnotesize
@@ -1333,6 +1349,17 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 	\emph{Journal of molecular evolution}, (1994), 39(1):105-11.
 
 \bibitem{BreastCancer} A. Asuncion and D. J. Newman, UCI Machine Learning Repository. Irvine, CA, USA: Univ. California Irvine, 2007.
+
+\bibitem{OF_IOF} K. S. Jones, A statistical interpretation of term specificity and its application in retrieval, in Document Retrieval Systems, W. Peter, Ed. London, U.K.: Taylor Graham Publishing, 1988, pp. 132–-142.
+
+\bibitem{Eskin}S. Boriah, V. Chandola, and V. Kumar, Similarity measures for categorical data: A comparative evaluation, 
+	\emph{in Proc. 8th SIAM Int. Conf. Data Mining}, {2008}, pp. 243–254.
+	
+\bibitem{rASA1} Conte LL, Chothia C, Janin J. The atomic structure of protein-protein recognition sites. 
+	\emph{Journal of molecular biology}, (1999), 285(5):2177-98.
+	
+\bibitem{rASA2} Levy, E.D., A simple definition of structural regions in proteins and its use in analyzing interface evolution.
+	\emph{Journal of molecular biology}, (2010), 403(4), pp.660-670.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
 \bibitem{HTF} T. Hastie et al., The Element of Statistical

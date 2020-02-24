@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  24 FEB 2020 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  24 FEB 2020 21:18
 entering extended mode
 **./Liu_Chuanxing_Thesis.tex
 (Liu_Chuanxing_Thesis.tex
@@ -1805,12 +1805,13 @@ ine 950.
 (pdftex.def)             Requested size: 297.50798pt x 591.10138pt.
 [41] [42 <./Affinity_Predict-eps-converted-to.pdf>] [43]
 µ⁄ŒÂ’¬
-Missing character: There is no ß in font cmr12!
+[44
 
-Overfull \hbox (17.07864pt too wide) in paragraph at lines 988--989
+]
+Overfull \hbox (21.70699pt too wide) in paragraph at lines 997--998
 []\C19/rm/m/n/12.045/45 b \C19/rm/m/n/12.045/55  \C19/rm/m/n/12.045/56 õ \C19/
 rm/m/n/12.045/55 î \C19/rm/m/n/12.045/43 º \C19/rm/m/n/12.045/55 Í ¥ $\OML/cmm/
-m/it/12.045 L\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 C[]W\OT1/cmr/m/n/12.045 
+m/it/12.045 L\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 C; W\OT1/cmr/m/n/12.045 
 )$ , \C19/rm/m/n/12.045/52 Ÿ \C19/rm/m/n/12.045/64 •$\OML/cmm/m/it/12.045 C \OT
 1/cmr/m/n/12.045 = (\OML/cmm/m/it/12.045 c[]; c[]; []  ; c[]\OT1/cmr/m/n/12.045
  )$ \C19/rm/m/n/12.045/55 ¥ \OT1/cmr/m/n/12.045 n \C19/rm/m/n/12.045/42 á \C19/
@@ -1820,10 +1821,15 @@ T1/cmr/m/n/12.045 )$
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1007.
-[44
+put line 1016.
 
-]
+Overfull \hbox (12.84435pt too wide) in paragraph at lines 1034--1035
+[]\C19/rm/m/n/12.045/37  \C19/rm/m/n/12.045/49 ÿ \C19/rm/m/n/12.045/58 © \C19/
+rm/m/n/12.045/37 Ê \C19/rm/m/n/12.045/62 ^ \C19/rm/m/n/12.045/49 
+ \OT1/cmr/m/n/12.045 Ham-ming, Oc-curence Frequency[[]], In-verse Occurence[[]]
+ \C19/rm/m/n/12.045/43 ⁄ \OT1/cmr/m/n/12.045 Eskin[[]],
+ []
+
 Package epstopdf Info: Source file: <Hamming_BRE.eps>
 (epstopdf)                    date: 2020-02-24 06:58:06
 (epstopdf)                    size: 2943002 bytes
@@ -1832,18 +1838,19 @@ Package epstopdf Info: Source file: <Hamming_BRE.eps>
 (epstopdf)                    size: 111002 bytes
 (epstopdf)             Command: <epstopdf --outfile=Hamming_BRE-eps-converted-t
 o.pdf Hamming_BRE.eps>
-(epstopdf)             \includegraphics on input line 1028.
+(epstopdf)             \includegraphics on input line 1039.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Hamming_BRE-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<Hamming_BRE-eps-converted-to.pdf, id=1105, 683.55376pt x 457.71pt>
+<Hamming_BRE-eps-converted-to.pdf, id=1111, 683.55376pt x 457.71pt>
 File: Hamming_BRE-eps-converted-to.pdf Graphic file (type pdf)
 <use Hamming_BRE-eps-converted-to.pdf>
 Package pdftex.def Info: Hamming_BRE-eps-converted-to.pdf  used on input line 1
-028.
-(pdftex.def)             Requested size: 410.13542pt x 274.62813pt.
+039.
+(pdftex.def)             Requested size: 341.77605pt x 228.85445pt.
+[45]
 Package epstopdf Info: Source file: <Eskin_BRE.eps>
 (epstopdf)                    date: 2020-02-24 06:47:10
 (epstopdf)                    size: 2913954 bytes
@@ -1852,19 +1859,19 @@ Package epstopdf Info: Source file: <Eskin_BRE.eps>
 (epstopdf)                    size: 109560 bytes
 (epstopdf)             Command: <epstopdf --outfile=Eskin_BRE-eps-converted-to.
 pdf Eskin_BRE.eps>
-(epstopdf)             \includegraphics on input line 1035.
+(epstopdf)             \includegraphics on input line 1046.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Eskin_BRE-eps-converted-to.pdf): PDF inclusion
 : found PDF version <1.7>, but at most version <1.5> allowed
-<Eskin_BRE-eps-converted-to.pdf, id=1106, 664.4825pt x 456.70625pt>
+<Eskin_BRE-eps-converted-to.pdf, id=1133, 664.4825pt x 456.70625pt>
 File: Eskin_BRE-eps-converted-to.pdf Graphic file (type pdf)
 <use Eskin_BRE-eps-converted-to.pdf>
-Package pdftex.def Info: Eskin_BRE-eps-converted-to.pdf  used on input line 103
-5.
-(pdftex.def)             Requested size: 398.69257pt x 274.02585pt.
-[45 <./Hamming_BRE-eps-converted-to.pdf>]
+Package pdftex.def Info: Eskin_BRE-eps-converted-to.pdf  used on input line 104
+6.
+(pdftex.def)             Requested size: 332.24043pt x 228.35255pt.
+[46 <./Hamming_BRE-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <OF_BRE.eps>
 (epstopdf)                    date: 2020-02-24 07:15:32
 (epstopdf)                    size: 2925062 bytes
@@ -1873,17 +1880,17 @@ Package epstopdf Info: Source file: <OF_BRE.eps>
 (epstopdf)                    size: 107793 bytes
 (epstopdf)             Command: <epstopdf --outfile=OF_BRE-eps-converted-to.pdf
  OF_BRE.eps>
-(epstopdf)             \includegraphics on input line 1042.
+(epstopdf)             \includegraphics on input line 1053.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./OF_BRE-eps-converted-to.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<OF_BRE-eps-converted-to.pdf, id=1120, 682.55pt x 455.7025pt>
+<OF_BRE-eps-converted-to.pdf, id=1147, 682.55pt x 455.7025pt>
 File: OF_BRE-eps-converted-to.pdf Graphic file (type pdf)
 <use OF_BRE-eps-converted-to.pdf>
-Package pdftex.def Info: OF_BRE-eps-converted-to.pdf  used on input line 1042.
-(pdftex.def)             Requested size: 409.53316pt x 273.4236pt.
+Package pdftex.def Info: OF_BRE-eps-converted-to.pdf  used on input line 1053.
+(pdftex.def)             Requested size: 341.27417pt x 227.85068pt.
 Package epstopdf Info: Source file: <IOF_BRE.eps>
 (epstopdf)                    date: 2020-02-24 07:09:28
 (epstopdf)                    size: 2988038 bytes
@@ -1892,37 +1899,49 @@ Package epstopdf Info: Source file: <IOF_BRE.eps>
 (epstopdf)                    size: 118933 bytes
 (epstopdf)             Command: <epstopdf --outfile=IOF_BRE-eps-converted-to.pd
 f IOF_BRE.eps>
-(epstopdf)             \includegraphics on input line 1049.
+(epstopdf)             \includegraphics on input line 1060.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./IOF_BRE-eps-converted-to.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
-<IOF_BRE-eps-converted-to.pdf, id=1121, 686.565pt x 456.70625pt>
+<IOF_BRE-eps-converted-to.pdf, id=1152, 686.565pt x 456.70625pt>
 File: IOF_BRE-eps-converted-to.pdf Graphic file (type pdf)
 <use IOF_BRE-eps-converted-to.pdf>
-Package pdftex.def Info: IOF_BRE-eps-converted-to.pdf  used on input line 1049.
+Package pdftex.def Info: IOF_BRE-eps-converted-to.pdf  used on input line 1060.
 
-(pdftex.def)             Requested size: 411.94218pt x 274.02585pt.
-[46 <./Eskin_BRE-eps-converted-to.pdf> <./OF_BRE-eps-converted-to.pdf>]
-[47 <./IOF_BRE-eps-converted-to.pdf>] [48
+(pdftex.def)             Requested size: 343.28166pt x 228.35255pt.
+[47 <./Eskin_BRE-eps-converted-to.pdf> <./OF_BRE-eps-converted-to.pdf>]
+Overfull \hbox (14.84343pt too wide) in paragraph at lines 1065--1066
+[]\C19/rm/m/n/12.045/63 3 \C19/rm/m/n/12.045/62 ˝ \C19/rm/m/n/12.045/37 ˇ \C19/
+rm/m/n/12.045/57 ‚ \C19/rm/m/n/12.045/37 C \C19/rm/m/n/12.045/40 È \C19/rm/m/n/
+12.045/47 | \C19/rm/m/n/12.045/63  \C19/rm/m/n/12.045/47 | \C19/rm/m/n/12.045/
+57 N \C19/rm/m/n/12.045/53 ä \C19/rm/m/n/12.045/43 ⁄ \C19/rm/m/n/12.045/48 Â \C
+19/rm/m/n/12.045/40  \C19/rm/m/n/12.045/62 K \C19/rm/m/n/12.045/59 è \C19/rm/m
+/n/12.045/55 û|\C19/rm/m/n/12.045/26 ß| \C19/rm/m/n/12.045/37 ÿ \C19/rm/m/n/12.
+045/54 f \C19/rm/m/n/12.045/62 u \C19/rm/m/n/12.045/52 Ÿ \C19/rm/m/n/12.045/56 
+¶ \C19/rm/m/n/12.045/40  \C19/rm/m/n/12.045/60 N \C19/rm/m/n/12.045/40 ı \C19/
+rm/m/n/12.045/41 ê {\OT1/cmr/m/n/12.045 (STATIUM, Rosetta,
+ []
 
-]<<c1929.cmap>><<c1930.cmap>> [49
+[48 <./IOF_BRE-eps-converted-to.pdf>] [49
+
+]<<c1929.cmap>><<c1930.cmap>> [50
 
 ]
-[50] [51pdfTeX warning (ext4): destination with the same identifier (name{cite.
+[51] [52pdfTeX warning (ext4): destination with the same identifier (name{cite.
 EpiPred}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1269 	
-        ] [52]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1358.
- [53]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1358.
+l.1285 	
+        ] [53]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1385.
+ [54]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1385.
  (Liu_Chuanxing_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1358.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1358.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1385.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1385.
 
 Package rerunfilecheck Info: File `Liu_Chuanxing_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 62B388B5442DAEF7472BA89277BB30ED;2041.
@@ -1933,72 +1952,71 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1358.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1385.
  ) 
 Here is how much of TeX's memory you used:
- 30329 strings out of 492453
- 554967 string characters out of 3121009
- 684339 words of memory out of 3000000
- 33751 multiletter control sequences out of 15000+200000
- 600334 words of font info for 277 fonts, out of 3000000 for 9000
+ 30312 strings out of 492453
+ 554549 string characters out of 3121009
+ 686957 words of memory out of 3000000
+ 33735 multiletter control sequences out of 15000+200000
+ 599524 words of font info for 274 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,15n,67p,2626b,1060s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
 imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS
-/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
-/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun
+/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:
+/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun
 .ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Font
 s/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIND
 OWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc>
 <C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sim
-sun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/F
-onts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/W
-INDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.t
+hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/F
+onts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/W
+INDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.t
 tc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/
 simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOW
-S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
-:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhe
-i.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
-ts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
-DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf
-><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
-mhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
-Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/
-WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.
-ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts
+S/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C
+:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsu
+n.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
+ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WIN
+DOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf
+><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
+msun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/
+Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/
+WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.
+ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
 /simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
 WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><
 C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sims
 un.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
 nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
 NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.tt
-c><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
-imsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
+c><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
+imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
 /Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
-/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei
-.ttf><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/leo/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/leo/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/leo/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/
-leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-<C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr9.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/leo/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/leo/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/leo/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
-/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb
-><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmtt12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmtt9.pfb>
-Output written on Liu_Chuanxing_Thesis.pdf (55 pages, 6788228 bytes).
+/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmex10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/leo/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/leo/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/leo/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/User
+s/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr9.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsl12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/leo/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/leo/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/leo/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Use
+rs/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.
+pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmtt9.pfb>
+Output written on Liu_Chuanxing_Thesis.pdf (56 pages, 6790982 bytes).
 PDF statistics:
- 1585 PDF objects out of 1728 (max. 8388607)
- 287 named destinations out of 1000 (max. 500000)
+ 1607 PDF objects out of 1728 (max. 8388607)
+ 292 named destinations out of 1000 (max. 500000)
  424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
