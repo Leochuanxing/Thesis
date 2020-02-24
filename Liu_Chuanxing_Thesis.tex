@@ -979,40 +979,76 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 \label{Bootstrap}
 \end{table}
 
-\chapter{RBFN 一个新的 center 选取方法}
-\section{题头}
-同一章内定理、引理等``题头"可以采用连续/统一的标号, 这是由模板中的诸如
-``\verb+\newtheorem{theorem}[definition]{定理}+ "这样的命令中的``\verb+ [definition]+"选项确定的, 它使所有定理采用和定义统一编号：
-\begin{lemma}\label{L1} 对于任何实数$A$, 成立着$A^2\geq 0$.
-\end{lemma}
+\chapter{讨论}
+用数学来研究生物问题，第一件要做的事情就是把生物对象之间的关系用数字来描述，这是数学模型的开始。距离，作为描述相互关系的一个指标，在生物问题上比较容易获得。比如说蛋白质之间的距离，可以通过它们所在的蛋白质作用网络来描述，也可以通过序列的相似性，由BLOSUM62来刻画。再比如说DNA序列之间的距离可以通过各种模型下核酸之间的替换概率来计算\cite{Sub_Mat1,Sub_Mat2,Sub_Mat3,Sub_Mat4}。再比如，生物网络各个节点之间的关系也可以通过距离来衡量。当有了距离之后，径向基函数网络就显得自然而然，因为它的输入值就是距离。在构建径向基函数网络的时候，一个重要的步骤就是中心(center)的选取。当中心选定之后，对每个样本的描述都由它和这些中心之间的关系决定。所以，选择好的中心，可以有效的压缩和描述数据。在生物学上，这些中心应该是具有重要生物意义的对象。比如，在研究癌症和基因之间的关系时，好的中心可能是对癌症产生重要影响的基因。Alexandridis 等给出了一个高效的选取 CRBFN 中心的方法\cite{FastCenter}。 基本思想就是对样本进行聚类，然后从每个聚类中随机抽取中心。这个方法受到随机因素的影响，特别是抽取的中心数目比较少时， 这种随机抽取的方法更是容易漏掉真正有重要意义的中心。所以，如果能在损失函数的指导下抽取中心，情况就会好很多。
+
+假设损失函数是 $L(C， W)$ , 其中$C = (c_1, c_2, \cdots, c_n)$ 是 n 个中心， $W=(w_1, w_2, \cdots, w_n)$ 是对应于这 n 个中心的系数。 那么中心 $c_i$ 的重要性可以由 $|\frac{\partial L}{\partial w_i}|$ 的大小来定义，$|\frac{\partial L}{\partial w_i}|$ 越大， $c_i$ 在模型中越重要。但是，优化模型时，$|\frac{\partial L}{\partial w_i}|$ 趋于 0 ，这样就不容易对不同中心的重要性做有效的区分。为了解决这个问题，可以对损失函数加上一个很小的正则项。
+$$L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2$$
+然后按照新的损失函数 $L_{\delta}$ 来训练模型，则有
+$$\frac{\partial L_{\delta}}{\partial w_i} = \frac{\partial L(W, C)}{\partial w_i} + \delta w_i = 0$$
+
+%	\begin{align*}
+%		&L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2\\
+%		&\frac{\partial L_{\delta}}{\partial w_i} = \frac{\partial L(W, C)}{\partial w_i} + \delta w_i
+%	\end{align*}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{Hamming_BRE.eps}
+	\label{Hamming_BRE}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{Eskin_BRE.eps}
+	\label{Eskin_BRE}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{OF_BRE.eps}
+	\label{OF_BRE}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{IOF_BRE.eps}
+	\label{IOF_BRE}
+\end{figure}
 
 
-\begin{theorem}\label{T1} 设$A,B$是两个实数, 则$2AB\leq A^2+B^2$.
-\end{theorem}
 
-\section{同章另一节的题头}
+%\section{题头}
+%同一章内定理、引理等``题头"可以采用连续/统一的标号, 这是由模板中的诸如
+%``\verb+\newtheorem{theorem}[definition]{定理}+ "这样的命令中的``\verb+ [definition]+"选项确定的, 它使所有定理采用和定义统一编号：
+%\begin{lemma}\label{L1} 对于任何实数$A$, 成立着$A^2\geq 0$.
+%\end{lemma}
 
-\begin{corollary}\label{P1} 设$a,b$为两个正数, 则其几何平均不大于其算术平均, 即
-$\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
-\end{corollary}
 
-\chapter{参考文献的写法}
+%\begin{theorem}\label{T1} 设$A,B$是两个实数, 则$2AB\leq A^2+B^2$.
+%\end{theorem}
 
-所有参考文献均用尾注形式列在论文篇末, 内容包括：主要负责人(作者,
-编者) 文献题名. 出版地, 出版年份, 起止页码.
-(如果文献是期刊杂志内的文章, 则除要列出作者和题名外, 还要注明期刊名,
-出版时间, 卷号或期号, 起止页码).
 
-英文出版物见\cite{HTF}, 国际会议见\cite{ZhangC},
-英文期刊见\cite{ChenSX}.
+%\begin{corollary}\label{P1} 设$a,b$为两个正数, 则其几何平均不大于其算术平均, 即
+%$\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
+%\end{corollary}
 
-中文出版物见\cite{ChenJX}, 中文期刊见\cite{Su}.
 
-建议文献排序按作者姓氏的字母排序, 同一作者的文章按时间先后排列.
-英文姓名的写法有先姓后名(\cite{LiT})和先名后姓(\cite{ChenSX})两种写法,
-请统一到其中一种.
-
-\textbf{注意``参考文献"不写成论文的一章. }
+%所有参考文献均用尾注形式列在论文篇末, 内容包括：主要负责人(作者,
+%编者) 文献题名. 出版地, 出版年份, 起止页码.
+%(如果文献是期刊杂志内的文章, 则除要列出作者和题名外, 还要注明期刊名,
+%出版时间, 卷号或期号, 起止页码).
+%
+%英文出版物见\cite{HTF}, 国际会议见\cite{ZhangC},
+%英文期刊见\cite{ChenSX}.
+%
+%中文出版物见\cite{ChenJX}, 中文期刊见\cite{Su}.
+%
+%建议文献排序按作者姓氏的字母排序, 同一作者的文章按时间先后排列.
+%英文姓名的写法有先姓后名(\cite{LiT})和先名后姓(\cite{ChenSX})两种写法,
+%请统一到其中一种.
+%
+%\textbf{注意``参考文献"不写成论文的一章. }
 
 \chapter*{\heiti 致谢}
 %\begin{table}[htbp]\centering
@@ -1244,10 +1280,22 @@ $\displaystyle \sqrt{ab}\leq {a+b\over 2}$.
 \bibitem{Quantifiable}Dash P , Fiore-Gartland A J , Hertz T , et al. Quantifiable predictive features define epitope-specific T cell receptor repertoires. 
 	\emph{Nature}, (2017), 547(7661):89-93.
 	
-\bibitem{FastCenter}Alexandridis, Alex and Chondrodima, Eva and Giannopoulos, Nikolaos and Sarimveis, Haralambos. A fast and efficient method for training categorical radial basis function networks.
+\bibitem{FastCenter} Alexandridis, Alex and Chondrodima, Eva and Giannopoulos, Nikolaos and Sarimveis, Haralambos. A fast and efficient method for training categorical radial basis function networks.
 	\emph{IEEE transactions on neural networks and learning systems}, (2016), 28(11):2831-2836.
 
 \bibitem{BFGS} Jorge Nocedal Stephen J. Wright, Numerical Optimization, Springer Series in Operations Research and Financial Engineering, 2006.
+
+\bibitem{Sub_Mat1}Kimura M. A simple method for estimating evolutionary rates of base substitutions through comparative studies of nucleotide sequences. 	
+	\emph{Journal of molecular evolution}, (1980), 16(2):111-20.
+	
+\bibitem{Sub_Mat2}Hasegawa M, Kishino H, Yano TA. Dating of the human-ape splitting by a molecular clock of mitochondrial DNA.
+	\emph{Journal of molecular evolution}, (1985), 22(2):160-74.
+	
+\bibitem{Sub_Mat3} Tavaré S. Some probabilistic and statistical problems in the analysis of DNA sequences.
+	\emph{Lectures on mathematics in the life sciences}, (1986), 17(2):57-86.
+	
+\bibitem{Sub_Mat4}Yang Z. Estimating the pattern of nucleotide substitution. 
+	\emph{Journal of molecular evolution}, (1994), 39(1):105-11.
 
 
 
