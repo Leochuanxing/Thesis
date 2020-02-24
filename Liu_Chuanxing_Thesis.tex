@@ -38,6 +38,9 @@
 \usepackage{enumitem}
 
 \usepackage{siunitx}
+
+\usepackage{algpseudocode}
+\usepackage{algorithm}
 % 公式编号的计数格式, 在章内计数
 \numberwithin{equation}{chapter}
 
@@ -983,36 +986,68 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 用数学来研究生物问题，第一件要做的事情就是把生物对象之间的关系用数字来描述，这是数学模型的开始。距离，作为描述相互关系的一个指标，在生物问题上比较容易获得。比如说蛋白质之间的距离，可以通过它们所在的蛋白质作用网络来描述，也可以通过序列的相似性，由BLOSUM62来刻画。再比如说DNA序列之间的距离可以通过各种模型下核酸之间的替换概率来计算\cite{Sub_Mat1,Sub_Mat2,Sub_Mat3,Sub_Mat4}。再比如，生物网络各个节点之间的关系也可以通过距离来衡量。当有了距离之后，径向基函数网络就显得自然而然，因为它的输入值就是距离。在构建径向基函数网络的时候，一个重要的步骤就是中心(center)的选取。当中心选定之后，对每个样本的描述都由它和这些中心之间的关系决定。所以，选择好的中心，可以有效的压缩和描述数据。在生物学上，这些中心应该是具有重要生物意义的对象。比如，在研究癌症和基因之间的关系时，好的中心可能是对癌症产生重要影响的基因。Alexandridis 等给出了一个高效的选取 CRBFN 中心的方法\cite{FastCenter}。 基本思想就是对样本进行聚类，然后从每个聚类中随机抽取中心。这个方法受到随机因素的影响，特别是抽取的中心数目比较少时， 这种随机抽取的方法更是容易漏掉真正有重要意义的中心。所以，如果能在损失函数的指导下抽取中心，情况就会好很多。
 
 假设损失函数是 $L(C， W)$ , 其中$C = (c_1, c_2, \cdots, c_n)$ 是 n 个中心， $W=(w_1, w_2, \cdots, w_n)$ 是对应于这 n 个中心的系数。 那么中心 $c_i$ 的重要性可以由 $|\frac{\partial L}{\partial w_i}|$ 的大小来定义，$|\frac{\partial L}{\partial w_i}|$ 越大， $c_i$ 在模型中越重要。但是，优化模型时，$|\frac{\partial L}{\partial w_i}|$ 趋于 0 ，这样就不容易对不同中心的重要性做有效的区分。为了解决这个问题，可以对损失函数加上一个很小的正则项。
-$$L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2$$
+	\begin{align}
+	 	\label{eq1} L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2
+	\end{align}
+%$$L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2$$
 然后按照新的损失函数 $L_{\delta}$ 来训练模型，则有
-$$\frac{\partial L_{\delta}}{\partial w_i} = \frac{\partial L(W, C)}{\partial w_i} + \delta w_i = 0$$
+	\begin{align}
+	\label{eq2}	&\frac{\partial L_{\delta}}{\partial w_i} = \frac{\partial 	L(W, C)}{\partial w_i} + \delta w_i = 0\\
+		\label{eq3}&\delta |w_i| = \left\vert\frac{\partial L_{\delta}}{\partial w_i}\right\vert
+	\end{align}
 
-%	\begin{align*}
-%		&L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2\\
-%		&\frac{\partial L_{\delta}}{\partial w_i} = \frac{\partial L(W, C)}{\partial w_i} + \delta w_i
-%	\end{align*}
+其中 $\delta > 0$, 是一个常数。 公式 (\ref{eq1}), (\ref{eq2}), (\ref{eq3}) 就是说：按 $|\frac{\partial L}{\partial w_i}|$ 排序 和 按 $|w_i|$ 排序的结果一样，也就是：
+\begin{align}\label{eqiv}
+\left\vert\frac{\partial L}{\partial w_i}\right\vert > \left\vert\frac{\partial L}{\partial w_j}\right\vert \iff \left\vert w_i \right \vert > \left\vert w_j \right \vert
+\end{align}
+依据公式（\ref{eqiv}），有算法 \ref{CenterSelectAlg}，称这个方法为 LGM(Loss Guided Method) 。
 
+	\alglanguage{pseudocode}
+	\begin{algorithm}
+		\caption{Center Selection Method}
+		\label{CenterSelectAlg}
+		\begin{algorithmic}
+			\State Initial $W$  \Comment $W$ is a vector of coefficients
+			\State Initial $C$ \Comment $C$ begins with all samples.
+			\State Set the target number of centers $N$.
+			\While {$len(C) < N $} \Comment $len(C)$ is the length of C.
+				\State Train the model
+				\For {$w_i \in W$}
+					\If {$|w_i| = min\{|w|: w \in W\}$ }
+						\State Del $w_i$ from $W$	  
+						\State Del $c_i$ from $C$			
+					\EndIf
+				\EndFor
+			\EndWhile			
+		\end{algorithmic}		
+	\end{algorithm}
+
+本论文采用了 Hamming, Eskin, Occurence Frequency, 和 Inverse Occurence Frequency 四种距离，Gaussian, Inverse Multi-Quadric, Markov 和 Thin Plate Spline 四种径向基函数， 在 Breast Cancer 数据上 \cite{BreastCancer} ， 对 LGM 和文献 \cite{FastCenter} 的方法进行比较。结果如图 \ref{Hamming_BRE}, \ref{Eskin_BRE}, \ref{OF_BRE}, \ref{IOF_BRE} 。
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{Hamming_BRE.eps}
+	\caption{Hamming distance}
 	\label{Hamming_BRE}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{Eskin_BRE.eps}
+	\caption{Eskin}
 	\label{Eskin_BRE}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{OF_BRE.eps}
+	\caption{OF}
 	\label{OF_BRE}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{IOF_BRE.eps}
+	\caption{Inverse Occurence Frequency}
 	\label{IOF_BRE}
 \end{figure}
 
@@ -1297,7 +1332,7 @@ $$\frac{\partial L_{\delta}}{\partial w_i} = \frac{\partial L(W, C)}{\partial w_
 \bibitem{Sub_Mat4}Yang Z. Estimating the pattern of nucleotide substitution. 
 	\emph{Journal of molecular evolution}, (1994), 39(1):105-11.
 
-
+\bibitem{BreastCancer} A. Asuncion and D. J. Newman, UCI Machine Learning Repository. Irvine, CA, USA: Univ. California Irvine, 2007.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
 \bibitem{HTF} T. Hastie et al., The Element of Statistical
