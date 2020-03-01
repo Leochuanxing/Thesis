@@ -99,7 +99,7 @@
 \def\thedefinition{\arabic{chapter}.\arabic{definition}.}
 
 % title - \zihao{1} for size requirement \heiti for font family requirement
-\title{{\zihao{1}\heiti{} 数学学院毕业论文模版}}
+\title{{\zihao{1}\heiti{} 抗原抗体相互作用的一个 RBFN 模型}}
 
 \author{刘传省\\学号：17210180030\\专业：计算系统生物学}
 
@@ -146,30 +146,28 @@ The interaction between antibody and antigen plays an important role in the immu
 \end{abstract}
 
 
-\chapter{研究背景}
+\chapter{研究的意义和现状}
 
-本章主要介绍相关研究的背景知识， 要解决问题的意义和研究进展
-
-\section{抗原抗体的相互作用}
+\section{研究的意义}
 人的免疫系统是人体抵抗外界病原入侵的重要系统， 它可以分为天然免疫(innate immunity)和获得性免疫(adaptive immunity). 天然免疫不具有特异性，或者最多也只能针对一大类的病原进行防御。它包括巨噬细胞、抑菌蛋白、NK细胞、补体系统、粒细胞等。天然免疫构成了人体防御的第一道防线。一旦病原突破第一道防线， 人体就要进行获得性免疫。获得性免疫是针对入侵的病原产生一系列的特异性的免疫反应，包括特异性的细胞免疫和体液免疫。获得性免疫的特异性，可以使得人体把主要的资源集中起来应对特定的病原，从而更高效。但是，自然界的病原千千万万，那么获得性免疫是如何识别这不同的病原的呢？
 
 对于特异性的细胞免疫来讲，他的特异性可以用下面的图 \ref{Cell_Immune}来说明。
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{CellImmune.eps}
-\caption{特异性细胞免疫示意图。此图知识简要说明了细胞免疫的过程，真是的情况比这里要复杂的多，比如共刺激等。}
+\caption{特异性细胞免疫示意图。真实的过程比这要复杂的多，涉及的分子和细胞也比这多，但是这幅图可以说明基本过程。}
 \label{Cell_Immune}
 \end{figure}
 
-对不同的病原体来讲，都有其独特的结构和成分，那些可以引起免疫反应的结构和成分，成为抗原(antigen). 体液免疫的特异性就是特定抗体对特定抗原的识别, 如图\ref{SerumImmune}。
+对不同的病原体来讲，都有其独特的结构和成分，那些可以引起免疫反应的结构和成分，称为抗原(antigen). 体液免疫的特异性就是特定抗体对特定抗原的识别, 如图\ref{SerumImmune}。
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{SerumImmune.eps}
-\caption{特异性体液免疫示意图。此图知识简要说明了体液免疫过程中，抗体的的产生和对病抗原的识别，真实的过程比这要复杂的多，比如说 T helper 的作用等。 同时，抗体除了直接杀死病原体之外，还可以参与抗体介导的细胞毒性(antibody directed cell cytotoxicity)。}
+\caption{特异性体液免疫示意图。此图简要说明了体液免疫过程中，抗体的的产生和对病抗原的识别，真实的过程比这要复杂的多，比如说 T helper 的作用等。 同时，抗体除了直接杀死病原体之外，还可以参与抗体介导的细胞毒性(antibody directed cell cytotoxicity)。}
 \label{SerumImmune}
 \end{figure}
 
-人类的抗体结构是一个二聚体，由两条重链(heavy chain)和两条轻链(light chain)组成。每条链又分为可变区(variable fragment)和不变区(constant fragment)。抗体的特异性则主要来自与可变区的互补决定区(CDR, complementarity determining region)如图\ref{AntibodySchematic}。
+人类的抗体结构是一个二聚体，由两条重链(heavy chain)和两条轻链(light chain)组成。每条链又分为可变区(variable fragment)和不变区(constant fragment)。抗体的特异性则主要来自可变区的互补决定区(CDR, complementarity determining region)， 如图\ref{AntibodySchematic}。
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{AntibodySchematic.eps}
@@ -177,20 +175,20 @@ The interaction between antibody and antigen plays an important role in the immu
 \label{AntibodySchematic}
 \end{figure}
 
-互补决定区主要由6个比较短的氨基酸片段组成，它们分为来自重链和轻链的CDR1, CDR2和CDR3。氨基酸在这些区域上的不同序列决定了抗体的特异性和多样性。对于抗原和抗体相互作用的研究，可以在一定程度上简化为CDRs和抗原局部区域的相互作用。抗原上那些和抗体相互作用的部分又称为抗原表位(epitope). CDR多样性的来源主要有两个， 一个是不同基因片段的拼接，另外一个是细胞超突变(Somatic hypermutation)， 也就是这些区域比其他区域有更高的突变率，有时候还会在拼接的过程中加入或者丢失一些碱基。理论上讲，可以产生的多样性可以达到$10^{12}$数量级，甚至还要更多。所以，体液免疫是一个强大的免疫机制，几乎对所有抗原都可以产生对应特异性抗体。
+互补决定区主要由6个比较短的氨基酸片段组成，它们分为是来自重链和轻链的CDR1, CDR2 和 CDR3。氨基酸在这些区域上的不同序列决定了抗体的特异性和多样性。对于抗原和抗体相互作用的研究，可以在一定程度上简化为 CDR 和抗原局部区域的相互作用。抗原上那些和抗体相互作用的部分又称为抗原表位(epitope)。抗体上和抗原相互作用的部分称为抗体表位(paratope)。CDR 多样性的来源主要有两个， 一个是不同基因片段的拼接，另外一个是细胞超突变(Somatic hypermutation)， 也就是这些区域比其他区域有更高的突变率，有时候还会在拼接的过程中加入或者丢失一些碱基。理论上讲，可以产生的多样性可以达到$10^{12}$数量级，甚至还要更多。所以，体液免疫是一个强大的免疫机制，几乎对所有抗原都可以产生特异性抗体。
 
-体液免疫早在很久以前就被用来和疾病斗争。早在宋朝的时候，智慧的中国人就用“种痘”来预防天花，就是利用的用毒性弱的毒株让人体产生抗体和免疫记忆。这就是最早的疫苗了，只是这时种的是人痘，具有极高的风险。1796年，英国人Edward Jener 用接种牛痘的方法来预防天花，极大的降低了接种的风险。1979年，世界卫生组织(WHO,world health organization) 宣布天花从地球上消除。这是，人类利用体液免疫的一次巨大成功，也是人类医学史上的壮举。自1796年以来，随着每次技术的进步，疫苗的数量和质量都会有很大的提升。
+体液免疫早在很久以前就被用来和疾病斗争。早在宋朝的时候，智慧的中国人就用“种痘”来预防天花，就是利用毒性弱的毒株让人体产生抗体和免疫记忆。这就是最早的疫苗了。然而接种人痘，具有极高的风险。1796年，英国人Edward Jener 用接种牛痘的方法来预防天花，极大的降低了接种的风险。1979年，世界卫生组织(WHO,world health organization) 宣布天花从地球上消除。这是，人类利用体液免疫的一次巨大成功，也是人类医学史上的壮举。自1796年以来，随着每次技术的进步，疫苗的数量和质量都会有很大的提升。
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{Vaccine}
 \caption{疫苗的数量变化和疫苗开发技术的发展\cite{Vaccine}}
 \label{Vaccine}
 \end{figure}
-但是，并不是所有的传染病都能顺利开发出疫苗，比如说HIV-1\cite{HIV1-vaccine}。其中的一个原因在于抗原的多变性。但是，也发现了一些具有广谱作用的抗体，可以抵抗多种不同的毒株。对这些抗体的进一步分析发现，它们对可以识别HIV-1一些保守的的抗原表位(epitope)。知道了这些抗原表位之后，就可以通过抗原表位的嫁接(grafting) 或者把抗原表位整合的特殊设计的架构(scaffolding)中， 由此设计的疫苗会比传统意义的上的疫苗效果更好。抗原表位的确定除了可以通过实验手段的到，还可以通过计算的手段，通过一系列的模型预测。
+但是，并不是所有的传染病都能顺利开发出疫苗，比如说HIV-1\cite{HIV1-vaccine}。其中的一个原因在于抗原的多变性。但是，也发现了一些具有广谱作用的抗体，可以抵抗多种不同的毒株。对这些抗体的进一步分析发现，它们对可以识别 HIV-1 上一些保守的的抗原表位(epitope)。知道了这些抗原表位之后，就可以通过抗原表位的嫁接(grafting) 或者把抗原表位整合的特殊设计的架构(scaffolding)中， 由此设计的疫苗会比传统意义的上的疫苗效果更好。要嫁接抗原表位，首先就要找到抗原表位。 抗原表位的确定除了可以通过实验手段的到，还可以通过对抗原抗体相互作用规律的研究，由计算得到。
 
-对抗原抗体相互作用的研究，除了可以帮助设计疫苗和预测抗原表位外，还可以促进对治疗性抗体(therapeutic antibody)的开发。随着单克隆抗体(monoclonal antibody)和人源化抗体(humanized antibody)技术的进步, 越来越多的治疗性抗体被注册成新的药物。到2020年2月初，已经被FDA(Food and Drug Administration)和EMA(European Medicines Agency)批准或正在审核的治疗性抗体就多达106个\cite{AntibodySociety}。更是开发出很多具有广谱抗癌作用的治疗性抗体，其中有很多是针对免疫过程中的检测点(checkpoint)开发的\cite{Blockade}。比如，在治疗美国前总统吉米卡特的癌症中起着至关重要作用的抗体 pembrolizumab 就是通过抑制PD1(programmed cell death protein 1)，从而实现免疫细胞对癌细胞的杀伤。鉴于传统小分子药物开发越来越困难，以及抗体的的多样性和相关技术的发展，治疗性抗体必将开辟人类药学史上一个新的时代\cite{Trend}。
+对抗原抗体相互作用的研究，除了可以帮助设计疫苗和预测抗原表位外，还可以促进治疗性抗体(therapeutic antibody)的开发。随着单克隆抗体(monoclonal antibody)和人源化抗体(humanized antibody)技术的进步, 越来越多的治疗性抗体被注册成新的药物。到2020年2月初，已经被 FDA(Food and Drug Administration) 和 EMA(European Medicines Agency) 批准或正在审核的治疗性抗体就多达106个\cite{AntibodySociety}。目前，已经开发出很多具有广谱抗癌作用的治疗性抗体，其中有很多是针对免疫过程中的检测点(checkpoint) 开发的\cite{Blockade}。比如，在治疗美国前总统吉米卡特的癌症中起着至关重要作用的抗体 pembrolizumab， 就是通过抑制PD1(programmed cell death protein 1)，从而实现免疫细胞对癌细胞的杀伤。鉴于传统小分子药物开发越来越困难，以及抗体的多样性和相关技术的发展，治疗性抗体必将开辟人类药学史上一个新的时代\cite{Trend}。
 
-一个简单的单克隆抗体的生产过程大概如图\cite{MonoclonalAntibody}：
+一个简单的单克隆抗体的生产过程大概如图\ref{MonoclonalAntibody}：
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{MonoclonalAntibody}
@@ -198,53 +196,50 @@ The interaction between antibody and antigen plays an important role in the immu
 \label{MonoclonalAntibody}
 \end{figure}
 
-然而如果把这些由老鼠产生的单克隆抗体直接注射到人体内，往往会产生免疫反应。一个避免免疫反应的做法是把这些单克隆抗体的CDR区域的氨基酸序列安插到人类抗体对应的位置，这样的抗体就是人源化抗体。CDR序列的产生需要大量的实验，如果这个过程可以通过计算的手段来做比较准确的预测，则会对抗体的制备有深刻影响。同时， 即便是通过实验手段产生CDR序列，由于实验过程中一些比较难以控制的因素，产生的序列也未必能满足我们的要求。一个不易控制的因素是抗体的作用位点。对于一个抗原来讲，可能的抗原表位会有很多，其中的任何一个抗原表位都可能诱导免疫反应，产生抗体，而理想的抗体往往需要针对特定的抗原表位。
+然而如果把这些由老鼠产生的单克隆抗体直接注射到人体内，往往会产生免疫反应。一个避免免疫反应的做法是把这些单克隆抗体的 CDR 区域的氨基酸序列安插到人类抗体对应的位置，这样的抗体就是人源化抗体。传统的方法产生有效的 CDR 需要大量的人力物力，如果可以计算的方法来精准预测这些 CDR ，则会对抗体的制备有深刻影响。同时， 即便是通过实验手段产生 CDR 序列，由于实验过程中一些比较难以控制的因素，产生的序列也未必能满足我们的要求。一个不易控制的因素是抗体的作用位点。对于一个抗原来讲，可能的抗原表位会有很多，其中的任何一个抗原表位都可能诱导免疫反应，产生抗体，而理想的抗体往往需要针对特定的抗原表位。另外一个不易控制的因素是抗原抗体之间的亲和力(affinity)。一个可以用作治疗用的抗体往往要求具有足够高的亲和力，这直接关系到抗体的疗效。虽然免疫系统本身会筛选出亲和力比较高的抗体，但是无法保证这样的亲和力就满足要求。那么这就需要在原来抗体的基础上，对CDR序列进行一定的改造，从而提高亲和力，达到我们的要求。对抗原抗体的相互作用的研究，可以指导 CDR 区域的设计，使得抗体可以针对指定的位点，并且具有足够高的亲和力，从而大大节约抗体药物的研发和生产成本。
 
-另外一个不易控制的因素是抗原抗体之间的亲和力(affinity)。一个可以用作治疗用的抗体往往要求具有足够高的亲和力,这直接关系到抗体的疗效。虽然免疫系统本身会筛选出亲和力比较高的抗体，但是无法保证这样的亲和力就满足要求。那么这就需要在原来抗体的基础上，对CDR序列进行一定的改造，从而提高亲和力，达到我们的要求。对抗原抗体的相互作用有足够的了解可以指导对这些序列的改造，从而大大节约抗体药物的研发和生产成本。
-
-对抗原抗体相互作用的研究，除了上面说的意义之外，还有很多外溢效应。比如说设计合适的抗体来催化一些反应，也就是抗体酶。再比如说，设计一些治疗性的多肽。从更大的范围讲，抗原抗体的相互作用是蛋白与蛋白相互作用的一部分，研究蛋白和蛋白相互作用的方法，在一定程度上可以用来研究抗原抗体的相互作用。但是抗原抗体的相互作用又有其特殊性，因为抗原抗体的相互作用主要表现为抗体的CDR loop 区和抗原表位的相互作用。
-
+对抗原抗体相互作用的研究，除了上面说的意义之外，还有很多外溢效应。比如说设计合适的抗体来催化一些反应，也就是抗体酶。再比如说，设计一些治疗性的多肽。有的研究表面，重链上 CDR3 区域的多肽可以起到中和抗原的作用\cite{TherapeuticPeptides}。 从更大的范围讲，抗原抗体的相互作用是蛋白与蛋白相互作用的一部分，对抗原抗体相互作用的研究也可以为更广泛的蛋白质与蛋白质相互作用的研究提供借鉴。
 
 \section{抗原抗体相互作用研究现状}
-对抗原抗体相互作用，比较早的是Cothia, 他第一次指出了抗体主要通过CDR区域和抗原相互作用，并且分析了CDR1和CDR2的经典结构。但是，这些都是描述性的，并不能对抗体的性质，以及什么样的抗原和什么样的抗体结合做出回答。接下来，大家开始对特定的抗原抗体复合物进行研究。其中对蛋清溶菌酶(hen egg white lysosome)和其抗体的相互作用的研究尤其多。Padlan 等解析了HyHEL-10 Fab和蛋清溶菌酶(HEL)的结构，认为抗原表位是不连续的，范德华力(van der Waals)和氢键(hydrogen bond)是相互作用的关键\cite{HyHEL1}；Yokota 等通过对HyHEL-10-HEL复合物中一些氨基酸的突变(L-Y50F, L-S91A, 和 L-S93A)来研究氢键的作用\cite{HyHEL2}，后来又研究了Arg的作用\cite{HyHEL7}；Pons 等通过Alanine scanning 研究了HyHEL-10-HEL中参与相互作用的各个氨基酸的重要性\cite{HyHEL3}；Shiroishi 等通过把Tyr 突变成 Phe 和 Ala 来研究 Tyr 在 HyHEL-10-HEL 中的作用\cite{HyHEL4}；同样，Shiroishi 等通过对 HyHEL-10-HEL 的分析，研究了盐桥(salt-bridge)的作用\cite{HyHEL5}；Kam-Morgan 等通过突变对HyHEL-10-HEL中抗原表位做了更为精细的研究\cite{HyHEL6}。除了HyHEL-10-HEL，还有许多文章对抗体HyHEL-63 和HEL 的复合物HyHEL-63-HEL，以及HyHEL-5-HEL 做了许多类似的研究\cite{HyHEL8,HyHEL9, HyHEL10, HyHEL11, HyHEL12, HyHEL13, HyHEL14, HyHEL15, HyHEL16}。除了针对HEL 和其抗体的研究之外，还有许多关于其他抗原抗体的研究。但是，所有这些研究，都是关于某一个具体的复合物在特定情况下的氨基酸的作用，或者某种相互作用力的贡献，从来没有一个系统的关于所有抗原抗体相互作用的描述。其中一个重要原因，是抗原抗体相互作用的构象(conformation)性质。也就是说，参与抗原抗体相互作用的氨基酸，特别是抗原表位上的氨基酸，并不是线性排列的，而是具有空间上的关系。就拿1918年H1N1流感大爆发时候流感病毒表面的血凝素(Hemagglutinin)SC1918/H1和它的抗体CR6261来说。
+对抗原抗体相互作用，比较早的是 Cothia, 他第一次指出了抗体主要通过 CDR 区域和抗原相互作用，并且分析了 CDR1 和 CDR2 的经典结构。但是，这些都是描述性的，并不能对抗原抗体的相互作用做出有效回答。接下来，大家开始对特定的抗原抗体复合物进行研究。其中对蛋清溶菌酶(hen egg white lysosome)和其抗体的相互作用的研究尤其多。Padlan 等解析了 HyHEL-10 Fab 和蛋清溶菌酶(HEL)的结构，认为抗原表位是不连续的，范德华力(van der Waals)和氢键(hydrogen bond)是抗原抗体相互作用的关键\cite{HyHEL1}；Yokota 等通过对 HyHEL-10-HEL 复合物中一些氨基酸的突变(L-Y50F, L-S91A, L-S93A)来研究氢键在抗原抗体相互作用中的角色\cite{HyHEL2}，后来又研究了 Arg 在抗原抗体复合物中的作用\cite{HyHEL7}；Pons 等通过 Alanine scanning 研究了 HyHEL-10-HEL 中参与相互作用的各个氨基酸的重要性\cite{HyHEL3}；Shiroishi 等通过把 Tyr 突变成 Phe 和 Ala 来研究 Tyr 在 HyHEL-10-HEL 中的作用\cite{HyHEL4}；同样，Shiroishi 等通过对 HyHEL-10-HEL 的分析，研究了盐桥(salt-bridge)的作用\cite{HyHEL5}；Kam-Morgan 等通过突变对HyHEL-10-HEL中抗原表位做了更为精细的研究\cite{HyHEL6}。除了 HyHEL-10-HEL，还有许多文章对抗体 HyHEL-63 和 HEL 的复合物HyHEL-63-HEL，以及 HyHEL-5-HEL 做了许多类似的研究\cite{HyHEL8,HyHEL9, HyHEL10, HyHEL11, HyHEL12, HyHEL13, HyHEL14, HyHEL15, HyHEL16}。除了针对 HEL 和其抗体的研究之外，还有许多关于其他抗原抗体的研究。但是，所有这些研究，都是关于某一个特定的复合物中特定氨基酸的研究，或者某种特定相互作用的研究，从来没有一个系统的关于所有抗原抗体相互作用的描述。其中一个重要原因，是抗原抗体相互作用的构象(conformation)性质。也就是说，参与抗原抗体相互作用的氨基酸，特别是抗原表位上的氨基酸，并不是线性排列的，而是具有空间上的关系。就拿1918年H1N1流感大爆发时候流感病毒表面的血凝素(Hemagglutinin)SC1918/H1 和它的抗体 CR6261 来说（图\ref{ConformationalEpitope}）。
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{ConformationalEpitope}
-\caption{\textbf{A}是SC1918/H1 和 CR6261 复合物的结构。\textbf{B} 是 SC1918/H1 和抗体结合区域的放大图，其抗原表位都已经标出。此图由文献\cite{ConformationalEpitope}中的图片编辑而成。 }
+\caption{\textbf{A} 是 SC1918/H1 和 CR6261 复合物的结构。\textbf{B} 是 SC1918/H1 和抗体结合区域的放大图，其抗原表位都已经标出。此图由文献\cite{ConformationalEpitope}中的图片编辑而成。 }
 \label{ConformationalEpitope}
 \end{figure}
-从图\ref{ConformationalEpitope} \textbf{B}中可以看出，在序列上，这些氨基酸并在序列不连续，然而在空间上却比较临近，形成有效的抗原表位，这就是抗原表位的构象性质。根据 Saba Ferdous 等最近对488个B-cell epitope 的研究，只有大概4\%的是线性的。如果把有不小于3个的氨基酸参与相互作用，并且这些氨基酸在序列上的距离不大于3的位置定为一个区域(region)，那么只有约14\%的抗原表位只有一个区域\cite{ConformationalEpitope1}，也就是说，抗原的表位是高度的非线性的。
+从图\ref{ConformationalEpitope} \textbf{B} 中可以看出，在序列上，这些参与抗原抗体相互作用的氨基酸在序列并不连续，然而在空间上却比较临近，形成有效的抗原表位，这就是抗原表位的构象性质。根据 Saba Ferdous 等最近对 488 个 抗原表位的研究，只有大概 4\% 是线性的。如果把有不小于3个的氨基酸参与相互作用，并且这些氨基酸在序列上的距离不大于3的位置定为一个区域(region)，那么只有约 14\% 的抗原表位只有一个区域\cite{ConformationalEpitope1}。这些结果说明，抗原表位是高度的非线性的。
 
-虽然抗原表位的非线性特征，给抗原抗体的研究带了的巨大的困难。但是，鉴于抗原表位在抗体设计和疫苗研发中的重要性，对抗原表位预测的努力一直没有停止。从实验的角度来讲，主要有结构生物学的方法和突变的方法。结构生物学的方法是通过分析抗原抗体复合物的结构，来判断哪些是抗原表位。突变的方法则是通过在不同的位点引入突变来确定，究竟哪些氨基酸在抗原抗体的结合过程中起关键作用\cite{EpitopePred1}。除了上面的实验手段，利用计算手段对抗原表位的预测，一直在发展。Rubinstein 等做了一个统计检验，$H_0$设定为抗原表位和非抗原表位没有差别，$H_a$设定为抗原表位和非抗原表位有差别。通过对大量抗原抗体的分析，认为抗原表位在氨基酸偏好、二级结构(secondary structure)、几何形状和进化的保守性上都和非抗原表位有显著区别\cite{EpitopePred2}。虽然这篇文章发表在2008年，但是比这早的以及在这之后的许多抗原表位预测方法的理论依据，都是对任意的抗原来预测它的抗原表位。例如，Hopp等通计算局部氨基酸序列的亲水性(hydrophilicity)来预测抗原表位,认为亲水性最高的区域要么是抗原表位要么和抗原表位相邻\cite{EpitopePred3}; Rubinstein等通过对一直的抗原表位的分析，用机器学习的方法来预测给定抗原的抗原表位；Jing Sun 等通过引入残基三角(residual triangle)的概念，计算每个氨基酸的倾向指数(propensity index)和集群系数(cluster coefficient)，由此来预测非线性抗原表位\cite{SEPPA}；Xu等对 CEP\cite{CEP},DiscoTope\cite{DiscoTope},PEPOP\cite{PEPOP}、ElliPro\cite{ElliPro}、 BEpro\cite{PEPITO} 和 SEPPA，六种预测方法在实验验证的数据集上进行了比较。即便是最好的SEPPA，其AUC 也只能达到0.62，原不满足实际需要\cite{EpitopePredEvaluation}。
+虽然抗原表位的非线性特征，给抗原抗体的研究带了的巨大的困难。但是，鉴于抗原表位在抗体设计和疫苗研发中的重要性，对抗原表位预测的努力一直没有停止。从实验的角度来讲，主要有结构生物学的方法和突变的方法。结构生物学的方法是通过分析抗原抗体复合物的结构，来判断哪些是抗原表位。突变的方法则是通过在不同的位点引入突变来确定，究竟哪些氨基酸在抗原抗体的结合过程中起关键作用\cite{EpitopePred1}。除了上面的实验手段，利用计算手段对抗原表位的预测，一直在发展。Rubinstein 等做了一个统计检验，$H_0$ 设定为抗原表位和非抗原表位没有差别，$H_a$ 设定为抗原表位和非抗原表位有差别。通过对大量抗原抗体的分析，认为抗原表位在氨基酸偏好、二级结构(secondary structure)、几何形状和进化的保守性上都和非抗原表位有显著区别\cite{EpitopePred2}。虽然这篇文章发表在2008年，但却是在这之前以及这之后的许多抗原表位预测方法的理论依据，这些方法都是对任意给定的抗原来预测它的抗原表位。例如，Hopp 等通计算局部氨基酸序列的亲水性(hydrophilicity)来预测抗原表位，认为亲水性最高的区域要么是抗原表位要么和抗原表位相邻\cite{EpitopePred3}； Rubinstein 等通过对一直的抗原表位的分析，用机器学习的方法来预测给定抗原的抗原表位；Jing Sun 等通过引入残基三角(residual triangle)的概念，计算每个氨基酸的倾向指数(propensity index)和集群系数(cluster coefficient)，由此来预测非线性抗原表位\cite{SEPPA}。Xu等对 CEP\cite{CEP},DiscoTope\cite{DiscoTope},PEPOP\cite{PEPOP}、ElliPro\cite{ElliPro}、 BEpro\cite{PEPITO} 和 SEPPA，六种预测方法在实验验证的数据集上进行了比较。即便是最好的 SEPPA，其 AUC 也只能达到0.62，远不能满足实际需要\cite{EpitopePredEvaluation}。
 
-上面的方法都是对任意给定的抗原，来预测抗原表位，并不涉及到和抗原结合的抗体。理论上讲，一个抗原的任何区域都有可能被抗体识别，也就是任何区域都有可能是抗原表位，所以对一个抗原来讲，预测给定抗体的抗原表位才更有意义\cite{EpitopePredNotAccurate}。Shinji Sog 构建了ASEP 指数用于抗原表位，这是第一次在给定抗体情况下对抗原表位的预测\cite{ASEP}。具体的过程可以概括如下：
+上面的方法都是对任意给定的抗原，来预测抗原表位，并不涉及到和抗原结合的抗体。理论上讲，一个抗原的任何区域都有可能被抗体识别，也就是任何区域都有可能是抗原表位。所以对一个抗原来讲，预测给定抗体的抗原表位才更有意义\cite{EpitopePredNotAccurate}。Shinji Sog 构建了 ASEP 指数用于抗原表位，这是第一次在给定抗体情况下对抗原表位的预测\cite{ASEP}。具体的过程可以概括如下：
 \begin{enumerate}[label=(\arabic*)]
 	\item 搜集训练集。在PDB 数据库中搜集抗原抗体复合物，同时搜集其他同源二聚体(homodimer)或者异源二聚体(heterodimer)作为抗原抗体复合物的参照，这里为了方便，我们称为参照复合物。
 	\item 计算氨基酸$x$在抗原表位中的出现频率$f_e(x)$：
 		$$f_e(x) = \frac{n_e(x)}{\sum_{y=1}^{20}n_e(y)}$$
-	其中，$n_e（x）$ 是训练集中抗原抗体复合物的抗原表位中$x$氨基酸的频率，分母中$n_e(y)$做类似的解读，指标 $y$ 从 1 遍历到 20 是指对20中不同氨基酸的频率求和。
-	\item 计算氨基酸$x$在参照复合物的表面氨基酸(surface residue)中的出现频率$f_s(x)$。这里的表面氨基酸被作者定义为出现在复合物表面但是又不参与复合物的相互作用。
+	其中，$n_e（x）$ 是训练集中抗原抗体复合物的抗原表位中 $x$ 氨基酸的频率，分母中 $n_e(y)$ 做类似的解读，指标 $y$ 从 1 遍历到 20 是指对20种不同氨基酸的频率求和。
+	\item 计算氨基酸 $x$ 在参照复合物的表面氨基酸(surface residue)中的出现频率 $f_s(x)$。这里的表面氨基酸被作者定义为出现在复合物表面但是又不参与复合物的相互作用。
 	$$f_s(x) = \frac{n_s(x)}{\sum_{y=1}^{20}n_s(y)}$$
-	其中，$n_s（x）$ 是参照复合物的表面氨基酸中$x$氨基酸的频率，分母中$n_s(y)$做类似的解读，指标 $y$ 从 1 遍历到 20 是指对20中不同氨基酸的频率求和。
+	其中，$n_s（x）$ 是参照复合物的表面氨基酸中 $x$ 氨基酸的频率，分母中$n_s(y)$ 做类似的解读，指标 $y$ 从 1 遍历到 20 是指对20中不同氨基酸的频率求和。
 %	\item 计算氨基酸 $x$ 在抗原表位中的氨基酸倾向(propensity)$p_e(x)$
 %		$$p_e(x)=\text{log}\left(\frac{f_e(x)}{f_s(x)}\right)$$
-	\item 给定抗原中一个特定位置的抗原表位氨基酸$x$，定义抗原抗体氨基酸对为$xy$， 其中$y$为距离$x$最近的位于抗体上的氨基酸。计算抗原抗体氨基酸对$xy$的出现率$f_{ep}(xy)$:
+	\item 给定抗原中一个特定位置的抗原表位氨基酸 $x$，定义抗原抗体氨基酸对 为$xy$， 其中 $y$ 与 $x$ 相互作用的位于抗体上的氨基酸。计算抗原抗体氨基酸对 $xy$ 的出现率 $f_{ep}(xy)$:
 	$$f_{ep}(xy)=\frac{n_{ep}(xy)}{\sum_{z=1}^{20}n_{ep}(xz)}\times f_e(x)$$
 	\item 用传统的不依赖于抗原的方法DiscoTope 来预测给定抗原的抗原表位,这里我们简称为传统预测抗原表位。
-	\item 计算传统预测抗原表位中氨基酸$x$的氨基酸频率$f^{'}_e(x)$:
+	\item 计算传统预测抗原表位中氨基酸 $x$ 的氨基酸频率 $f^{'}_e(x)$:
 	$$f^{'}_e(x)=\sum\limits_{y=1}^{20}[f_{ep}(xy)\times n_p(y)]$$
-	其中$n_p(y)$是给定抗体的抗体表位(paratope)中氨基酸$y$的出现频率。
-	\item 计算传统预测抗原表位中氨基酸$x$抗体特意的抗原表位倾向ASEP(antibody-specific epitope propensity), $p_e^{'}(x)$:
+	其中 $n_p(y)$ 是给定抗体的抗体表位(paratope)中氨基酸$y$的出现频率。
+	\item 计算传统预测抗原表位中氨基酸 $x$ 抗体特异的抗原表位倾向ASEP(antibody-specific epitope propensity), $p_e^{'}(x)$:
 	$$p_e^{'}(x)=\text{log}\left(\frac{f_e^{'}(x)}{f_s(x)}\right)$$
-	\item 对于传统预测抗原表位中的氨基酸$i$，计算:
+	\item 对于传统预测抗原表位中的氨基酸 $i$，计算:
 	$$\text{ASEP}(i) = \sum\limits_{x=1}^{20}p_e^{'}(x)c_i(x)$$
-	其中$c_i(x)$是指在传统预测抗原表位中的氨基酸$\alpha$碳与$i$的$\alpha$碳距离小于10\si{\angstrom}的类型为$x$的氨基酸的个数。这里也就是对$i$附近的$p_e^{'}(x)$根据不同氨基酸的频率进行加权。
+	其中 $c_i(x)$ 是指在传统预测抗原表位中的氨基酸 $\alpha$ 碳与 $i$ 的 $\alpha$ 碳距离小于10\si{\angstrom}的类型为 $x$ 的氨基酸的个数。这里也就是对 $i$ 附近的 $p_e^{'}(x)$ 根据不同氨基酸的频率进行加权。
 	\item 对传统预测抗原表位中的每个氨基酸都计算ASEP， 然后排序，取舍。ASEP越高越可能为抗原表位。	
 \end{enumerate}
-	在上面的步骤中，(4)通过加权形式，把抗原表位和抗体表位结合在一起，从而在后面的计算过程中实现了在给定抗体情况下对抗原表位的ASEP打分。这个简单的加权，比之前仅仅依靠抗原对抗原表位做出的预测有了明显提高。
+	在上面的步骤中，(4)通过加权形式，把抗原表位和抗体表位结合在一起，从而在后面的计算过程中实现了在给定抗体情况下对抗原表位的ASEP打分。这个简单的加权，比之前仅仅依靠抗原对抗原表位做出的预测有了明显提高。在上面的公式种，$f_{ep}(xy)$   可以算作对抗原抗体相互作用的一种描述，但是这种描述只是计算特定氨基酸对出现频率的大小。
 	
-	Konrad Krawczy等在它们对蛋白与蛋白相互作用研究的基础上设计了在给定抗体情况下抗原表位的预测方法：EpiPred\cite{EpiPred}。该方法在抗原表位预测的时候，结合了抗原表位和抗体表位在空间上的互补性和一个由 i-Patch 转化而来的打分。一个氨基酸对的i-Patch 值的大概计算方法如下，具体详细的计算请参考文献\cite{iPatch1,iPatch2}。
+	Konrad Krawczy 等在它们对蛋白与蛋白相互作用研究的基础上设计了在给定抗体情况下抗原表位的预测方法：EpiPred\cite{EpiPred}。该方法在抗原表位预测的时候，结合了抗原表位和抗体表位在空间上的互补性和一个由 i-Patch 转化而来的打分。一个氨基酸对的 i-Patch 值的大概计算方法如下（具体详细的计算请参考文献\cite{iPatch1,iPatch2}）：
 	\begin{enumerate}[label = (\arabic*)]
 		\item 为了减少可能出现的氨基酸对的数目，把氨基酸进行分类，文献\cite{iPatch2}把氨基酸分成7类。
 		\item 计算两个氨基酸类$(C_1, C_2)$之间的倾向性(propensity)$P(C_1, C_2)$。
@@ -253,19 +248,19 @@ The interaction between antibody and antigen plays an important role in the immu
 		R_{non}(C_1, C_2)&=\frac{f_{non}(C_1, C_2)/f_{all}(C_1, C_2)}{\sum\limits_{i=1}^{7}\sum\limits_{j\neq i} f_{non}(C_i, C_j)/f_{all}(C_i, C_j)}\\
 		P(C_1, C_2) &= \frac{R_{con}(C_1, C_2)}{R_{con}(C_1, C_2)}			
 		\end{align*}
-	其中$f_{con}(C_1, C_2)$是相互作用的氨基酸对$(x,y)\in C_1\times C_2$ 的频率。类似， $f_{non}(C_1, C_2)$ 和 $f_{all}(C_1, C_2)$ 分别是不相互作用的氨基酸对的频率和所有可能的氨基酸对的频率。
+	其中 $f_{con}(C_1, C_2)$ 是相互作用的氨基酸对 $(x,y)\in C_1\times C_2$ 的频率。类似， $f_{non}(C_1, C_2)$ 和 $f_{all}(C_1, C_2)$ 分别是不相互作用的氨基酸对的频率和所有可能的氨基酸对的频率。
 	\item 根据氨基酸对 $(C_1, C_2)$ 附近氨基酸的分部情况，计算权重 $w(C_i|(C_1, C_2)),\; i = 1,2,\cdots, 7$
 		\begin{align*}
 		 		w_{con}(C_i|(C_1, C_2))&=\frac{f_{con}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{con}(C_i))/f_{all}(C_i)}\chi_{\{C_i \in N\}}\\
 		 		w_{non}(C_i|(C_1, C_2))&=\frac{f_{non}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{non}(C_i))/f_{all}(C_i)}\chi_{\{C_i \in N\}}\\
 		 		w(C_i|(C_1, C_2)) &= w_{con}(C_i|(C_1, C_2))/w_{non}(C_i|(C_1, C_2))		
 		\end{align*}
-		其中 $f_{con}(C_i)$ 为属于类别$C_i$的参与相互作用的氨基酸出现的频率， $N$为$(C_1, C_2)$ 附近氨基酸的类别的集合,在这里，“附近”可以根据具体情况选择的距离范围来决定。$\chi$为示性函数(characteristic function)。
-	\item 计算一个抗原表面的氨基酸$x$可以成为抗原表位的i-Patch分数。
+		其中 $f_{con}(C_i)$ 为属于类别 $C_i$ 的参与相互作用的氨基酸出现的频率， $N$ 为 $(C_1, C_2)$ 附近氨基酸的类别的集合,在这里，“附近”可以根据具体情况选择的距离范围来决定。$\chi$ 为示性函数(characteristic function)。
+	\item 计算一个抗原表面的氨基酸 $x$ 可以成为抗原表位的 i-Patch 分数。
 	$$\text{i-Patch}(x) = \frac{1}{|para|}\sum\limits_{C_i\in N(C_x,C_y)}\sum\limits_{y\in para}w(C_i|(C_x, C_y))P(C_x, C_y)$$
-	其中$para$是给定抗体的抗体表位氨基酸的集合，$C_x$ 和 $C_y$ 分别是 $x$ 和 $y$ 所在的氨基酸类，$N(C_x,C_y)$ 为氨基酸对 $(x, y)$ 附近氨基酸类别的集合。“附近”的界定和 $(3)$ 同。
+	其中 $para$ 是给定抗体的抗体表位氨基酸的集合，$C_x$ 和 $C_y$ 分别是 $x$ 和 $y$ 所在的氨基酸类，$N(C_x,C_y)$ 为氨基酸对 $(x, y)$ 附近氨基酸类别的集合。“附近”的界定和 $(3)$ 同。
 	\end{enumerate}
-从上面的计算可以看出，i-Patch 考虑了给定抗体的抗体表位，同时也以权重的形式，考虑了氨基酸对周围氨基酸的影响。
+从上面的计算可以看出，i-Patch 考虑了给定抗体的抗体表位，同时也以权重的形式，考虑了氨基酸对周围氨基酸的影响。步骤 （2） 和步骤 （3） 的是作对相互作用的氨基酸对，或者相互作用的氨基酸三角（三个相互作用的氨基酸组成的三角形）的描述。 这些描述可以看作是对抗原抗体相互作用的一种刻画，但是仍然局限于计算这些氨基酸对或者氨基酸三角的频率。
 
 Liang Zhao 和 Jinyan Li 设计了Bepar(\textbf{B}-cell \textbf{e}pitope \textbf{p}rediction through \textbf{a}ssociation \textbf{r}ules)\cite{Bepar}。其大概方法如图\ref{Bepar}：
 \begin{figure}[H]
@@ -278,34 +273,39 @@ Liang Zhao 和 Jinyan Li 设计了Bepar(\textbf{B}-cell \textbf{e}pitope \textbf{p}r
 \begin{enumerate}[label=(\arabic*)]
 	\item Relative composition 的计算
 		$$R_{ij}=2\times P_{ij}\times\log\frac{P_{ij}}{Q_{ij}}$$
-		其中，$ij$ 表示第 $i$ 个CDR上的氨基酸 $j$ 。$P_{ij}$ 表示氨基酸 $j$ 在第 $i$ 个CDR上所占的比例，$Q_{ij}$ 表示氨基酸 $j$ 在所有CDR上所占的比例。 同样抗原表位氨基酸 Relative composition 的计算如下：
+		其中，$ij$ 表示第 $i$ 个 CDR 上的氨基酸 $j$ 。$P_{ij}$ 表示氨基酸 $j$ 在第 $i$ 个CDR上所占的比例，$Q_{ij}$ 表示氨基酸 $j$ 在所有 CDR 上所占的比例。 同样抗原表位氨基酸 Relative composition 的计算如下：
 		$$R_{j}=2\times P_{j}\times\log\frac{P_{j}}{Q_{j}}$$
 		其中 $P_{j}$ 是抗原表位中氨基酸 $j$ 在所有抗原表位氨基酸中的比例， $Q_j$ 是氨基酸 $j$ 在所有抗原氨基酸中的比例。
 	\item Cooperativity 的计算
 	$$C_{i, jk}=\frac{P_{i, jk}}{Q_{i, jk}}$$
 	$C_{i, jk}$ 表示在第 $i$ 个CDR上，两个相邻的氨基酸 $jk$ 的 Cooperativity 。$P_{i, jk}$ 表示两个相邻的氨基酸在 $jk$ 在第 $i$ 个CDR上所占的比例， $Q_{i, jk}$ 表示两个相邻的氨基酸在 $jk$ 在所有CDR上所占的比例。
-	\item Association Rule 的计算， 具体可以参看文献\cite{AssociationRule}。大概的做法是把抗原表位和抗体表位的相互作用看成二部图然后寻找同一个抗原抗体复合物中出现的二部图的相似性。
+	\item 相关法则（Association Rule） 的计算\cite{AssociationRule}。假设 $A$ 和 $B$ 分别是一些相互作用的氨基酸对的集合，并且 $A\cap B = \emptyset$。 support $A$ 是包含 $A$ 的复合物的的比例。 相关法则 $R:\; A \rightarrow B$ 是指当观测到 $A$ 就可以观测到 $B$。 support $R$ 是指包含 $A \cup B$ 的复合物的比例。$R$ 的置信水平（confidence level） 定义为：
+	$$\frac{\text{support }R}{\text{support }A}$$
+	作者选取 support $R\geq 10\%$ 并且置信水平 $\geq 80\%$ 的相关法则。
 \end{enumerate}
-Relative composition 被用来寻找种子，然后通过 Cooperativity 和 Association Rule 进行扩展。
+在计算过程中，Relative composition 被用来寻找种子，然后通过 Cooperativity 和 相关规则进行扩展。同时，这些步骤也可以看成对抗原抗体相互作用的一种描述，可是这种描述仍然可以该概括为对相互作用的氨基酸对的数目的计算。
 
-Inbal Sela-Culang 等开发了基于给定抗体序列的抗原表位的预测方法：PEASE\cite{}。该方法通过抽取氨基酸对的10个特征，然后构建 Random Forest 来预测。这10个特征分别是：
+Inbal Sela-Culang 等开发了基于给定抗体序列的抗原表位的预测方法：PEASE\cite{PEASE}。该方法通过抽取氨基酸对的10个特征，然后构建 Random Forest 来预测。这10个特征分别是：
 \begin{enumerate}[label=(\arabic*)]
 	\item 氨基酸对中，来自抗原的氨基酸C端一侧相邻的4个氨基酸和N端一侧相邻的4个氨基酸。
 	\item 氨基酸对中，来自抗体的氨基酸C端一侧相邻的4个氨基酸和N端一侧相邻的4个氨基酸。
 	\item 氨基酸对中，来自抗原的氨基酸的 solvent accessibility。
 	\item 氨基酸对中，来自抗原的氨基酸的二级结构(secondary structure)。
 	\item 氨基酸对中，来自抗体的氨基酸是来自于轻链还是重链。
-	\item CDR的序号，是1、2还是3。
-	\item 氨基酸对中，来自抗体的氨基酸在CDR中的位置。
+	\item CDR的序号，是1、2还是3（每条抗体链上有3个 CDR 区域）。
+	\item 氨基酸对中，来自抗体的氨基酸在 CDR 中的位置。
 	\item 氨基酸对中，来自抗原的氨基酸的无序状态(disorder state)。
 	\item 氨基酸对中，来自抗原的氨基酸的作用热点的分类(classification of the interaction hotspot)。
 	\item 氨基酸对的 Contact potential, 计算如下：
 	$$E_{ij}=\log_{2}\left[\frac{f^{ij}}{\sum\limits_{i=1}^{20}\sum\limits_{j=1}^{20}f^{ij}}\middle/\left(\frac{f^{j}}{\sum\limits_{j=1}^{20}f^{j}}\times\frac{f^i}{\sum\limits_{i=1}^{20}f^{i}}\right)\right]$$
-	其中，$i$表示抗体表位上的氨基酸，$j$表示抗原表位上的氨基酸，$f^i$表示氨基酸$i$在抗体表位上出现的频率， $f^j$表示氨基酸$j$在抗原表位上出现的频率,$f^{ij}$表示氨基酸 $i$ 和 $j$ 相互作用的频率， $E_{ij}$ 为要计算的Contact potential 。
+	其中，$i$ 表示抗体表位上的氨基酸，$j$ 表示抗原表位上的氨基酸，$f^i$ 表示氨基酸 $i$ 在抗体表位上出现的频率， $f^j$ 表示氨基酸 $j$ 在抗原表位上出现的频率, $f^{ij}$ 表示氨基酸 $i$ 和 $j$ 相互作用的频率， $E_{ij}$ 为要计算的 Contact potential 。
 \end{enumerate}
-以上的这四种方法，是我能够了解到的基于抗体的抗原表位预测方法，虽然这些方法是为了预测抗原的表位，但是也可以看成对抗原抗体相互作用的探索。如果仔细观察这些方法，它们主要是对氨基酸对进行分析，也就是对1个抗原表位氨基酸和1个抗体表位氨基酸进行分析，而且这些分析多是基于出现的频率大小。并没有综合运用氨基酸与氨基酸之间的替换矩阵(substitutionn matrix)，也没有涉及到多个氨基酸与多个氨基酸之间的对应关系。鉴于此，本论文就是在这些方面做了改进，建立了一个更有效的模型。
 
-蛋白质和蛋白质的相互作用主要集中在几个关键的氨基酸上，这几个关键的氨基酸被称为热点(hot-spot)\cite{HotSpot}。最早提出热点的概念，是 Clackson 等在研究人生长激素(hGH)和它的一个受体hGHbp 相互作用时提出的\cite{HotSpot0} 。通常来讲，这些热点上的每个氨基酸对亲和力的贡献都在 2kJ/mol 以上，而且相互作用的两个蛋白的热点是相互对应的，不但结构互补，亲水性也相同，带电荷也往往相反。系统的分析表明，热点的氨基酸组成个蛋白中氨基酸的组成有明显的不同\cite{HotSpotComp}。Tryptophan(21\%), Arginine(13.3\%) 和 Tyrosine(12.3\%) 是含量最高的三种氨基酸。
+PEASE 所构建的 Random Forest 把一个氨基酸对的 10 个特征联系了起来，可以看成对抗原抗体相互作用的一种描述。但是，这 10 个特征很少涉及氨基酸的生物化学性质，同时 通过 Random Forest 也是一种对氨基酸对的计数。
+
+以上的这四种方法，是我能够了解到的基于抗体的抗原表位预测方法，虽然这些方法是为了预测抗原的表位，但是里面对抗原抗体相互作用的探索。如果仔细观察这些方法，它们主要是对氨基酸对进行分析，也就是对1个抗原表位氨基酸和1个抗体表位氨基酸进行分析，而且这些分析多是基于出现的频率大小， 也就是计数。并没有运用氨基酸与氨基酸之间的替换矩阵(substitutionn matrix)来描述氨基酸的生化性质，也没有涉及到多个氨基酸与多个氨基酸之间的对应关系。鉴于此，本论文就是在这些方面做了改进，建立了一个更有效的，可以描述抗原抗体相互作用的模型。这样也就基本确定了本论文的核心亮点：提取相互作用的氨基酸序列对，定义距离， 构建模型。
+
+正如之前所说的，抗原抗体相互作用的研究之所以如此困难，关键就在于这种相互作用是一种三维结构的相互作用，很难通过分析连续的序列来寻找规律。但是从另一个角度讲，抗原抗体的相互作用可以看成一些相互作用的连续的氨基酸序列之间的组合，只是这些连续的氨基酸序列的长度可能比较短，甚至只含有一个氨基酸。之前的研究表明，蛋白质和蛋白质的相互作用主要集中在几个关键的氨基酸上，这几个关键的氨基酸被称为热点(hot-spot)\cite{HotSpot}。最早提出热点的概念，是 Clackson 等在研究人生长激素(hGH)和它的一个受体hGHbp 相互作用时提出的\cite{HotSpot0} 。通常来讲，这些热点上的每个氨基酸对亲和力的贡献都在 2kJ/mol 以上，而且相互作用的两个蛋白的热点是相互对应的，不但结构互补，亲水性也相同，带电荷也往往相反。系统的分析表明，热点的氨基酸组成个蛋白中氨基酸的组成有明显的不同\cite{HotSpotComp}。Tryptophan(21\%), Arginine(13.3\%) 和 Tyrosine(12.3\%) 是含量最高的三种氨基酸。
 
 抗原与抗体的相互作用作为蛋白质之间相互作用的一个特例，热点的概念也同样适用。多数的情况下，抗原抗体的亲和力是由少数几个热点氨基酸决定， 比如文献\cite{AntibodyGenHot1}的研究。通过实验手段确定抗原抗体的热点，往往通过 Alanine Scanning 。 也有通过计算的方法来确定热点\cite{HotSpotPred1, HotSpotPred2}。
 
@@ -315,10 +315,12 @@ Inbal Sela-Culang 等开发了基于给定抗体序列的抗原表位的预测方法：PEASE\cite{}。该
 \caption{A 为抗体 cAB-Lys3 和上面的热点； B 为抗原 HEL(蛋清溶菌酶)上的热点。图片来自\cite{HotSpotPred2}，绿色代表加强抗原抗体的相互作用，红色代表减弱抗原抗体的相互作用。}
 \label{HotSpot}
 \end{figure}
-从图\ref{HotSpot}可以看出，热点只有少数的几个氨基酸，而且往往是短的在序列上相邻的氨基酸组成。在图\ref{HotSpot}A 中热点为 Y103, A104, S105, Y106 。B 中也有类似情况。既然这样，如果我们只研究抗原热点和抗体热点之间的关系，就可以把问题在一定程度上化简为一个短的氨基酸序列和另外一个短的氨基酸序列的相互作用。
-\section{亲和力预测}
-自然产生的抗体，往往在亲和力(affinity)上有一定的限制\cite{AffinityLimit}。为了获得更好的疗效，在治疗性抗体的生产和设计过程中，往往要涉及到亲和力成熟(affinity maturation)。所谓的亲和力的成熟就是说，在原来抗体的基础上，通过改造CDR上氨基酸的序列，从而使得抗原和抗体之间有更高的亲和力\cite{AffinityMaturation}。传统的实验手段，比如说突变和各种各样的展示技术，可以被用来寻找具有更高亲和力的抗体\cite{PhageDisplay}, 有不少的亲和力(affinity)可以被提高到nM的级别\cite{PhageDisplay1}。但是这些实验的手段，需要很大的工作量，也会持续很长的时间。也有一些通过计算的手段，来指导CDR上氨基酸的序列的改造。这样的方法也比较多，比如通过分子模拟、通过自由能的扰动(free energy perturbation)\cite{EnergyPerturb1},通过 potential-of-mean force(PMF)\cite{EnergyPerturb2}，虽然目前现在这些通过计算提高亲和力的方法效果还不是太理想，但是，这是一片广阔的天地\cite{Insilico1}。首先，计算的方法可以大大提高速度。传统方法几个月才能完成的事情，计算的方法可能几天就可以完成。其次，随着数据量的积累和计算水平的提高，计算的结果必然会越来越准确。通过计算的方法解决亲和力的问题，概括的讲来，大概有两个思路，一个是统计学的角度，一个是从物理化学原理的角度。上面说的分子模拟等方法都是从物理化学的角度，来进行的计算。也可以从统计学的角度来解决这个问题，比如说观察到观察到A和B经常相互作用，而A和C不经常相互作用。如果把C突变成B就很有可能增加分子的亲和力。Lippow等\cite{Lippow}，集中分析氨基酸与氨基酸之间的静电作用，高效的把抗EGFR的治疗性抗体Erbitux 的亲和力提高10倍，达到52pM ； 把抗蛋清溶菌酶的抗体D44.1 的亲和力提高了140倍，达到30pM ；同时他们方法的有效性还在治疗性抗体Avastin 的已知亲和力的突变，以及抗荧光蛋白(fluorescein) 的抗体 4-4-20 的已知亲和力的突变中，得到验证。这个结果是惊人的， 是计算机辅助亲和力成熟的一次成功。但是，这个方法需要抗原和抗体复合物的结构，同时也只分析了一对一的静电相互作用，并没有涉及到多个氨基酸协同作用和其他种类的相互作用力的情况。Sarah Sirin 等\cite{AB-Bind}构建了一个抗原抗体复合物突变数据库，涉及到32个复合物，1101个突变，并且每个突变都有实验手段得到的亲和力。通过比较 dDFIRE, DFIRE, STATIUM, Rosetta, FoldX, Discovery Studio, 在预测亲和力上的表现，Sarah Sirin 等认为，总的来说，目前的预测方法效果都不够好， 实际 $\Delta\Delta G$ (吉布斯自由能的变化)和预测的 $\Delta\Delta G$ 之间的相关系数 $r$ 在 0.16 到 0.45 之间，很难满足实际的需求，但是在作出亲和力是增加还是减小这样的二分类判断时候，这些方法具有一定的意义。在上面的方法中， FoldX 和 Discovery Studio 是效果较好的两个。在上面的所有方法中，STATIUM 使用了统计学的方法，通过计算两个氨基酸之间 $C^\alpha$ 和 $C^\beta$ 之间的距离和夹角的关系，来计算氨基酸之间的 STATIUM potential，进而估计突变对亲和力的影响\cite{STATIUM}。
+从图\ref{HotSpot}可以看出，热点只有少数的几个氨基酸，而且往往是短的在序列上相邻的氨基酸组成。在图\ref{HotSpot}A 中热点为 Y103, A104, S105, Y106 。B 中也有类似情况。既然这样，为了排除那些并不重要的氨基酸序列对的干扰，我们可以从每个抗原抗体复合物中选取最重要的相互作用的氨基酸序列对进行分析。在本论文中，这些重要的相互作用的氨基酸对称之为 Core。
 
+%\section{亲和力预测}
+%由于本论文模型的应用之一，就是预测突变对抗原抗体符合物亲和力的影响，这里对抗原抗体亲和力
+%自然产生的抗体，往往在亲和力(affinity)上有一定的限制\cite{AffinityLimit}。为了获得更好的疗效，在治疗性抗体的生产和设计过程中，往往要涉及到亲和力成熟(affinity maturation)。所谓的亲和力的成熟就是说，在原来抗体的基础上，通过改造CDR上氨基酸的序列，从而使得抗原和抗体之间有更高的亲和力\cite{AffinityMaturation}。传统的实验手段，比如说突变和各种各样的展示技术，可以被用来寻找具有更高亲和力的抗体\cite{PhageDisplay}, 有不少的亲和力(affinity)可以被提高到nM的级别\cite{PhageDisplay1}。但是这些实验的手段，需要很大的工作量，也会持续很长的时间。也有一些通过计算的手段，来指导CDR上氨基酸的序列的改造。这样的方法也比较多，比如通过分子模拟、通过自由能的扰动(free energy perturbation)\cite{EnergyPerturb1},通过 potential-of-mean force(PMF)\cite{EnergyPerturb2}，虽然目前现在这些通过计算提高亲和力的方法效果还不是太理想，但是，这是一片广阔的天地\cite{Insilico1}。首先，计算的方法可以大大提高速度。传统方法几个月才能完成的事情，计算的方法可能几天就可以完成。其次，随着数据量的积累和计算水平的提高，计算的结果必然会越来越准确。通过计算的方法解决亲和力的问题，概括的讲来，大概有两个思路，一个是统计学的角度，一个是从物理化学原理的角度。上面说的分子模拟等方法都是从物理化学的角度，来进行的计算。也可以从统计学的角度来解决这个问题，比如说观察到观察到A和B经常相互作用，而A和C不经常相互作用。如果把C突变成B就很有可能增加分子的亲和力。Lippow等\cite{Lippow}，集中分析氨基酸与氨基酸之间的静电作用，高效的把抗EGFR的治疗性抗体Erbitux 的亲和力提高10倍，达到52pM ； 把抗蛋清溶菌酶的抗体D44.1 的亲和力提高了140倍，达到30pM ；同时他们方法的有效性还在治疗性抗体Avastin 的已知亲和力的突变，以及抗荧光蛋白(fluorescein) 的抗体 4-4-20 的已知亲和力的突变中，得到验证。这个结果是惊人的， 是计算机辅助亲和力成熟的一次成功。但是，这个方法需要抗原和抗体复合物的结构，同时也只分析了一对一的静电相互作用，并没有涉及到多个氨基酸协同作用和其他种类的相互作用力的情况。Sarah Sirin 等\cite{AB-Bind}构建了一个抗原抗体复合物突变数据库，涉及到32个复合物，1101个突变，并且每个突变都有实验手段得到的亲和力。通过比较 dDFIRE, DFIRE, STATIUM, Rosetta, FoldX, Discovery Studio, 在预测亲和力上的表现，Sarah Sirin 等认为，总的来说，目前的预测方法效果都不够好， 实际 $\Delta\Delta G$ (吉布斯自由能的变化)和预测的 $\Delta\Delta G$ 之间的相关系数 $r$ 在 0.16 到 0.45 之间，很难满足实际的需求，但是在作出亲和力是增加还是减小这样的二分类判断时候，这些方法具有一定的意义。在上面的方法中， FoldX 和 Discovery Studio 是效果较好的两个。在上面的所有方法中，STATIUM 使用了统计学的方法，通过计算两个氨基酸之间 $C^\alpha$ 和 $C^\beta$ 之间的距离和夹角的关系，来计算氨基酸之间的 STATIUM potential，进而估计突变对亲和力的影响\cite{STATIUM}。
+\newpage
 \section{本论文的主要内容}
 本论文可以概括为通过对热点的研究，来建立抗原抗体相互作用的模型。中间涉及的内容，从数据的收集，到模型的检验，还有不同模型的比较。可以成如下几点：
 \begin{enumerate}[label=(\arabic*)]
@@ -879,7 +881,9 @@ $$0.1277 + 0.0411 = 0.0722 + 0.0966$$
 
  
 \section{预测突变对抗原抗体复合物亲和力的影响}
-增加抗原和抗体的亲和力，在治疗性抗体的生产过程中起着至关重要的作用。实验室中的各种展示技术是筛选具有高亲和力抗体的有效手段，但是成本高，过程复杂。用计算的方法来设计高亲和力的抗体，可以大大提高筛选的效率。虽然目前计算的手段精确度有待提高，却是一个广阔的天地，是未来发展的方向。用计算的方法设计高亲和力的抗体，在一定意义上可以归结为对亲和力变化的预测，也就是，当有一系列可能的突变时，用计算的方法来判定那一个突变会增加抗原抗体的亲和力。Sirin 等比较了 7 个不同的方法\cite{AB-Bind}, 虽然这些方法的预测的亲和力(affinity) 和实际实验测得的亲和力的相关系数并不高，但是在单单判断一个突变是否会增加亲和力的问题上还是具有实际参考价值，特别是表现优秀的 FoldX 和 Discovery Studio。
+自然产生的抗体，往往在亲和力(affinity)上有一定的限制\cite{AffinityLimit}。为了获得更好的疗效，在治疗性抗体的生产和设计过程中，往往要涉及到亲和力成熟(affinity maturation)。所谓的亲和力的成熟就是说，在原来抗体的基础上，通过改造CDR上氨基酸的序列，从而使得抗原和抗体之间有更高的亲和力\cite{AffinityMaturation}。传统的实验手段，比如说突变和各种各样的展示技术，可以被用来寻找具有更高亲和力的抗体\cite{PhageDisplay}, 有不少的亲和力(affinity)可以被提高到nM的级别\cite{PhageDisplay1}。但是这些实验的手段，需要很大的工作量，也会持续很长的时间。也有一些通过计算的手段，来指导CDR上氨基酸的序列的改造。这样的方法也比较多，比如通过分子模拟、通过自由能的扰动(free energy perturbation)\cite{EnergyPerturb1},通过 potential-of-mean force(PMF)\cite{EnergyPerturb2}，虽然目前现在这些通过计算提高亲和力的方法效果还不是太理想，但是，这是一片广阔的天地\cite{Insilico1}。首先，计算的方法可以大大提高速度。传统方法几个月才能完成的事情，计算的方法可能几天就可以完成。其次，随着数据量的积累和计算水平的提高，计算的结果必然会越来越准确。通过计算的方法解决亲和力的问题，概括的讲来，大概有两个思路，一个是统计学的角度，一个是从物理化学原理的角度。上面说的分子模拟等方法都是从物理化学的角度，来进行的计算。也可以从统计学的角度来解决这个问题，比如说观察到观察到A和B经常相互作用，而A和C不经常相互作用。如果把C突变成B就很有可能增加分子的亲和力。Lippow等\cite{Lippow}，集中分析氨基酸与氨基酸之间的静电作用，高效的把抗EGFR的治疗性抗体Erbitux 的亲和力提高10倍，达到52pM ； 把抗蛋清溶菌酶的抗体D44.1 的亲和力提高了140倍，达到30pM ；同时他们方法的有效性还在治疗性抗体Avastin 的已知亲和力的突变，以及抗荧光蛋白(fluorescein) 的抗体 4-4-20 的已知亲和力的突变中，得到验证。这个结果是惊人的， 是计算机辅助亲和力成熟的一次成功。但是，这个方法需要抗原和抗体复合物的结构，同时也只分析了一对一的静电相互作用，并没有涉及到多个氨基酸协同作用和其他种类的相互作用力的情况。Sarah Sirin 等\cite{AB-Bind}构建了一个抗原抗体复合物突变数据库，涉及到32个复合物，1101个突变，并且每个突变都有实验手段得到的亲和力。通过比较 dDFIRE, DFIRE, STATIUM, Rosetta, FoldX, Discovery Studio, 在预测亲和力上的表现，Sarah Sirin 等认为，总的来说，目前的预测方法效果都不够好， 实际 $\Delta\Delta G$ (吉布斯自由能的变化)和预测的 $\Delta\Delta G$ 之间的相关系数 $r$ 在 0.16 到 0.45 之间，很难满足实际的需求，但是在作出亲和力是增加还是减小这样的二分类判断时候，这些方法具有一定的意义。在上面的方法中， FoldX 和 Discovery Studio 是效果较好的两个。在上面的所有方法中，STATIUM 使用了统计学的方法，通过计算两个氨基酸之间 $C^\alpha$ 和 $C^\beta$ 之间的距离和夹角的关系，来计算氨基酸之间的 STATIUM potential，进而估计突变对亲和力的影响\cite{STATIUM}。
+%
+%增加抗原和抗体的亲和力，在治疗性抗体的生产过程中起着至关重要的作用。实验室中的各种展示技术是筛选具有高亲和力抗体的有效手段，但是成本高，过程复杂。用计算的方法来设计高亲和力的抗体，可以大大提高筛选的效率。虽然目前计算的手段精确度有待提高，却是一个广阔的天地，是未来发展的方向。用计算的方法设计高亲和力的抗体，在一定意义上可以归结为对亲和力变化的预测，也就是，当有一系列可能的突变时，用计算的方法来判定那一个突变会增加抗原抗体的亲和力。Sirin 等比较了 7 个不同的方法\cite{AB-Bind}, 虽然这些方法的预测的亲和力(affinity) 和实际实验测得的亲和力的相关系数并不高，但是在单单判断一个突变是否会增加亲和力的问题上还是具有实际参考价值，特别是表现优秀的 FoldX 和 Discovery Studio。
 
 本论文从上面构建的RBFN模型出发，对突变的亲和力做出预测。一个基本的假设就是，如果突变使得抗原抗体相互作用的氨基酸朝着 Core 的方向变化，那么这个突变就可以增加抗原抗体的亲和力，否则就减弱抗原抗体的亲和力。那么，用 RBFN 模型进行亲和力变化预测的第一步就是找出相互作用的短的氨基酸序列。在现实的突变过程中，往往都是单个突变，然后逐次叠加， Sirin 等\cite{AB-Bind} 收集的数据中绝大多数为单位点突变（1101 个突变中有 645 个位单位点突变）。
 %同时考虑到 RBFN 中的 match-type(1,1)模型的准确性，以及在用 其他 match-type 下表现并不好，于是就采用了 match-type(1,1)下的RBFN模型。
@@ -1107,6 +1111,7 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 %\textbf{注意``参考文献"不写成论文的一章. }
 
 \chapter*{\heiti 致谢}
+在本论文相关的研究过程中，得到了朱山风老师和孙丰珠老师的大量帮助。在此表达诚挚的感谢。还要感谢 MIT 的 Keating 教授，她无私的提供了她们组的实验数据。感谢吴宗敏老师在数学上的指导。还要感谢过去并没有直接参与到本论文的老师和朋友们，虽然他们没有直接参与论文的写作，但是他们的存在使我更像一个社会性的动物，让我的存在有一定的意义。
 %\begin{table}[htbp]\centering
 %\begin{tabular}{llll}
 %\hline\hline
@@ -1140,6 +1145,9 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 			
 \bibitem{Trend} António L.Grilo, A.Mantalaris,The Increasingly Human and Profitable Monoclonal Antibody Market, 
 			\emph{ Trends in biotechnology} 37.1 (2019): 9-16.
+			
+\bibitem{TherapeuticPeptides}Dorfman T, Moore MJ, Guth AC, Choe H, Farzan M. A tyrosine-sulfated peptide derived from the heavy-chain CDR3 region of an HIV-1-neutralizing antibody binds gp120 and inhibits HIV-1 infection. 
+	\emph{Journal of Biological Chemistry}. (2006), 281(39):28529-35.
 			
 \bibitem{HyHEL1}Padlan, Eduardo A., et al. Structure of an antibody-antigen complex: crystal structure of the HyHEL-10 Fab-lysozyme complex. 
 			\emph{PNAS}, (1989), 86(15):5938-5942.		
