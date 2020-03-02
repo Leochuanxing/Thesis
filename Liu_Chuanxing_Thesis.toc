@@ -7,10 +7,12 @@
 \contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}数据的初步分析}{20}{section.2.2}% 
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}RBFN 的构建}{26}{chapter.3}% 
 \contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core 之间距离的定义}{26}{section.3.1}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}RBFN模型}{27}{section.3.2}% 
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}RBFN 模型的应用}{33}{chapter.4}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core中抗原氨基酸和抗体氨基酸的区分}{33}{section.4.1}% 
-\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}预测突变对抗原抗体复合物亲和力的影响}{37}{section.4.2}% 
-\contentsline {subsection}{\numberline {2.1.}可预测氨基酸对的提取}{39}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {2.2.}亲和力变化的预测}{40}{subsection.4.2.2}% 
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}讨论}{44}{chapter.5}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}RBFN 模型}{28}{section.3.2}% 
+\contentsline {subsection}{\numberline {2.1.}RBFN 模型的构建}{28}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {2.2.}RBFN 模型的检验}{31}{subsection.3.2.2}% 
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}RBFN 模型的应用}{34}{chapter.4}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core 中抗原氨基酸和抗体氨基酸的区分}{34}{section.4.1}% 
+\contentsline {section}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}预测突变对抗原抗体复合物亲和力的影响}{39}{section.4.2}% 
+\contentsline {subsection}{\numberline {2.1.}可预测氨基酸对的提取}{40}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {2.2.}亲和力变化的预测}{42}{subsection.4.2.2}% 
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}讨论}{45}{chapter.5}% 

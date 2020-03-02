@@ -106,8 +106,8 @@
 \newlabel{CN}{{2.1}{16}{数据提取}{equation.2.1.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces 截断距离和聚类数之间的关系。A为 testing set 中重链的聚类情况，B 为 testing set 中轻链的聚类情况， C 为 training set 中重链的聚类情况， D 为 training set 中轻链的聚类情况。}}{17}{figure.2.2}\protected@file@percent }
 \newlabel{ElbowMethod}{{2.2}{17}{截断距离和聚类数之间的关系。A为 testing set 中重链的聚类情况，B 为 testing set 中轻链的聚类情况， C 为 training set 中重链的聚类情况， D 为 training set 中轻链的聚类情况。}{figure.2.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces 来自于抗原抗体复合物 1adq(一个PDB编号) 重链和其对应抗原之间所有坑能相互作用的氨基酸。上面使用的是本论文涉及的四坐标体系(four coordinate system)，这四个坐标分别是 \textbf  {标记}，\textbf  {抗体氨基酸位置}，\textbf  {抗原氨基酸位置} 和 \textbf  {CN}。标记，给出抗体链的名称，抗原链的名称和CDR序号；CN如公式(\ref  {CN})定义。(h1HA, 30, 16, 7)表示在复合物 1adq 的重链 H 上的 30 位氨基酸和抗原链 A 上 16 位氨基酸相互作用，请 CN 值为 7，并且这个相互作用位于重链的第一个CDR上。}}{18}{table.2.3}\protected@file@percent }
-\newlabel{All_Contact_aa}{{2.3}{18}{来自于抗原抗体复合物 1adq(一个PDB编号) 重链和其对应抗原之间所有坑能相互作用的氨基酸。上面使用的是本论文涉及的四坐标体系(four coordinate system)，这四个坐标分别是 \textbf {标记}，\textbf {抗体氨基酸位置}，\textbf {抗原氨基酸位置} 和 \textbf {CN}。标记，给出抗体链的名称，抗原链的名称和CDR序号；CN如公式(\ref {CN})定义。(h1HA, 30, 16, 7)表示在复合物 1adq 的重链 H 上的 30 位氨基酸和抗原链 A 上 16 位氨基酸相互作用，请 CN 值为 7，并且这个相互作用位于重链的第一个CDR上。}{table.2.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces 来自于抗原抗体复合物 1adq(一个PDB编号) 重链和其对应抗原之间所有可能相互作用的氨基酸对。上面使用的是本论文设计的四坐标体系(four coordinate system)，这四个坐标分别是 \textbf  {标记}，\textbf  {抗体氨基酸位置}，\textbf  {抗原氨基酸位置} 和 \textbf  {CN}。标记，给出抗体链的名称，抗原链的名称和CDR序号；CN如公式(\ref  {CN})定义。(h1HA, 30, 16, 7)表示在复合物 1adq 的重链 H 上的 30 位氨基酸和抗原链 A 上 16 位氨基酸相互作用，且这两个氨基酸的 CN 值为 7，并且这个相互作用位于重链的第一个CDR上。}}{18}{table.2.3}\protected@file@percent }
+\newlabel{All_Contact_aa}{{2.3}{18}{来自于抗原抗体复合物 1adq(一个PDB编号) 重链和其对应抗原之间所有可能相互作用的氨基酸对。上面使用的是本论文设计的四坐标体系(four coordinate system)，这四个坐标分别是 \textbf {标记}，\textbf {抗体氨基酸位置}，\textbf {抗原氨基酸位置} 和 \textbf {CN}。标记，给出抗体链的名称，抗原链的名称和CDR序号；CN如公式(\ref {CN})定义。(h1HA, 30, 16, 7)表示在复合物 1adq 的重链 H 上的 30 位氨基酸和抗原链 A 上 16 位氨基酸相互作用，且这两个氨基酸的 CN 值为 7，并且这个相互作用位于重链的第一个CDR上。}{table.2.3}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces 表\ref  {All_Contact_aa}中最终 Core 的抽取结果。}}{20}{table.2.4}\protected@file@percent }
 \newlabel{Core_Extraction}{{2.4}{20}{表\ref {All_Contact_aa}中最终 Core 的抽取结果。}{table.2.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}数据的初步分析}{20}{section.2.2}\protected@file@percent }
@@ -119,8 +119,8 @@
 \newlabel{Core_CDR}{{2.6}{21}{不同 match-type 的 Core 在不同CDR上的分布}{table.2.6}{}}
 \citation{TYR_important1}
 \citation{TYR_important2}
-\@writefile{lot}{\contentsline {table}{\numberline {2.7}{\ignorespaces 表中列出的是对不同的 match-type 情况下做假设检验，得到的P值。对于给定的 match-type 和抗体链（轻链或者重链）， $H_0:$ CDR3 上 Core 的密度大于 其他两个CDR。这里密度，是用Core 的数目除以 CDR 的长度。 }}{22}{table.2.7}\protected@file@percent }
-\newlabel{P_value_CDR3_Domi}{{2.7}{22}{表中列出的是对不同的 match-type 情况下做假设检验，得到的P值。对于给定的 match-type 和抗体链（轻链或者重链）， $H_0:$ CDR3 上 Core 的密度大于 其他两个CDR。这里密度，是用Core 的数目除以 CDR 的长度。}{table.2.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.7}{\ignorespaces 表中列出的是对不同的 match-type 情况下做假设检验，得到的P值。对于给定的 match-type 和抗体链（轻链或者重链），做假设检验， $H_0:$ CDR3 上 Core 的密度大于 其他两个CDR。这里密度，是用Core 的数目除以 CDR 的长度。 }}{22}{table.2.7}\protected@file@percent }
+\newlabel{P_value_CDR3_Domi}{{2.7}{22}{表中列出的是对不同的 match-type 情况下做假设检验，得到的P值。对于给定的 match-type 和抗体链（轻链或者重链），做假设检验， $H_0:$ CDR3 上 Core 的密度大于 其他两个CDR。这里密度，是用Core 的数目除以 CDR 的长度。}{table.2.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces 抗原氨基酸和抗体氨基酸在所有Core中的分布情况}}{22}{figure.2.4}\protected@file@percent }
 \newlabel{AA_distr_all}{{2.4}{22}{抗原氨基酸和抗体氨基酸在所有Core中的分布情况}{figure.2.4}{}}
 \citation{Tyr_Ser_Gly}
@@ -146,32 +146,36 @@
 \@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core 之间距离的定义}{26}{section.3.1}\protected@file@percent }
 \newlabel{sim}{{3.1}{27}{Core 之间距离的定义}{equation.3.1.1}{}}
 \newlabel{positive}{{3.2}{27}{Core 之间距离的定义}{equation.3.1.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}RBFN模型}{27}{section.3.2}\protected@file@percent }
 \citation{FastCenter}
 \citation{FastCenter}
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}RBFN 模型}{28}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.}RBFN 模型的构建}{28}{subsection.3.2.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 文献\cite  {FastCenter}选取 center 的流程图}}{28}{figure.3.1}\protected@file@percent }
 \newlabel{Coverage_Center}{{3.1}{28}{文献\cite {FastCenter}选取 center 的流程图}{figure.3.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 在观测值为 CN 时，在各种 match-type 下的 交叉检验的最优表现。这里的最优是按照交叉检验过程中平均 AUC 来衡量的。}}{29}{table.3.1}\protected@file@percent }
+\newlabel{Best_para_Numerical}{{3.1}{29}{在观测值为 CN 时，在各种 match-type 下的 交叉检验的最优表现。这里的最优是按照交叉检验过程中平均 AUC 来衡量的。}{table.3.1}{}}
 \citation{BFGS}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 在观测值为 CN 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均AUC来衡量的。}}{29}{table.3.1}\protected@file@percent }
-\newlabel{Best_para_Numerical}{{3.1}{29}{在观测值为 CN 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均AUC来衡量的。}{table.3.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces 在观测值为 0, 1 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均AUC来衡量的。}}{29}{table.3.2}\protected@file@percent }
-\newlabel{Best_para_Binary}{{3.2}{29}{在观测值为 0, 1 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均AUC来衡量的。}{table.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 在不同 match-type 下 RBFN 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}}{30}{figure.3.2}\protected@file@percent }
-\newlabel{Discrimination}{{3.2}{30}{在不同 match-type 下 RBFN 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}{figure.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 在不同 match-type 下 整合 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}}{32}{figure.3.3}\protected@file@percent }
-\newlabel{Integrated}{{3.3}{32}{在不同 match-type 下 整合 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}{figure.3.3}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第四章\hspace  {.3em}}RBFN 模型的应用}{33}{chapter.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces 在观测值为 0, 1 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均 AUC 来衡量的。}}{30}{table.3.2}\protected@file@percent }
+\newlabel{Best_para_Binary}{{3.2}{30}{在观测值为 0, 1 时，在各种 match-type 下的 交叉检验的最有表现。这里的最优是按照交叉检验过程中平均 AUC 来衡量的。}{table.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.}RBFN 模型的检验}{31}{subsection.3.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 在不同 match-type 下 RBFN 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}}{31}{figure.3.2}\protected@file@percent }
+\newlabel{Discrimination}{{3.2}{31}{在不同 match-type 下 RBFN 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}{figure.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 在不同 match-type 下 整合 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}}{33}{figure.3.3}\protected@file@percent }
+\newlabel{Integrated}{{3.3}{33}{在不同 match-type 下 整合 模型正负测试集的区分。在每种 match-type 下，有 10 条 ROC 曲线对应 10 组测试集，Average AUC 是这 10 个测试集 AUC 的平均。}{figure.3.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第四章\hspace  {.3em}}RBFN 模型的应用}{34}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core中抗原氨基酸和抗体氨基酸的区分}{33}{section.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces RBFN 用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}}{34}{figure.4.1}\protected@file@percent }
-\newlabel{reverse}{{4.1}{34}{RBFN 用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}{figure.4.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 整合模型用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。 }}{35}{figure.4.2}\protected@file@percent }
-\newlabel{Integrated_Reverse}{{4.2}{35}{整合模型用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}{figure.4.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces 各种情况下的AUC值。这些数值来自图 \ref  {Discrimination}, \ref  {Integrated}, \ref  {reverse}, \ref  {Integrated_Reverse}。R 表示 RBFN 模型，I 表示整合模型，T 表示正测试集， TR 表示由 T 中元素的抗原氨基酸序列和抗体氨基酸序列交换次序得到的测试集， N 表示随机生成的负样本。AUC(R,T,N) 表示用 RBFN模型（R）区分 T 和 N 时的 AUC 值。}}{36}{table.4.1}\protected@file@percent }
-\newlabel{AUC_Commutative}{{4.1}{36}{各种情况下的AUC值。这些数值来自图 \ref {Discrimination}, \ref {Integrated}, \ref {reverse}, \ref {Integrated_Reverse}。R 表示 RBFN 模型，I 表示整合模型，T 表示正测试集， TR 表示由 T 中元素的抗原氨基酸序列和抗体氨基酸序列交换次序得到的测试集， N 表示随机生成的负样本。AUC(R,T,N) 表示用 RBFN模型（R）区分 T 和 N 时的 AUC 值。}{table.4.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces 各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}}{36}{figure.4.3}\protected@file@percent }
-\newlabel{Commutative}{{4.3}{36}{各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}{figure.4.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}Core 中抗原氨基酸和抗体氨基酸的区分}{34}{section.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces RBFN 用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}}{35}{figure.4.1}\protected@file@percent }
+\newlabel{reverse}{{4.1}{35}{RBFN 用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}{figure.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 整合模型用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。 }}{36}{figure.4.2}\protected@file@percent }
+\newlabel{Integrated_Reverse}{{4.2}{36}{整合模型用来区分测试集 T 和 TR 的ROC曲线和对应 AUC 值。}{figure.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces 各种情况下的AUC值。这些数值来自图 \ref  {Discrimination}, \ref  {Integrated}, \ref  {reverse}, \ref  {Integrated_Reverse}。R 表示 RBFN 模型，I 表示整合模型，T 表示正测试集， TR 表示由 T 中元素的抗原氨基酸序列和抗体氨基酸序列交换次序得到的测试集， N 表示随机生成的负样本。AUC(R,T,N) 表示用 RBFN模型（R）区分 T 和 N 时的 AUC 值。}}{37}{table.4.1}\protected@file@percent }
+\newlabel{AUC_Commutative}{{4.1}{37}{各种情况下的AUC值。这些数值来自图 \ref {Discrimination}, \ref {Integrated}, \ref {reverse}, \ref {Integrated_Reverse}。R 表示 RBFN 模型，I 表示整合模型，T 表示正测试集， TR 表示由 T 中元素的抗原氨基酸序列和抗体氨基酸序列交换次序得到的测试集， N 表示随机生成的负样本。AUC(R,T,N) 表示用 RBFN模型（R）区分 T 和 N 时的 AUC 值。}{table.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces 各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}}{37}{figure.4.3}\protected@file@percent }
+\newlabel{Commutative}{{4.3}{37}{各种情况下 AUC 的差值。0.0722 是 AUC(I,T,R) 和 AUC(R,T,R) 在各种 match-type 下差值的平均。0.1277， 0.0966， 0.0411 也做类似计算。}{figure.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 对图 \ref  {Commutative} 交换关系的解释}}{38}{figure.4.4}\protected@file@percent }
+\newlabel{Commutative_Explanation}{{4.4}{38}{对图 \ref {Commutative} 交换关系的解释}{figure.4.4}{}}
 \citation{AffinityLimit}
 \citation{AffinityMaturation}
 \citation{PhageDisplay}
@@ -182,24 +186,22 @@
 \citation{Lippow}
 \citation{AB-Bind}
 \citation{STATIUM}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 对图 \ref  {Commutative} 交换关系的解释}}{37}{figure.4.4}\protected@file@percent }
-\newlabel{Commutative_Explanation}{{4.4}{37}{对图 \ref {Commutative} 交换关系的解释}{figure.4.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}预测突变对抗原抗体复合物亲和力的影响}{37}{section.4.2}\protected@file@percent }
 \citation{AB-Bind}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.}可预测氨基酸对的提取}{39}{subsection.4.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 相互作用突变氨基酸对的提取。}}{39}{figure.4.5}\protected@file@percent }
-\newlabel{ContactingPairs}{{4.5}{39}{相互作用突变氨基酸对的提取。}{figure.4.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces 把突变氨基酸对的抗体氨基酸限定在 CDR 上。}}{40}{figure.4.6}\protected@file@percent }
-\newlabel{Predictable}{{4.6}{40}{把突变氨基酸对的抗体氨基酸限定在 CDR 上。}{figure.4.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.}亲和力变化的预测}{40}{subsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {第\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces 节}预测突变对抗原抗体复合物亲和力的影响}{39}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.}可预测氨基酸对的提取}{40}{subsection.4.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 相互作用突变氨基酸对的提取。}}{40}{figure.4.5}\protected@file@percent }
+\newlabel{ContactingPairs}{{4.5}{40}{相互作用突变氨基酸对的提取。}{figure.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces 把突变氨基酸对的抗体氨基酸限定在 CDR 上。}}{41}{figure.4.6}\protected@file@percent }
+\newlabel{Predictable}{{4.6}{41}{把突变氨基酸对的抗体氨基酸限定在 CDR 上。}{figure.4.6}{}}
 \citation{AB-Bind}
 \citation{AB-Bind}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces $\Delta \Delta G$ 位于不同范围的突变复合物的亲和力的预测效果。 其中 $\Delta \Delta G$ 为吉布斯自由能的变化，单位是 KJ/mol 。 n 表示预测的突变复合物的数目。预测效果的好坏用 AUC 来衡量。}}{41}{table.4.2}\protected@file@percent }
-\newlabel{Affinity_Pred}{{4.2}{41}{$\Delta \Delta G$ 位于不同范围的突变复合物的亲和力的预测效果。 其中 $\Delta \Delta G$ 为吉布斯自由能的变化，单位是 KJ/mol 。 n 表示预测的突变复合物的数目。预测效果的好坏用 AUC 来衡量。}{table.4.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces 各种方法的预测效果。CN：指的是本文的方法，是 Contacting Number 首字母的缩写。其他的方法请参考文献 \cite  {AB-Bind}。突变体复合物的选择是在 one\_WithinRang\_True 的类型下的突变体复合物。$\Delta \Delta G$ 的单位是 KJ/mol 。}}{42}{figure.4.7}\protected@file@percent }
-\newlabel{Affinity_Predict}{{4.7}{42}{各种方法的预测效果。CN：指的是本文的方法，是 Contacting Number 首字母的缩写。其他的方法请参考文献 \cite {AB-Bind}。突变体复合物的选择是在 one\_WithinRang\_True 的类型下的突变体复合物。$\Delta \Delta G$ 的单位是 KJ/mol 。}{figure.4.7}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Bootstrap 方法构建各种不同方法 AUC 95\% 的置信区间。Boostrap 的取样次数为 10,000 。D Studio 为 Discovery Studio 。}}{43}{table.4.3}\protected@file@percent }
-\newlabel{Bootstrap}{{4.3}{43}{Bootstrap 方法构建各种不同方法 AUC 95\% 的置信区间。Boostrap 的取样次数为 10,000 。D Studio 为 Discovery Studio 。}{table.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.}亲和力变化的预测}{42}{subsection.4.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces $\Delta \Delta G$ 位于不同范围的突变复合物的亲和力的预测效果。 其中 $\Delta \Delta G$ 为吉布斯自由能的变化，单位是 KJ/mol 。 n 表示预测的突变复合物的数目。预测效果的好坏用 AUC 来衡量。}}{42}{table.4.2}\protected@file@percent }
+\newlabel{Affinity_Pred}{{4.2}{42}{$\Delta \Delta G$ 位于不同范围的突变复合物的亲和力的预测效果。 其中 $\Delta \Delta G$ 为吉布斯自由能的变化，单位是 KJ/mol 。 n 表示预测的突变复合物的数目。预测效果的好坏用 AUC 来衡量。}{table.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces 各种方法的预测效果。CN：指的是本文的方法，是 Contacting Number 首字母的缩写。其他的方法请参考文献 \cite  {AB-Bind}。突变体复合物的选择是在 one\_WithinRang\_True 的类型下的突变体复合物。$\Delta \Delta G$ 的单位是 KJ/mol 。}}{43}{figure.4.7}\protected@file@percent }
+\newlabel{Affinity_Predict}{{4.7}{43}{各种方法的预测效果。CN：指的是本文的方法，是 Contacting Number 首字母的缩写。其他的方法请参考文献 \cite {AB-Bind}。突变体复合物的选择是在 one\_WithinRang\_True 的类型下的突变体复合物。$\Delta \Delta G$ 的单位是 KJ/mol 。}{figure.4.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Bootstrap 方法构建各种不同方法 AUC 95\% 的置信区间。Boostrap 的取样次数为 10,000 。D Studio 为 Discovery Studio 。}}{44}{table.4.3}\protected@file@percent }
+\newlabel{Bootstrap}{{4.3}{44}{Bootstrap 方法构建各种不同方法 AUC 95\% 的置信区间。Boostrap 的取样次数为 10,000 。D Studio 为 Discovery Studio 。}{table.4.3}{}}
 \citation{rASA1}
 \citation{rASA2}
 \citation{FastCenter}
@@ -208,7 +210,7 @@
 \citation{Sub_Mat3}
 \citation{Sub_Mat4}
 \citation{FastCenter}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第五章\hspace  {.3em}}讨论}{44}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第五章\hspace  {.3em}}讨论}{45}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
 \citation{OF_IOF}
@@ -222,18 +224,18 @@
 \citation{FastCenter}
 \citation{FastCenter}
 \citation{FastCenter}
-\newlabel{eq1}{{5.1}{45}{讨论}{equation.5.0.1}{}}
-\newlabel{eq2}{{5.2}{45}{讨论}{equation.5.0.2}{}}
-\newlabel{eq3}{{5.3}{45}{讨论}{equation.5.0.3}{}}
-\newlabel{eqiv}{{5.4}{45}{讨论}{equation.5.0.4}{}}
+\newlabel{eq1}{{5.1}{46}{讨论}{equation.5.0.1}{}}
+\newlabel{eq2}{{5.2}{46}{讨论}{equation.5.0.2}{}}
+\newlabel{eq3}{{5.3}{46}{讨论}{equation.5.0.3}{}}
+\newlabel{eqiv}{{5.4}{46}{讨论}{equation.5.0.4}{}}
 \citation{Eskin}
 \citation{FastCenter}
 \citation{Eskin}
 \citation{FastCenter}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Center Selection Method}}{46}{algorithm.1}\protected@file@percent }
-\newlabel{CenterSelectAlg}{{1}{46}{讨论}{algorithm.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Hamming distance 的定义可以参看文献\cite  {FastCenter}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite  {FastCenter} 给出的方法。}}{46}{figure.5.1}\protected@file@percent }
-\newlabel{Hamming_BRE}{{5.1}{46}{Hamming distance 的定义可以参看文献\cite {FastCenter}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite {FastCenter} 给出的方法。}{figure.5.1}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Center Selection Method}}{47}{algorithm.1}\protected@file@percent }
+\newlabel{CenterSelectAlg}{{1}{47}{讨论}{algorithm.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Hamming distance 的定义可以参看文献\cite  {FastCenter}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite  {FastCenter} 给出的方法。}}{47}{figure.5.1}\protected@file@percent }
+\newlabel{Hamming_BRE}{{5.1}{47}{Hamming distance 的定义可以参看文献\cite {FastCenter}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite {FastCenter} 给出的方法。}{figure.5.1}{}}
 \citation{OF_IOF}
 \citation{FastCenter}
 \citation{OF_IOF}
@@ -242,12 +244,12 @@
 \citation{FastCenter}
 \citation{OF_IOF}
 \citation{FastCenter}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Eskin distance 的定义可以参看文献\cite  {Eskin}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite  {FastCenter} 给出的方法。}}{47}{figure.5.2}\protected@file@percent }
-\newlabel{Eskin_BRE}{{5.2}{47}{Eskin distance 的定义可以参看文献\cite {Eskin}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite {FastCenter} 给出的方法。}{figure.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces OF 表示 Occurence Frequency ， 定义可以参看文献\cite  {OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite  {FastCenter} 给出的方法。}}{47}{figure.5.3}\protected@file@percent }
-\newlabel{OF_BRE}{{5.3}{47}{OF 表示 Occurence Frequency ， 定义可以参看文献\cite {OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite {FastCenter} 给出的方法。}{figure.5.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces IOF 表示 Inverse Occurence Frequency ， 定义可以参看文献\cite  {OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite  {FastCenter} 给出的方法。}}{48}{figure.5.4}\protected@file@percent }
-\newlabel{IOF_BRE}{{5.4}{48}{IOF 表示 Inverse Occurence Frequency ， 定义可以参看文献\cite {OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite {FastCenter} 给出的方法。}{figure.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Eskin distance 的定义可以参看文献\cite  {Eskin}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite  {FastCenter} 给出的方法。}}{48}{figure.5.2}\protected@file@percent }
+\newlabel{Eskin_BRE}{{5.2}{48}{Eskin distance 的定义可以参看文献\cite {Eskin}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite {FastCenter} 给出的方法。}{figure.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces OF 表示 Occurence Frequency ， 定义可以参看文献\cite  {OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite  {FastCenter} 给出的方法。}}{48}{figure.5.3}\protected@file@percent }
+\newlabel{OF_BRE}{{5.3}{48}{OF 表示 Occurence Frequency ， 定义可以参看文献\cite {OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite {FastCenter} 给出的方法。}{figure.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces IOF 表示 Inverse Occurence Frequency ， 定义可以参看文献\cite  {OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite  {FastCenter} 给出的方法。}}{49}{figure.5.4}\protected@file@percent }
+\newlabel{IOF_BRE}{{5.4}{49}{IOF 表示 Inverse Occurence Frequency ， 定义可以参看文献\cite {OF_IOF}。Loss Guided 表示 LGM 方法， Random Cluster 表示文献 \cite {FastCenter} 给出的方法。}{figure.5.4}{}}
 \bibcite{Vaccine}{1}
 \bibcite{HIV1-vaccine}{2}
 \bibcite{AntibodySociety}{3}
@@ -329,9 +331,3 @@
 \bibcite{Eskin}{79}
 \bibcite{rASA1}{80}
 \bibcite{rASA2}{81}
-\bibcite{HTF}{82}
-\bibcite{ChenSX}{83}
-\bibcite{ZhangC}{84}
-\bibcite{ChenJX}{85}
-\bibcite{Su}{86}
-\bibcite{LiT}{87}
