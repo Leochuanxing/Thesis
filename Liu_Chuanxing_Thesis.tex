@@ -27,6 +27,7 @@
 
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{titlesec}
+\usepackage{fancyhdr}
 
 \usepackage{graphicx}
 \usepackage{float}
@@ -102,17 +103,20 @@
 \def\theequation{\arabic{chapter}.\arabic{equation}}
 \def\thedefinition{\arabic{chapter}.\arabic{definition}.}
 
-% title - \zihao{1} for size requirement \heiti for font family requirement
-%\title{{\zihao{1}\heiti{} 从 Core 的角度对抗原抗体相互作用的初步研究}}
-\title{}
-\author{}
+
+
+%\title - \zihao{1} for size requirement \heiti for font family requirement
+%\title{\includegraphics[scale=0.5]{FudanLogo.png}\\
+%{\zihao{1}\heiti{} 从 Core 的角度对抗原抗体相互作用的初步研究}}
+%\title{}
+%\author{}
 %\author{刘传省\\学号：17210180030\\专业：计算系统生物学}
 
-\date{}
+%\date{}
 
 %%%%%%%%%%%%%%%%%%%导言区设置完毕
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}
+
 %Styles for chapters/section
 %若要将章标题左对齐, 用下面这个语句替换相应的设置
 %\CTEXsetup[nameformat={\raggedright\zihao{3}\bfseries},%
@@ -130,12 +134,45 @@
 \CTEXoptions[abstractname={摘要：}]
 \CTEXoptions[bibname={\heiti 参考文献}]
 
-\renewcommand{\thepage}{\roman{page}}
-\setcounter{page}{1}
-\tableofcontents\clearpage
 
-\maketitle\renewcommand{\thepage}{\arabic{page}}
-\thispagestyle{empty}\setcounter{page}{0}
+\begin{document}
+% 设置首页
+%\maketitle\renewcommand{\thepage}{\arabic{page}}
+%\pagestyle{empty}
+%\hspace{12cm}学校代码：10246
+%
+%\hspace{12cm}学号：17210180030
+%\begin{center}
+%	\includegraphics[scale=0.5]{FudanLogo.png}
+%	
+%	\Huge{硕 士 学 位 论 文}
+%	
+%	\Large{(学术学位）}\vspace{1cm}
+%	
+%	\Large{从 Core 的角度对抗原抗体相互作用的初步研究}\vspace{0.5cm}
+%	
+%	\Large{A preliminary study of the antibody-antigen interactions from the 
+%angle of the cores }
+%\end{center}\vspace{6cm}
+%
+%\hspace{4.8cm}\large{院系：数学科学学院}\vspace{0.3cm}
+%
+%\hspace{4.5cm}\large{专业：应用数学}\vspace{0.3cm}
+%
+%\hspace{4.5cm}\large{姓名：刘传省}\vspace{0.3cm}
+%
+%\hspace{4.5cm}\large{指导教师：孙丰珠教授}\vspace{0.3cm}
+%
+%\hspace{4.5cm}\large{完成日期：2020年3月20日}
+
+%\newpage
+% The page number of the content and the abstract pages will be in roman
+\pagestyle{plain}\setcounter{page}{1}
+\renewcommand{\thepage}{\roman{page}}
+\cfoot{\thepage}
+%\setcounter{page}{1}
+\tableofcontents\clearpage
+\newpage
 %%%  论文的页码从正文开始计数, 摘要页不显示页码
 % 撰写论文的摘要
 \renewcommand{\abstractname}{摘要}
@@ -157,7 +194,12 @@ This model was used to distinguish between the antibody amino acids and the anti
 
 \noindent{\heiti 中图分类号:O1}
 \end{abstract}
-
+\newpage
+% Adjust the page settings for the main content
+\pagestyle{plain}
+\setcounter{page}{1}
+\renewcommand{\thepage}{\arabic{page}}
+\cfoot{\thepage}
 
 \chapter{研究的意义和现状}
 
@@ -545,10 +587,10 @@ $$\sum\limits_{a\in ab_m}\sum\limits_{b\in ag_n}\text{CN}(a, b)$$
 \end{threeparttable}
 \label{Cover_over_MatchType}
 \end{table}
-为了更为直观的表示 Core 的数目随着氨基酸长度的变化，可以把表\ref{Cover_over_MatchType}的数据画成三维坐标图\ref{F_core_match_t}。
+为了更为直观的表示 Core 的数目随着氨基酸长度的变化，可以把表\ref{Cover_over_MatchType}的数据画成三维坐标图\ref{F_core_match_t}。\vspace{-0.3cm}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.3]{Core_districution_over_Match_type.eps}
+\includegraphics[scale=0.28]{Core_districution_over_Match_type.eps}
 \caption{Core 的数目按不同 match-type 的分布}
 \label{F_core_match_t}
 \end{figure}
@@ -1253,12 +1295,6 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 \texttt{https://github.com/Leochuanxing/Paritope\_Epitope}
 \end{center}
 
-\chapter*{致谢}
-本课题的研究看上去很简单，但很多是全新的想法，所以探索的过程有各种曲折，还有对结果不确定性的恐惧。能坚持下来，一是基于对所研究内容重要性的认识，一是和很多小伙伴交流，让我有更多的自信并且放松了心情。在这之中，我最应该感谢的是梁小丁。
-
-还要感谢朱山风老师在整个科研过程中的帮助。朱老师建议我研究一下抗原和抗体之间的相互作用，后来一起去上海交大一个和抗体有关的实验室交流，然后慢慢有了整个课题的思路。还要感谢孙丰珠老师在这个过程中提供的各种帮助，特别是在文章后期的修改，以及一些统计方法上的建议。
-
-
 %\section{题头}
 %同一章内定理、引理等``题头"可以采用连续/统一的标号, 这是由模板中的诸如
 %``\verb+\newtheorem{theorem}[definition]{定理}+ "这样的命令中的``\verb+ [definition]+"选项确定的, 它使所有定理采用和定义统一编号：
@@ -1313,6 +1349,7 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 
  \footnotesize
 \begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{参考文献}
 \bibitem{Vaccine} Gary J. Nabel, Designing Tomorrow’s Vaccines, 
 			\emph{N Engl J Med}, 6(2013), 368:551-560.	
 					
@@ -1567,7 +1604,12 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 %evolution equations, Pitman Monographs and Surveys in Pure and
 %Applied Mathematics, 45, Longman Scientific \& Technical, Harlow.
 \end{thebibliography}
+\newpage
+\normalsize
+\chapter*{致谢}\addcontentsline{toc}{chapter}{致谢}
+本课题的研究看上去很简单，但很多是全新的想法，所以探索的过程有各种曲折，还有对结果不确定性的恐惧。能坚持下来，一是基于对所研究内容重要性的认识，一是和很多小伙伴交流，让我有更多的自信并且放松了心情。在这之中，我最应该感谢的是梁小丁。
 
+还要感谢孙丰珠老师在这个过程中提供的各种帮助，特别是在文章后期的修改，以及一些统计方法上的建议。孙老师还曾经发给我一篇关于 TCR 的，发表在《自然》上的重要文献，这篇文献对本论文的研究有重要参考价值。还要感谢朱山风老师在整个科研过程中的帮助。朱老师最先建议我研究一下抗原和抗体之间的相互作用，后来一起去上海交大一个和抗体有关的实验室交流，然后慢慢有了整个课题的思路。在后面的整个研究过程中，朱老师一直无私的提供帮助，并多次组织专家提出宝贵意见。
 
 
 %\bibliographystyle{plain}
