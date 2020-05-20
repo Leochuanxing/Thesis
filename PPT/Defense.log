@@ -1,0 +1,1316 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  17 MAR 2020 11:35
+entering extended mode
+**./Defense.tex
+(Defense.tex
+LaTeX2e <2019-10-01> patch level 1
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamer.cls"
+Document Class: beamer 2019/09/29 v3.57 A class for typesetting presentations
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasemod
+es.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.st
+y"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count80
+)
+\beamer@tempbox=\box27
+\beamer@tempcount=\count81
+\c@beamerpauses=\count82
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasedec
+ode.sty"
+\beamer@slideinframe=\count83
+\beamer@minimum=\count84
+\beamer@decode@box=\box28
+)
+\beamer@commentbox=\box29
+\beamer@modecount=\count85
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty
+"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+\headdp=\dimen102
+\footheight=\dimen103
+\sidebarheight=\dimen104
+\beamer@tempdim=\dimen105
+\beamer@finalheight=\dimen106
+\beamer@animht=\dimen107
+\beamer@animdp=\dimen108
+\beamer@animwd=\dimen109
+\beamer@leftmargin=\dimen110
+\beamer@rightmargin=\dimen111
+\beamer@leftsidebar=\dimen112
+\beamer@rightsidebar=\dimen113
+\beamer@boxsize=\dimen114
+\beamer@vboxoffset=\dimen115
+\beamer@descdefault=\dimen116
+\beamer@descriptionwidth=\dimen117
+\beamer@lastskip=\skip41
+\beamer@areabox=\box30
+\beamer@animcurrent=\box31
+\beamer@animshowbox=\box32
+\beamer@sectionbox=\box33
+\beamer@logobox=\box34
+\beamer@linebox=\box35
+\beamer@sectioncount=\count86
+\beamer@subsubsectionmax=\count87
+\beamer@subsectionmax=\count88
+\beamer@sectionmax=\count89
+\beamer@totalheads=\count90
+\beamer@headcounter=\count91
+\beamer@partstartpage=\count92
+\beamer@sectionstartpage=\count93
+\beamer@subsectionstartpage=\count94
+\beamer@animationtempa=\count95
+\beamer@animationtempb=\count96
+\beamer@xpos=\count97
+\beamer@ypos=\count98
+\beamer@ypos@offset=\count99
+\beamer@showpartnumber=\count100
+\beamer@currentsubsection=\count101
+\beamer@coveringdepth=\count102
+\beamer@sectionadjust=\count103
+\beamer@tocsectionnumber=\count104
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbaseopt
+ions.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+))
+\beamer@paperwidth=\skip42
+\beamer@paperheight=\skip43
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.st
+y"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvtex.st
+y"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.st
+y"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count105
+\Gm@cntv=\count106
+\c@Gm@tempcnt=\count107
+\Gm@bindingoffset=\dimen118
+\Gm@wd@mp=\dimen119
+\Gm@odd@mp=\dimen120
+\Gm@even@mp=\dimen121
+\Gm@layoutwidth=\dimen122
+\Gm@layoutheight=\dimen123
+\Gm@layouthoffset=\dimen124
+\Gm@layoutvoffset=\dimen125
+\Gm@dimlist=\toks15
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.cf
+g")) ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size11.clo
+"
+File: size11.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfco
+re.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.st
+y"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.st
+y"
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphic
+s.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.
+def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfs
+ys.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs
+.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfu
+til-common.tex"
+\pgfutil@everybye=\toks16
+\pgfutil@tempdima=\dimen128
+\pgfutil@tempdimb=\dimen129
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfu
+til-common-lists.tex"))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfu
+til-latex.def"
+\pgfutil@abb=\box36
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfr
+cs.code.tex"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revision.t
+ex")
+Package: pgfrcs 2019/08/03 v3.1.4b (3.1.4b)
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pg
+fsys.code.tex"
+Package: pgfsys 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfk
+eys.code.tex"
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfk
+eysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks19
+))
+\pgf@x=\dimen130
+\pgf@y=\dimen131
+\pgf@xa=\dimen132
+\pgf@ya=\dimen133
+\pgf@xb=\dimen134
+\pgf@yb=\dimen135
+\pgf@xc=\dimen136
+\pgf@yc=\dimen137
+\pgf@xd=\dimen138
+\pgf@yd=\dimen139
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count108
+\c@pgf@countb=\count109
+\c@pgf@countc=\count110
+\c@pgf@countd=\count111
+\t@pgf@toka=\toks20
+\t@pgf@tokb=\toks21
+\t@pgf@tokc=\toks22
+\pgf@sys@id@count=\count112
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pg
+f.cfg"
+File: pgf.cfg 2019/08/03 v3.1.4b (3.1.4b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pg
+fsys-pdftex.def"
+File: pgfsys-pdftex.def 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pg
+fsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2019/08/03 v3.1.4b (3.1.4b)
+)))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pg
+fsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfsyssoftpath@smallbuffer@items=\count113
+\pgfsyssoftpath@bigbuffer@items=\count114
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pg
+fsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.c
+fg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+core.code.tex"
+Package: pgfcore 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.c
+ode.tex"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathca
+lc.code.tex"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathut
+il.code.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathpa
+rser.code.tex"
+\pgfmath@dimen=\dimen140
+\pgfmath@count=\count115
+\pgfmath@box=\box37
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.code.tex"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.basic.code.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.trigonometric.code.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.random.code.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.comparison.code.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.base.code.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.round.code.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.misc.code.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfu
+nctions.integerarithmetics.code.tex")))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfl
+oat.code.tex"
+\c@pgfmathroundto@lastzeros=\count116
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.co
+de.tex")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corepoints.code.tex"
+File: pgfcorepoints.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@picminx=\dimen141
+\pgf@picmaxx=\dimen142
+\pgf@picminy=\dimen143
+\pgf@picmaxy=\dimen144
+\pgf@pathminx=\dimen145
+\pgf@pathmaxx=\dimen146
+\pgf@pathminy=\dimen147
+\pgf@pathmaxy=\dimen148
+\pgf@xx=\dimen149
+\pgf@xy=\dimen150
+\pgf@yx=\dimen151
+\pgf@yy=\dimen152
+\pgf@zx=\dimen153
+\pgf@zy=\dimen154
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@path@lastx=\dimen155
+\pgf@path@lasty=\dimen156
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@shorten@end@additional=\dimen157
+\pgf@shorten@start@additional=\dimen158
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corescopes.code.tex"
+File: pgfcorescopes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfpic=\box38
+\pgf@hbox=\box39
+\pgf@layerbox@main=\box40
+\pgf@picture@serial@count=\count117
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+coregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgflinewidth=\dimen159
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+coretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@pt@x=\dimen160
+\pgf@pt@y=\dimen161
+\pgf@pt@temp=\dimen162
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corequick.code.tex"
+File: pgfcorequick.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+coreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corearrows.code.tex"
+File: pgfcorearrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfarrowsep=\dimen163
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+coreshade.code.tex"
+File: pgfcoreshade.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@max=\dimen164
+\pgf@sys@shading@range@num=\count118
+\pgf@shadingcount=\count119
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+coreimage.code.tex"
+File: pgfcoreimage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+coreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfexternal@startupbox=\box41
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corelayers.code.tex"
+File: pgfcorelayers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+coretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgf
+corerdf.code.tex"
+File: pgfcorerdf.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\xxcolo
+r.sty"
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count120
+\XC@countmixins=\count121
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\atbegshi.
+sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwarerr
+.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.s
+ty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.st
+y"
+Package: hyperref 2019/09/28 v7.00a Hypertext links for LaTeX
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-hy
+perref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-ge
+neric.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty
+"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.s
+ty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen165
+\Hy@linkcounter=\count122
+\Hy@pagecounter=\count123
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count124
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.cf
+g"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4414.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4414.
+Package hyperref Info: Option `pdfpagelabels' set `false' on input line 4414.
+Package hyperref Info: Option `implicit' set `false' on input line 4414.
+Package hyperref Info: Hyper figures OFF on input line 4540.
+Package hyperref Info: Link nesting OFF on input line 4545.
+Package hyperref Info: Hyper index ON on input line 4548.
+Package hyperref Info: Plain pages OFF on input line 4555.
+Package hyperref Info: Backreferencing OFF on input line 4560.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4793.
+\c@Hy@tempcnt=\count125
+ ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5152.
+\XeTeXLinkMargin=\dimen166
+\Fld@menulength=\count126
+\Field@Width=\dimen167
+\Fld@charsize=\dimen168
+Package hyperref Info: Hyper figures OFF on input line 6423.
+Package hyperref Info: Link nesting OFF on input line 6428.
+Package hyperref Info: Hyper index ON on input line 6431.
+Package hyperref Info: backreferencing OFF on input line 6438.
+Package hyperref Info: Link coloring OFF on input line 6443.
+Package hyperref Info: Link coloring with OCG OFF on input line 6448.
+Package hyperref Info: PDF/A mode OFF on input line 6453.
+LaTeX Info: Redefining \ref on input line 6493.
+LaTeX Info: Redefining \pageref on input line 6497.
+
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def
+"
+File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
+\Fld@listcount=\count127
+\c@bookmark@seq@number=\count128
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfilech
+eck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasereq
+uires.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasecom
+patibility.sty")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasefon
+t.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty
+"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.st
+y"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks26
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/sansmathaccent\sansm
+athaccent.sty"
+Package: sansmathaccent 2013/03/28
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/filehook\filehook.st
+y"
+Package: filehook 2019/10/03 v0.6 Hooks for input files
+)))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasetra
+nslator.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translato
+r.sty"
+Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasemis
+c.sty")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasetwo
+screens.sty")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbaseove
+rlay.sty"
+\beamer@argscount=\count129
+\beamer@lastskipcover=\skip44
+\beamer@trivlistdepth=\count130
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasetit
+le.sty")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasesec
+tion.sty"
+\c@lecture=\count131
+\c@part=\count132
+\c@section=\count133
+\c@subsection=\count134
+\c@subsubsection=\count135
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasefra
+me.sty"
+\beamer@framebox=\box42
+\beamer@frametitlebox=\box43
+\beamer@zoombox=\box44
+\beamer@zoomcount=\count136
+\beamer@zoomframecount=\count137
+\beamer@frametextheight=\dimen169
+\c@subsectionslide=\count138
+\beamer@frametopskip=\skip45
+\beamer@framebottomskip=\skip46
+\beamer@frametopskipautobreak=\skip47
+\beamer@framebottomskipautobreak=\skip48
+\beamer@envbody=\toks27
+\framewidth=\dimen170
+\c@framenumber=\count139
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasever
+batim.sty"
+\beamer@verbatimfileout=\write4
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasefra
+mesize.sty"
+\beamer@splitbox=\box45
+\beamer@autobreakcount=\count140
+\beamer@autobreaklastheight=\dimen171
+\beamer@frametitletoks=\toks28
+\beamer@framesubtitletoks=\toks29
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasefra
+mecomponents.sty"
+\beamer@footins=\box46
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasecol
+or.sty")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasenot
+es.sty"
+\beamer@frameboxcopy=\box47
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasetoc
+.sty")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasetem
+plates.sty"
+\beamer@sbttoks=\toks30
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbaseaux
+templates.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasebox
+es.sty"
+\bmb@box=\box48
+\bmb@colorbox=\box49
+\bmb@boxshadow=\box50
+\bmb@boxshadowball=\box51
+\bmb@boxshadowballlarge=\box52
+\bmb@temp=\dimen172
+\bmb@dima=\dimen173
+\bmb@dimb=\dimen174
+\bmb@prevheight=\dimen175
+)
+\beamer@blockheadheight=\dimen176
+))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbaseloc
+alstructure.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\enumerate.sty"
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks31
+)
+\c@figure=\count141
+\c@table=\count142
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasenav
+igation.sty"
+\beamer@section@min@dim=\dimen177
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasethe
+orems.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2019/04/01 v2.17c AMS math features
+\@mathmargin=\skip51
+For additional information on amsmath, use the `?' option.
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks32
+\ex@=\dimen178
+)) ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.st
+y"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen179
+) ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
+"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count143
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count144
+\leftroot@=\count145
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count146
+\DOTSCASE@=\count147
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen180
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count148
+\c@MaxMatrixCols=\count149
+\dotsspace@=\muskip11
+\c@parentequation=\count150
+\dspbrk@lvl=\count151
+\tag@help=\toks33
+\row@=\count152
+\column@=\count153
+\maxfields@=\count154
+\andhelp@=\toks34
+\eqnshift@=\dimen181
+\alignsep@=\dimen182
+\tagshift@=\dimen183
+\tagwidth@=\dimen184
+\totwidth@=\dimen185
+\lineht@=\dimen186
+\@envbody=\toks35
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks42
+)
+\c@theorem=\count155
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerbasethe
+mes.sty"))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerthemede
+fault.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerfontthe
+medefault.sty")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamercolorth
+emedefault.sty")
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerinnerth
+emedefault.sty"
+\beamer@dima=\dimen187
+\beamer@dimb=\dimen188
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerouterth
+emedefault.sty")))
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerthemeGo
+ettingen.sty"
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamerouterth
+emesidebar.sty"
+\beamer@sidebarwidth=\dimen189
+\beamer@headheight=\dimen190
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+17.
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
+File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)))
+(Defense.aux)
+\openout1 = `Defense.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(14.22636pt, 278.83713pt, 71.13187pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=278.83713pt
+* \textheight=244.6939pt
+* \oddsidemargin=-58.04362pt
+* \evensidemargin=-58.04362pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf
+.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count156
+\scratchdimen=\dimen191
+\scratchbox=\box55
+\nofMPsegments=\count157
+\nofMParguments=\count158
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count159
+\MPscratchDim=\dimen192
+\MPnumerator=\count160
+\makeMPintoPDFobject=\count161
+\everyMPtoPDFconversion=\toks44
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-ba
+se.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+) ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box56
+Package hyperref Info: Link coloring OFF on input line 9.
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty
+"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitles
+tring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count162
+)
+LaTeX Info: Redefining \ref on input line 9.
+LaTeX Info: Redefining \pageref on input line 9.
+LaTeX Info: Redefining \nameref on input line 9.
+ (Defense.out) (Defense.out)
+\@outlinefile=\write5
+\openout5 = `Defense.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 9.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 9.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 9.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 9.
+\symnumbers=\mathgroup6
+\sympureletters=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 9.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/bx/n on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/bx/n on input line 9.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 9.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 9.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 9.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  OT1/lmss/m/n --> OT1/lmss/bx/n on input line 9.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/lmss/m/it --> OT1/lmss/bx/it on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/lmss/bx/n --> OT1/lmr/bx/n on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/bx/n on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/m/n --> OT1/lmss/bx/n on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmss/m/it --> OT1/lmss/bx/it on input line 9.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/bx/n on input line 9.
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translato
+r-basic-dictionary-English.dict"
+Dictionary: translator-basic-dictionary, Language: English 
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translato
+r-bibliography-dictionary-English.dict"
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translato
+r-environment-dictionary-English.dict"
+Dictionary: translator-environment-dictionary, Language: English 
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translato
+r-months-dictionary-English.dict"
+Dictionary: translator-months-dictionary, Language: English 
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translato
+r-numbers-dictionary-English.dict"
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translato
+r-theorem-dictionary-English.dict"
+Dictionary: translator-theorem-dictionary, Language: English 
+) (Defense.nav) [1{C:/Users/leo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.m
+ap}
+
+] (Defense.toc) [2
+
+]
+Package epstopdf Info: Source file: <SerumImmune.eps>
+(epstopdf)                    date: 2020-02-10 20:55:42
+(epstopdf)                    size: 2342642 bytes
+(epstopdf)             Output file: <SerumImmune-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-17 08:03:55
+(epstopdf)                    size: 42415 bytes
+(epstopdf)             Command: <epstopdf --outfile=SerumImmune-eps-converted-t
+o.pdf SerumImmune.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./SerumImmune-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<SerumImmune-eps-converted-to.pdf, id=187, 794.97pt x 614.295pt>
+File: SerumImmune-eps-converted-to.pdf Graphic file (type pdf)
+<use SerumImmune-eps-converted-to.pdf>
+Package pdftex.def Info: SerumImmune-eps-converted-to.pdf  used on input line 3
+5.
+(pdftex.def)             Requested size: 158.99118pt x 122.85681pt.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+5.
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+35.
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+35.
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 35.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 35.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 35.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 35.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 35.
+
+[3
+
+ <./SerumImmune-eps-converted-to.pdf>]
+<Quantifiable_TCR.png, id=243, 754.82pt x 289.08pt>
+File: Quantifiable_TCR.png Graphic file (type png)
+<use Quantifiable_TCR.png>
+Package pdftex.def Info: Quantifiable_TCR.png  used on input line 54.
+(pdftex.def)             Requested size: 150.96132pt x 57.81497pt.
+<figure9.png, id=244, 360.34625pt x 430.60875pt>
+File: figure9.png Graphic file (type png)
+<use figure9.png>
+Package pdftex.def Info: figure9.png  used on input line 54.
+(pdftex.def)             Requested size: 108.1047pt x 129.18361pt.
+ [4
+
+ <./Quantifiable_TCR.png> <./figure9.png>]
+<ConformationalEpitope2.png, id=285, 963.6pt x 542.025pt>
+File: ConformationalEpitope2.png Graphic file (type png)
+<use ConformationalEpitope2.png>
+Package pdftex.def Info: ConformationalEpitope2.png  used on input line 67.
+(pdftex.def)             Requested size: 240.89941pt x 135.5059pt.
+ [5
+
+ <./ConformationalEpitope2.png>]
+<HotSpot.png, id=327, 712.6625pt x 313.17pt>
+File: HotSpot.png Graphic file (type png)
+<use HotSpot.png>
+Package pdftex.def Info: HotSpot.png  used on input line 80.
+(pdftex.def)             Requested size: 178.16519pt x 78.2923pt.
+ [6
+
+ <./HotSpot.png>] [7
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 122.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 122.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 122.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 122.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 122.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 122.
+
+ [8
+
+] [9
+
+]
+Package epstopdf Info: Source file: <ElbowMethod.eps>
+(epstopdf)                    date: 2020-02-18 06:40:04
+(epstopdf)                    size: 2489066 bytes
+(epstopdf)             Output file: <ElbowMethod-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-17 09:39:29
+(epstopdf)                    size: 76562 bytes
+(epstopdf)             Command: <epstopdf --outfile=ElbowMethod-eps-converted-t
+o.pdf ElbowMethod.eps>
+(epstopdf)             \includegraphics on input line 147.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./ElbowMethod-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<ElbowMethod-eps-converted-to.pdf, id=502, 794.97pt x 614.295pt>
+File: ElbowMethod-eps-converted-to.pdf Graphic file (type pdf)
+<use ElbowMethod-eps-converted-to.pdf>
+Package pdftex.def Info: ElbowMethod-eps-converted-to.pdf  used on input line 1
+47.
+(pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
+[10
+
+ <./ElbowMethod-eps-converted-to.pdf>] [11
+
+] [12
+
+] [13
+
+] [14
+
+]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+66.
+
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+[15
+
+] [16
+
+]
+Package epstopdf Info: Source file: <Discrimination2-03.eps>
+(epstopdf)                    date: 2019-12-04 20:00:18
+(epstopdf)                    size: 2254530 bytes
+(epstopdf)             Output file: <Discrimination2-03-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-17 10:48:57
+(epstopdf)                    size: 40295 bytes
+(epstopdf)             Command: <epstopdf --outfile=Discrimination2-03-eps-conv
+erted-to.pdf Discrimination2-03.eps>
+(epstopdf)             \includegraphics on input line 300.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Discrimination2-03-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Discrimination2-03-eps-converted-to.pdf, id=798, 614.295pt x 235.88126pt>
+File: Discrimination2-03-eps-converted-to.pdf Graphic file (type pdf)
+<use Discrimination2-03-eps-converted-to.pdf>
+Package pdftex.def Info: Discrimination2-03-eps-converted-to.pdf  used on input
+ line 300.
+(pdftex.def)             Requested size: 276.43019pt x 106.14558pt.
+[17
+
+ <./Discrimination2-03-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <PositiveNegativeDiscrimination.eps>
+(epstopdf)                    date: 2019-11-29 22:01:16
+(epstopdf)                    size: 3186122 bytes
+(epstopdf)             Output file: <PositiveNegativeDiscrimination-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2020-03-17 10:50:16
+(epstopdf)                    size: 108633 bytes
+(epstopdf)             Command: <epstopdf --outfile=PositiveNegativeDiscriminat
+ion-eps-converted-to.pdf PositiveNegativeDiscrimination.eps>
+(epstopdf)             \includegraphics on input line 308.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./PositiveNegativeDiscrimination-eps-converted-t
+o.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
+ed
+<PositiveNegativeDiscrimination-eps-converted-to.pdf, id=847, 577.15625pt x 607
+.26875pt>
+File: PositiveNegativeDiscrimination-eps-converted-to.pdf Graphic file (type pd
+f)
+<use PositiveNegativeDiscrimination-eps-converted-to.pdf>
+Package pdftex.def Info: PositiveNegativeDiscrimination-eps-converted-to.pdf  u
+sed on input line 308.
+(pdftex.def)             Requested size: 202.0077pt x 212.54724pt.
+[18
+
+ <./PositiveNegativeDiscrimination-eps-converted-to.pdf>] [19
+
+]
+Package epstopdf Info: Source file: <Reverse.eps>
+(epstopdf)                    date: 2019-11-29 22:59:32
+(epstopdf)                    size: 2935918 bytes
+(epstopdf)             Output file: <Reverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-17 11:04:42
+(epstopdf)                    size: 81384 bytes
+(epstopdf)             Command: <epstopdf --outfile=Reverse-eps-converted-to.pd
+f Reverse.eps>
+(epstopdf)             \includegraphics on input line 340.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Reverse-eps-converted-to.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<Reverse-eps-converted-to.pdf, id=939, 577.15625pt x 586.19pt>
+File: Reverse-eps-converted-to.pdf Graphic file (type pdf)
+<use Reverse-eps-converted-to.pdf>
+Package pdftex.def Info: Reverse-eps-converted-to.pdf  used on input line 340.
+(pdftex.def)             Requested size: 202.0077pt x 205.16957pt.
+[20
+
+ <./Reverse-eps-converted-to.pdf>] [21
+
+]
+Package epstopdf Info: Source file: <ContactingPairs.eps>
+(epstopdf)                    date: 2020-02-23 15:37:06
+(epstopdf)                    size: 2674126 bytes
+(epstopdf)             Output file: <ContactingPairs-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-17 11:14:43
+(epstopdf)                    size: 17764 bytes
+(epstopdf)             Command: <epstopdf --outfile=ContactingPairs-eps-convert
+ed-to.pdf ContactingPairs.eps>
+(epstopdf)             \includegraphics on input line 357.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./ContactingPairs-eps-converted-to.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<ContactingPairs-eps-converted-to.pdf, id=1029, 862.22125pt x 517.935pt>
+File: ContactingPairs-eps-converted-to.pdf Graphic file (type pdf)
+<use ContactingPairs-eps-converted-to.pdf>
+Package pdftex.def Info: ContactingPairs-eps-converted-to.pdf  used on input li
+ne 357.
+(pdftex.def)             Requested size: 258.66837pt x 155.38168pt.
+[22
+
+ <./ContactingPairs-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Predictable.eps>
+(epstopdf)                    date: 2019-12-01 20:35:54
+(epstopdf)                    size: 1975166 bytes
+(epstopdf)             Output file: <Predictable-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-17 11:16:38
+(epstopdf)                    size: 20851 bytes
+(epstopdf)             Command: <epstopdf --outfile=Predictable-eps-converted-t
+o.pdf Predictable.eps>
+(epstopdf)             \includegraphics on input line 367.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Predictable-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<Predictable-eps-converted-to.pdf, id=1078, 391.4625pt x 206.7725pt>
+File: Predictable-eps-converted-to.pdf Graphic file (type pdf)
+<use Predictable-eps-converted-to.pdf>
+Package pdftex.def Info: Predictable-eps-converted-to.pdf  used on input line 3
+67.
+(pdftex.def)             Requested size: 117.43965pt x 62.03223pt.
+[23
+
+ <./Predictable-eps-converted-to.pdf>] [24
+
+]
+Package epstopdf Info: Source file: <CNStatium.eps>
+(epstopdf)                    date: 2019-12-05 22:06:46
+(epstopdf)                    size: 2054410 bytes
+(epstopdf)             Output file: <CNStatium-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-17 11:30:35
+(epstopdf)                    size: 51396 bytes
+(epstopdf)             Command: <epstopdf --outfile=CNStatium-eps-converted-to.
+pdf CNStatium.eps>
+(epstopdf)             \includegraphics on input line 383.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./CNStatium-eps-converted-to.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<CNStatium-eps-converted-to.pdf, id=1169, 319.1925pt x 161.60374pt>
+File: CNStatium-eps-converted-to.pdf Graphic file (type pdf)
+<use CNStatium-eps-converted-to.pdf>
+Package pdftex.def Info: CNStatium-eps-converted-to.pdf  used on input line 383
+.
+(pdftex.def)             Requested size: 255.35434pt x 129.28316pt.
+[25
+
+ <./CNStatium-eps-converted-to.pdf>] [26
+
+]
+\tf@nav=\write6
+\openout6 = `Defense.nav'.
+
+\tf@toc=\write7
+\openout7 = `Defense.toc'.
+
+\tf@snm=\write8
+\openout8 = `Defense.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
+ (Defense.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 434.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 434.
+Package rerunfilecheck Info: File `Defense.out' has not changed.
+(rerunfilecheck)             Checksum: 17BC4DED432F650151156B6F214750E3;1079.
+ ) 
+Here is how much of TeX's memory you used:
+ 18011 strings out of 492453
+ 347313 string characters out of 3121009
+ 417128 words of memory out of 3000000
+ 21862 multiletter control sequences out of 15000+200000
+ 61051 words of font info for 60 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 58i,15n,62p,796b,557s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.
+enc}{C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.
+enc}{C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathe
+x.enc}<C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lme
+x10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
+mmi10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
+/lmmi8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
+m/lmr10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+lm/lmr8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+lm/lmss10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmss12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmss8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmssbx10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/lm/lmsso10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmsso8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/lm/lmsy10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmsy8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Defense.pdf (26 pages, 4120523 bytes).
+PDF statistics:
+ 1328 PDF objects out of 1440 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+

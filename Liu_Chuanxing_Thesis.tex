@@ -30,10 +30,14 @@
 
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage[font=footnotesize, format=plain,labelfont=bf,
+                  justification=centerlast, labelsep=newline, 
+                  indention=1cm]{caption}
 
 \usepackage{multirow}
 \usepackage{rotating}
 \usepackage{hhline}
+\usepackage{threeparttable}
 
 \usepackage{enumitem}
 
@@ -99,9 +103,10 @@
 \def\thedefinition{\arabic{chapter}.\arabic{definition}.}
 
 % title - \zihao{1} for size requirement \heiti for font family requirement
-\title{{\zihao{1}\heiti{} ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÒ»¸ö RBFN Ä£ÐÍ}}
-
-\author{Áõ´«Ê¡\\Ñ§ºÅ£º17210180030\\×¨Òµ£º¼ÆËãÏµÍ³ÉúÎïÑ§}
+%\title{{\zihao{1}\heiti{} ´Ó Core µÄ½Ç¶È¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ³õ²½ÑÐ¾¿}}
+\title{}
+\author{}
+%\author{Áõ´«Ê¡\\Ñ§ºÅ£º17210180030\\×¨Òµ£º¼ÆËãÏµÍ³ÉúÎïÑ§}
 
 \date{}
 
@@ -134,32 +139,40 @@
 %%%  ÂÛÎÄµÄÒ³Âë´ÓÕýÎÄ¿ªÊ¼¼ÆÊý, ÕªÒªÒ³²»ÏÔÊ¾Ò³Âë
 % ×«Ð´ÂÛÎÄµÄÕªÒª
 \renewcommand{\abstractname}{ÕªÒª}
+\vspace{-0.5cm}
 \begin{abstract}
-¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÔÚÈËµÄÃâÒßÏµÍ³ÖÐ°çÑÝÕâÖÁ¹ØÖØÒªµÄ½ÇÉ«¡£¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿£¬ÔÚÖÎÁÆÐÔ¿¹ÌåµÄÉè¼Æ¡¢ÒßÃçµÄÉú²úÉÏ¶¼ÓÐÖØÒªµÄÒâÒå¡£È»¶ø¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¿Õ¼äÐÔÖÊ£¬Ê¹µÃÑÐ¾¿Ê®·ÖÀ§ÄÑ¡£±¾ÂÛÎÄÍ¨¹ýÑ°ÕÒ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¹Ø¼ü°±»ùËáÐòÁÐ,±¾ÂÛÎÄ³ÆÖ®Îª Core ÔÚÒ»¶¨³Ì¶ÈÉÏ¿Ë·þÁËÕâÒ»À§ÄÑ¡£Í¨¹ý¶Ô Core ÖÐ°±»ùËáµÄ·ÖÎö£¬·¢ÏÖ TYR ÔÚ¿¹Ìå±íÎ»ÖÐµÄÖØÒªÐÔ£¬Ò²Îª¹¹½¨¼ò»¯µÄ¿¹Ìå¿âÌá¹©ÁËÐÂµÄ²Î¿¼£»Í¬Ê±·¢ÏÖ¿¹Ìå±íÎ»¶ÔÇ×Ë®ÐÔ°±»ùËáµÄÆ«ºÃºÍÊèË®ÐÔ°±»ùËáµÄÅÅ³âÏÖÏó¡£±¾ÎÄÔÚ Core µÄ»ù´¡ÉÏ½¨Á¢ÁË RBFN Ä£ÐÍÀ´ÏµÍ³µÄÃèÊö¿¹Ô­¿¹ÌåÖ®¼äÏà»¥×÷ÓÃµÄÊýÁ¿¹ØÏµ£¬È¡µÃºÜºÃÐ§¹û¡£Í¬Ê±£¬Õâ¸öÄ£ÐÍ±»ÓÃÀ´Çø·Ö Core ÖÐµÄ¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËá£¬ÒÔ¼°Ô¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå¸´ºÏÎïÇ×ºÍÁ¦µÄÓ°Ïì£¬¶¼È¡µÃÁË²»´íµÄÐ§¹û¡£
+¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÔÚÈËµÄÃâÒßÏµÍ³ÖÐ°çÑÝÖÁ¹ØÖØÒªµÄ½ÇÉ«¡£¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿£¬ÔÚÉè¼ÆÖÎÁÆÐÔ¿¹ÌåºÍ¿ª·¢ÒßÃçÉÏ¶¼ÓÐÖØÒªÒâÒå¡£È»¶ø¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¿Õ¼äÐÔÖÊ£¬Ê¹µÃÑÐ¾¿Ê®·ÖÀ§ÄÑ¡£±¾ÂÛÎÄÍ¨¹ýÑ°ÕÒ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¹Ø¼ü°±»ùËáÐòÁÐ£¨±¾ÂÛÎÄ³ÆÖ®Îª Core£©£¬ ÔÚÒ»¶¨³Ì¶ÈÉÏ¿Ë·þÁËÕâÒ»À§ÄÑ¡£Í¨¹ý¶Ô Core ÖÐ°±»ùËáµÄ·ÖÎö£¬·¢ÏÖÁË TYR ÔÚ¿¹Ìå±íÎ»ÖÐµÄÖØÒªÐÔ£»Îª¹¹½¨¼ò»¯µÄ¿¹Ìå¿âÌá¹©ÁËÐÂµÄ²Î¿¼£»²¢·¢ÏÖÁË¿¹Ô­±íÎ»¶ÔÇ×Ë®ÐÔ°±»ùËáµÄÆ«ºÃºÍÊèË®ÐÔ°±»ùËáµÄÅÅ³âÏÖÏó¡£±¾ÎÄÍ¨¹ý BLOSUM62 ¶¨ÒåÁË Core Ö®¼äµÄ¾àÀë£¬²¢ÔÚ´Ë»ù´¡ÉÏ½¨Á¢ÁË¾¶Ïò»ùº¯ÊýÍøÂçÄ£ÐÍ (RBFNÄ£ÐÍ)¡£¸ÃRBFNÄ£ÐÍÏµÍ³µØÃèÊöÁË¿¹Ô­¿¹ÌåÖ®¼äÏà»¥×÷ÓÃµÄÊýÁ¿¹ØÏµ£¬²¢ÔÚÇø·Ö Core ºÍËæ»ú²úÉúµÄ¸º²âÊÔ¼¯ÉÏÈ¡µÃÁ¼ºÃÐ§¹û¡£Í¬Ê±£¬¸ÃÄ£ÐÍ±»ÓÃÀ´Çø·Ö Core ÖÐµÄ¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËá£¬ÒÔ¼°Ô¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå¸´ºÏÎïÇ×ºÍÁ¦µÄÓ°Ïì¡£
 
-\noindent{\heiti ¹Ø¼ü×Ö:} ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ, ¿¹Ô­±íÎ», ¿¹Ìå±íÎ»£¬Ç×ºÍÁ¦Ô¤²â£¬Core£¬RBFN Ä£ÐÍ£¬¼ò»¯¿¹Ìå¿â¡£
+\noindent{\heiti ¹Ø¼ü×Ö:} ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ£¬¿¹Ô­±íÎ»£¬¿¹Ìå±íÎ»£¬Ç×ºÍÁ¦Ô¤²â£¬Core¡£
+
+\noindent{\heiti ÖÐÍ¼·ÖÀàºÅ:O1} 
+\newpage
+
 \end{abstract}
 \renewcommand{\abstractname}{Abstract}
 \begin{abstract}
-The interaction between antibody and antigen plays an important role in the immune system, and the study of those interactions benefit the design of therapeutic antibodies and the vaccine significantly. However the conformational property of the antibody-antigen interaction poses a big hurdle. To jump over this hurdle, we introduced the concept of the Cores, which were the key interacting amino acids, and by analyzing those Cores, the importance of TYR was emphasized, a new guide line for building antibody libraries with a few types of amino acids was suggested, and the favor of hydrophilic  amino acids and repulsion of the hydrophobic amino acids of the the epitopes were substantiated.  An RBFN model was successfully built to systematically and numerically describe those cores. This model was exploited to distinguish between than antibody amino acids and the antigen amino acids in the cores, and, more importantly, was exploited to predict whether a mutation could increase or decrease the affinity of an antibody-antigen complex.\\
-\noindent{\textbf{Keywords:}} antibody-antigen interaction, paratope, epitope, affinity prediction, Core, RBFN model, reduced antibody library.
+The antibody-antigen interactions play an important role in the immune system, and the study of the interactions significantly benefited the design of therapeutic antibodies and  vaccines. However, the conformational property of the antibody-antigen interaction poses a big challenge to the study. To overcome this challenge, we introduced the concept of the Cores that were the key interacting amino acid sequences. By analyzing those Cores, we showed the importance of TYR, provided a new guide-line for building antibody libraries with a few types of amino acids, and showed the preference of hydrophilic  amino acids and the repulsion of the hydrophobic amino acids of the epitopes.  We defined a distance between cores from the BLOSUM62. We developed an RBFN model on basis of this distance, to systematically and numerically describe those cores. This model performed well in distinguishing between the positive cores and the randomly generated negative cores.
+This model was used to distinguish between the antibody amino acids and the antigen amino acids in the cores, and, more importantly,  to predict whether a mutation could increase or decrease the affinity of an antibody-antigen complex.\\
+\noindent{\textbf{Keywords:}} antibody-antigen interaction, paratope, epitope, affinity prediction, Core.
+
+\noindent{\heiti ÖÐÍ¼·ÖÀàºÅ:O1}
 \end{abstract}
 
 
 \chapter{ÑÐ¾¿µÄÒâÒåºÍÏÖ×´}
 
 \section{ÑÐ¾¿µÄÒâÒå}
-ÈËµÄÃâÒßÏµÍ³ÊÇÈËÌåµÖ¿¹Íâ½ç²¡Ô­ÈëÇÖµÄÖØÒªÏµÍ³£¬ Ëü¿ÉÒÔ·ÖÎªÌìÈ»ÃâÒß(innate immunity)ºÍ»ñµÃÐÔÃâÒß(adaptive immunity). ÌìÈ»ÃâÒß²»¾ßÓÐÌØÒìÐÔ£¬»òÕß×î¶àÒ²Ö»ÄÜÕë¶ÔÒ»´óÀàµÄ²¡Ô­½øÐÐ·ÀÓù¡£Ëü°üÀ¨¾ÞÊÉÏ¸°û¡¢ÒÖ¾úµ°°×¡¢NKÏ¸°û¡¢²¹ÌåÏµÍ³¡¢Á£Ï¸°ûµÈ¡£ÌìÈ»ÃâÒß¹¹³ÉÁËÈËÌå·ÀÓùµÄµÚÒ»µÀ·ÀÏß¡£Ò»µ©²¡Ô­Í»ÆÆµÚÒ»µÀ·ÀÏß£¬ ÈËÌå¾ÍÒª½øÐÐ»ñµÃÐÔÃâÒß¡£»ñµÃÐÔÃâÒßÊÇÕë¶ÔÈëÇÖµÄ²¡Ô­²úÉúÒ»ÏµÁÐµÄÌØÒìÐÔµÄÃâÒß·´Ó¦£¬°üÀ¨ÌØÒìÐÔµÄÏ¸°ûÃâÒßºÍÌåÒºÃâÒß¡£»ñµÃÐÔÃâÒßµÄÌØÒìÐÔ£¬¿ÉÒÔÊ¹µÃÈËÌå°ÑÖ÷ÒªµÄ×ÊÔ´¼¯ÖÐÆðÀ´Ó¦¶ÔÌØ¶¨µÄ²¡Ô­£¬´Ó¶ø¸ü¸ßÐ§¡£µ«ÊÇ£¬×ÔÈ»½çµÄ²¡Ô­Ç§Ç§ÍòÍò£¬ÄÇÃ´»ñµÃÐÔÃâÒßÊÇÈçºÎÊ¶±ðÕâ²»Í¬µÄ²¡Ô­µÄÄØ£¿
+ÈËµÄÃâÒßÏµÍ³ÊÇÈËÌåµÖ¿¹Íâ½ç²¡Ô­ÈëÇÖµÄÖØÒªÏµÍ³£¬ Ëü¿ÉÒÔ·ÖÎªÌìÈ»ÃâÒß(innate immunity)ºÍ»ñµÃÐÔÃâÒß(adaptive immunity)¡£ ÌìÈ»ÃâÒß²»¾ßÓÐÌØÒìÐÔ£¬»òÕß×î¶àÒ²Ö»ÄÜÕë¶ÔÒ»´óÀàµÄ²¡Ô­½øÐÐ·ÀÓù¡£Ëü°üÀ¨¾ÞÊÉÏ¸°û¡¢ÒÖ¾úµ°°×¡¢NKÏ¸°û¡¢²¹ÌåÏµÍ³¡¢Á£Ï¸°ûµÈ¡£ÌìÈ»ÃâÒß¹¹³ÉÁËÈËÌå·ÀÓùµÄµÚÒ»µÀ·ÀÏß¡£Ò»µ©²¡Ô­Í»ÆÆµÚÒ»µÀ·ÀÏß£¬ ÈËÌå¾ÍÒª½øÐÐ»ñµÃÐÔÃâÒß¡£»ñµÃÐÔÃâÒßÊÇÕë¶ÔÈëÇÖµÄ²¡Ô­²úÉúÒ»ÏµÁÐµÄÌØÒìÐÔµÄÃâÒß·´Ó¦£¬°üÀ¨ÌØÒìÐÔµÄÏ¸°ûÃâÒßºÍÌåÒºÃâÒß¡£»ñµÃÐÔÃâÒßµÄÌØÒìÐÔ£¬¿ÉÒÔÊ¹µÃÈËÌå°ÑÖ÷ÒªµÄ×ÊÔ´¼¯ÖÐÆðÀ´Ó¦¶ÔÌØ¶¨µÄ²¡Ô­£¬´Ó¶ø¸ü¸ßÐ§¡£
 
 ¶ÔÓÚÌØÒìÐÔµÄÏ¸°ûÃâÒßÀ´½²£¬ËûµÄÌØÒìÐÔ¿ÉÒÔÓÃÏÂÃæµÄÍ¼ \ref{Cell_Immune}À´ËµÃ÷¡£
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{CellImmune.eps}
-\caption{ÌØÒìÐÔÏ¸°ûÃâÒßÊ¾ÒâÍ¼¡£ÕæÊµµÄ¹ý³Ì±ÈÕâÒª¸´ÔÓµÄ¶à£¬Éæ¼°µÄ·Ö×ÓºÍÏ¸°ûÒ²±ÈÕâ¶à£¬µ«ÊÇÕâ·ùÍ¼¿ÉÒÔËµÃ÷»ù±¾¹ý³Ì¡£}
+\caption{ÌØÒìÐÔÏ¸°ûÃâÒßÊ¾ÒâÍ¼¡£ÕæÊµµÄ¹ý³Ì±ÈÕâÒª¸´ÔÓµÄ¶à¡£}
 \label{Cell_Immune}
 \end{figure}
 
-¶Ô²»Í¬µÄ²¡Ô­ÌåÀ´½²£¬¶¼ÓÐÆä¶ÀÌØµÄ½á¹¹ºÍ³É·Ö£¬ÄÇÐ©¿ÉÒÔÒýÆðÃâÒß·´Ó¦µÄ½á¹¹ºÍ³É·Ö£¬³ÆÎª¿¹Ô­(antigen). ÌåÒºÃâÒßµÄÌØÒìÐÔ¾ÍÊÇÌØ¶¨¿¹Ìå¶ÔÌØ¶¨¿¹Ô­µÄÊ¶±ð, ÈçÍ¼\ref{SerumImmune}¡£
+¶Ô²»Í¬µÄ²¡Ô­ÌåÀ´½²£¬¶¼ÓÐÆä¶ÀÌØµÄ½á¹¹ºÍ³É·Ö£¬ÄÇÐ©¿ÉÒÔÒýÆðÃâÒß·´Ó¦µÄ½á¹¹ºÍ³É·Ö£¬³ÆÎª¿¹Ô­(antigen)¡£ ÌåÒºÃâÒßµÄÌØÒìÐÔ¾ÍÊÇÌØ¶¨¿¹Ìå¶ÔÌØ¶¨¿¹Ô­µÄÊ¶±ð, ÈçÍ¼\ref{SerumImmune}¡£
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{SerumImmune.eps}
@@ -175,18 +188,18 @@ The interaction between antibody and antigen plays an important role in the immu
 \label{AntibodySchematic}
 \end{figure}
 
-»¥²¹¾ö¶¨ÇøÖ÷ÒªÓÉ6¸ö±È½Ï¶ÌµÄ°±»ùËáÆ¬¶Î×é³É£¬ËüÃÇ·ÖÎªÊÇÀ´×ÔÖØÁ´ºÍÇáÁ´µÄCDR1, CDR2 ºÍ CDR3¡£°±»ùËáÔÚÕâÐ©ÇøÓòÉÏµÄ²»Í¬ÐòÁÐ¾ö¶¨ÁË¿¹ÌåµÄÌØÒìÐÔºÍ¶àÑùÐÔ¡£¶ÔÓÚ¿¹Ô­ºÍ¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿£¬¿ÉÒÔÔÚÒ»¶¨³Ì¶ÈÉÏ¼ò»¯Îª CDR ºÍ¿¹Ô­¾Ö²¿ÇøÓòµÄÏà»¥×÷ÓÃ¡£¿¹Ô­ÉÏÄÇÐ©ºÍ¿¹ÌåÏà»¥×÷ÓÃµÄ²¿·ÖÓÖ³ÆÎª¿¹Ô­±íÎ»(epitope)¡£¿¹ÌåÉÏºÍ¿¹Ô­Ïà»¥×÷ÓÃµÄ²¿·Ö³ÆÎª¿¹Ìå±íÎ»(paratope)¡£CDR ¶àÑùÐÔµÄÀ´Ô´Ö÷ÒªÓÐÁ½¸ö£¬ Ò»¸öÊÇ²»Í¬»ùÒòÆ¬¶ÎµÄÆ´½Ó£¬ÁíÍâÒ»¸öÊÇÏ¸°û³¬Í»±ä(Somatic hypermutation)£¬ Ò²¾ÍÊÇÕâÐ©ÇøÓò±ÈÆäËûÇøÓòÓÐ¸ü¸ßµÄÍ»±äÂÊ£¬ÓÐÊ±ºò»¹»áÔÚÆ´½ÓµÄ¹ý³ÌÖÐ¼ÓÈë»òÕß¶ªÊ§Ò»Ð©¼î»ù¡£ÀíÂÛÉÏ½²£¬¿ÉÒÔ²úÉúµÄ¶àÑùÐÔ¿ÉÒÔ´ïµ½$10^{12}$ÊýÁ¿¼¶£¬ÉõÖÁ»¹Òª¸ü¶à¡£ËùÒÔ£¬ÌåÒºÃâÒßÊÇÒ»¸öÇ¿´óµÄÃâÒß»úÖÆ£¬¼¸ºõ¶ÔËùÓÐ¿¹Ô­¶¼¿ÉÒÔ²úÉúÌØÒìÐÔ¿¹Ìå¡£
+»¥²¹¾ö¶¨ÇøÖ÷ÒªÓÉ6¸ö±È½Ï¶ÌµÄ°±»ùËáÆ¬¶Î×é³É£¬ËüÃÇ·ÖÎªÊÇÀ´×ÔÖØÁ´ºÍÇáÁ´µÄ CDR1¡¢ CDR2 ºÍ CDR3¡£°±»ùËáÔÚÕâÐ©ÇøÓòÉÏµÄ²»Í¬ÐòÁÐ¾ö¶¨ÁË¿¹ÌåµÄÌØÒìÐÔºÍ¶àÑùÐÔ¡£¶ÔÓÚ¿¹Ô­ºÍ¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿£¬¿ÉÒÔÔÚÒ»¶¨³Ì¶ÈÉÏ¼ò»¯Îª¶Ô CDR ºÍ¿¹Ô­¾Ö²¿ÇøÓòÏà»¥×÷ÓÃµÄÑÐ¾¿¡£¿¹Ô­ÉÏÄÇÐ©ºÍ¿¹ÌåÏà»¥×÷ÓÃµÄ²¿·ÖÓÖ³ÆÎª¿¹Ô­±íÎ»(epitope)¡£¿¹ÌåÉÏºÍ¿¹Ô­Ïà»¥×÷ÓÃµÄ²¿·Ö³ÆÎª¿¹Ìå±íÎ»(paratope)¡£CDR ¶àÑùÐÔµÄÀ´Ô´Ö÷ÒªÓÐÁ½¸ö£¬ Ò»¸öÊÇ²»Í¬»ùÒòÆ¬¶ÎµÄÆ´½Ó£¬ÁíÍâÒ»¸öÊÇÏ¸°û³¬Í»±ä(Somatic hypermutation)£¬ Ò²¾ÍÊÇÕâÐ©ÇøÓò±ÈÆäËûÇøÓòÓÐ¸ü¸ßµÄÍ»±äÂÊ£¬ÓÐÊ±ºò»¹»áÔÚÆ´½ÓµÄ¹ý³ÌÖÐ¼ÓÈë»òÕß¶ªÊ§Ò»Ð©¼î»ù¡£ÀíÂÛÉÏ½²£¬¿ÉÒÔ²úÉúµÄ¶àÑùÐÔ¿ÉÒÔ´ïµ½$10^{12}$ÊýÁ¿¼¶£¬ÉõÖÁ»¹Òª¸ü¶à¡£ËùÒÔ£¬ÌåÒºÃâÒßÊÇÒ»¸öÇ¿´óµÄÃâÒß»úÖÆ£¬¼¸ºõ¶ÔËùÓÐ¿¹Ô­¶¼¿ÉÒÔ²úÉúÌØÒìÐÔ¿¹Ìå¡£
 
-ÌåÒºÃâÒßÔçÔÚºÜ¾ÃÒÔÇ°¾Í±»ÓÃÀ´ºÍ¼²²¡¶·Õù¡£ÔçÔÚËÎ³¯µÄÊ±ºò£¬ÖÇ»ÛµÄÖÐ¹úÈË¾ÍÓÃ¡°ÖÖ¶»¡±À´Ô¤·ÀÌì»¨£¬¾ÍÊÇÀûÓÃ¶¾ÐÔÈõµÄ¶¾ÖêÈÃÈËÌå²úÉú¿¹ÌåºÍÃâÒß¼ÇÒä¡£Õâ¾ÍÊÇ×îÔçµÄÒßÃçÁË¡£È»¶ø½ÓÖÖÈË¶»£¬¾ßÓÐ¼«¸ßµÄ·çÏÕ¡£1796Äê£¬Ó¢¹úÈËEdward Jener ÓÃ½ÓÖÖÅ£¶»µÄ·½·¨À´Ô¤·ÀÌì»¨£¬¼«´óµÄ½µµÍÁË½ÓÖÖµÄ·çÏÕ¡£1979Äê£¬ÊÀ½çÎÀÉú×éÖ¯(WHO,world health organization) Ðû²¼Ìì»¨´ÓµØÇòÉÏÏû³ý¡£ÕâÊÇ£¬ÈËÀàÀûÓÃÌåÒºÃâÒßµÄÒ»´Î¾Þ´ó³É¹¦£¬Ò²ÊÇÈËÀàÒ½Ñ§Ê·ÉÏµÄ×³¾Ù¡£×Ô1796ÄêÒÔÀ´£¬Ëæ×ÅÃ¿´Î¼¼ÊõµÄ½ø²½£¬ÒßÃçµÄÊýÁ¿ºÍÖÊÁ¿¶¼»áÓÐºÜ´óµÄÌáÉý¡£
+ÌåÒºÃâÒßÔçÔÚºÜ¾ÃÒÔÇ°¾Í±»ÓÃÀ´ºÍ¼²²¡¶·Õù¡£ÔçÔÚËÎ³¯µÄÊ±ºò£¬ÖÇ»ÛµÄÖÐ¹úÈË¾ÍÓÃ¡°ÖÖ¶»¡±À´Ô¤·ÀÌì»¨£¬¾ÍÊÇÀûÓÃ¶¾ÐÔÈõµÄ¶¾ÖêÈÃÈËÌå²úÉú¿¹ÌåºÍÃâÒß¼ÇÒä¡£Õâ¾ÍÊÇ×îÔçµÄÒßÃçÁË¡£È»¶ø½ÓÖÖÈË¶»£¬¾ßÓÐ¼«¸ßµÄ·çÏÕ¡£1796Äê£¬Ó¢¹úÈË Edward Jener ÓÃ½ÓÖÖÅ£¶»µÄ·½·¨À´Ô¤·ÀÌì»¨£¬¼«´óµÄ½µµÍÁË½ÓÖÖµÄ·çÏÕ¡£1979Äê£¬ÊÀ½çÎÀÉú×éÖ¯ (WHO,world health organization) Ðû²¼Ìì»¨´ÓµØÇòÉÏÏû³ý¡£ÕâÊÇÈËÀàÀûÓÃÌåÒºÃâÒßµÄÒ»´Î¾Þ´ó³É¹¦£¬Ò²ÊÇÈËÀàÒ½Ñ§Ê·ÉÏµÄ×³¾Ù¡£×Ô1796ÄêÒÔÀ´£¬Ëæ×ÅÃ¿´Î¼¼ÊõµÄ½ø²½£¬ÒßÃçµÄÊýÁ¿ºÍÖÊÁ¿¶¼»áÓÐºÜ´óµÄÌáÉý¡£
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{Vaccine}
 \caption{ÒßÃçµÄÊýÁ¿±ä»¯ºÍÒßÃç¿ª·¢¼¼ÊõµÄ·¢Õ¹\cite{Vaccine}}
 \label{Vaccine}
 \end{figure}
-µ«ÊÇ£¬²¢²»ÊÇËùÓÐµÄ´«È¾²¡¶¼ÄÜË³Àû¿ª·¢³öÒßÃç£¬±ÈÈçËµHIV-1\cite{HIV1-vaccine}¡£ÆäÖÐµÄÒ»¸öÔ­ÒòÔÚÓÚ¿¹Ô­µÄ¶à±äÐÔ¡£µ«ÊÇ£¬Ò²·¢ÏÖÁËÒ»Ð©¾ßÓÐ¹ãÆ××÷ÓÃµÄ¿¹Ìå£¬¿ÉÒÔµÖ¿¹¶àÖÖ²»Í¬µÄ¶¾Öê¡£¶ÔÕâÐ©¿¹ÌåµÄ½øÒ»²½·ÖÎö·¢ÏÖ£¬ËüÃÇ¶Ô¿ÉÒÔÊ¶±ð HIV-1 ÉÏÒ»Ð©±£ÊØµÄµÄ¿¹Ô­±íÎ»(epitope)¡£ÖªµÀÁËÕâÐ©¿¹Ô­±íÎ»Ö®ºó£¬¾Í¿ÉÒÔÍ¨¹ý¿¹Ô­±íÎ»µÄ¼Þ½Ó(grafting) »òÕß°Ñ¿¹Ô­±íÎ»ÕûºÏµÄÌØÊâÉè¼ÆµÄ¼Ü¹¹(scaffolding)ÖÐ£¬ ÓÉ´ËÉè¼ÆµÄÒßÃç»á±È´«Í³ÒâÒåµÄÉÏµÄÒßÃçÐ§¹û¸üºÃ¡£Òª¼Þ½Ó¿¹Ô­±íÎ»£¬Ê×ÏÈ¾ÍÒªÕÒµ½¿¹Ô­±íÎ»¡£ ¿¹Ô­±íÎ»µÄÈ·¶¨³ýÁË¿ÉÒÔÍ¨¹ýÊµÑéÊÖ¶ÎµÄµ½£¬»¹¿ÉÒÔÍ¨¹ý¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ¹æÂÉµÄÑÐ¾¿£¬ÓÉ¼ÆËãµÃµ½¡£
+µ«ÊÇ£¬²¢²»ÊÇËùÓÐµÄ´«È¾²¡¶¼ÄÜË³Àû¿ª·¢³öÒßÃç£¬±ÈÈçËµHIV-1\cite{HIV1-vaccine}¡£ÆäÖÐµÄÒ»¸öÔ­ÒòÔÚÓÚ¿¹Ô­µÄ¶à±äÐÔ¡£µ«ÊÇ£¬Ò²·¢ÏÖÁËÒ»Ð©¾ßÓÐ¹ãÆ××÷ÓÃµÄ¿¹Ìå£¬¿ÉÒÔµÖ¿¹¶àÖÖ²»Í¬µÄ¶¾Öê¡£¶ÔÕâÐ©¿¹ÌåµÄ½øÒ»²½·ÖÎö·¢ÏÖ£¬ËüÃÇ¿ÉÒÔÊ¶±ð HIV-1 ÉÏÒ»Ð©±£ÊØµÄµÄ¿¹Ô­±íÎ»(epitope)¡£ÖªµÀÁËÕâÐ©¿¹Ô­±íÎ»Ö®ºó£¬¾Í¿ÉÒÔÍ¨¹ý¿¹Ô­±íÎ»µÄ¼Þ½Ó (grafting) »òÕß°Ñ¿¹Ô­±íÎ»ÕûºÏµ½ÌØÊâÉè¼ÆµÄ¼Ü¹¹(scaffolding)ÖÐ£¬ ÓÉ´ËÉè¼ÆµÄÒßÃç»á±È´«Í³ÒâÒåµÄÉÏµÄÒßÃçÐ§¹û¸üºÃ¡£Òª¼Þ½Ó¿¹Ô­±íÎ»£¬Ê×ÏÈ¾ÍÒªÕÒµ½¿¹Ô­±íÎ»¡£ ¿¹Ô­±íÎ»µÄÈ·¶¨³ýÁË¿ÉÒÔÍ¨¹ýÊµÑéÊÖ¶ÎµÃµ½£¬»¹¿ÉÒÔÍ¨¹ý¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ¹æÂÉµÄÑÐ¾¿£¬ÓÉ¼ÆËãµÃµ½¡£
 
-¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿£¬³ýÁË¿ÉÒÔ°ïÖúÉè¼ÆÒßÃçºÍÔ¤²â¿¹Ô­±íÎ»Íâ£¬»¹¿ÉÒÔ´Ù½øÖÎÁÆÐÔ¿¹Ìå(therapeutic antibody)µÄ¿ª·¢¡£Ëæ×Åµ¥¿ËÂ¡¿¹Ìå(monoclonal antibody)ºÍÈËÔ´»¯¿¹Ìå(humanized antibody)¼¼ÊõµÄ½ø²½, Ô½À´Ô½¶àµÄÖÎÁÆÐÔ¿¹Ìå±»×¢²á³ÉÐÂµÄÒ©Îï¡£µ½2020Äê2ÔÂ³õ£¬ÒÑ¾­±» FDA(Food and Drug Administration) ºÍ EMA(European Medicines Agency) Åú×¼»òÕýÔÚÉóºËµÄÖÎÁÆÐÔ¿¹Ìå¾Í¶à´ï106¸ö\cite{AntibodySociety}¡£Ä¿Ç°£¬ÒÑ¾­¿ª·¢³öºÜ¶à¾ßÓÐ¹ãÆ×¿¹°©×÷ÓÃµÄÖÎÁÆÐÔ¿¹Ìå£¬ÆäÖÐÓÐºÜ¶àÊÇÕë¶ÔÃâÒß¹ý³ÌÖÐµÄ¼ì²âµã(checkpoint) ¿ª·¢µÄ\cite{Blockade}¡£±ÈÈç£¬ÔÚÖÎÁÆÃÀ¹úÇ°×ÜÍ³¼ªÃ×¿¨ÌØµÄ°©Ö¢ÖÐÆð×ÅÖÁ¹ØÖØÒª×÷ÓÃµÄ¿¹Ìå pembrolizumab£¬ ¾ÍÊÇÍ¨¹ýÒÖÖÆPD1(programmed cell death protein 1)£¬´Ó¶øÊµÏÖÃâÒßÏ¸°û¶Ô°©Ï¸°ûµÄÉ±ÉË¡£¼øÓÚ´«Í³Ð¡·Ö×ÓÒ©Îï¿ª·¢Ô½À´Ô½À§ÄÑ£¬ÒÔ¼°¿¹ÌåµÄ¶àÑùÐÔºÍÏà¹Ø¼¼ÊõµÄ·¢Õ¹£¬ÖÎÁÆÐÔ¿¹Ìå±Ø½«¿ª±ÙÈËÀàÒ©Ñ§Ê·ÉÏÒ»¸öÐÂµÄÊ±´ú\cite{Trend}¡£
+¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿£¬³ýÁË¿ÉÒÔ°ïÖúÉè¼ÆÒßÃçºÍÔ¤²â¿¹Ô­±íÎ»Íâ£¬»¹¿ÉÒÔ´Ù½øÖÎÁÆÐÔ¿¹Ìå(therapeutic antibody)µÄ¿ª·¢¡£Ëæ×Åµ¥¿ËÂ¡¿¹Ìå(monoclonal antibody)ºÍÈËÔ´»¯¿¹Ìå(humanized antibody)¼¼ÊõµÄ½ø²½£¬ Ô½À´Ô½¶àµÄÖÎÁÆÐÔ¿¹Ìå±»×¢²á³ÉÐÂµÄÒ©Îï¡£µ½2020Äê2ÔÂ³õ£¬ÒÑ¾­±» FDA(Food and Drug Administration) ºÍ EMA(Eu- ropean Medicines Agency) Åú×¼»òÕýÔÚÉóºËµÄÖÎÁÆÐÔ¿¹Ìå¾Í¶à´ï106¸ö\cite{AntibodySociety}¡£Ä¿Ç°£¬ÒÑ¾­¿ª·¢³öºÜ¶à¾ßÓÐ¹ãÆ×¿¹°©×÷ÓÃµÄÖÎÁÆÐÔ¿¹Ìå£¬ÆäÖÐÓÐºÜ¶àÊÇÕë¶ÔÃâÒß¹ý³ÌÖÐµÄ¼ì²âµã(checkpoint) ¿ª·¢µÄ\cite{Blockade}¡£±ÈÈç£¬ÔÚÖÎÁÆÃÀ¹úÇ°×ÜÍ³¼ªÃ×¿¨ÌØµÄ°©Ö¢ÖÐÆð×ÅÖÁ¹ØÖØÒª×÷ÓÃµÄ¿¹Ìå pembrolizumab£¬ ¾ÍÊÇÍ¨¹ýÒÖÖÆ PD1(programmed cell death protein 1)£¬´Ó¶øÊµÏÖÃâÒßÏ¸°û¶Ô°©Ï¸°ûµÄÉ±ÉË¡£¼øÓÚ´«Í³Ð¡·Ö×ÓÒ©Îï¿ª·¢Ô½À´Ô½À§ÄÑ£¬ÒÔ¼°¿¹ÌåµÄ¶àÑùÐÔºÍÏà¹Ø¼¼ÊõµÄ·¢Õ¹£¬ÖÎÁÆÐÔ¿¹Ìå±Ø½«¿ª±ÙÈËÀàÒ©Ñ§Ê·ÉÏÒ»¸öÐÂµÄÊ±´ú\cite{Trend}¡£
 
 Ò»¸ö¼òµ¥µÄµ¥¿ËÂ¡¿¹ÌåµÄÉú²ú¹ý³Ì´ó¸ÅÈçÍ¼\ref{MonoclonalAntibody}£º
 \begin{figure}[H]
@@ -196,12 +209,12 @@ The interaction between antibody and antigen plays an important role in the immu
 \label{MonoclonalAntibody}
 \end{figure}
 
-È»¶øÈç¹û°ÑÕâÐ©ÓÉÀÏÊó²úÉúµÄµ¥¿ËÂ¡¿¹ÌåÖ±½Ó×¢Éäµ½ÈËÌåÄÚ£¬ÍùÍù»á²úÉúÃâÒß·´Ó¦¡£Ò»¸ö±ÜÃâÃâÒß·´Ó¦µÄ×ö·¨ÊÇ°ÑÕâÐ©µ¥¿ËÂ¡¿¹ÌåµÄ CDR ÇøÓòµÄ°±»ùËáÐòÁÐ°²²åµ½ÈËÀà¿¹Ìå¶ÔÓ¦µÄÎ»ÖÃ£¬ÕâÑùµÄ¿¹Ìå¾ÍÊÇÈËÔ´»¯¿¹Ìå¡£´«Í³µÄ·½·¨²úÉúÓÐÐ§µÄ CDR ÐèÒª´óÁ¿µÄÈËÁ¦ÎïÁ¦£¬Èç¹û¿ÉÒÔ¼ÆËãµÄ·½·¨À´¾«×¼Ô¤²âÕâÐ© CDR £¬Ôò»á¶Ô¿¹ÌåµÄÖÆ±¸ÓÐÉî¿ÌÓ°Ïì¡£Í¬Ê±£¬ ¼´±ãÊÇÍ¨¹ýÊµÑéÊÖ¶Î²úÉú CDR ÐòÁÐ£¬ÓÉÓÚÊµÑé¹ý³ÌÖÐÒ»Ð©±È½ÏÄÑÒÔ¿ØÖÆµÄÒòËØ£¬²úÉúµÄÐòÁÐÒ²Î´±ØÄÜÂú×ãÎÒÃÇµÄÒªÇó¡£Ò»¸ö²»Ò×¿ØÖÆµÄÒòËØÊÇ¿¹ÌåµÄ×÷ÓÃÎ»µã¡£¶ÔÓÚÒ»¸ö¿¹Ô­À´½²£¬¿ÉÄÜµÄ¿¹Ô­±íÎ»»áÓÐºÜ¶à£¬ÆäÖÐµÄÈÎºÎÒ»¸ö¿¹Ô­±íÎ»¶¼¿ÉÄÜÓÕµ¼ÃâÒß·´Ó¦£¬²úÉú¿¹Ìå£¬¶øÀíÏëµÄ¿¹ÌåÍùÍùÐèÒªÕë¶ÔÌØ¶¨µÄ¿¹Ô­±íÎ»¡£ÁíÍâÒ»¸ö²»Ò×¿ØÖÆµÄÒòËØÊÇ¿¹Ô­¿¹ÌåÖ®¼äµÄÇ×ºÍÁ¦(affinity)¡£Ò»¸ö¿ÉÒÔÓÃ×÷ÖÎÁÆÓÃµÄ¿¹ÌåÍùÍùÒªÇó¾ßÓÐ×ã¹»¸ßµÄÇ×ºÍÁ¦£¬ÕâÖ±½Ó¹ØÏµµ½¿¹ÌåµÄÁÆÐ§¡£ËäÈ»ÃâÒßÏµÍ³±¾Éí»áÉ¸Ñ¡³öÇ×ºÍÁ¦±È½Ï¸ßµÄ¿¹Ìå£¬µ«ÊÇÎÞ·¨±£Ö¤ÕâÑùµÄÇ×ºÍÁ¦¾ÍÂú×ãÒªÇó¡£ÄÇÃ´Õâ¾ÍÐèÒªÔÚÔ­À´¿¹ÌåµÄ»ù´¡ÉÏ£¬¶ÔCDRÐòÁÐ½øÐÐÒ»¶¨µÄ¸ÄÔì£¬´Ó¶øÌá¸ßÇ×ºÍÁ¦£¬´ïµ½ÎÒÃÇµÄÒªÇó¡£¶Ô¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃµÄÑÐ¾¿£¬¿ÉÒÔÖ¸µ¼ CDR ÇøÓòµÄÉè¼Æ£¬Ê¹µÃ¿¹Ìå¿ÉÒÔÕë¶ÔÖ¸¶¨µÄÎ»µã£¬²¢ÇÒ¾ßÓÐ×ã¹»¸ßµÄÇ×ºÍÁ¦£¬´Ó¶ø´ó´ó½ÚÔ¼¿¹ÌåÒ©ÎïµÄÑÐ·¢ºÍÉú²ú³É±¾¡£
+È»¶øÈç¹û°ÑÕâÐ©ÓÉÀÏÊó²úÉúµÄµ¥¿ËÂ¡¿¹ÌåÖ±½Ó×¢Éäµ½ÈËÌåÄÚ£¬ÍùÍù»á²úÉúÃâÒß·´Ó¦¡£Ò»¸ö±ÜÃâÃâÒß·´Ó¦µÄ×ö·¨ÊÇ°ÑÕâÐ©µ¥¿ËÂ¡¿¹ÌåµÄ CDR ÇøÓòµÄ°±»ùËáÐòÁÐ°²²åµ½ÈËÀà¿¹Ìå¶ÔÓ¦µÄÎ»ÖÃ£¬ÕâÑùµÄ¿¹Ìå¾ÍÊÇÈËÔ´»¯¿¹Ìå¡£´«Í³µÄ·½·¨²úÉúÓÐÐ§µÄ CDR ÐèÒª´óÁ¿µÄÈËÁ¦ÎïÁ¦£¬Èç¹û¿ÉÒÔÓÃ¼ÆËãµÄ·½·¨À´¾«×¼Ô¤²âÕâÐ© CDR £¬Ôò»á¶Ô¿¹ÌåµÄÖÆ±¸ÓÐÉî¿ÌÓ°Ïì¡£Í¬Ê±£¬ ¼´±ãÊÇÍ¨¹ýÊµÑéÊÖ¶Î²úÉú CDR ÐòÁÐ£¬ÓÉÓÚÊµÑé¹ý³ÌÖÐÒ»Ð©±È½ÏÄÑÒÔ¿ØÖÆµÄÒòËØ£¬²úÉúµÄÐòÁÐÒ²Î´±ØÄÜÂú×ãÎÒÃÇµÄÒªÇó¡£Ò»¸ö²»Ò×¿ØÖÆµÄÒòËØÊÇ¿¹ÌåµÄ×÷ÓÃÎ»µã¡£¶ÔÓÚÒ»¸ö¿¹Ô­À´½²£¬¿ÉÄÜµÄ¿¹Ô­±íÎ»»áÓÐºÜ¶à£¬ÆäÖÐµÄÈÎºÎÒ»¸ö¿¹Ô­±íÎ»¶¼¿ÉÄÜÓÕµ¼ÃâÒß·´Ó¦£¬²úÉú¿¹Ìå£¬¶øÀíÏëµÄ¿¹ÌåÍùÍùÐèÒªÕë¶ÔÌØ¶¨µÄ¿¹Ô­±íÎ»¡£ÁíÍâÒ»¸ö²»Ò×¿ØÖÆµÄÒòËØÊÇ¿¹Ô­¿¹ÌåÖ®¼äµÄÇ×ºÍÁ¦(affinity)¡£Ò»¸ö¿ÉÒÔÓÃ×÷ÖÎÁÆÓÃµÄ¿¹ÌåÍùÍùÒªÇó¾ßÓÐ×ã¹»¸ßµÄÇ×ºÍÁ¦£¬ÕâÖ±½Ó¹ØÏµµ½¿¹ÌåµÄÁÆÐ§¡£ËäÈ»ÃâÒßÏµÍ³±¾Éí»áÉ¸Ñ¡³öÇ×ºÍÁ¦±È½Ï¸ßµÄ¿¹Ìå£¬µ«ÊÇÎÞ·¨±£Ö¤ÕâÑùµÄÇ×ºÍÁ¦¾ÍÂú×ãÒªÇó¡£ÄÇÃ´Õâ¾ÍÐèÒªÔÚÔ­À´¿¹ÌåµÄ»ù´¡ÉÏ£¬¶ÔCDRÐòÁÐ½øÐÐÒ»¶¨µÄ¸ÄÔì£¬´Ó¶øÌá¸ßÇ×ºÍÁ¦£¬´ïµ½ÎÒÃÇµÄÒªÇó¡£¶Ô¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃµÄÑÐ¾¿£¬¿ÉÒÔÖ¸µ¼ CDR ÇøÓòµÄÉè¼Æ£¬Ê¹µÃ¿¹Ìå¿ÉÒÔÕë¶ÔÖ¸¶¨µÄÎ»µã£¬²¢ÇÒ¾ßÓÐ×ã¹»¸ßµÄÇ×ºÍÁ¦£¬´Ó¶ø´ó´ó½ÚÔ¼¿¹ÌåÒ©ÎïµÄÑÐ·¢ºÍÉú²ú³É±¾¡£
 
 ¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿£¬³ýÁËÉÏÃæËµµÄÒâÒåÖ®Íâ£¬»¹ÓÐºÜ¶àÍâÒçÐ§Ó¦¡£±ÈÈçËµÉè¼ÆºÏÊÊµÄ¿¹ÌåÀ´´ß»¯Ò»Ð©·´Ó¦£¬Ò²¾ÍÊÇ¿¹ÌåÃ¸¡£ÔÙ±ÈÈçËµ£¬Éè¼ÆÒ»Ð©ÖÎÁÆÐÔµÄ¶àëÄ¡£ÓÐµÄÑÐ¾¿±íÃæ£¬ÖØÁ´ÉÏ CDR3 ÇøÓòµÄ¶àëÄ¿ÉÒÔÆðµ½ÖÐºÍ¿¹Ô­µÄ×÷ÓÃ\cite{TherapeuticPeptides}¡£ ´Ó¸ü´óµÄ·¶Î§½²£¬¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÊÇµ°°×Óëµ°°×Ïà»¥×÷ÓÃµÄÒ»²¿·Ö£¬¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿Ò²¿ÉÒÔÎª¸ü¹ã·ºµÄµ°°×ÖÊÓëµ°°×ÖÊÏà»¥×÷ÓÃµÄÑÐ¾¿Ìá¹©½è¼ø¡£
 
 \section{¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃÑÐ¾¿ÏÖ×´}
-¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ£¬±È½ÏÔçµÄÊÇ Cothia, ËûµÚÒ»´ÎÖ¸³öÁË¿¹ÌåÖ÷ÒªÍ¨¹ý CDR ÇøÓòºÍ¿¹Ô­Ïà»¥×÷ÓÃ£¬²¢ÇÒ·ÖÎöÁË CDR1 ºÍ CDR2 µÄ¾­µä½á¹¹¡£µ«ÊÇ£¬ÕâÐ©¶¼ÊÇÃèÊöÐÔµÄ£¬²¢²»ÄÜ¶Ô¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ×ö³öÓÐÐ§»Ø´ð¡£½ÓÏÂÀ´£¬´ó¼Ò¿ªÊ¼¶ÔÌØ¶¨µÄ¿¹Ô­¿¹Ìå¸´ºÏÎï½øÐÐÑÐ¾¿¡£ÆäÖÐ¶Ôµ°ÇåÈÜ¾úÃ¸(hen egg white lysosome)ºÍÆä¿¹ÌåµÄÏà»¥×÷ÓÃµÄÑÐ¾¿ÓÈÆä¶à¡£Padlan µÈ½âÎöÁË HyHEL-10 Fab ºÍµ°ÇåÈÜ¾úÃ¸(HEL)µÄ½á¹¹£¬ÈÏÎª¿¹Ô­±íÎ»ÊÇ²»Á¬ÐøµÄ£¬·¶µÂ»ªÁ¦(van der Waals)ºÍÇâ¼ü(hydrogen bond)ÊÇ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¹Ø¼ü\cite{HyHEL1}£»Yokota µÈÍ¨¹ý¶Ô HyHEL-10-HEL ¸´ºÏÎïÖÐÒ»Ð©°±»ùËáµÄÍ»±ä(L-Y50F, L-S91A, L-S93A)À´ÑÐ¾¿Çâ¼üÔÚ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃÖÐµÄ½ÇÉ«\cite{HyHEL2}£¬ºóÀ´ÓÖÑÐ¾¿ÁË Arg ÔÚ¿¹Ô­¿¹Ìå¸´ºÏÎïÖÐµÄ×÷ÓÃ\cite{HyHEL7}£»Pons µÈÍ¨¹ý Alanine scanning ÑÐ¾¿ÁË HyHEL-10-HEL ÖÐ²ÎÓëÏà»¥×÷ÓÃµÄ¸÷¸ö°±»ùËáµÄÖØÒªÐÔ\cite{HyHEL3}£»Shiroishi µÈÍ¨¹ý°Ñ Tyr Í»±ä³É Phe ºÍ Ala À´ÑÐ¾¿ Tyr ÔÚ HyHEL-10-HEL ÖÐµÄ×÷ÓÃ\cite{HyHEL4}£»Í¬Ñù£¬Shiroishi µÈÍ¨¹ý¶Ô HyHEL-10-HEL µÄ·ÖÎö£¬ÑÐ¾¿ÁËÑÎÇÅ(salt-bridge)µÄ×÷ÓÃ\cite{HyHEL5}£»Kam-Morgan µÈÍ¨¹ýÍ»±ä¶ÔHyHEL-10-HELÖÐ¿¹Ô­±íÎ»×öÁË¸üÎª¾«Ï¸µÄÑÐ¾¿\cite{HyHEL6}¡£³ýÁË HyHEL-10-HEL£¬»¹ÓÐÐí¶àÎÄÕÂ¶Ô¿¹Ìå HyHEL-63 ºÍ HEL µÄ¸´ºÏÎïHyHEL-63-HEL£¬ÒÔ¼° HyHEL-5-HEL ×öÁËÐí¶àÀàËÆµÄÑÐ¾¿\cite{HyHEL8,HyHEL9, HyHEL10, HyHEL11, HyHEL12, HyHEL13, HyHEL14, HyHEL15, HyHEL16}¡£³ýÁËÕë¶Ô HEL ºÍÆä¿¹ÌåµÄÑÐ¾¿Ö®Íâ£¬»¹ÓÐÐí¶à¹ØÓÚÆäËû¿¹Ô­¿¹ÌåµÄÑÐ¾¿¡£µ«ÊÇ£¬ËùÓÐÕâÐ©ÑÐ¾¿£¬¶¼ÊÇ¹ØÓÚÄ³Ò»¸öÌØ¶¨µÄ¸´ºÏÎïÖÐÌØ¶¨°±»ùËáµÄÑÐ¾¿£¬»òÕßÄ³ÖÖÌØ¶¨Ïà»¥×÷ÓÃµÄÑÐ¾¿£¬´ÓÀ´Ã»ÓÐÒ»¸öÏµÍ³µÄ¹ØÓÚËùÓÐ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÃèÊö¡£ÆäÖÐÒ»¸öÖØÒªÔ­Òò£¬ÊÇ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¹¹Ïó(conformation)ÐÔÖÊ¡£Ò²¾ÍÊÇËµ£¬²ÎÓë¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ°±»ùËá£¬ÌØ±ðÊÇ¿¹Ô­±íÎ»ÉÏµÄ°±»ùËá£¬²¢²»ÊÇÏßÐÔÅÅÁÐµÄ£¬¶øÊÇ¾ßÓÐ¿Õ¼äÉÏµÄ¹ØÏµ¡£¾ÍÄÃ1918ÄêH1N1Á÷¸Ð´ó±¬·¢Ê±ºòÁ÷¸Ð²¡¶¾±íÃæµÄÑªÄýËØ(Hemagglutinin)SC1918/H1 ºÍËüµÄ¿¹Ìå CR6261 À´Ëµ£¨Í¼\ref{ConformationalEpitope}£©¡£
+¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ£¬±È½ÏÔçµÄÊÇ Cothia£¬ ËûµÚÒ»´ÎÖ¸³öÁË¿¹ÌåÖ÷ÒªÍ¨¹ý CDR ÇøÓòºÍ¿¹Ô­Ïà»¥×÷ÓÃ£¬²¢ÇÒ·ÖÎöÁË CDR1 ºÍ CDR2 µÄ¾­µä½á¹¹¡£µ«ÊÇ£¬ÕâÐ©¶¼ÊÇÃèÊöÐÔµÄ£¬²¢²»ÄÜ¶Ô¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ×ö³öÓÐÐ§»Ø´ð¡£½ÓÏÂÀ´£¬´ó¼Ò¿ªÊ¼¶ÔÌØ¶¨µÄ¿¹Ô­¿¹Ìå¸´ºÏÎï½øÐÐÑÐ¾¿¡£ÆäÖÐ¶Ôµ°ÇåÈÜ¾úÃ¸(hen egg white lysosome)ºÍÆä¿¹ÌåµÄÏà»¥×÷ÓÃµÄÑÐ¾¿ÓÈÆä¶à¡£Padlan µÈ½âÎöÁË HyHEL-10 Fab ºÍµ°ÇåÈÜ¾úÃ¸(HEL)µÄ½á¹¹£¬ÈÏÎª¿¹Ô­±íÎ»ÊÇ²»Á¬ÐøµÄ£¬·¶µÂ»ªÁ¦(van der Waals)ºÍÇâ¼ü(hydrogen bond)ÊÇ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¹Ø¼ü\cite{HyHEL1}£»Yokota µÈÍ¨¹ý¶Ô HyHEL-10-HEL ¸´ºÏÎïÖÐÒ»Ð©°±»ùËáµÄÍ»±ä(L-Y50F¡¢ L-S91A¡¢ L-S93A)À´ÑÐ¾¿Çâ¼üÔÚ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃÖÐµÄ½ÇÉ«\cite{HyHEL2}£¬ºóÀ´ÓÖÑÐ¾¿ÁË Arg ÔÚ¿¹Ô­¿¹Ìå¸´ºÏÎïÖÐµÄ×÷ÓÃ\cite{HyHEL7}£»Pons µÈÍ¨¹ý Alanine scanning ÑÐ¾¿ÁË HyHEL-10-HEL ÖÐ²ÎÓëÏà»¥×÷ÓÃµÄ¸÷¸ö°±»ùËáµÄÖØÒªÐÔ\cite{HyHEL3}£»Shiroishi µÈÍ¨¹ý°Ñ Tyr Í»±ä³É Phe ºÍ Ala À´ÑÐ¾¿ Tyr ÔÚ HyHEL-10-HEL ÖÐµÄ×÷ÓÃ\cite{HyHEL4}£»Í¬Ñù£¬Shiroishi µÈÍ¨¹ý¶Ô HyHEL-10-HEL µÄ·ÖÎö£¬ÑÐ¾¿ÁËÑÎÇÅ(salt-bridge)µÄ×÷ÓÃ\cite{HyHEL5}£»Kam-Morgan µÈÍ¨¹ýÍ»±ä¶ÔHyHEL-10-HELÖÐ¿¹Ô­±íÎ»×öÁË¸üÎª¾«Ï¸µÄÑÐ¾¿\cite{HyHEL6}¡£³ýÁË HyHEL-10-HEL£¬»¹ÓÐÐí¶àÎÄÕÂ¶Ô¿¹Ìå HyHEL-63 ºÍ HEL µÄ¸´ºÏÎïHyHEL-63-HEL£¬ÒÔ¼° HyHEL-5-HEL ×öÁËÐí¶àÀàËÆµÄÑÐ¾¿\cite{HyHEL8,HyHEL9, HyHEL10, HyHEL11, HyHEL12, HyHEL13, HyHEL14, HyHEL15, HyHEL16}¡£³ýÁËÕë¶Ô HEL ºÍÆä¿¹ÌåµÄÑÐ¾¿Ö®Íâ£¬»¹ÓÐÐí¶à¹ØÓÚÆäËû¿¹Ô­¿¹ÌåµÄÑÐ¾¿¡£µ«ÊÇ£¬ËùÓÐÕâÐ©ÑÐ¾¿£¬¶¼ÊÇ¹ØÓÚÄ³Ò»¸öÌØ¶¨µÄ¸´ºÏÎïÖÐÌØ¶¨°±»ùËáµÄÑÐ¾¿£¬»òÕßÄ³ÖÖÌØ¶¨Ïà»¥×÷ÓÃµÄÑÐ¾¿£¬´ÓÀ´Ã»ÓÐÒ»¸öÏµÍ³µÄ¹ØÓÚËùÓÐ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÃèÊö¡£ÆäÖÐÒ»¸öÖØÒªÔ­Òò£¬ÊÇ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¹¹Ïó(conformation)ÐÔÖÊ¡£Ò²¾ÍÊÇËµ£¬²ÎÓë¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ°±»ùËá£¬ÌØ±ðÊÇ¿¹Ô­±íÎ»ÉÏµÄ°±»ùËá£¬²¢²»ÊÇÏßÐÔÅÅÁÐµÄ£¬¶øÊÇ¾ßÓÐ¿Õ¼äÉÏµÄ¹ØÏµ¡£¾ÍÄÃ1918ÄêH1N1Á÷¸Ð´ó±¬·¢Ê±ºòÁ÷¸Ð²¡¶¾±íÃæµÄÑªÄýËØ(Hemagglutinin)SC1918/H1 ºÍËüµÄ¿¹Ìå CR6261 À´Ëµ£¨Í¼\ref{ConformationalEpitope}£©¡£
 
 \begin{figure}[H]
 \centering
@@ -209,37 +222,37 @@ The interaction between antibody and antigen plays an important role in the immu
 \caption{\textbf{A} ÊÇ SC1918/H1 ºÍ CR6261 ¸´ºÏÎïµÄ½á¹¹¡£\textbf{B} ÊÇ SC1918/H1 ºÍ¿¹Ìå½áºÏÇøÓòµÄ·Å´óÍ¼£¬Æä¿¹Ô­±íÎ»¶¼ÒÑ¾­±ê³ö¡£´ËÍ¼ÓÉÎÄÏ×\cite{ConformationalEpitope}ÖÐµÄÍ¼Æ¬±à¼­¶ø³É¡£ }
 \label{ConformationalEpitope}
 \end{figure}
-´ÓÍ¼\ref{ConformationalEpitope} \textbf{B} ÖÐ¿ÉÒÔ¿´³ö£¬ÔÚÐòÁÐÉÏ£¬ÕâÐ©²ÎÓë¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ°±»ùËáÔÚÐòÁÐ²¢²»Á¬Ðø£¬È»¶øÔÚ¿Õ¼äÉÏÈ´±È½ÏÁÙ½ü£¬ÐÎ³ÉÓÐÐ§µÄ¿¹Ô­±íÎ»£¬Õâ¾ÍÊÇ¿¹Ô­±íÎ»µÄ¹¹ÏóÐÔÖÊ¡£¸ù¾Ý Saba Ferdous µÈ×î½ü¶Ô 488 ¸ö ¿¹Ô­±íÎ»µÄÑÐ¾¿£¬Ö»ÓÐ´ó¸Å 4\% ÊÇÏßÐÔµÄ¡£Èç¹û°ÑÓÐ²»Ð¡ÓÚ3¸öµÄ°±»ùËá²ÎÓëÏà»¥×÷ÓÃ£¬²¢ÇÒÕâÐ©°±»ùËáÔÚÐòÁÐÉÏµÄ¾àÀë²»´óÓÚ3µÄÎ»ÖÃ¶¨ÎªÒ»¸öÇøÓò(region)£¬ÄÇÃ´Ö»ÓÐÔ¼ 14\% µÄ¿¹Ô­±íÎ»Ö»ÓÐÒ»¸öÇøÓò\cite{ConformationalEpitope1}¡£ÕâÐ©½á¹ûËµÃ÷£¬¿¹Ô­±íÎ»ÊÇ¸ß¶ÈµÄ·ÇÏßÐÔµÄ¡£
+´ÓÍ¼\ref{ConformationalEpitope} \textbf{B} ÖÐ¿ÉÒÔ¿´³ö£¬ÔÚÐòÁÐÉÏ£¬ÕâÐ©²ÎÓë¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ°±»ùËáÔÚÐòÁÐ²¢²»Á¬Ðø£¬È»¶øÔÚ¿Õ¼äÉÏÈ´±È½ÏÁÙ½ü£¬ÐÎ³ÉÓÐÐ§µÄ¿¹Ô­±íÎ»£¬Õâ¾ÍÊÇ¿¹Ô­±íÎ»µÄ¹¹ÏóÐÔÖÊ¡£¸ù¾Ý Saba Ferdous µÈ×î½ü¶Ô 488 ¸ö ¿¹Ô­±íÎ»µÄÑÐ¾¿£¬Ö»ÓÐ´ó¸Å 4\% ÊÇÏßÐÔµÄ¡£Èç¹û°ÑÓÐ²»Ð¡ÓÚ3¸öµÄ°±»ùËá²ÎÓëÏà»¥×÷ÓÃ£¬²¢ÇÒÕâÐ©°±»ùËáÔÚÐòÁÐÉÏÏà²î´óÓÚ3µÄÎ»ÖÃ¶¨ÎªÒ»¸öÇøÓò(region)£¬ÄÇÃ´Ö»ÓÐÔ¼ 14\% µÄ¿¹Ô­±íÎ»Ö»ÓÐÒ»¸öÇøÓò\cite{ConformationalEpitope1}¡£ÕâÐ©½á¹ûËµÃ÷£¬¿¹Ô­±íÎ»ÊÇ¸ß¶ÈµÄ·ÇÏßÐÔµÄ¡£
 
-ËäÈ»¿¹Ô­±íÎ»µÄ·ÇÏßÐÔÌØÕ÷£¬¸ø¿¹Ô­¿¹ÌåµÄÑÐ¾¿´øÁËµÄ¾Þ´óµÄÀ§ÄÑ¡£µ«ÊÇ£¬¼øÓÚ¿¹Ô­±íÎ»ÔÚ¿¹ÌåÉè¼ÆºÍÒßÃçÑÐ·¢ÖÐµÄÖØÒªÐÔ£¬¶Ô¿¹Ô­±íÎ»Ô¤²âµÄÅ¬Á¦Ò»Ö±Ã»ÓÐÍ£Ö¹¡£´ÓÊµÑéµÄ½Ç¶ÈÀ´½²£¬Ö÷ÒªÓÐ½á¹¹ÉúÎïÑ§µÄ·½·¨ºÍÍ»±äµÄ·½·¨¡£½á¹¹ÉúÎïÑ§µÄ·½·¨ÊÇÍ¨¹ý·ÖÎö¿¹Ô­¿¹Ìå¸´ºÏÎïµÄ½á¹¹£¬À´ÅÐ¶ÏÄÄÐ©ÊÇ¿¹Ô­±íÎ»¡£Í»±äµÄ·½·¨ÔòÊÇÍ¨¹ýÔÚ²»Í¬µÄÎ»µãÒýÈëÍ»±äÀ´È·¶¨£¬¾¿¾¹ÄÄÐ©°±»ùËáÔÚ¿¹Ô­¿¹ÌåµÄ½áºÏ¹ý³ÌÖÐÆð¹Ø¼ü×÷ÓÃ\cite{EpitopePred1}¡£³ýÁËÉÏÃæµÄÊµÑéÊÖ¶Î£¬ÀûÓÃ¼ÆËãÊÖ¶Î¶Ô¿¹Ô­±íÎ»µÄÔ¤²â£¬Ò»Ö±ÔÚ·¢Õ¹¡£Rubinstein µÈ×öÁËÒ»¸öÍ³¼Æ¼ìÑé£¬$H_0$ Éè¶¨Îª¿¹Ô­±íÎ»ºÍ·Ç¿¹Ô­±íÎ»Ã»ÓÐ²î±ð£¬$H_a$ Éè¶¨Îª¿¹Ô­±íÎ»ºÍ·Ç¿¹Ô­±íÎ»ÓÐ²î±ð¡£Í¨¹ý¶Ô´óÁ¿¿¹Ô­¿¹ÌåµÄ·ÖÎö£¬ÈÏÎª¿¹Ô­±íÎ»ÔÚ°±»ùËáÆ«ºÃ¡¢¶þ¼¶½á¹¹(secondary structure)¡¢¼¸ºÎÐÎ×´ºÍ½ø»¯µÄ±£ÊØÐÔÉÏ¶¼ºÍ·Ç¿¹Ô­±íÎ»ÓÐÏÔÖøÇø±ð\cite{EpitopePred2}¡£ËäÈ»ÕâÆªÎÄÕÂ·¢±íÔÚ2008Äê£¬µ«È´ÊÇÔÚÕâÖ®Ç°ÒÔ¼°ÕâÖ®ºóµÄÐí¶à¿¹Ô­±íÎ»Ô¤²â·½·¨µÄÀíÂÛÒÀ¾Ý£¬ÕâÐ©·½·¨¶¼ÊÇ¶ÔÈÎÒâ¸ø¶¨µÄ¿¹Ô­À´Ô¤²âËüµÄ¿¹Ô­±íÎ»¡£ÀýÈç£¬Hopp µÈÍ¨¼ÆËã¾Ö²¿°±»ùËáÐòÁÐµÄÇ×Ë®ÐÔ(hydrophilicity)À´Ô¤²â¿¹Ô­±íÎ»£¬ÈÏÎªÇ×Ë®ÐÔ×î¸ßµÄÇøÓòÒªÃ´ÊÇ¿¹Ô­±íÎ»ÒªÃ´ºÍ¿¹Ô­±íÎ»ÏàÁÚ\cite{EpitopePred3}£» Rubinstein µÈÍ¨¹ý¶ÔÒ»Ö±µÄ¿¹Ô­±íÎ»µÄ·ÖÎö£¬ÓÃ»úÆ÷Ñ§Ï°µÄ·½·¨À´Ô¤²â¸ø¶¨¿¹Ô­µÄ¿¹Ô­±íÎ»£»Jing Sun µÈÍ¨¹ýÒýÈë²Ð»ùÈý½Ç(residual triangle)µÄ¸ÅÄî£¬¼ÆËãÃ¿¸ö°±»ùËáµÄÇãÏòÖ¸Êý(propensity index)ºÍ¼¯ÈºÏµÊý(cluster coefficient)£¬ÓÉ´ËÀ´Ô¤²â·ÇÏßÐÔ¿¹Ô­±íÎ»\cite{SEPPA}¡£XuµÈ¶Ô CEP\cite{CEP},DiscoTope\cite{DiscoTope},PEPOP\cite{PEPOP}¡¢ElliPro\cite{ElliPro}¡¢ BEpro\cite{PEPITO} ºÍ SEPPA£¬ÁùÖÖÔ¤²â·½·¨ÔÚÊµÑéÑéÖ¤µÄÊý¾Ý¼¯ÉÏ½øÐÐÁË±È½Ï¡£¼´±ãÊÇ×îºÃµÄ SEPPA£¬Æä AUC Ò²Ö»ÄÜ´ïµ½0.62£¬Ô¶²»ÄÜÂú×ãÊµ¼ÊÐèÒª\cite{EpitopePredEvaluation}¡£
+ËäÈ»¿¹Ô­±íÎ»µÄ·ÇÏßÐÔÌØÕ÷£¬¸ø¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿´øÀ´ÁË¾Þ´óµÄÀ§ÄÑ¡£µ«ÊÇ£¬¼øÓÚ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÖØÒªÐÔ£¬Õâ·½ÃæµÄÑÐ¾¿Ò»Ö±ÔÚ½øÐÐ£¬×îÍ»³öµÄ±íÏÖÎª¶Ô¿¹Ô­±íÎ»µÄÔ¤²â¡£´ÓÊµÑéµÄ½Ç¶ÈÀ´½²£¬È·¶¨¿¹Ô­±íÎ»Ö÷ÒªÓÐ½á¹¹ÉúÎïÑ§µÄ·½·¨ºÍÍ»±äµÄ·½·¨¡£½á¹¹ÉúÎïÑ§µÄ·½·¨ÊÇÍ¨¹ý·ÖÎö¿¹Ô­¿¹Ìå¸´ºÏÎïµÄ½á¹¹£¬À´ÅÐ¶ÏÄÄÐ©ÊÇ¿¹Ô­±íÎ»¡£Í»±äµÄ·½·¨ÔòÊÇÍ¨¹ýÔÚ²»Í¬µÄÎ»µãÒýÈëÍ»±ä£¬À´È·¶¨¾¿¾¹ÄÄÐ©°±»ùËáÔÚ¿¹Ô­¿¹ÌåµÄ½áºÏ¹ý³ÌÖÐÆð¹Ø¼ü×÷ÓÃ\cite{EpitopePred1}¡£³ýÁËÉÏÃæµÄÊµÑéÊÖ¶Î£¬ÀûÓÃ¼ÆËãÊÖ¶Î¶Ô¿¹Ô­±íÎ»µÄÔ¤²âÒ²Ò»Ö±ÔÚ·¢Õ¹¡£Rubinstein µÈ×öÁËÒ»¸öÍ³¼Æ¼ìÑé£¬$H_0$ Éè¶¨Îª¿¹Ô­±íÎ»ºÍ·Ç¿¹Ô­±íÎ»Ã»ÓÐ²î±ð£¬$H_a$ Éè¶¨Îª¿¹Ô­±íÎ»ºÍ·Ç¿¹Ô­±íÎ»ÓÐ²î±ð¡£Í¨¹ý¶Ô´óÁ¿¿¹Ô­¿¹ÌåµÄ·ÖÎö£¬ÈÏÎª¿¹Ô­±íÎ»ÔÚ°±»ùËáÆ«ºÃ¡¢¶þ¼¶½á¹¹(secondary structure)¡¢¼¸ºÎÐÎ×´ºÍ½ø»¯µÄ±£ÊØÐÔÉÏ¶¼ºÍ·Ç¿¹Ô­±íÎ»ÓÐÏÔÖøÇø±ð\cite{EpitopePred2}¡£ËäÈ»ÕâÆªÎÄÕÂ·¢±íÔÚ2008Äê£¬µ«È´ÊÇÔÚÕâÖ®Ç°ÒÔ¼°ÕâÖ®ºóµÄÐí¶à¿¹Ô­±íÎ»Ô¤²â·½·¨µÄÀíÂÛÒÀ¾Ý£¬ÕâÐ©·½·¨¶¼ÊÇ¶ÔÈÎÒâ¸ø¶¨µÄ¿¹Ô­À´Ô¤²âËüµÄ¿¹Ô­±íÎ»¡£ÀýÈç£¬Hopp µÈÍ¨¹ý¼ÆËã¾Ö²¿°±»ùËáÐòÁÐµÄÇ×Ë®ÐÔ(hydrophilicity)À´Ô¤²â¿¹Ô­±íÎ»£¬ÈÏÎªÇ×Ë®ÐÔ×î¸ßµÄÇøÓòÒªÃ´ÊÇ¿¹Ô­±íÎ»ÒªÃ´ºÍ¿¹Ô­±íÎ»ÏàÁÚ\cite{EpitopePred3}£» Rubinstein µÈÍ¨¹ý¶ÔÒÑÖªµÄ¿¹Ô­±íÎ»µÄ·ÖÎö£¬ÓÃ»úÆ÷Ñ§Ï°µÄ·½·¨À´Ô¤²â¸ø¶¨¿¹Ô­µÄ¿¹Ô­±íÎ»£»Jing Sun µÈÍ¨¹ýÒýÈë²Ð»ùÈý½Ç(residual triangle)µÄ¸ÅÄî£¬¼ÆËãÃ¿¸ö°±»ùËáµÄÇãÏòÖ¸Êý(propensity index)ºÍ¼¯ÈºÏµÊý(cluster coefficient)£¬ÓÉ´ËÀ´Ô¤²â·ÇÏßÐÔ¿¹Ô­±íÎ»\cite{SEPPA}¡£XuµÈ¶Ô CEP\cite{CEP},DiscoTope\cite{DiscoTope},PEPOP\cite{PEPOP}¡¢ElliPro\cite{ElliPro}¡¢ BEpro\cite{PEPITO} ºÍ SEPPA£¬ÁùÖÖÔ¤²â·½·¨ÔÚÊµÑéÑéÖ¤µÄÊý¾Ý¼¯ÉÏ½øÐÐÁË±È½Ï¡£¼´±ãÊÇ×îºÃµÄ SEPPA£¬Æä AUC Ò²Ö»ÄÜ´ïµ½0.62£¬Ô¶²»ÄÜÂú×ãÊµ¼ÊÐèÒª\cite{EpitopePredEvaluation}¡£
 
 ÉÏÃæµÄ·½·¨¶¼ÊÇ¶ÔÈÎÒâ¸ø¶¨µÄ¿¹Ô­£¬À´Ô¤²â¿¹Ô­±íÎ»£¬²¢²»Éæ¼°µ½ºÍ¿¹Ô­½áºÏµÄ¿¹Ìå¡£ÀíÂÛÉÏ½²£¬Ò»¸ö¿¹Ô­µÄÈÎºÎÇøÓò¶¼ÓÐ¿ÉÄÜ±»¿¹ÌåÊ¶±ð£¬Ò²¾ÍÊÇÈÎºÎÇøÓò¶¼ÓÐ¿ÉÄÜÊÇ¿¹Ô­±íÎ»¡£ËùÒÔ¶ÔÒ»¸ö¿¹Ô­À´½²£¬Ô¤²â¸ø¶¨¿¹ÌåµÄ¿¹Ô­±íÎ»²Å¸üÓÐÒâÒå\cite{EpitopePredNotAccurate}¡£Shinji Sog ¹¹½¨ÁË ASEP Ö¸ÊýÓÃÓÚ¿¹Ô­±íÎ»£¬ÕâÊÇµÚÒ»´ÎÔÚ¸ø¶¨¿¹ÌåÇé¿öÏÂ¶Ô¿¹Ô­±íÎ»µÄÔ¤²â\cite{ASEP}¡£¾ßÌåµÄ¹ý³Ì¿ÉÒÔ¸ÅÀ¨ÈçÏÂ£º
 \begin{enumerate}[label=(\arabic*)]
 	\item ËÑ¼¯ÑµÁ·¼¯¡£ÔÚPDB Êý¾Ý¿âÖÐËÑ¼¯¿¹Ô­¿¹Ìå¸´ºÏÎï£¬Í¬Ê±ËÑ¼¯ÆäËûÍ¬Ô´¶þ¾ÛÌå(homodimer)»òÕßÒìÔ´¶þ¾ÛÌå(heterodimer)×÷Îª¿¹Ô­¿¹Ìå¸´ºÏÎïµÄ²ÎÕÕ£¬ÕâÀïÎªÁË·½±ã£¬ÎÒÃÇ³ÆÎª²ÎÕÕ¸´ºÏÎï¡£
 	\item ¼ÆËã°±»ùËá$x$ÔÚ¿¹Ô­±íÎ»ÖÐµÄ³öÏÖÆµÂÊ$f_e(x)$£º
 		$$f_e(x) = \frac{n_e(x)}{\sum_{y=1}^{20}n_e(y)}$$
-	ÆäÖÐ£¬$n_e£¨x£©$ ÊÇÑµÁ·¼¯ÖÐ¿¹Ô­¿¹Ìå¸´ºÏÎïµÄ¿¹Ô­±íÎ»ÖÐ $x$ °±»ùËáµÄÆµÂÊ£¬·ÖÄ¸ÖÐ $n_e(y)$ ×öÀàËÆµÄ½â¶Á£¬Ö¸±ê $y$ ´Ó 1 ±éÀúµ½ 20 ÊÇÖ¸¶Ô20ÖÖ²»Í¬°±»ùËáµÄÆµÂÊÇóºÍ¡£
+	ÆäÖÐ£¬$n_e(x) $ ÊÇÑµÁ·¼¯ÖÐ¿¹Ô­¿¹Ìå¸´ºÏÎïµÄ¿¹Ô­±íÎ»ÖÐ $x$ °±»ùËáµÄÆµÂÊ£¬·ÖÄ¸ÖÐ $n_e(y)$ ×öÀàËÆµÄ½â¶Á£¬Ö¸±ê $y$ ´Ó 1 ±éÀúµ½ 20 ÊÇÖ¸¶Ô20ÖÖ²»Í¬°±»ùËáµÄÆµÂÊÇóºÍ¡£
 	\item ¼ÆËã°±»ùËá $x$ ÔÚ²ÎÕÕ¸´ºÏÎïµÄ±íÃæ°±»ùËá(surface residue)ÖÐµÄ³öÏÖÆµÂÊ $f_s(x)$¡£ÕâÀïµÄ±íÃæ°±»ùËá±»×÷Õß¶¨ÒåÎª³öÏÖÔÚ¸´ºÏÎï±íÃæµ«ÊÇÓÖ²»²ÎÓë¸´ºÏÎïµÄÏà»¥×÷ÓÃ¡£
 	$$f_s(x) = \frac{n_s(x)}{\sum_{y=1}^{20}n_s(y)}$$
-	ÆäÖÐ£¬$n_s£¨x£©$ ÊÇ²ÎÕÕ¸´ºÏÎïµÄ±íÃæ°±»ùËáÖÐ $x$ °±»ùËáµÄÆµÂÊ£¬·ÖÄ¸ÖÐ$n_s(y)$ ×öÀàËÆµÄ½â¶Á£¬Ö¸±ê $y$ ´Ó 1 ±éÀúµ½ 20 ÊÇÖ¸¶Ô20ÖÐ²»Í¬°±»ùËáµÄÆµÂÊÇóºÍ¡£
+	ÆäÖÐ£¬$n_s(x)$ ÊÇ²ÎÕÕ¸´ºÏÎïµÄ±íÃæ°±»ùËáÖÐ $x$ °±»ùËáµÄÆµÂÊ£¬·ÖÄ¸ÖÐ$n_s(y)$ ×öÀàËÆµÄ½â¶Á£¬Ö¸±ê $y$ ´Ó 1 ±éÀúµ½ 20 ÊÇÖ¸¶Ô20ÖÐ²»Í¬°±»ùËáµÄÆµÂÊÇóºÍ¡£
 %	\item ¼ÆËã°±»ùËá $x$ ÔÚ¿¹Ô­±íÎ»ÖÐµÄ°±»ùËáÇãÏò(propensity)$p_e(x)$
 %		$$p_e(x)=\text{log}\left(\frac{f_e(x)}{f_s(x)}\right)$$
 	\item ¸ø¶¨¿¹Ô­ÖÐÒ»¸öÌØ¶¨Î»ÖÃµÄ¿¹Ô­±íÎ»°±»ùËá $x$£¬¶¨Òå¿¹Ô­¿¹Ìå°±»ùËá¶Ô Îª$xy$£¬ ÆäÖÐ $y$ Óë $x$ Ïà»¥×÷ÓÃµÄÎ»ÓÚ¿¹ÌåÉÏµÄ°±»ùËá¡£¼ÆËã¿¹Ô­¿¹Ìå°±»ùËá¶Ô $xy$ µÄ³öÏÖÂÊ $f_{ep}(xy)$:
 	$$f_{ep}(xy)=\frac{n_{ep}(xy)}{\sum_{z=1}^{20}n_{ep}(xz)}\times f_e(x)$$
-	\item ÓÃ´«Í³µÄ²»ÒÀÀµÓÚ¿¹Ô­µÄ·½·¨DiscoTope À´Ô¤²â¸ø¶¨¿¹Ô­µÄ¿¹Ô­±íÎ»,ÕâÀïÎÒÃÇ¼ò³ÆÎª´«Í³Ô¤²â¿¹Ô­±íÎ»¡£
+	\item ÓÃ´«Í³µÄ²»ÒÀÀµÓÚ¿¹Ô­µÄ·½·¨DiscoTope\cite{DiscoTope} À´Ô¤²â¸ø¶¨¿¹Ô­µÄ¿¹Ô­±í£¬ÕâÀïÎÒÃÇ¼ò³ÆÎª´«Í³Ô¤²â¿¹Ô­±íÎ»¡£
 	\item ¼ÆËã´«Í³Ô¤²â¿¹Ô­±íÎ»ÖÐ°±»ùËá $x$ µÄ°±»ùËáÆµÂÊ $f^{'}_e(x)$:
 	$$f^{'}_e(x)=\sum\limits_{y=1}^{20}[f_{ep}(xy)\times n_p(y)]$$
 	ÆäÖÐ $n_p(y)$ ÊÇ¸ø¶¨¿¹ÌåµÄ¿¹Ìå±íÎ»(paratope)ÖÐ°±»ùËá$y$µÄ³öÏÖÆµÂÊ¡£
-	\item ¼ÆËã´«Í³Ô¤²â¿¹Ô­±íÎ»ÖÐ°±»ùËá $x$ ¿¹ÌåÌØÒìµÄ¿¹Ô­±íÎ»ÇãÏòASEP(antibody-specific epitope propensity), $p_e^{'}(x)$:
+	\item ¼ÆËã´«Í³Ô¤²â¿¹Ô­±íÎ»ÖÐ°±»ùËá $x$ ¿¹ÌåÌØÒìµÄ¿¹Ô­±íÎ»ÇãÏòASEP(antibody-specific epitope propensity)£¬ $p_e^{'}(x)$:
 	$$p_e^{'}(x)=\text{log}\left(\frac{f_e^{'}(x)}{f_s(x)}\right)$$
 	\item ¶ÔÓÚ´«Í³Ô¤²â¿¹Ô­±íÎ»ÖÐµÄ°±»ùËá $i$£¬¼ÆËã:
 	$$\text{ASEP}(i) = \sum\limits_{x=1}^{20}p_e^{'}(x)c_i(x)$$
 	ÆäÖÐ $c_i(x)$ ÊÇÖ¸ÔÚ´«Í³Ô¤²â¿¹Ô­±íÎ»ÖÐµÄ°±»ùËá $\alpha$ Ì¼Óë $i$ µÄ $\alpha$ Ì¼¾àÀëÐ¡ÓÚ10\si{\angstrom}µÄÀàÐÍÎª $x$ µÄ°±»ùËáµÄ¸öÊý¡£ÕâÀïÒ²¾ÍÊÇ¶Ô $i$ ¸½½üµÄ $p_e^{'}(x)$ ¸ù¾Ý²»Í¬°±»ùËáµÄÆµÂÊ½øÐÐ¼ÓÈ¨¡£
-	\item ¶Ô´«Í³Ô¤²â¿¹Ô­±íÎ»ÖÐµÄÃ¿¸ö°±»ùËá¶¼¼ÆËãASEP£¬ È»ºóÅÅÐò£¬È¡Éá¡£ASEPÔ½¸ßÔ½¿ÉÄÜÎª¿¹Ô­±íÎ»¡£	
+	\item ¶Ô´«Í³Ô¤²â¿¹Ô­±íÎ»ÖÐµÄÃ¿¸ö°±»ùËá¶¼¼ÆËãASEP£¬ È»ºóÅÅÐò£¬È¡Éá¡£ASEPÔ½¸ßÔ½¿ÉÄÜ³ÉÎª¿¹Ô­±íÎ»¡£	
 \end{enumerate}
-	ÔÚÉÏÃæµÄ²½ÖèÖÐ£¬(4)Í¨¹ý¼ÓÈ¨ÐÎÊ½£¬°Ñ¿¹Ô­±íÎ»ºÍ¿¹Ìå±íÎ»½áºÏÔÚÒ»Æð£¬´Ó¶øÔÚºóÃæµÄ¼ÆËã¹ý³ÌÖÐÊµÏÖÁËÔÚ¸ø¶¨¿¹ÌåÇé¿öÏÂ¶Ô¿¹Ô­±íÎ»µÄASEP´ò·Ö¡£Õâ¸ö¼òµ¥µÄ¼ÓÈ¨£¬±ÈÖ®Ç°½ö½öÒÀ¿¿¿¹Ô­¶Ô¿¹Ô­±íÎ»×ö³öµÄÔ¤²âÓÐÁËÃ÷ÏÔÌá¸ß¡£ÔÚÉÏÃæµÄ¹«Ê½ÖÖ£¬$f_{ep}(xy)$   ¿ÉÒÔËã×÷¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÒ»ÖÖÃèÊö£¬µ«ÊÇÕâÖÖÃèÊöÖ»ÊÇ¼ÆËãÌØ¶¨°±»ùËá¶Ô³öÏÖÆµÂÊµÄ´óÐ¡¡£
+	ÔÚÉÏÃæµÄ²½ÖèÖÐ£¬(4)Í¨¹ý¼ÓÈ¨ÐÎÊ½£¬°Ñ¿¹Ô­±íÎ»ºÍ¿¹Ìå±íÎ»½áºÏÔÚÒ»Æð£¬´Ó¶øÔÚºóÃæµÄ¼ÆËã¹ý³ÌÖÐÊµÏÖÁËÔÚ¸ø¶¨¿¹ÌåÇé¿öÏÂ¶Ô¿¹Ô­±íÎ»µÄASEP´ò·Ö¡£Õâ¸ö¼òµ¥µÄ¼ÓÈ¨£¬±ÈÖ®Ç°½ö½öÒÀ¿¿¿¹Ô­¶Ô¿¹Ô­±íÎ»×ö³öµÄÔ¤²âÓÐÁËÃ÷ÏÔÌá¸ß¡£ÔÚÉÏÃæµÄ¹«Ê½ÖÐ£¬$f_{ep}(xy)$   ¿ÉÒÔËã×÷¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÒ»ÖÖÃèÊö£¬µ«ÊÇÕâÖÖÃèÊöÖ»ÊÇ¼ÆËãÌØ¶¨°±»ùËá¶Ô³öÏÖÆµÂÊµÄ´óÐ¡¡£
 	
-	Konrad Krawczy µÈÔÚËüÃÇ¶Ôµ°°×Óëµ°°×Ïà»¥×÷ÓÃÑÐ¾¿µÄ»ù´¡ÉÏÉè¼ÆÁËÔÚ¸ø¶¨¿¹ÌåÇé¿öÏÂ¿¹Ô­±íÎ»µÄÔ¤²â·½·¨£ºEpiPred\cite{EpiPred}¡£¸Ã·½·¨ÔÚ¿¹Ô­±íÎ»Ô¤²âµÄÊ±ºò£¬½áºÏÁË¿¹Ô­±íÎ»ºÍ¿¹Ìå±íÎ»ÔÚ¿Õ¼äÉÏµÄ»¥²¹ÐÔºÍÒ»¸öÓÉ i-Patch ×ª»¯¶øÀ´µÄ´ò·Ö¡£Ò»¸ö°±»ùËá¶ÔµÄ i-Patch ÖµµÄ´ó¸Å¼ÆËã·½·¨ÈçÏÂ£¨¾ßÌåÏêÏ¸µÄ¼ÆËãÇë²Î¿¼ÎÄÏ×\cite{iPatch1,iPatch2}£©£º
+	Konrad Krawczy µÈÔÚËûÃÇ¶Ôµ°°×Óëµ°°×Ïà»¥×÷ÓÃÑÐ¾¿µÄ»ù´¡ÉÏÉè¼ÆÁËÔÚ¸ø¶¨¿¹ÌåÇé¿öÏÂ¿¹Ô­±íÎ»µÄÔ¤²â·½·¨£ºEpiPred\cite{EpiPred}¡£¸Ã·½·¨ÔÚ¿¹Ô­±íÎ»Ô¤²âµÄÊ±ºò£¬½áºÏÁË¿¹Ô­±íÎ»ºÍ¿¹Ìå±íÎ»ÔÚ¿Õ¼äÉÏµÄ»¥²¹ÐÔºÍÒ»¸öÓÉ i-Patch ×ª»¯¶øÀ´µÄ´ò·Ö¡£Ò»¸ö°±»ùËá¶ÔµÄ i-Patch ÖµµÄ´ó¸Å¼ÆËã·½·¨ÈçÏÂ£¨¾ßÌåÏêÏ¸µÄ¼ÆËãÇë²Î¿¼ÎÄÏ×\cite{iPatch1,iPatch2}£©£º
 	\begin{enumerate}[label = (\arabic*)]
 		\item ÎªÁË¼õÉÙ¿ÉÄÜ³öÏÖµÄ°±»ùËá¶ÔµÄÊýÄ¿£¬°Ñ°±»ùËá½øÐÐ·ÖÀà£¬ÎÄÏ×\cite{iPatch2}°Ñ°±»ùËá·Ö³É7Àà¡£
 		\item ¼ÆËãÁ½¸ö°±»ùËáÀà$(C_1, C_2)$Ö®¼äµÄÇãÏòÐÔ(propensity)$P(C_1, C_2)$¡£
@@ -255,31 +268,32 @@ The interaction between antibody and antigen plays an important role in the immu
 		 		w_{non}(C_i|(C_1, C_2))&=\frac{f_{non}(C_i)/f_{all}(C_i)}{\sum\limits_{C_i \in N}f_{non}(C_i))/f_{all}(C_i)}\chi_{\{C_i \in N\}}\\
 		 		w(C_i|(C_1, C_2)) &= w_{con}(C_i|(C_1, C_2))/w_{non}(C_i|(C_1, C_2))		
 		\end{align*}
-		ÆäÖÐ $f_{con}(C_i)$ ÎªÊôÓÚÀà±ð $C_i$ µÄ²ÎÓëÏà»¥×÷ÓÃµÄ°±»ùËá³öÏÖµÄÆµÂÊ£¬ $N$ Îª $(C_1, C_2)$ ¸½½ü°±»ùËáµÄÀà±ðµÄ¼¯ºÏ,ÔÚÕâÀï£¬¡°¸½½ü¡±¿ÉÒÔ¸ù¾Ý¾ßÌåÇé¿öÑ¡ÔñµÄ¾àÀë·¶Î§À´¾ö¶¨¡£$\chi$ ÎªÊ¾ÐÔº¯Êý(characteristic function)¡£
+		ÆäÖÐ $f_{con}(C_i)$ ÎªÊôÓÚÀà±ð $C_i$ µÄ²ÎÓëÏà»¥×÷ÓÃµÄ°±»ùËá³öÏÖµÄÆµÂÊ£¬ $N$ Îª $(C_1, C_2)$ ¸½½ü°±»ùËáµÄÀà±ðµÄ¼¯ºÏ£¬ÔÚÕâÀï£¬¡°¸½½ü¡±¿ÉÒÔ¸ù¾Ý¾ßÌåÇé¿öÑ¡ÔñµÄ¾àÀë·¶Î§À´¾ö¶¨¡£$\chi$ ÎªÊ¾ÐÔº¯Êý(characteristic function)¡£
 	\item ¼ÆËãÒ»¸ö¿¹Ô­±íÃæµÄ°±»ùËá $x$ ¿ÉÒÔ³ÉÎª¿¹Ô­±íÎ»µÄ i-Patch ·ÖÊý¡£
 	$$\text{i-Patch}(x) = \frac{1}{|para|}\sum\limits_{C_i\in N(C_x,C_y)}\sum\limits_{y\in para}w(C_i|(C_x, C_y))P(C_x, C_y)$$
 	ÆäÖÐ $para$ ÊÇ¸ø¶¨¿¹ÌåµÄ¿¹Ìå±íÎ»°±»ùËáµÄ¼¯ºÏ£¬$C_x$ ºÍ $C_y$ ·Ö±ðÊÇ $x$ ºÍ $y$ ËùÔÚµÄ°±»ùËáÀà£¬$N(C_x,C_y)$ Îª°±»ùËá¶Ô $(x, y)$ ¸½½ü°±»ùËáÀà±ðµÄ¼¯ºÏ¡£¡°¸½½ü¡±µÄ½ç¶¨ºÍ $(3)$ Í¬¡£
 	\end{enumerate}
 ´ÓÉÏÃæµÄ¼ÆËã¿ÉÒÔ¿´³ö£¬i-Patch ¿¼ÂÇÁË¸ø¶¨¿¹ÌåµÄ¿¹Ìå±íÎ»£¬Í¬Ê±Ò²ÒÔÈ¨ÖØµÄÐÎÊ½£¬¿¼ÂÇÁË°±»ùËá¶ÔÖÜÎ§°±»ùËáµÄÓ°Ïì¡£²½Öè £¨2£© ºÍ²½Öè £¨3£© µÄÊÇ×÷¶ÔÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô£¬»òÕßÏà»¥×÷ÓÃµÄ°±»ùËáÈý½Ç£¨Èý¸öÏà»¥×÷ÓÃµÄ°±»ùËá×é³ÉµÄÈý½ÇÐÎ£©µÄÃèÊö¡£ ÕâÐ©ÃèÊö¿ÉÒÔ¿´×÷ÊÇ¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÒ»ÖÖ¿Ì»­£¬µ«ÊÇÈÔÈ»¾ÖÏÞÓÚ¼ÆËãÕâÐ©°±»ùËá¶Ô»òÕß°±»ùËáÈý½ÇµÄÆµÂÊ¡£
 
-Liang Zhao ºÍ Jinyan Li Éè¼ÆÁËBepar(\textbf{B}-cell \textbf{e}pitope \textbf{p}rediction through \textbf{a}ssociation \textbf{r}ules)\cite{Bepar}¡£Æä´ó¸Å·½·¨ÈçÍ¼\ref{Bepar}£º
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.6]{BeparFlowChart.eps}
-	\caption{´ËÍ¼Ô´×ÔÎÄÏ×\cite{Bepar}}
-	\label{Bepar}
-\end{figure}
-ÆäÖÐÉæ¼°µ½¿¹Ô­±íÎ»ºÍ¿¹Ìå±íÎ»Ïà»¥×÷ÓÃµÄ²¿·ÖÓÐÏà¶Ô×é³É(relative composition) ¡¢Cooperativity ºÍ Cooccurrent pattern ¡£ ËüÃÇµÄ¼ÆËãÈçÏÂ£º
+Liang Zhao ºÍ Jinyan Li Éè¼ÆÁËBepar(\textbf{B}-cell \textbf{e}pitope \textbf{p}rediction through \textbf{a}ssociation \textbf{r}ules)\cite{Bepar}¡£
+%Æä´ó¸Å·½·¨ÈçÍ¼\ref{Bepar}£º
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.6]{BeparFlowChart.eps}
+%	\caption{´ËÍ¼Ô´×ÔÎÄÏ×\cite{Bepar}}
+%	\label{Bepar}
+%\end{figure}
+ÆäÖÐÉæ¼°µ½¿¹Ô­±íÎ»ºÍ¿¹Ìå±íÎ»Ïà»¥×÷ÓÃµÄ²¿·ÖÓÐÏà¶Ô×é³É(relative composition) ¡¢Cooperativity ºÍ Cooccurrent pattern¡£ ËüÃÇµÄ¼ÆËãÈçÏÂ£º
 \begin{enumerate}[label=(\arabic*)]
 	\item Relative composition µÄ¼ÆËã
 		$$R_{ij}=2\times P_{ij}\times\log\frac{P_{ij}}{Q_{ij}}$$
-		ÆäÖÐ£¬$ij$ ±íÊ¾µÚ $i$ ¸ö CDR ÉÏµÄ°±»ùËá $j$ ¡£$P_{ij}$ ±íÊ¾°±»ùËá $j$ ÔÚµÚ $i$ ¸öCDRÉÏËùÕ¼µÄ±ÈÀý£¬$Q_{ij}$ ±íÊ¾°±»ùËá $j$ ÔÚËùÓÐ CDR ÉÏËùÕ¼µÄ±ÈÀý¡£ Í¬Ñù¿¹Ô­±íÎ»°±»ùËá Relative composition µÄ¼ÆËãÈçÏÂ£º
+		ÆäÖÐ£¬$ij$ ±íÊ¾µÚ $i$ ¸ö CDR ÉÏµÄ°±»ùËá $j$¡£$P_{ij}$ ±íÊ¾°±»ùËá $j$ ÔÚµÚ $i$ ¸öCDRÉÏËùÕ¼µÄ±ÈÀý£¬$Q_{ij}$ ±íÊ¾°±»ùËá $j$ ÔÚËùÓÐ CDR ÉÏËùÕ¼µÄ±ÈÀý¡£ Í¬Ñù¿¹Ô­±íÎ»°±»ùËá Relative composition µÄ¼ÆËãÈçÏÂ£º
 		$$R_{j}=2\times P_{j}\times\log\frac{P_{j}}{Q_{j}}$$
 		ÆäÖÐ $P_{j}$ ÊÇ¿¹Ô­±íÎ»ÖÐ°±»ùËá $j$ ÔÚËùÓÐ¿¹Ô­±íÎ»°±»ùËáÖÐµÄ±ÈÀý£¬ $Q_j$ ÊÇ°±»ùËá $j$ ÔÚËùÓÐ¿¹Ô­°±»ùËáÖÐµÄ±ÈÀý¡£
 	\item Cooperativity µÄ¼ÆËã
 	$$C_{i, jk}=\frac{P_{i, jk}}{Q_{i, jk}}$$
-	$C_{i, jk}$ ±íÊ¾ÔÚµÚ $i$ ¸öCDRÉÏ£¬Á½¸öÏàÁÚµÄ°±»ùËá $jk$ µÄ Cooperativity ¡£$P_{i, jk}$ ±íÊ¾Á½¸öÏàÁÚµÄ°±»ùËáÔÚ $jk$ ÔÚµÚ $i$ ¸öCDRÉÏËùÕ¼µÄ±ÈÀý£¬ $Q_{i, jk}$ ±íÊ¾Á½¸öÏàÁÚµÄ°±»ùËáÔÚ $jk$ ÔÚËùÓÐCDRÉÏËùÕ¼µÄ±ÈÀý¡£
-	\item Ïà¹Ø·¨Ôò£¨Association Rule£© µÄ¼ÆËã\cite{AssociationRule}¡£¼ÙÉè $A$ ºÍ $B$ ·Ö±ðÊÇÒ»Ð©Ïà»¥×÷ÓÃµÄ°±»ùËá¶ÔµÄ¼¯ºÏ£¬²¢ÇÒ $A\cap B = \emptyset$¡£ support $A$ ÊÇ°üº¬ $A$ µÄ¸´ºÏÎïµÄµÄ±ÈÀý¡£ Ïà¹Ø·¨Ôò $R:\; A \rightarrow B$ ÊÇÖ¸µ±¹Û²âµ½ $A$ ¾Í¿ÉÒÔ¹Û²âµ½ $B$¡£ support $R$ ÊÇÖ¸°üº¬ $A \cup B$ µÄ¸´ºÏÎïµÄ±ÈÀý¡£$R$ µÄÖÃÐÅË®Æ½£¨confidence level£© ¶¨ÒåÎª£º
+	$C_{i, jk}$ ±íÊ¾ÔÚµÚ $i$ ¸öCDRÉÏ£¬Á½¸öÏàÁÚµÄ°±»ùËá $jk$ µÄ Cooperativity¡£$P_{i, jk}$ ±íÊ¾Á½¸öÏàÁÚµÄ°±»ùËáÔÚ $jk$ ÔÚµÚ $i$ ¸öCDRÉÏËùÕ¼µÄ±ÈÀý£¬ $Q_{i, jk}$ ±íÊ¾Á½¸öÏàÁÚµÄ°±»ùËáÔÚ $jk$ ÔÚËùÓÐCDRÉÏËùÕ¼µÄ±ÈÀý¡£
+	\item Ïà¹Ø·¨Ôò£¨Association Rule£© µÄ¼ÆËã\cite{AssociationRule}¡£¼ÙÉè $A$ ºÍ $B$ ·Ö±ðÊÇÒ»Ð©Ïà»¥×÷ÓÃµÄ°±»ùËá¶ÔµÄ¼¯ºÏ£¬²¢ÇÒ $A\cap B = \emptyset$¡£ support $A$ ÊÇ°üº¬ $A$ µÄ¸´ºÏÎïµÄ±ÈÀý¡£ Ïà¹Ø·¨Ôò $R:\; A \rightarrow B$ ÊÇÖ¸µ±¹Û²âµ½ $A$ ¾Í¿ÉÒÔ¹Û²âµ½ $B$¡£ support $R$ ÊÇÖ¸°üº¬ $A \cup B$ µÄ¸´ºÏÎïµÄ±ÈÀý¡£$R$ µÄÖÃÐÅË®Æ½£¨confidence level£© ¶¨ÒåÎª£º
 	$$\frac{\text{support }R}{\text{support }A}$$
 	×÷ÕßÑ¡È¡ support $R\geq 10\%$ ²¢ÇÒÖÃÐÅË®Æ½ $\geq 80\%$ µÄÏà¹Ø·¨Ôò¡£
 \end{enumerate}
@@ -298,36 +312,36 @@ Inbal Sela-Culang µÈ¿ª·¢ÁË»ùÓÚ¸ø¶¨¿¹ÌåÐòÁÐµÄ¿¹Ô­±íÎ»µÄÔ¤²â·½·¨£ºPEASE\cite{PEASE
 	\item °±»ùËá¶ÔÖÐ£¬À´×Ô¿¹Ô­µÄ°±»ùËáµÄ×÷ÓÃÈÈµãµÄ·ÖÀà(classification of the interaction hotspot)¡£
 	\item °±»ùËá¶ÔµÄ Contact potential, ¼ÆËãÈçÏÂ£º
 	$$E_{ij}=\log_{2}\left[\frac{f^{ij}}{\sum\limits_{i=1}^{20}\sum\limits_{j=1}^{20}f^{ij}}\middle/\left(\frac{f^{j}}{\sum\limits_{j=1}^{20}f^{j}}\times\frac{f^i}{\sum\limits_{i=1}^{20}f^{i}}\right)\right]$$
-	ÆäÖÐ£¬$i$ ±íÊ¾¿¹Ìå±íÎ»ÉÏµÄ°±»ùËá£¬$j$ ±íÊ¾¿¹Ô­±íÎ»ÉÏµÄ°±»ùËá£¬$f^i$ ±íÊ¾°±»ùËá $i$ ÔÚ¿¹Ìå±íÎ»ÉÏ³öÏÖµÄÆµÂÊ£¬ $f^j$ ±íÊ¾°±»ùËá $j$ ÔÚ¿¹Ô­±íÎ»ÉÏ³öÏÖµÄÆµÂÊ, $f^{ij}$ ±íÊ¾°±»ùËá $i$ ºÍ $j$ Ïà»¥×÷ÓÃµÄÆµÂÊ£¬ $E_{ij}$ ÎªÒª¼ÆËãµÄ Contact potential ¡£
+	ÆäÖÐ£¬$i$ ±íÊ¾¿¹Ìå±íÎ»ÉÏµÄ°±»ùËá£¬$j$ ±íÊ¾¿¹Ô­±íÎ»ÉÏµÄ°±»ùËá£¬$f^i$ ±íÊ¾°±»ùËá $i$ ÔÚ¿¹Ìå±íÎ»ÉÏ³öÏÖµÄÆµÂÊ£¬ $f^j$ ±íÊ¾°±»ùËá $j$ ÔÚ¿¹Ô­±íÎ»ÉÏ³öÏÖµÄÆµÂÊ, $f^{ij}$ ±íÊ¾°±»ùËá $i$ ºÍ $j$ Ïà»¥×÷ÓÃµÄÆµÂÊ£¬ $E_{ij}$ ÎªÒª¼ÆËãµÄ Contact potential¡£
 \end{enumerate}
 
-PEASE Ëù¹¹½¨µÄ Random Forest °ÑÒ»¸ö°±»ùËá¶ÔµÄ 10 ¸öÌØÕ÷ÁªÏµÁËÆðÀ´£¬¿ÉÒÔ¿´³É¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÒ»ÖÖÃèÊö¡£µ«ÊÇ£¬Õâ 10 ¸öÌØÕ÷ºÜÉÙÉæ¼°°±»ùËáµÄÉúÎï»¯Ñ§ÐÔÖÊ£¬Í¬Ê± Í¨¹ý Random Forest Ò²ÊÇÒ»ÖÖ¶Ô°±»ùËá¶ÔµÄ¼ÆÊý¡£
+PEASE Ëù¹¹½¨µÄ Random Forest °ÑÒ»¸ö°±»ùËá¶ÔµÄ 10 ¸öÌØÕ÷ÁªÏµÁËÆðÀ´£¬¿ÉÒÔ¿´³É¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÒ»ÖÖÃèÊö¡£µ«ÊÇ£¬Õâ 10 ¸öÌØÕ÷ºÜÉÙÉæ¼°°±»ùËáµÄÉúÎï»¯Ñ§ÐÔÖÊ£¬Í¬Ê±  Random Forest Ò²ÊÇÒ»ÖÖ¶Ô°±»ùËá¶ÔµÄ¼ÆÊý¡£
 
-ÒÔÉÏµÄÕâËÄÖÖ·½·¨£¬ÊÇÎÒÄÜ¹»ÁË½âµ½µÄ»ùÓÚ¿¹ÌåµÄ¿¹Ô­±íÎ»Ô¤²â·½·¨£¬ËäÈ»ÕâÐ©·½·¨ÊÇÎªÁËÔ¤²â¿¹Ô­µÄ±íÎ»£¬µ«ÊÇ°üº¬ÓÐ¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÌ½Ë÷¡£Èç¹û×ÐÏ¸¹Û²ìÕâÐ©·½·¨£¬ËüÃÇÖ÷ÒªÊÇ¶Ô°±»ùËá¶Ô½øÐÐ·ÖÎö£¬Ò²¾ÍÊÇ¶Ô1¸ö¿¹Ô­±íÎ»°±»ùËáºÍ1¸ö¿¹Ìå±íÎ»°±»ùËá½øÐÐ·ÖÎö£¬¶øÇÒÕâÐ©·ÖÎö¶àÊÇ»ùÓÚ³öÏÖµÄÆµÂÊ´óÐ¡£¬ Ò²¾ÍÊÇ¼ÆÊý¡£²¢Ã»ÓÐÔËÓÃ°±»ùËáÓë°±»ùËáÖ®¼äµÄÌæ»»¾ØÕó(substitutionn matrix)À´ÃèÊö°±»ùËáµÄÉú»¯ÐÔÖÊ£¬Ò²Ã»ÓÐÉæ¼°µ½¶à¸ö°±»ùËáÓë¶à¸ö°±»ùËáÖ®¼äµÄ¶ÔÓ¦¹ØÏµ¡£¼øÓÚ´Ë£¬±¾ÂÛÎÄ¾ÍÊÇÔÚÕâÐ©·½Ãæ×öÁË¸Ä½ø£¬½¨Á¢ÁËÒ»¸ö¸üÓÐÐ§µÄ£¬¿ÉÒÔÃèÊö¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÄ£ÐÍ¡£ÕâÑùÒ²¾Í»ù±¾È·¶¨ÁË±¾ÂÛÎÄµÄ¹Ø¼ü£ºÌáÈ¡Ïà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ¶Ô£¬¶¨Òå¾àÀë£¬ ¹¹½¨Ä£ÐÍ¡£
+ÒÔÉÏµÄÕâËÄÖÖ·½·¨£¬ÊÇÎÒÄÜ¹»ÁË½âµ½µÄ»ùÓÚ¿¹ÌåµÄ¿¹Ô­±íÎ»Ô¤²â·½·¨£¬ËäÈ»ÕâÐ©·½·¨ÊÇÎªÁËÔ¤²â¿¹Ô­µÄ±íÎ»£¬µ«ÊÇ°üº¬ÓÐ¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÌ½Ë÷¡£Èç¹û×ÐÏ¸¹Û²ìÕâÐ©·½·¨£¬ËüÃÇÖ÷ÒªÊÇ¶Ô°±»ùËá¶Ô½øÐÐ·ÖÎö£¬Ò²¾ÍÊÇ¶Ô1¸ö¿¹Ô­±íÎ»°±»ùËáºÍ1¸ö¿¹Ìå±íÎ»°±»ùËá½øÐÐ·ÖÎö£¬¶øÇÒÕâÐ©·ÖÎö¶àÊÇ»ùÓÚ³öÏÖµÄÆµÂÊ´óÐ¡£¬ Ò²¾ÍÊÇ¼ÆÊý¡£²¢Ã»ÓÐÔËÓÃ°±»ùËáÓë°±»ùËáÖ®¼äµÄÌæ»»¾ØÕó(substitution matrix)À´ÃèÊö°±»ùËáµÄÉú»¯ÐÔÖÊ£¬Ò²Ã»ÓÐÉæ¼°µ½¶à¸ö°±»ùËáÓë¶à¸ö°±»ùËáÖ®¼äµÄ¶ÔÓ¦¹ØÏµ¡£¼øÓÚ´Ë£¬±¾ÂÛÎÄ¾ÍÊÇÔÚÕâÐ©·½Ãæ×öÁË¸Ä½ø£¬½¨Á¢ÁËÒ»¸ö¸üÓÐÐ§µÄ£¬¿ÉÒÔÃèÊö¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÄ£ÐÍ¡£ÕâÑùÒ²¾Í»ù±¾È·¶¨ÁË±¾ÂÛÎÄµÄ¹Ø¼ü£ºÌáÈ¡Ïà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ¶Ô£¬¶¨Òå¾àÀë£¬ ¹¹½¨Ä£ÐÍ¡£
 
-ÕýÈçÖ®Ç°ËùËµµÄ£¬¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿Ö®ËùÒÔÈç´ËÀ§ÄÑ£¬¹Ø¼ü¾ÍÔÚÓÚÕâÖÖÏà»¥×÷ÓÃÊÇÒ»ÖÖÈýÎ¬½á¹¹µÄÏà»¥×÷ÓÃ£¬ºÜÄÑÍ¨¹ý·ÖÎöÁ¬ÐøµÄÐòÁÐÀ´Ñ°ÕÒ¹æÂÉ¡£µ«ÊÇ´ÓÁíÒ»¸ö½Ç¶È½²£¬¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ¿ÉÒÔ¿´³ÉÒ»Ð©Ïà»¥×÷ÓÃµÄÁ¬ÐøµÄ°±»ùËáÐòÁÐÖ®¼äµÄ×éºÏ£¬Ö»ÊÇÕâÐ©Á¬ÐøµÄ°±»ùËáÐòÁÐµÄ³¤¶È¿ÉÄÜ±È½Ï¶Ì£¬ÉõÖÁÖ»º¬ÓÐÒ»¸ö°±»ùËá¡£Ö®Ç°µÄÑÐ¾¿±íÃ÷£¬µ°°×ÖÊºÍµ°°×ÖÊµÄÏà»¥×÷ÓÃÖ÷Òª¼¯ÖÐÔÚ¼¸¸ö¹Ø¼üµÄ°±»ùËáÉÏ£¬Õâ¼¸¸ö¹Ø¼üµÄ°±»ùËá±»³ÆÎªÈÈµã(hot-spot)\cite{HotSpot}¡£×îÔçÌá³öÈÈµãµÄ¸ÅÄî£¬ÊÇ Clackson µÈÔÚÑÐ¾¿ÈËÉú³¤¼¤ËØ(hGH)ºÍËüµÄÒ»¸öÊÜÌåhGHbp Ïà»¥×÷ÓÃÊ±Ìá³öµÄ\cite{HotSpot0} ¡£Í¨³£À´½²£¬ÕâÐ©ÈÈµãÉÏµÄÃ¿¸ö°±»ùËá¶ÔÇ×ºÍÁ¦µÄ¹±Ï×¶¼ÔÚ 2kJ/mol ÒÔÉÏ£¬¶øÇÒÏà»¥×÷ÓÃµÄÁ½¸öµ°°×µÄÈÈµãÊÇÏà»¥¶ÔÓ¦µÄ£¬²»µ«½á¹¹»¥²¹£¬Ç×Ë®ÐÔÒ²ÏàÍ¬£¬´øµçºÉÒ²ÍùÍùÏà·´¡£ÏµÍ³µÄ·ÖÎö±íÃ÷£¬ÈÈµãµÄ°±»ùËá×é³É¸öµ°°×ÖÐ°±»ùËáµÄ×é³ÉÓÐÃ÷ÏÔµÄ²»Í¬\cite{HotSpotComp}¡£Tryptophan(21\%), Arginine(13.3\%) ºÍ Tyrosine(12.3\%) ÊÇº¬Á¿×î¸ßµÄÈýÖÖ°±»ùËá¡£
+ÕýÈçÖ®Ç°ËùËµµÄ£¬¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÑÐ¾¿Ö®ËùÒÔÈç´ËÀ§ÄÑ£¬¹Ø¼ü¾ÍÔÚÓÚÕâÖÖÏà»¥×÷ÓÃÊÇÒ»ÖÖÈýÎ¬½á¹¹µÄÏà»¥×÷ÓÃ£¬ºÜÄÑÍ¨¹ý·ÖÎöÁ¬ÐøµÄÐòÁÐÀ´Ñ°ÕÒ¹æÂÉ¡£µ«ÊÇ´ÓÁíÒ»¸ö½Ç¶È½²£¬¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ¿ÉÒÔ¿´³ÉÒ»Ð©Ïà»¥×÷ÓÃµÄÁ¬ÐøµÄ°±»ùËáÐòÁÐÖ®¼äµÄ×éºÏ£¬Ö»ÊÇÕâÐ©Á¬ÐøµÄ°±»ùËáÐòÁÐµÄ³¤¶È¿ÉÄÜ±È½Ï¶Ì£¬ÉõÖÁÖ»º¬ÓÐÒ»¸ö°±»ùËá¡£Ö®Ç°µÄÑÐ¾¿±íÃ÷£¬µ°°×ÖÊºÍµ°°×ÖÊµÄÏà»¥×÷ÓÃÖ÷Òª¼¯ÖÐÔÚ¼¸¸ö¹Ø¼üµÄ°±»ùËáÉÏ£¬Õâ¼¸¸ö¹Ø¼üµÄ°±»ùËá±»³ÆÎªÈÈµã(hot-spot)\cite{HotSpot}¡£ÈÈµãµÄ¸ÅÄî×îÔçÊÇ Clackson µÈÔÚÑÐ¾¿ÈËÉú³¤¼¤ËØ(hGH)ºÍËüµÄÒ»¸öÊÜÌåhGHbp Ïà»¥×÷ÓÃÊ±Ìá³öµÄ\cite{HotSpot0} ¡£Í¨³£À´½²£¬ÕâÐ©ÈÈµãÉÏµÄÃ¿¸ö°±»ùËá¶ÔÇ×ºÍÁ¦µÄ¹±Ï×¶¼ÔÚ 2kJ/mol ÒÔÉÏ£¬¶øÇÒÏà»¥×÷ÓÃµÄÁ½¸öµ°°×µÄÈÈµãÊÇÏà»¥¶ÔÓ¦µÄ£¬²»µ«½á¹¹»¥²¹£¬Ç×Ë®ÐÔÒ²ÏàÍ¬£¬´øµçºÉÒ²ÍùÍùÏà·´¡£ÏµÍ³µÄ·ÖÎö±íÃ÷£¬ÈÈµãµÄ°±»ùËá×é³ÉºÍÕû¸öµ°°×ÖÐ°±»ùËáµÄ×é³ÉÓÐÃ÷ÏÔµÄ²»Í¬\cite{HotSpotConser}¡£Tryptophan(21\%), Arginine(13.3\%) ºÍ Tyrosine(12.3\%) ÊÇÈÈµãÖÐº¬Á¿×î¸ßµÄÈýÖÖ°±»ùËá¡£
 
 ¿¹Ô­Óë¿¹ÌåµÄÏà»¥×÷ÓÃ×÷Îªµ°°×ÖÊÖ®¼äÏà»¥×÷ÓÃµÄÒ»¸öÌØÀý£¬ÈÈµãµÄ¸ÅÄîÒ²Í¬ÑùÊÊÓÃ¡£¶àÊýµÄÇé¿öÏÂ£¬¿¹Ô­¿¹ÌåµÄÇ×ºÍÁ¦ÊÇÓÉÉÙÊý¼¸¸öÈÈµã°±»ùËá¾ö¶¨£¬ ±ÈÈçÎÄÏ×\cite{AntibodyGenHot1}µÄÑÐ¾¿¡£Í¨¹ýÊµÑéÊÖ¶ÎÈ·¶¨¿¹Ô­¿¹ÌåµÄÈÈµã£¬ÍùÍùÍ¨¹ý Alanine Scanning ¡£ Ò²ÓÐÍ¨¹ý¼ÆËãµÄ·½·¨À´È·¶¨ÈÈµã\cite{HotSpotPred1, HotSpotPred2}¡£
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.5]{HotSpot}
-\caption{A Îª¿¹Ìå cAB-Lys3 ºÍÉÏÃæµÄÈÈµã£» B Îª¿¹Ô­ HEL(µ°ÇåÈÜ¾úÃ¸)ÉÏµÄÈÈµã¡£Í¼Æ¬À´×Ô\cite{HotSpotPred2}£¬ÂÌÉ«´ú±í¼ÓÇ¿¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ£¬ºìÉ«´ú±í¼õÈõ¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ¡£}
-\label{HotSpot}
-\end{figure}
-´ÓÍ¼\ref{HotSpot}¿ÉÒÔ¿´³ö£¬ÈÈµãÖ»ÓÐÉÙÊýµÄ¼¸¸ö°±»ùËá£¬¶øÇÒÍùÍùÊÇ¶ÌµÄÔÚÐòÁÐÉÏÏàÁÚµÄ°±»ùËá×é³É¡£ÔÚÍ¼\ref{HotSpot}A ÖÐÈÈµãÎª Y103, A104, S105, Y106 ¡£B ÖÐÒ²ÓÐÀàËÆÇé¿ö¡£¼ÈÈ»ÕâÑù£¬ÎªÁËÅÅ³ýÄÇÐ©²¢²»ÖØÒªµÄ°±»ùËáÐòÁÐ¶ÔµÄ¸ÉÈÅ£¬ÎÒÃÇ¿ÉÒÔ´ÓÃ¿¸ö¿¹Ô­¿¹Ìå¸´ºÏÎïÖÐÑ¡È¡×îÖØÒªµÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ¶Ô½øÐÐ·ÖÎö¡£ÔÚ±¾ÂÛÎÄÖÐ£¬ÕâÐ©ÖØÒªµÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ¶Ô³ÆÖ®Îª Core¡£
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.4]{HotSpot}
+%\caption{A Îª¿¹Ìå cAB-Lys3 ºÍÉÏÃæµÄÈÈµã£» B Îª¿¹Ô­ HEL(µ°ÇåÈÜ¾úÃ¸)ÉÏµÄÈÈµã¡£Í¼Æ¬À´×Ô\cite{HotSpotPred2}£¬ÂÌÉ«´ú±í¼ÓÇ¿¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ£¬ºìÉ«´ú±í¼õÈõ¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ¡£}
+%\label{HotSpot}
+%\end{figure}
+±ÈÈçËµ¿¹Ô­ HEL£¨µ°ÇåÈÜ¾úÃ¸£© ºÍ ¿¹Ìå cAB-Lys3 µÄÏà»¥×÷ÓÃ£¬ÈÈµãÖ»ÓÐÉÙÊýµÄ¼¸¸ö°±»ùËá£¬¶øÇÒÍùÍùÓÉ¶ÌµÄÔÚÐòÁÐÉÏÏàÁÚµÄ°±»ùËá×é³É\cite{HotSpotPred2}¡£cAB-Lys3 ¿¹ÌåÖÐµÄÈÈµãÎª Y103, A104, S105, Y106 ¡£Óë cAB-Lys3 Ïà»¥×÷ÓÃµÄ HEL£¨µ°ÇåÈÜ¾úÃ¸£© ÉÏµÄÈÈµã°±»ùËáÒ²Í¬ÑùÓÉ¶ÌµÄÔÚÐòÁÐÉÏÏàÁÚµÄ°±»ùËá×é³É¡£¼ÈÈ»ÕâÑù£¬ÎªÁËÅÅ³ýÄÇÐ©²¢²»ÖØÒªµÄ°±»ùËáÐòÁÐ¶ÔµÄ¸ÉÈÅ£¬ÎÒÃÇ¿ÉÒÔ´ÓÃ¿¸ö¿¹Ô­¿¹Ìå¸´ºÏÎïÖÐÑ¡È¡×îÖØÒªµÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ¶Ô½øÐÐ·ÖÎö¡£ÔÚ±¾ÂÛÎÄÖÐ£¬ÕâÐ©ÖØÒªµÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ¶Ô³ÆÖ®Îª Core¡£±¾ÂÛÎÄµÄÑÐ¾¿£¬Ò²¾ÍÊÇ½¨Á¢ÔÚ Core µÄ»ù´¡ÉÏ¡£ËùÒÔ£¬±¾ÂÛÎÄµÄ¹Ø¼üÓÖ½øÒ»²½¼ò»¯Îª£ºCore µÄÌáÈ¡£¬ Core Ö®¼ä¾àÀëµÄ¶¨Òå£¬Ä£ÐÍµÄ½¨Á¢¡£
 
 %\section{Ç×ºÍÁ¦Ô¤²â}
 %ÓÉÓÚ±¾ÂÛÎÄÄ£ÐÍµÄÓ¦ÓÃÖ®Ò»£¬¾ÍÊÇÔ¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå·ûºÏÎïÇ×ºÍÁ¦µÄÓ°Ïì£¬ÕâÀï¶Ô¿¹Ô­¿¹ÌåÇ×ºÍÁ¦
 %×ÔÈ»²úÉúµÄ¿¹Ìå£¬ÍùÍùÔÚÇ×ºÍÁ¦(affinity)ÉÏÓÐÒ»¶¨µÄÏÞÖÆ\cite{AffinityLimit}¡£ÎªÁË»ñµÃ¸üºÃµÄÁÆÐ§£¬ÔÚÖÎÁÆÐÔ¿¹ÌåµÄÉú²úºÍÉè¼Æ¹ý³ÌÖÐ£¬ÍùÍùÒªÉæ¼°µ½Ç×ºÍÁ¦³ÉÊì(affinity maturation)¡£ËùÎ½µÄÇ×ºÍÁ¦µÄ³ÉÊì¾ÍÊÇËµ£¬ÔÚÔ­À´¿¹ÌåµÄ»ù´¡ÉÏ£¬Í¨¹ý¸ÄÔìCDRÉÏ°±»ùËáµÄÐòÁÐ£¬´Ó¶øÊ¹µÃ¿¹Ô­ºÍ¿¹ÌåÖ®¼äÓÐ¸ü¸ßµÄÇ×ºÍÁ¦\cite{AffinityMaturation}¡£´«Í³µÄÊµÑéÊÖ¶Î£¬±ÈÈçËµÍ»±äºÍ¸÷ÖÖ¸÷ÑùµÄÕ¹Ê¾¼¼Êõ£¬¿ÉÒÔ±»ÓÃÀ´Ñ°ÕÒ¾ßÓÐ¸ü¸ßÇ×ºÍÁ¦µÄ¿¹Ìå\cite{PhageDisplay}, ÓÐ²»ÉÙµÄÇ×ºÍÁ¦(affinity)¿ÉÒÔ±»Ìá¸ßµ½nMµÄ¼¶±ð\cite{PhageDisplay1}¡£µ«ÊÇÕâÐ©ÊµÑéµÄÊÖ¶Î£¬ÐèÒªºÜ´óµÄ¹¤×÷Á¿£¬Ò²»á³ÖÐøºÜ³¤µÄÊ±¼ä¡£Ò²ÓÐÒ»Ð©Í¨¹ý¼ÆËãµÄÊÖ¶Î£¬À´Ö¸µ¼CDRÉÏ°±»ùËáµÄÐòÁÐµÄ¸ÄÔì¡£ÕâÑùµÄ·½·¨Ò²±È½Ï¶à£¬±ÈÈçÍ¨¹ý·Ö×ÓÄ£Äâ¡¢Í¨¹ý×ÔÓÉÄÜµÄÈÅ¶¯(free energy perturbation)\cite{EnergyPerturb1},Í¨¹ý potential-of-mean force(PMF)\cite{EnergyPerturb2}£¬ËäÈ»Ä¿Ç°ÏÖÔÚÕâÐ©Í¨¹ý¼ÆËãÌá¸ßÇ×ºÍÁ¦µÄ·½·¨Ð§¹û»¹²»ÊÇÌ«ÀíÏë£¬µ«ÊÇ£¬ÕâÊÇÒ»Æ¬¹ãÀ«µÄÌìµØ\cite{Insilico1}¡£Ê×ÏÈ£¬¼ÆËãµÄ·½·¨¿ÉÒÔ´ó´óÌá¸ßËÙ¶È¡£´«Í³·½·¨¼¸¸öÔÂ²ÅÄÜÍê³ÉµÄÊÂÇé£¬¼ÆËãµÄ·½·¨¿ÉÄÜ¼¸Ìì¾Í¿ÉÒÔÍê³É¡£Æä´Î£¬Ëæ×ÅÊý¾ÝÁ¿µÄ»ýÀÛºÍ¼ÆËãË®Æ½µÄÌá¸ß£¬¼ÆËãµÄ½á¹û±ØÈ»»áÔ½À´Ô½×¼È·¡£Í¨¹ý¼ÆËãµÄ·½·¨½â¾öÇ×ºÍÁ¦µÄÎÊÌâ£¬¸ÅÀ¨µÄ½²À´£¬´ó¸ÅÓÐÁ½¸öË¼Â·£¬Ò»¸öÊÇÍ³¼ÆÑ§µÄ½Ç¶È£¬Ò»¸öÊÇ´ÓÎïÀí»¯Ñ§Ô­ÀíµÄ½Ç¶È¡£ÉÏÃæËµµÄ·Ö×ÓÄ£ÄâµÈ·½·¨¶¼ÊÇ´ÓÎïÀí»¯Ñ§µÄ½Ç¶È£¬À´½øÐÐµÄ¼ÆËã¡£Ò²¿ÉÒÔ´ÓÍ³¼ÆÑ§µÄ½Ç¶ÈÀ´½â¾öÕâ¸öÎÊÌâ£¬±ÈÈçËµ¹Û²ìµ½¹Û²ìµ½AºÍB¾­³£Ïà»¥×÷ÓÃ£¬¶øAºÍC²»¾­³£Ïà»¥×÷ÓÃ¡£Èç¹û°ÑCÍ»±ä³ÉB¾ÍºÜÓÐ¿ÉÄÜÔö¼Ó·Ö×ÓµÄÇ×ºÍÁ¦¡£LippowµÈ\cite{Lippow}£¬¼¯ÖÐ·ÖÎö°±»ùËáÓë°±»ùËáÖ®¼äµÄ¾²µç×÷ÓÃ£¬¸ßÐ§µÄ°Ñ¿¹EGFRµÄÖÎÁÆÐÔ¿¹ÌåErbitux µÄÇ×ºÍÁ¦Ìá¸ß10±¶£¬´ïµ½52pM £» °Ñ¿¹µ°ÇåÈÜ¾úÃ¸µÄ¿¹ÌåD44.1 µÄÇ×ºÍÁ¦Ìá¸ßÁË140±¶£¬´ïµ½30pM £»Í¬Ê±ËûÃÇ·½·¨µÄÓÐÐ§ÐÔ»¹ÔÚÖÎÁÆÐÔ¿¹ÌåAvastin µÄÒÑÖªÇ×ºÍÁ¦µÄÍ»±ä£¬ÒÔ¼°¿¹Ó«¹âµ°°×(fluorescein) µÄ¿¹Ìå 4-4-20 µÄÒÑÖªÇ×ºÍÁ¦µÄÍ»±äÖÐ£¬µÃµ½ÑéÖ¤¡£Õâ¸ö½á¹ûÊÇ¾ªÈËµÄ£¬ ÊÇ¼ÆËã»ú¸¨ÖúÇ×ºÍÁ¦³ÉÊìµÄÒ»´Î³É¹¦¡£µ«ÊÇ£¬Õâ¸ö·½·¨ÐèÒª¿¹Ô­ºÍ¿¹Ìå¸´ºÏÎïµÄ½á¹¹£¬Í¬Ê±Ò²Ö»·ÖÎöÁËÒ»¶ÔÒ»µÄ¾²µçÏà»¥×÷ÓÃ£¬²¢Ã»ÓÐÉæ¼°µ½¶à¸ö°±»ùËáÐ­Í¬×÷ÓÃºÍÆäËûÖÖÀàµÄÏà»¥×÷ÓÃÁ¦µÄÇé¿ö¡£Sarah Sirin µÈ\cite{AB-Bind}¹¹½¨ÁËÒ»¸ö¿¹Ô­¿¹Ìå¸´ºÏÎïÍ»±äÊý¾Ý¿â£¬Éæ¼°µ½32¸ö¸´ºÏÎï£¬1101¸öÍ»±ä£¬²¢ÇÒÃ¿¸öÍ»±ä¶¼ÓÐÊµÑéÊÖ¶ÎµÃµ½µÄÇ×ºÍÁ¦¡£Í¨¹ý±È½Ï dDFIRE, DFIRE, STATIUM, Rosetta, FoldX, Discovery Studio, ÔÚÔ¤²âÇ×ºÍÁ¦ÉÏµÄ±íÏÖ£¬Sarah Sirin µÈÈÏÎª£¬×ÜµÄÀ´Ëµ£¬Ä¿Ç°µÄÔ¤²â·½·¨Ð§¹û¶¼²»¹»ºÃ£¬ Êµ¼Ê $\Delta\Delta G$ (¼ª²¼Ë¹×ÔÓÉÄÜµÄ±ä»¯)ºÍÔ¤²âµÄ $\Delta\Delta G$ Ö®¼äµÄÏà¹ØÏµÊý $r$ ÔÚ 0.16 µ½ 0.45 Ö®¼ä£¬ºÜÄÑÂú×ãÊµ¼ÊµÄÐèÇó£¬µ«ÊÇÔÚ×÷³öÇ×ºÍÁ¦ÊÇÔö¼Ó»¹ÊÇ¼õÐ¡ÕâÑùµÄ¶þ·ÖÀàÅÐ¶ÏÊ±ºò£¬ÕâÐ©·½·¨¾ßÓÐÒ»¶¨µÄÒâÒå¡£ÔÚÉÏÃæµÄ·½·¨ÖÐ£¬ FoldX ºÍ Discovery Studio ÊÇÐ§¹û½ÏºÃµÄÁ½¸ö¡£ÔÚÉÏÃæµÄËùÓÐ·½·¨ÖÐ£¬STATIUM Ê¹ÓÃÁËÍ³¼ÆÑ§µÄ·½·¨£¬Í¨¹ý¼ÆËãÁ½¸ö°±»ùËáÖ®¼ä $C^\alpha$ ºÍ $C^\beta$ Ö®¼äµÄ¾àÀëºÍ¼Ð½ÇµÄ¹ØÏµ£¬À´¼ÆËã°±»ùËáÖ®¼äµÄ STATIUM potential£¬½ø¶ø¹À¼ÆÍ»±ä¶ÔÇ×ºÍÁ¦µÄÓ°Ïì\cite{STATIUM}¡£
 \newpage
 \section{±¾ÂÛÎÄµÄÖ÷ÒªÄÚÈÝ}
-±¾ÂÛÎÄ¿ÉÒÔ¸ÅÀ¨ÎªÍ¨¹ý¶ÔÈÈµãµÄÑÐ¾¿£¬À´½¨Á¢¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÄ£ÐÍ¡£ÖÐ¼äÉæ¼°µÄÄÚÈÝ£¬´ÓÊý¾ÝµÄÊÕ¼¯£¬µ½Ä£ÐÍµÄ¼ìÑé£¬»¹ÓÐ²»Í¬Ä£ÐÍµÄ±È½Ï¡£¿ÉÒÔ³ÉÈçÏÂ¼¸µã£º
+±¾ÂÛÎÄ¿ÉÒÔ¸ÅÀ¨ÎªÍ¨¹ý¶Ô Core µÄÑÐ¾¿£¬À´½¨Á¢¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄÄ£ÐÍ¡£ÖÐ¼äÉæ¼°µÄÄÚÈÝ£¬´ÓÊý¾ÝµÄÊÕ¼¯£¬µ½Ä£ÐÍµÄ¼ìÑé£¬»¹ÓÐ²»Í¬Ä£ÐÍµÄ±È½Ï¡£¿ÉÒÔ·Ö³ÉÈçÏÂ¼¸µã£º
 \begin{enumerate}[label=(\arabic*)]
-	\item \textbf{Êý¾ÝµÄÌáÈ¡ºÍ³õ²½·ÖÎö}¡£ÔÚµÚÒ»ÕÂ×îºóµÄ²¿·ÖËµ£¬¶àÊýÇé¿öÏÂ£¬¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÓÉ¼¸¸ö¹Ø¼üµÄ°±»ùËá¾ö¶¨£¬ÕâÐ©¹Ø¼üµÄ°±»ùËáÍùÍùÊÇÒ»Ð©¶ÌµÄÏàÁÚµÄ°±»ùËá¡£ÄÇÃ´ÈçºÎÕÒ³öÕâÐ©°±»ùËá£¿ÕâÊÇ±¾ÂÛÎÄ½â¾öµÄµÚÒ»¸öÎÊÌâ¡£
-	\item\textbf{RBFN(¾¶Ïò»ùº¯ÊýÍøÂç) Ä£ÐÍµÄ¹¹½¨}¡£ÕÒµ½ÁËÏà»¥×÷ÓÃµÄ¶ÌµÄ°±»ùËáÐòÁÐµÄÏà»¥×÷ÓÃ¹ØÏµºó£¬ÈçºÎ¿Ì»­Õâ¸ö¹ØÏµ£¿±¾ÂÛÎÄÊ×ÏÈÍ¨¹ý°±»ùËáÌæ»»¾ØÕó(BLOSUM62),¶¨ÒåÁË¶ÌµÄ°±»ùËáÐòÁÐ¶ÔÖ®¼äµÄ¾àÀë£¬ÓÃ¾¶Ïò»ùº¯ÊýÍøÂç¶ÔÕâ¸ö¹ØÏµ½øÐÐÁË¿Ì»­¡£È»ºó£¬¶ÔÕâ¸öÄ£ÐÍ½øÐÐÁË¼ìÑé¡£
-	\item \textbf{RBFN Ä£ÐÍµÄÓ¦ÓÃ}¡£½¨ºÃµÄÄ£ÐÍ¿ÉÒÔÓÃÀ´×öÊ²Ã´£¿±¾ÂÛÎÄÓÃÕâ¸öÄ£ÐÍ×öÁËÁ½¼þÊÂ£¬Ò»ÊÇÍ¨¹ýÄ£ÐÍÀ´ÑéÖ¤¿¹Ô­±íÎ»ºÍ¿¹Ìå±íÎ»µÄ²»Í¬£¬¶þÊÇÍ¨¹ýÄ£ÐÍÀ´Ô¤²âÍ»±äºó£¬¿¹Ô­¿¹ÌåÇ×ºÍÁ¦µÄ±ä»¯¡£
-	\item\textbf{RBFN center µÄÑ¡È¡}¡£ÔÚ¹¹½¨ RBFN Ä£ÐÍÊ±ºò£¬Ò»¸öÖØÒªµÄ²½Öè¾ÍÊÇÑ¡È¡ºÏÊÊµÄÖÐÐÄ(center)¡£±¾ÂÛÎÄÉè¼ÆÁËÒ»¸ö¸üÎª¸ßÐ§µÄÑ¡È¡·½·¨£¬ÏÔÖøºÃÓÚÄ¿Ç°ÒÑÖªµÄ·½·¨¡£
+	\item \textbf{Êý¾ÝµÄÌáÈ¡ºÍ³õ²½·ÖÎö}¡£Ö÷ÒªÊÇ½éÉÜÈçºÎÉ¸Ñ¡·ûºÏÌõ¼þµÄ¿¹Ô­¿¹Ìå¸´ºÏÎï£¬ÈçºÎ´ÓÕâÐ©¸´ºÏÎïÖÐÌáÈ¡ Core£¬ »¹ÓÐ Core ÖÐ°±»ùËáµÄ·Ö²¼ÌØµã¡£
+	\item\textbf{RBFN(¾¶Ïò»ùº¯ÊýÍøÂç) Ä£ÐÍµÄ¹¹½¨}¡£±¾ÂÛÎÄÊ×ÏÈÍ¨¹ý°±»ùËáÌæ»»¾ØÕó(BLOSUM62),¶¨ÒåÁË core Ö®¼äµÄ¾àÀë£¬ÓÃ¾¶Ïò»ùº¯ÊýÍøÂç¶Ô core ½øÐÐÁË¿Ì»­¡£È»ºó£¬¶ÔÕâ¸öÄ£ÐÍ½øÐÐÁË¼ìÑé¡£
+	\item \textbf{RBFN Ä£ÐÍµÄÓ¦ÓÃ}¡£±¾ÂÛÎÄÓÃ½¨ºÃµÄ RBFN Ä£ÐÍ×öÁËÁ½¼þÊÂ£¬Ò»ÊÇÍ¨¹ýÄ£ÐÍÀ´ÑéÖ¤¿¹Ô­±íÎ»ºÍ¿¹Ìå±íÎ»µÄ²»Í¬£¬¶þÊÇÍ¨¹ýÄ£ÐÍÀ´Ô¤²âÍ»±ä¶Ô¿¹Ô­¿¹ÌåÇ×ºÍÁ¦µÄÓ°Ïì¡£
+	\item\textbf{RBFN center µÄÑ¡È¡}¡£ÔÚ¹¹½¨ RBFN Ä£ÐÍÊ±ºò£¬Ò»¸öÖØÒªµÄ²½Öè¾ÍÊÇÑ¡È¡ºÏÊÊµÄÖÐÐÄ(center)¡£±¾ÂÛÎÄ¶Ô center Ñ¡È¡µÄ·½·¨×öÁËÒ»¶¨µÄÌ½ÌÖ¡£±¾²¿·ÖÄÚÈÝ·ÅÔÚÁË RBFN µÄÄ£ÐÍ¹¹½¨ÄÚÈÝÖÐ¡£
 \end{enumerate}
 
 
@@ -343,62 +357,67 @@ PEASE Ëù¹¹½¨µÄ Random Forest °ÑÒ»¸ö°±»ùËá¶ÔµÄ 10 ¸öÌØÕ÷ÁªÏµÁËÆðÀ´£¬¿ÉÒÔ¿´³É¶Ô¿¹Ô
 \label{DataExtraction}
 \end{figure}
 \begin{enumerate}[label=(\arabic*)]
-	\item \textbf{¿¹Ô­¿¹Ìå¸´ºÏÎïµÄÑ¡È¡}¡£¿¹Ô­¿¹Ìå·ûºÏÎïÍ¨¹ýÓÉ Oxford Protein Informatics Group Î¬»¤µÄÍøÕ¾ÏÂÔØ\cite{SAbDab}¡£ÏÂÔØÊ±ºòÉè¶¨¸´ºÏÎïµÄ·Ö±æÂÊ²»Ð¡ÓÚ3\si{\angstrom} ²¢ÇÒ¿¹Ô­µÄ²»Ð¡ÓÚ5¸ö°±»ùËáµÄ³¤¶È¡£Ò»¹²ÊÕ¼¯ÁË1624¸ö¿¹Ô­¿¹Ìå¸´ºÏÎï£¬²¢°Ñ×î½üÌá½»µÄ 10\% µÄ¸´ºÏÎï×÷Îª testing set¡£ 
-	\item \textbf{ÌáÈ¡ËùÓÐÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô}¡£ÕâÀïËùÓÐÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô£¬ÊÇÖ¸ÔÚCDRÉÏµÄËùÓÐµÄ°±»ùËáºÍ¿¹Ô­ÉÏµÄ°±»ùËáÖ®¼äËùÓÐ¿ÉÄÜµÄÏà»¥×÷ÓÃ¡£ÕâÀïÉæ¼°µ½CDRÇøÓòµÄ½ç¶¨ºÍÏà»¥×÷ÓÃµÄ¶¨Òå¡£
+	\item \textbf{¿¹Ô­¿¹Ìå¸´ºÏÎïµÄÑ¡È¡}¡£¿¹Ô­¿¹Ìå·ûºÏÎïÍ¨¹ýÓÉ Oxford Protein Informatics Group Î¬»¤µÄÍøÕ¾ÏÂÔØ\cite{SAbDab}¡£ÏÂÔØÊ±ºòÉè¶¨¸´ºÏÎïµÄ·Ö±æÂÊ²»Ð¡ÓÚ3\si{\angstrom} ²¢ÇÒ¿¹Ô­²»Ð¡ÓÚ5¸ö°±»ùËáµÄ³¤¶È¡£Ò»¹²ÊÕ¼¯ÁË1624¸ö¿¹Ô­¿¹Ìå¸´ºÏÎï£¬²¢°Ñ×î½üÌá½»µÄ 10\% µÄ¸´ºÏÎï×÷Îª testing set¡£ 
+	\item \textbf{ÌáÈ¡ËùÓÐÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô}¡£ÕâÀïËùÓÐÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô£¬ÊÇÖ¸ÔÚCDRÉÏµÄËùÓÐµÄ°±»ùËáºÍ¿¹Ô­ÉÏµÄ°±»ùËáÖ®¼äËùÓÐ¿ÉÄÜµÄÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô¡£ÕâÀïÉæ¼°µ½CDRÇøÓòµÄ½ç¶¨ºÍÏà»¥×÷ÓÃµÄ¶¨Òå¡£
 	\begin{enumerate}
-		\item CDR ÇøÓòµÄ¶¨Òå·½·¨±È½Ï¶à\cite{CDRDefine1}£¬ ËüÃÇÓÐÒ»¶¨³Ì¶ÈÉÏµÄ²î±ð£¬µ«ÊÇ×ÜÌåÒ»ÖÂ¡£ Andrew C. R. Martin ½ÌÊÚµÄÍÅ¶Ó¸ø³öÁËÈ·¶¨CDRÇøÓò²»Í¬·½·¨Ö®¼äµÄ²î±ð£¬²¢¸ø³öÁËÒ»Ð©ÅÐ¶Ï×¼Ôò(www.bioinf.org.uk/abs)¡£´ÓÐòÁÐÉÏ¿´£¬ÇáÁ´ÉÏÃæµÄCDR ÇøÓòµÄÅÐ¶Ï¹æÔòÎª£º
+		\item CDR ÇøÓòµÄ¶¨Òå·½·¨±È½Ï¶à\cite{CDRDefine1}£¬ ËüÃÇÓÐÒ»¶¨³Ì¶ÈÉÏµÄ²î±ð£¬µ«ÊÇ×ÜÌåÒ»ÖÂ¡£ Andrew C. R. Martin ½ÌÊÚµÄÍÅ¶Ó¸ø³öÁËÈ·¶¨ CDR ÇøÓòµÄ²»Í¬·½·¨Ö®¼äµÄ²î±ð£¬²¢¸ø³öÁËÒ»Ð©ÅÐ¶Ï×¼Ôò(www.bioinf.org.uk/abs)¡£´ÓÐòÁÐÉÏ¿´£¬ÇáÁ´ÉÏÃæµÄ CDR ÇøÓòµÄÅÐ¶Ï¹æÔòÎª£º
 		\begin{enumerate}
 			\item µÚÒ»¸öCDR(CDRL1) ´ó¸Å´ÓµÚ24Î»¿ªÊ¼£¬³¤Îª10-17¡£
-			\item µÚ¶þ¸öCDR(CDRL2) ´ÓCDR1ºóµÄµÚ16¸ö°±»ùËáÊ¼£¬³¤Îª7¡£
-			\item µÚÈý¸öCDR(CDRL3)´ÓCDR2ºóµÄµÚ33¸ö°±»ùËáÊ¼£¬³¤Îª7-11¡£
+			\item µÚ¶þ¸öCDR(CDRL2) ´Ó CDR1 ºóµÄµÚ16¸ö°±»ùËáÊ¼£¬³¤Îª7¡£
+			\item µÚÈý¸öCDR(CDRL3)´Ó CDR2 ºóµÄµÚ33¸ö°±»ùËáÊ¼£¬³¤Îª7-11¡£
 		\end{enumerate}
-ÎªÁËº­¸Ç¿ÉÄÜµÄCDRÇøÓò£¬CDRL1µÄÎ»ÖÃ£¬ÆäÇøÓòÓ¦¸ÃÉè¶¨Îª24-41£¬Í¬ÑùCDRL2µÄÇøÓòÉè¶¨Îª50-64£¬ CDRL3µÄÇøÓòÉè¶¨Îª90-108¡£¿ÉÒÔ×Ü½áÎª±í¸ñ\ref{CDRL_Range}£º
-\begin{table}[htbp]\centering
+ÎªÁËº­¸Ç¿ÉÄÜµÄ CDR ÇøÓò£¬CDRL1 µÄÎ»ÖÃ£¬ÆäÇøÓòÓ¦¸ÃÉè¶¨Îª 24-41£¬ CDRL2 µÄÇøÓòÓ¦Éè¶¨Îª50-64£¬ CDRL3 µÄÇøÓòÉèÓ¦Éè¶¨Îª 90-108¡£¿ÉÒÔ×Ü½áÎª±í¸ñ\ref{CDRL_Range}¡£ Õâ¸ö¶¨Òå·½Ê½£¬ÔÚ°üº¬ÇáÁ´ÉÏËùÓÐ¿ÉÄÜCDR µÄÍ¬Ê±£¬Ò²»á°üº¬·ÇCDRÇøÓò¡£µ«ÊÇÕâ¸ö¶ÔºóÃæÊý¾ÝµÄ·ÖÎöÓ°ÏìºÜÐ¡£¬Ò»ÔòÒòÎª¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ¶àÊý·¢ÉúÔÚCDRÇøÓòºÍ¿¹ÌåÖ®¼ä£¬¶þÔòµ±ºóÃæ³éÈ¡×î¹Ø¼üµÄ°±»ùËáÊ±£¬ÓÖ½øÒ»²½µÄ°Ñ·¶Î§ÏÞÖÆÔÚCDRÉÏ£¬ËùÒÔ·ÇCDRÇøÓòµÄ°±»ùËá£¬¼´±ã±»°üº¬½øÈ¥£¬ºóÃæ±»Ñ¡À´×÷ÎªÊý¾ÝµÄ¿ÉÄÜÐÔÒ²ºÜÐ¡¡£ËùÒÔ£¬ÕâÀïÄþÔ¸°ÑCDRµÄ·¶Î§¶¨´ó£¬Ò²²»¶¨Ð¡¡£Í¬ÑùµÄÔ­Òò£¬ÎÒÃÇ¿ÉÒÔÈ·¶¨ÖØÁ´ÉÏCDRµÄ·¶Î§(±í\ref{CDRH_Range})¡£
+\begin{table}[H]
+\hspace{2cm}
+\scalebox{0.8}{
 \begin{tabular}{llll}
 \hline\hline
-                    & CDRL1      & CDRL2     & CDRL3 \\
+ & CDRL1      & CDRL2     & CDRL3 \\
 \hline
 Starting   & Approximately 24       & 16 residues after CDRL1      & 33 residues after CDRL2 \\
 Length       & 10 to 17 residues      & 7 residues       & 7 to 11 residues       \\
 Max-CDRL& 24 to 41       & 50 to 64        & 90 to 108       \\
 \hline
-\end{tabular}
+\end{tabular}}
 \caption{ÇáÁ´ÉÏCDRÇøÓòµÄÈ·¶¨}\label{CDRL_Range}
 \end{table}
-ÉÏÃæµÄ¶¨Òå·½Ê½£¬ÔÚ°üº¬ÇáÁ´ÉÏËùÓÐ¿ÉÄÜCDR µÄÍ¬Ê±£¬Ò²»á°üº¬·ÇCDRÇøÓò¡£µ«ÊÇÕâ¸ö¶ÔºóÃæÊý¾ÝµÄ·ÖÎöÓ°ÏìºÜÐ¡£¬Ò»ÔòÒòÎª¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ¶àÊý·¢ÉúÔÚCDRÇøÓòºÍ¿¹ÌåÖ®¼ä£¬¶þÔòµ±ºóÃæ³éÈ¡×î¹Ø¼üµÄ°±»ùËáÊ±£¬ÓÖ½øÒ»²½µÄ°Ñ·¶Î§ÏÞÖÆÔÚCDRÉÏ£¬ËùÒÔ·ÇCDRÇøÓòµÄ°±»ùËá£¬¼´±ã±»°üº¬½øÈ¥£¬ºóÃæ±»Ñ¡À´×÷ÎªÊý¾ÝµÄ¿ÉÄÜÐÔÒ²ºÜÐ¡¡£ËùÒÔ£¬ÕâÀïÄþÔ¸°ÑCDRµÄ·¶Î§¶¨´ó£¬Ò²²»¶¨Ð¡¡£Í¬ÑùµÄÔ­Òò£¬ÎÒÃÇ¿ÉÒÔÈ·¶¨ÖØÁ´ÉÏCDRµÄ·¶Î§(±í\ref{CDRH_Range})¡£
-\begin{table}[htbp]\centering
+
+\begin{table}[H]
+\hspace{2cm}
+\scalebox{0.8}{
 \begin{tabular}{llll}
 \hline\hline
-                    & CDRH1      & CDRH2     & CDRH3 \\
+& CDRH1      & CDRH2     & CDRH3 \\
 \hline
 Starting   & Approximately 26       & 15 residues after CDRH1      & 33 residues after CDRH2 \\
 Length       & 10 to 12 residues      & 16 to 19 residues       & 3 to 25 residues       \\
 Max-CDRH& 26 to 38       & 51 to 72        & 100 to 130       \\
 \hline
-\end{tabular}
-\caption{ÇáÁ´ÉÏCDRÇøÓòµÄÈ·¶¨}\label{CDRH_Range}
+\end{tabular}}
+\caption{ÖØÁ´ÉÏCDRÇøÓòµÄÈ·¶¨}\label{CDRH_Range}
 \end{table}
+
 		\item \textbf{Ïà»¥×÷ÓÃ°±»ùËá¶ÔµÄÈ·¶¨}¡£Èç¹û·Ö±ðÎ»ÓÚCDR ºÍ ¿¹Ô­ÉÏµÄÁ½¸ö°±»ùËáÖ®¼ä£¬´æÔÚ¾àÀë²»´óÓÚ 4\si{\angstrom} µÄÔ­×Ó(ÇâÔ­×Ó³ýÍâ)£¬ÄÇÃ´¾ÍÈÏÎªÕâÁ½¸ö°±»ùËáÏà»¥×÷ÓÃ¡£ÎªÁË±ãÓÚÕâÀïµÄ³ÂÊöºÍºóÃæ½øÒ»²½µÄÓ¦ÓÃ£¬ÎÒÃÇ¶¨ÒåÁ½¸ö°±»ùËá¼äµÄ×÷ÓÃÊý(contact number)CN:
 	\begin{equation}
 	\text{CN}(A,B)=\sum\limits_{a\in A}\sum\limits_{b\in B} \chi\{d(a,b) \leq 4\}
 	\label{CN}
     \end{equation}			
 %		$$\text{CN}(A,B)=\sum\limits_{a\in A}\sum\limits_{b\in B} \chi\{d(a,b) \leq 4\}$$
-			ÆäÖÐA£¬B ·Ö±ð±íÊÇÁ½¸ö°±»ùËá£¬ÔÚ±í´ïÊ½ $a\in A$ ÖÐ£¬ A ±íÊ¾°±»ùËá A ÉÏ³ýÇâÔ­×ÓÍâËùÓÐÔ­×ÓµÄ¼¯ºÏ£»$a\in B$ ×öÍ¬Ñù½âÊÍ¡£ $d(a,b)$ ±íÊ¾Ô­×Ó a ºÍ b Ö®¼äµÄÅ·Ê½¾àÀë£¬ÒÔ \si{\angstrom} Îªµ¥Î»¡£CDR ÉÏµÄ°±»ùËá A ºÍ ¿¹Ô­ÉÏµÄ°±»ùËá B ÊÇÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô£¬ÔòÊÇËµ $\text{CN}(A, B)\geq 1$ ¡£
+			ÆäÖÐA¡¢B ·Ö±ð±íÊÇÁ½¸ö°±»ùËá£¬ÔÚ±í´ïÊ½ $a\in A$ ÖÐ£¬ A ±íÊ¾°±»ùËá A ÉÏ³ýÇâÔ­×ÓÍâËùÓÐÔ­×ÓµÄ¼¯ºÏ£¬$b\in B$ ×öÍ¬Ñù½âÊÍ¡£ $d(a,b)$ ±íÊ¾Ô­×Ó a ºÍ b Ö®¼äµÄÅ·Ê½¾àÀë£¬ÒÔ \si{\angstrom} Îªµ¥Î»¡£CDR ÉÏµÄ°±»ùËá A ºÍ ¿¹Ô­ÉÏµÄ°±»ùËá B ÊÇÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô£¬ÔòÊÇËµ $\text{CN}(A, B)\geq 1$ ¡£
 	\end{enumerate}
 %È·¶¨ÁËCDRµÄ·¶Î§²¢¶¨ÒåÁËÏà»¥×÷ÓÃµÄ°±»ùËá¶ÔÖ®ºó£¬ÌáÈ¡ËùÓÐÏà»¥×÷ÓÃµÄ°±»ùËá¶ÔÔò¿ÉÒÔË³Àû½øÐÐ¡£¿´Ò»¸öÀý×Ó¡£
-\item \textbf{È¥³ýÖØ¸´}¡£ÎªÁË±ÜÃâÍ¬Ò»¸ö¿¹Ô­¿¹Ìå¸´ºÏÎï±»·´¸´³éÈ¡Êý¾Ý£¬ÐèÒªÈ¥³ý¸ß¶ÈÏàËÆµÄ¸´ºÏÎï¡£È»¶ø£¬Í¬Ò»¸ö¿¹Ô­¿ÉÒÔ±»²»Í¬µÄ¿¹ÌåÊ¶±ð£¬ËùÒÔ²»ÄÜ´Ó¿¹Ô­µÄ½Ç¶ÈÈ¥ÖØ¡£´Ó¿¹ÌåµÄ½á¹¹ÉÏ¿ÉÒÔÖªµÀ£¬¿¹ÌåºÍ¿¹ÌåÖ®¼äµÄ²î±ðÖ÷ÒªÌåÏÖÔÚ¿É±äÇøÉÏ£¬¸ü½øÒ»²½µÄËµ£¬Ö÷ÒªÌåÏÖÔÚCDRÇøÓòÉÏ£¬ËùÒÔ£¬Ö»ÒªÁ½¸ö¿¹ÌåµÄCDRÇøÓò²î±ð×ã¹»´ó£¬¾Í¿ÉÒÔÈÏ¶¨Îª²»Í¬µÄ¿¹Ìå£¬Ò²¾ÍÊÇ£¬Òª´ÓCDRÇøÓòµÄÏàËÆ¶ÈÉÏÈ¥ÖØ¡£ÕâÀï£¬ÎÒÃÇ°ÑÍ¬Ò»¸ö¿¹ÌåÉÏµÄÇáÁ´ºÍÖØÁ´·Ö±ð×÷Îª¶ÀÁ¢µÄÁ½ÌõÁ´À´¿¼ÂÇ¡£Éè LA, LB ·Ö±ðÎªÁ½ÌõÇáÁ´¡£Ê×ÏÈ°Ñ LA£¬LB Á´ÉÏµÄÈý¸öCDRÇøÓò·Ö±ðÆ´½ÓÆðÀ´£¬·Ö±ð¼ÇÎª CDR-LA, CDR-LB£¬È»ºó½øÐÐ±È½Ï£¬°Ñ´ò·Ö¹æÔò¶¨ÒåÎª£º
+\item \textbf{È¥³ýÖØ¸´}¡£ÎªÁË±ÜÃâÍ¬Ò»¸ö¿¹Ô­¿¹Ìå¸´ºÏÎï±»·´¸´³éÈ¡Êý¾Ý£¬ÐèÒªÈ¥³ý¸ß¶ÈÏàËÆµÄ¸´ºÏÎï¡£È»¶ø£¬Í¬Ò»¸ö¿¹Ô­¿ÉÒÔ±»²»Í¬µÄ¿¹ÌåÊ¶±ð£¬ËùÒÔ²»ÄÜ´Ó¿¹Ô­µÄ½Ç¶ÈÈ¥³ýÖØ¸´¡£´Ó¿¹ÌåµÄ½á¹¹ÉÏ¿ÉÒÔÖªµÀ£¬¿¹ÌåºÍ¿¹ÌåÖ®¼äµÄ²î±ðÖ÷ÒªÌåÏÖÔÚ¿É±äÇøÉÏ£¬¸ü½øÒ»²½µÄËµ£¬Ö÷ÒªÌåÏÖÔÚ CDR ÇøÓòÉÏ£¬ËùÒÔ£¬Ö»ÒªÁ½¸ö¿¹ÌåµÄ CDR ÇøÓò²î±ð×ã¹»´ó£¬¾Í¿ÉÒÔÈÏ¶¨Îª²»Í¬µÄ¿¹Ìå£¬Ò²¾ÍÊÇ£¬Òª´Ó CDR ÇøÓòµÄÏàËÆ¶ÈÉÏÈ¥ÖØ¡£ÕâÀï£¬ÎÒÃÇ°ÑÍ¬Ò»¸ö¿¹ÌåÉÏµÄÇáÁ´ºÍÖØÁ´·Ö±ð×÷Îª¶ÀÁ¢µÄÁ½ÌõÁ´À´¿¼ÂÇ£¬È»ºó·Ö±ð¶ÔÇáÁ´ºÍÖØÁ´È¥³ýÖØ¸´¡£Éè LA¡¢ LB ·Ö±ðÎªÁ½ÌõÇáÁ´¡£Ê×ÏÈ°Ñ LA¡¢LB Á´ÉÏµÄÈý¸ö CDR ÇøÓò·Ö±ðÆ´½ÓÆðÀ´£¬·Ö±ð¼ÇÎª CDR-LA¡¢CDR-LB£¬È»ºó½øÐÐ±È½Ï£¬°Ñ´ò·Ö¹æÔò¶¨ÒåÎª£º
 	\begin{enumerate}
 		\item ÏàÍ¬µÄÁ½¸ö°±»ùËáµÃ·ÖÎª1
 		\item ²»Í¬µÄÁ½¸ö°±»ùËáµÃ·ÖÎª0
-		\item ¿ÕÈ±(gap)µÄµÃ·ÖÎª0
+		\item open gap µÄµÃ·ÖÎª0
 		\item extended gap µÃ·ÖÎª0
 	\end{enumerate}
 ÉÏÃæµÄ¹æÔò¿ÉÒÔ²»ÑÏ¸ñµÄ¸ÅÀ¨Îª£¬¼ÆËãÏàÍ¬°±»ùËáµÄÊýÄ¿¡£°ÑÍ¨¹ýÉÏÃæµÄ¹æÔòµÃµ½µÄ·ÖÊý¼ÇÎª S(LA, LB)¡£ È»ºó¼ÆËã LA ºÍ LB Ö®¼äµÄ¾àÀë D(LA, LB)¡£
 $$\text{D(LA, LB)} = 1 - \text{S(LA, LB)}/N$$
-ÆäÖÐ$N=\text{min}(Len(\text{CDR-LA}), Len(\text{CDR-LB}))$, $Len$ ±íÊ¾¼ÆËã°±»ùËáÐòÁÐµÄ³¤¶È¡£ ÉÏÃæµÄ¹«Ê½¿ÉÒÔ¼òµ¥µÄ¸Ã¸ÅÀ¨Îª£¬¶ÔS(LA, LB) ½øÐÐ Normalization, È»ºó×ª»¯Îª¾àÀë¡£
+ÆäÖÐ $N=\text{min}(Len(\text{CDR-LA}), Len(\text{CDR-LB}))$£¬ $Len$ ±íÊ¾¼ÆËã°±»ùËáÐòÁÐµÄ³¤¶È¡£ ÉÏÃæµÄ¹«Ê½¿ÉÒÔ¼òµ¥µÄ¸Ã¸ÅÀ¨Îª£¬¶Ô S(LA, LB) ½øÐÐ Normalization, È»ºó×ª»¯Îª¾àÀë¡£ÖØÁ´Ò²×öÍ¬Ñù´¦Àí¡£
 
-¶¨ÒåºÃ¾àÀë£¬ÎÒÃÇ¾Í¸ù¾ÝÕâ¸ö¾àÀë¶Ô²»Í¬µÄÇáÁ´½øÐÐ¾ÛÀà(hierarchical cluster)£¬ Í¨¹ý·ÖÎöÔÚ²»Í¬½Ø¶Ï¾àÀë (cut-off distance) ÏÂµÄ¾ÛÀàÇé¿öÀ´¾ö¶¨È¥ÖØµÄ½Ø¶Ï¾àÀë¡£Í¼\ref{ElbowMethod}ÊÇ·ÖÀàÊýÄ¿ºÍ½Ø¶Ï¾àÀëÖ®¼äµÄ¹ØÏµ¡£
+¶¨ÒåºÃ¾àÀë£¬ÎÒÃÇ¾Í¸ù¾ÝÕâ¸ö¾àÀë¶ÔÇáÁ´ºÍÖØÁ´·Ö±ð½øÐÐ¾ÛÀà(hierarchical cluster)£¬ Í¨¹ý·ÖÎöÔÚ²»Í¬½Ø¶Ï¾àÀë (cut-off distance) ÏÂµÄ¾ÛÀàÇé¿öÀ´¾ö¶¨È¥³ýÖØ¸´µÄ½Ø¶Ï¾àÀë¡£Í¼\ref{ElbowMethod}ÊÇ¾ÛÀàÊýÄ¿ºÍ½Ø¶Ï¾àÀëÖ®¼äµÄ¹ØÏµ¡£
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{ElbowMethod.eps}
@@ -406,12 +425,14 @@ $$\text{D(LA, LB)} = 1 - \text{S(LA, LB)}/N$$
 \label{ElbowMethod}
 \end{figure}
 
-´ÓÍ¼ÖÐ¿ÉÒÔ¿´³ö£¬µ±½Ø¶Ï¾àÀëÊÇ0.1Ê±£¬¾ÛÀàÊýÄ¿µÄ¼õÉÙËÙ¶ÈÃ÷ÏÔ¼õ»º¡£ ¸ù¾Ý elbow method, 0.1ÊÇÒ»¸ö±È½ÏºÃµÄ½Ø¶Ï¾àÀë¡£
+´ÓÍ¼ÖÐ¿ÉÒÔ¿´³ö£¬µ±½Ø¶Ï¾àÀëÊÇ0.1Ê±£¬¾ÛÀàÊýÄ¿µÄ¼õÉÙËÙ¶ÈÃ÷ÏÔ¼õ»º¡£ ¸ù¾Ý elbow method £¬ 0.1ÊÇÒ»¸ö±È½ÏºÃµÄ½Ø¶Ï¾àÀë¡£
 
 µ±ÖØÁ´ºÍÇáÁ´°´ÕÕ 0.1 µÄ½Ø¶Ï¾àÀë½øÐÐ·ÖÀàºó£¬ÐèÒª´ÓÃ¿¸öÀà±ðÖÐÑ¡³öÒ»¸ö´ú±í£¬×÷ÎªÓÐÐ§Êý¾ÝÊ¹ÓÃ¡£Ñ¡È¡¹æÔò¶¨ÒåÈçÏÂ£º
 	$$\text{T}(C)=\sum\limits_{A\in C}\sum\limits_{B\in Ag}\text{CN}(A,B)$$
-ÆäÖÐ C ÎªÒ»¸öÇáÁ´»òÕßÖØÁ´£¬ÔÚ $A\in C$ ÖÐ C ±íÊ¾ÇáÁ´»òÕßÖØÁ´CDRÉÏ°±»ùËáµÄ¼¯ºÏ£¬ CN µÄ¶¨Òå¼û¹«Ê½(\ref{CN})¡£ ÔÚÃ¿¸ö·ÖÀàÖÐÑ¡È¡´ú±íÐÔµÄÖØÁ´»òÕßÇáÁ´µÄÊ±ºò£¬Ñ¡Ôñ $\text{T}(C)$ ×î´óµÄÒ»¸ö¡£±í¸ñ\ref{All_Contact_aa} ¸ø³öÁË±»Ñ¡ÖÐµÄÒ»¸öÖØÁ´ºÍÆä¶ÔÓ¦µÄ¿¹Ô­Ö®¼äµÄËùÓÐÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô¡£
-\begin{table}[H]\centering
+ÆäÖÐ C ÎªÒ»¸öÇáÁ´»òÕßÖØÁ´£¬ÔÚ $A\in C$ ÖÐ£¬ C ±íÊ¾ÇáÁ´»òÕßÖØÁ´CDRÉÏ°±»ùËáµÄ¼¯ºÏ£¬ CN µÄ¶¨Òå¼û¹«Ê½(\ref{CN})¡£ ÔÚÃ¿¸ö·ÖÀàÖÐÑ¡È¡´ú±íÐÔµÄÖØÁ´»òÕßÇáÁ´µÄÊ±ºò£¬Ñ¡Ôñ $\text{T}(C)$ ×î´óµÄÒ»¸ö¡£±í¸ñ\ref{All_Contact_aa} ¸ø³öÁË±»Ñ¡ÖÐµÄÒ»¸öÖØÁ´ºÍÆä¶ÔÓ¦µÄ¿¹Ô­Ö®¼äµÄËùÓÐÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô¡£
+\begin{table}[H]
+\caption{\small{À´×ÔÓÚ 1adq(PDB ±àºÅ) ÖØÁ´ºÍÆä¶ÔÓ¦¿¹Ô­Ö®¼äËùÓÐ¿ÉÄÜÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô¡£}}
+\centering
 \begin{tabular}{cccc}
 \hline\hline
  ±ê¼Ç        & ¿¹Ìå°±»ùËáÎ»ÖÃ      & ¿¹Ô­°±»ùËáÎ»ÖÃ     & CN \\
@@ -434,47 +455,75 @@ h3HA&102&196&5\\
 h3HA&102&197&3\\
 \hline
 \end{tabular}
-\caption{À´×ÔÓÚ¿¹Ô­¿¹Ìå¸´ºÏÎï 1adq(Ò»¸öPDB±àºÅ) ÖØÁ´ºÍÆä¶ÔÓ¦¿¹Ô­Ö®¼äËùÓÐ¿ÉÄÜÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô¡£ÉÏÃæÊ¹ÓÃµÄÊÇ±¾ÂÛÎÄÉè¼ÆµÄËÄ×ø±êÌåÏµ(four coordinate system)£¬ÕâËÄ¸ö×ø±ê·Ö±ðÊÇ \textbf{±ê¼Ç}£¬\textbf{¿¹Ìå°±»ùËáÎ»ÖÃ}£¬\textbf{¿¹Ô­°±»ùËáÎ»ÖÃ} ºÍ \textbf{CN}¡£±ê¼Ç£¬¸ø³ö¿¹ÌåÁ´µÄÃû³Æ£¬¿¹Ô­Á´µÄÃû³ÆºÍCDRÐòºÅ£»CNÈç¹«Ê½(\ref{CN})¶¨Òå¡£(h1HA, 30, 16, 7)±íÊ¾ÔÚ¸´ºÏÎï 1adq µÄÖØÁ´ H ÉÏµÄ 30 Î»°±»ùËáºÍ¿¹Ô­Á´ A ÉÏ 16 Î»°±»ùËáÏà»¥×÷ÓÃ£¬ÇÒÕâÁ½¸ö°±»ùËáµÄ CN ÖµÎª 7£¬²¢ÇÒÕâ¸öÏà»¥×÷ÓÃÎ»ÓÚÖØÁ´µÄµÚÒ»¸öCDRÉÏ¡£}
 \label{All_Contact_aa}
 \end{table}
+ÉÏÃæÊ¹ÓÃµÄÊÇ±¾ÂÛÎÄÉè¼ÆµÄËÄ×ø±êÌåÏµ(four-coordinate system)£¬ÕâËÄ¸ö×ø±ê·Ö±ðÊÇ \textbf{±ê¼Ç}£¬\textbf{¿¹Ìå°±»ùËáÎ»ÖÃ}£¬\textbf{¿¹Ô­°±»ùËáÎ»ÖÃ} ºÍ \textbf{CN}¡£µÚÒ»ÁÐµÄ±ê¼Ç±ê¼Ç£¬¸ø³öÁË¿¹ÌåÁ´µÄÃû³Æ£¬¿¹Ô­Á´µÄÃû³ÆºÍCDRÐòºÅ£»CNÈç¹«Ê½(\ref{CN})¶¨Òå¡£(h1HA, 30, 16, 7) ±íÊ¾ÔÚ¸´ºÏÎï 1adq µÄÖØÁ´ H ÉÏµÄ 30 Î»°±»ùËáºÍ¿¹Ô­Á´ A ÉÏ 16 Î»°±»ùËáÏà»¥×÷ÓÃ£¬ÇÒÕâÁ½¸ö°±»ùËáµÄ CN ÖµÎª 7£¬²¢ÇÒÕâ¸öÏà»¥×÷ÓÃÎ»ÓÚÖØÁ´µÄµÚÒ»¸öCDRÉÏ¡£
+ 
 \item \textbf{×éºÏ³ÉÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ¡£}
-¼ÈÈ»×îÖÕµÄÄ¿µÄÊÇÒªÑ¡³öÆð¹Ø¼ü×÷ÓÃµÄ¶ÌµÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ£¬ÄÇÃ´¾ÍÒª°Ñ±í\ref{All_Contact_aa} ÖÐËùÓÐ¿ÉÄÜÏà»¥×÷ÓÃµÄ°±»ùËá°´ÕÕ²»Í¬µÄ³¤¶ÈÁ¬Á¬½ÓÆðÀ´¡£ÏÈÀ´¶¨ÒåÒ»¸ö¸ÅÄî£º Æ¥ÅäÀàÐÍ(match-type)¡£ËùÎ½Æ¥ÅäÀàÐÍ¾ÍÊÇÏà»¥×÷ÓÃµÄÁ¬ÐøµÄ¿¹Ìå°±»ùËáµÄ³¤¶ÈºÍÏà»¥×÷ÓÃµÄÁ¬ÐøµÄ¿¹Ô­°±»ùËáµÄ³¤¶ÈËù×é³ÉµÄÒ»¸ö¶þÎ¬×ø±ê¡£±ÈÈç (2,3) ¾Í±íÊ¾ 2 ¸öÁ¬ÐøµÄ¿¹Ìå°±»ùËáºÍ 3 ¸öÁ¬ÐøµÄ¿¹Ô­°±»ùËáÏà»¥×÷ÓÃ¡£ÔÚ±¾ÂÛÎÄÖÐÆ¥ÅäÀàÐÍµÄÈ¡Öµ·¶Î§ÊÇ $\{(i,j):i,j=1,2,3\}$¡£¶Ô±í\ref{All_Contact_aa}ÖÐµÄÊý¾Ý½øÐÐ×éºÏ£º
-	\begin{enumerate}
-		\item Æ¥ÅäÀàÐÍÎª(1,1)µÄÓÐ: ([30],[16],7), ([30], [14],3), ([30], [17], 7), ([52], [16], 9), ([52], [15], 2), ([99], [196], 1), ([99], [198], 4), ([100], [196], 3), ([101], [196], 8), ([101], [15], 4), ([101], [13], 1), ([101], [14], 3), ([101], [190], 3), ([101], [198], 6), ([102], [196], 5), ([102], [197], 3)¡£ÕâÀï×îºóÒ»¸ö×ø±êÎª CN Öµ£¬ÎªÁË·½±ãÏÂÒ»²½ Core µÄÑ¡È¡¡£([30],[16],7) ±íÊ¾¿¹ÌåÉÏ 30 Î»µÄ°±»ùËáºÍ¿¹Ô­ÉÏ 16 Î»µÄ°±»ùËáÏà»¥×÷ÓÃ£¬Æä CN ÖµÎª 7¡£
-		\item Æ¥ÅäÀàÐÍÎª(1,2)µÄÓÐ£º([30], [16,17], 14), ([52], [15, 16], 11), ([101], [13, 14], 4), ([101], [14, 15], 7), ([102], [196, 197], 8)¡£
-		\item Æ¥ÅäÀàÐÍÎª(1,3)µÄÓÐ£º([101], [13, 14, 15], 8)¡£
-		\item Æ¥ÅäÀàÐÍÎª(2,1)µÄÓÐ£º([99, 100], [196], 4), ([101, 102], [196], 13)¡£
-		\item Æ¥ÅäÀàÐÍÎª(2,2)Ã»ÓÐ¡£ÔÚÕâÀïÒª×¢ÒâÒ»¸öË³ÐòÎÊÌâ£¬¼ÙÉè101 ºÍ 197 µÄCN ÊýÊÇ10£¨Êµ¼Ê 101 ºÍ 197 ²¢Ã»ÓÐÏà»¥×÷ÓÃ£¬ÕâÊÇÊÇÎªÁËËµÃ÷°±»ùËáÐòÁÐµÄË³ÐòÎÊÌâ¶ø×öµÄ¼ÙÉè£©£¬ ÄÇÃ´ 101, 102ºÍ 196, 197 µÄÆ¥ÅäÊÇÐ´³É([101, 102], [196, 197], 26)£¬»¹ÊÇ([101, 102], [197, 196], 26)ÄØ£¿±¾ÂÛÎÄÔÚÈ·¶¨°±»ùËáË³ÐòµÄÊ±ºò£¬¿¹Ìå CDR ÉÏ°±»ùËáµÄË³Ðò£¬Ò»ÂÉ´Ó±àºÅÐ¡µÄµ½±àºÅ´óµÄ£¬¶ø¿¹Ô­°±»ùËáµÄË³ÐòÓÉ¿¹Ìå°±»ùËáÐòÁÐÁ½¶ËµÄ°±»ùËáºÍ¿¹Ô­°±»ùËáÁ½¶ËµÄ°±»ùËáÏà»¥×÷ÓÃÇé¿ö¶ø¶¨¡£ÔÚÕâÀï£¬¿¹Ìå 101 Î»°±»ùËáºÍ¿¹Ô­ 197 Î»°±»ùËáµÄCNÎª 10£¬101 ºÍ 196 Îª 8£¬ 102 ºÍ 197 Îª 3£¬ 102 ºÍ 196 Îª 5£¬ ÒòÎª $8+3<10+5$, Ò²¾ÍÊÇ°Ñ 196 ºÍ197 µÄË³Ðòµßµ¹¹ýÀ´ºÍÓÐÀû£¬ËùÒÔÓ¦¸ÃÐ´³É([101, 102], [197, 196], 26)¡£
-		\item Æ¥ÅäÀàÐÍÎª(2,3)Ã»ÓÐ¡£
-		\item Æ¥ÅäÀàÐÍÎª(3,1)µÄÓÐ([100, 101, 102], [196], 16)¡£
-		\item Æ¥ÅäÀàÐÍÎª(3,2)µÄÃ»ÓÐ¡£
-		\item Æ¥ÅäÀàÐÍÎª(3,3)µÄÃ»ÓÐ¡£
-	\end{enumerate}
+¼ÈÈ»×îÖÕµÄÄ¿µÄÊÇÒªÑ¡³öÆð¹Ø¼ü×÷ÓÃµÄ¶ÌµÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ£¬ÄÇÃ´¾ÍÒª°Ñ±í\ref{All_Contact_aa} ÖÐËùÓÐ¿ÉÄÜÏà»¥×÷ÓÃµÄ°±»ùËá°´ÕÕ²»Í¬µÄ³¤¶ÈÁ¬Á¬½ÓÆðÀ´¡£ÏÈÀ´¶¨ÒåÒ»¸ö¸ÅÄî£º Æ¥ÅäÀàÐÍ(match-type)¡£ËùÎ½Æ¥ÅäÀàÐÍ¾ÍÊÇÏà»¥×÷ÓÃµÄÁ¬ÐøµÄ¿¹Ìå°±»ùËáµÄ³¤¶ÈºÍÏà»¥×÷ÓÃµÄÁ¬ÐøµÄ¿¹Ô­°±»ùËáµÄ³¤¶ÈËù×é³ÉµÄÒ»¸ö¶þÎ¬×ø±ê¡£±ÈÈç (2,3) ¾Í±íÊ¾ 2 ¸öÁ¬ÐøµÄ¿¹Ìå°±»ùËáºÍ 3 ¸öÁ¬ÐøµÄ¿¹Ô­°±»ùËáÏà»¥×÷ÓÃ¡£ÔÚ±¾ÂÛÎÄÖÐÆ¥ÅäÀàÐÍµÄÈ¡Öµ·¶Î§ÊÇ $\{(i,j):i,j=1,2,3\}$¡£¶Ô±í\ref{All_Contact_aa}ÖÐµÄÊý¾Ý½øÐÐ×éºÏ£¬ÓÃ Algorithm\ref{ExtractCores} Ñ¡³öËùÓÐÏà»¥×÷ÓÃµÄ¶ÌµÄ°±»ùËáÐòÁÐ¡£
+\begin{minipage}{15cm}
+\alglanguage{pseudocode}
+	\begin{algorithm}[H]
+		\caption{Extract contacting sequences}
+		\label{ExtractCores}
+		\begin{algorithmic}
+			\State $AbAG(m,n)$: an empty set of contacting sequences of match-type(m,n)
+			\State $AB_m$:  all consecutive antibody amino acids sequences of length $m$
+			\For {$ab_m \in AB_m$}
+				\State Find $AG(ab_m)$: antigen amino acids contacting with any amino acid in $ab_m$
+				\State Generate $AG_n$: all  amino acid sequences of length $n$ generated from $AG(ab_m)$
+				\For {$ag_n \in AG_n$}
+					\State $AbAG(m,n) \leftarrow AbAG(m,n) \cup (ab_m, ag_n)$
+				\EndFor
+			\EndFor	
+		\end{algorithmic}
+	\end{algorithm}
+\end{minipage}
+\vspace{0.5cm}
+
+±í \ref{All_Contact_aa} Êý¾ÝÍ¨¹ýÉÏÃæËã·¨µÃµ½¶ÌµÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐºó£¬¶ÔÓÚ match-type(m, n), ²¢ÇÒ $m>1, n>1$ µÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ£¬ÎÒÃÇ»¹Òªµ÷Õû°±»ùËáÐòÁÐµÄ·½Ïò¡£ÎÒÃÇÒÔ match-type(3,2) µÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐÎªÀý£¬¼ÙÉè $[a_1, a_2, a_3]$ ÊÇÀ´×ÔÓÚ¿¹ÌåµÄ°±»ùËáÐòÁÐ£¬$[b_1, b_2]$ ÊÇÀ´×ÔÓÚ¿¹Ô­µÄ°±»ùËáÐòÁÐ¡£Èç¹û $CN(a_1, b_1)+CN(a_3, b_2) < CN(a_1, b_2) + CN(a_3, b_1)$£¬ ÄÇÃ´×îÖÕµÄ°±»ùËá¶ÔÒªÐ´³É $([a_1, a_2, a_3], [b_2, b_1])$£¬ ·ñÔò£¬ÔòÐ´³É $([a_1, a_2, a_3], [b_1, b_2])$¡£
+
+%	\begin{enumerate}
+%		\item Æ¥ÅäÀàÐÍÎª(1,1)µÄÓÐ: ([30],[16],7), ([30], [14],3), ([30], [17], 7), ([52], [16], 9), ([52], [15], 2), ([99], [196], 1), ([99], [198], 4), ([100], [196], 3), ([101], [196], 8), ([101], [15], 4), ([101], [13], 1), ([101], [14], 3), ([101], [190], 3), ([101], [198], 6), ([102], [196], 5), ([102], [197], 3)¡£ÕâÀï×îºóÒ»¸ö×ø±êÎª CN Öµ£¬ÎªÁË·½±ãÏÂÒ»²½ Core µÄÑ¡È¡¡£([30],[16],7) ±íÊ¾¿¹ÌåÉÏ 30 Î»µÄ°±»ùËáºÍ¿¹Ô­ÉÏ 16 Î»µÄ°±»ùËáÏà»¥×÷ÓÃ£¬Æä CN ÖµÎª 7¡£
+%		\item Æ¥ÅäÀàÐÍÎª(1,2)µÄÓÐ£º([30], [16,17], 14), ([52], [15, 16], 11), ([101], [13, 14], 4), ([101], [14, 15], 7), ([102], [196, 197], 8)¡£
+%		\item Æ¥ÅäÀàÐÍÎª(1,3)µÄÓÐ£º([101], [13, 14, 15], 8)¡£
+%		\item Æ¥ÅäÀàÐÍÎª(2,1)µÄÓÐ£º([99, 100], [196], 4), ([101, 102], [196], 13)¡£
+%		\item Æ¥ÅäÀàÐÍÎª(2,2)ÓÐ¡£ÔÚÕâÀïÒª×¢ÒâÒ»¸öË³ÐòÎÊÌâ£¬¼ÙÉè101 ºÍ 197 µÄCN ÊýÊÇ10£¨Êµ¼Ê 101 ºÍ 197 ²¢Ã»ÓÐÏà»¥×÷ÓÃ£¬ÕâÊÇÊÇÎªÁËËµÃ÷°±»ùËáÐòÁÐµÄË³ÐòÎÊÌâ¶ø×öµÄ¼ÙÉè£©£¬ ÄÇÃ´ 101, 102ºÍ 196, 197 µÄÆ¥ÅäÊÇÐ´³É([101, 102], [196, 197], 26)£¬»¹ÊÇ([101, 102], [197, 196], 26)ÄØ£¿±¾ÂÛÎÄÔÚÈ·¶¨°±»ùËáË³ÐòµÄÊ±ºò£¬¿¹Ìå CDR ÉÏ°±»ùËáµÄË³Ðò£¬Ò»ÂÉ´Ó±àºÅÐ¡µÄµ½±àºÅ´óµÄ£¬¶ø¿¹Ô­°±»ùËáµÄË³ÐòÓÉ¿¹Ìå°±»ùËáÐòÁÐÁ½¶ËµÄ°±»ùËáºÍ¿¹Ô­°±»ùËáÁ½¶ËµÄ°±»ùËáÏà»¥×÷ÓÃÇé¿ö¶ø¶¨¡£ÔÚÕâÀï£¬¿¹Ìå 101 Î»°±»ùËáºÍ¿¹Ô­ 197 Î»°±»ùËáµÄCNÎª 10£¬101 ºÍ 196 Îª 8£¬ 102 ºÍ 197 Îª 3£¬ 102 ºÍ 196 Îª 5£¬ ÒòÎª $8+3<10+5$, Ò²¾ÍÊÇ°Ñ 196 ºÍ197 µÄË³Ðòµßµ¹¹ýÀ´ºÍÓÐÀû£¬ËùÒÔÓ¦¸ÃÐ´³É([101, 102], [197, 196], 26)¡£
+%		\item Æ¥ÅäÀàÐÍÎª(2,3)Ã»ÓÐ¡£
+%		\item Æ¥ÅäÀàÐÍÎª(3,1)µÄÓÐ([100, 101, 102], [196], 16)¡£
+%		\item Æ¥ÅäÀàÐÍÎª(3,2)µÄÃ»ÓÐ¡£
+%		\item Æ¥ÅäÀàÐÍÎª(3,3)µÄÃ»ÓÐ¡£
+%	\end{enumerate}
 \item \textbf{Ñ¡³ö Core¡£}
-Í¨¹ý¼ÆËãµÄ·½·¨ÕÒ¹Ø¼üµÄÏà»¥×÷ÓÃµÄ°±»ùËá·½·¨±È½Ï¶à£¬ÓÐµÄ´ÓÎïÀí»¯Ñ§µÄ½Ç¶È½øÐÐ¼ÆËã£¬ÓÐµÄ¼ÆËã°±»ùËáÖ®¼ä½Ó´¥Ãæ»ýµÄ´óÐ¡¡£±¾ÂÛÎÄÍ¨¹ý¼ÆËã CN µÄ´óÐ¡À´ÅÐ¶ÏÒ»¸ö°±»ùËáÊÇ²»ÊÇÆð×Å¹Ø¼ü×÷ÓÃ¡£±¾ÂÛÎÄ¶Ô²»Í¬µÄÆ¥ÅäÀàÐÍ¶¼³éÈ¡ÁË¹Ø¼üµÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ£¬³ÆÎª Core£¬ ²¢¼ÙÉèÔÚÍ¬Ò»¸öÆ¥ÅäÀàÐÍÏÂÍ¬Ò»ÌõÁ´ÉÏ×î¶àÓÐÒ»¸ö Core¡£ËùÒÔ±í\ref{All_Contact_aa}×îÖÕ Core µÄ³éÈ¡½á¹ûÈç±í\ref{Core_Extraction}£º
-\begin{table}[H]\centering
-\begin{tabular}{ll}
-\hline\hline
-Match-type          & Core \\
-\hline
-(1,1)  & ([52]£¬[16], 9)     \\
-(1,2)       & ([30], [16, 17], 14)\\
-(1,3)&([101], [13, 14, 15], 8)  \\
-(3,1) &([100, 101, 102], [196], 16)\\
-\hline
-\end{tabular}
-\caption{±í\ref{All_Contact_aa}ÖÐ×îÖÕ Core µÄ³éÈ¡½á¹û¡£}\label{Core_Extraction}
-\end{table}
+Í¨¹ý¼ÆËãµÄ·½·¨ÕÒ¹Ø¼üµÄÏà»¥×÷ÓÃµÄ°±»ùËá·½·¨±È½Ï¶à£¬ÓÐµÄ´ÓÎïÀí»¯Ñ§µÄ½Ç¶È½øÐÐ¼ÆËã£¬ÓÐµÄ¼ÆËã°±»ùËáÖ®¼ä½Ó´¥Ãæ»ýµÄ´óÐ¡¡£±¾ÂÛÎÄÍ¨¹ý¼ÆËã CN µÄ´óÐ¡À´ÅÐ¶ÏÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐµÄÖØÒªÐÔ¡£¼ÙÉè $(ab_m, ag_n)$ ÊÇ match-type(m, n) µÄÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ£¬ËüÃÇÖ®¼äµÄ CN Í¨¹ýÏÂÃæµÄ¹«Ê½¼ÆËã
+$$\sum\limits_{a\in ab_m}\sum\limits_{b\in ag_n}\text{CN}(a, b)$$
+ÔÚÌØ¶¨µÄ match-type ÏÂ£¬Ñ¡Ôñ CN ×î´óµÄ°±»ùËáÐòÁÐ¶Ô×÷Îª Core. Ò²¾ÍÊÇËµ£¬¸ø¶¨¿¹Ô­Á´ºÍ¿¹ÌåÁ´£¨ÇáÁ´»òÖØÁ´£©£¬ ÔÚÃ¿ÖÖ match-type ÏÂ£¬ ×î¶àÖ»ÄÜÑ¡³öÒ»¸ö Core£¬Õâ¸ö Core ¾ÍÊÇ CN ×î´óµÄ°±»ùËáÐòÁÐ¶Ô¡£
+%ËùÒÔ±í\ref{All_Contact_aa}×îÖÕ Core µÄ³éÈ¡½á¹ûÈç±í\ref{Core_Extraction}£º
+%\begin{table}[H]\centering
+%\begin{tabular}{ll}
+%\hline\hline
+%Match-type          & Core \\
+%\hline
+%(1,1)  & ([52]£¬[16], 9)     \\
+%(1,2)       & ([30], [16, 17], 14)\\
+%(1,3)&([101], [13, 14, 15], 8)  \\
+%(3,1) &([100, 101, 102], [196], 16)\\
+%\hline
+%\end{tabular}
+%\caption{±í\ref{All_Contact_aa}ÖÐ×îÖÕ Core µÄ³éÈ¡½á¹û¡£}\label{Core_Extraction}
+%\end{table}
 \end{enumerate}
 \section{Êý¾ÝµÄ³õ²½·ÖÎö}
-´Ó¿¹Ô­¿¹Ìå¸´ºÏÎïÖÐ³éÈ¡³ö Core Ö®ºó£¬¶Ô Core µÄÖÐ°±»ùËá¼òµ¥µÄÍ³¼Æ·ÖÎö¿ÉÒÔµÃ³öºÜ¶àÓÐÒâË¼µÄ½áÂÛ¡£ÓÐÐ©½áÂÛÒÑ¾­±»ÒÔÍùµÄÑÐ¾¿Ö¤Êµ£¬ÓÐÐ©ÔòÊÇÈ«ÐÂµÄ£¬»¹ÓÐÐ©ÊÇÔÚÔ­ÓÐ½áÂÛµÄ»ù´¡ÉÏ£¬ÓÐÁË½øÒ»²½µÄ·¢Õ¹¡£
-\begin{enumerate}[label=(\arabic*)]
-	\item \textbf{Core µÄ·Ö²¼}
-	
-	ÎÒÃÇ´ÓÉÏÃæÊý¾ÝÌáÈ¡µÄ¹ý³Ì£¬¿ÉÒÔ²ì¾õµ½Ëæ×Å¿¹Ô­°±»ùËáÐòÁÐ³¤¶È»òÕß¿¹Ìå°±»ùËáÐòÁÐ³¤¶ÈµÄÔö¼Ó£¬¿ÉÒÔ±»³éÈ¡µÄ Core µÄÊýÄ¿Ô½À´Ô½ÉÙ£¬ÕâÒ²·ûºÏÒ»¸ö¼òµ¥µÄÂß¼­ÊÂÊµ£¬ÄÇ¾ÍÊÇÈç¹û¿ÉÒÔ³éÈ¡½Ï³¤µÄ°±»ùËáÐòÁÐµÄ Core, ÄÇÃ´¾ÍÒ»¶¨¿ÉÒÔ³éÈ¡½Ï¶ÌµÄ°±»ùËáÐòÁÐµÄ Core (±í\ref{Cover_over_MatchType})¡£
+´Ó¿¹Ô­¿¹Ìå¸´ºÏÎïÖÐ³éÈ¡³ö Core Ö®ºó£¬¶Ô Core ÖÐµÄ°±»ùËá¼òµ¥µÄÍ³¼Æ·ÖÎö¿ÉÒÔµÃ³öºÜ¶àÓÐÒâË¼µÄ½áÂÛ¡£ÓÐÐ©½áÂÛÒÑ¾­±»ÒÔÍùµÄÑÐ¾¿Ö¤Êµ£¬ÓÐÐ©ÔòÊÇÈ«ÐÂµÄ£¬»¹ÓÐÐ©ÊÇÔÚÔ­ÓÐ½áÂÛµÄ»ù´¡ÉÏ£¬ÓÐÁË½øÒ»²½µÄ·¢Õ¹¡£
+%\begin{enumerate}[label=(\arabic*)]
+	%\item \textbf{Core µÄ·Ö²¼}
+\subsection{Core µÄ·Ö²¼}	
+	ÎÒÃÇ´ÓÉÏÃæÊý¾ÝÌáÈ¡µÄ¹ý³Ì£¬¿ÉÒÔ²ì¾õµ½Ëæ×Å¿¹Ô­°±»ùËáÐòÁÐ³¤¶È»òÕß¿¹Ìå°±»ùËáÐòÁÐ³¤¶ÈµÄÔö¼Ó£¬¿ÉÒÔ±»³éÈ¡µÄ Core µÄÊýÄ¿Ô½À´Ô½ÉÙ£¬ÕâÒ²·ûºÏÒ»¸ö¼òµ¥µÄÂß¼­ÊÂÊµ£¬ÄÇ¾ÍÊÇÈç¹û¿ÉÒÔ³éÈ¡½Ï³¤µÄ°±»ùËáÐòÁÐµÄ Core£¬ÄÇÃ´¾ÍÒ»¶¨¿ÉÒÔ³éÈ¡½Ï¶ÌµÄ°±»ùËáÐòÁÐµÄ Core (±í\ref{Cover_over_MatchType})¡£
 	\begin{table}[H]
-\renewcommand{\arraystretch}{2}
+\caption{\small{²»Í¬ match-type ÏÂ Core µÄÊýÄ¿¡£}}
 \centering
+\begin{threeparttable}
+\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{c|c||ccc}
 \hline
 \multicolumn{2}{c}{}&\multicolumn{3}{c}{Length of Antigen Amino Acids}\\
@@ -489,22 +538,27 @@ Match-type          & Core \\
 &\scell{3}&\cell{1219}&\cell{1130}&\cell{805}\\
 \hline
 \end{tabular}
-\caption{²»Í¬ match-type ÏÂ Core µÄÊýÄ¿¡£Ã¿ÐÐ´ú±í²»Í¬µÄ¿¹Ìå°±»ùËáµÄ³¤¶È£¬Ã¿ÁÐ´ú±í²»Í¬µÄ¿¹Ô­°±»ùËáµÄ³¤¶È¡£±ÈÈç£¬match-type Îª£¨2£¬1£© Ê± Core µÄÊýÄ¿ÊÇ1454¡£}
 \renewcommand{\arraystretch}{1}
+\begin{tablenotes}
+\item \small{Ã¿ÐÐ´ú±í²»Í¬µÄ¿¹Ìå°±»ùËáµÄ³¤¶È£¬Ã¿ÁÐ´ú±í²»Í¬µÄ¿¹Ô­°±»ùËáµÄ³¤¶È¡£±ÈÈç£¬match-type Îª£¨2£¬1£© Ê± Core µÄÊýÄ¿ÊÇ1454¡£}
+\end{tablenotes}
+\end{threeparttable}
 \label{Cover_over_MatchType}
 \end{table}
 ÎªÁË¸üÎªÖ±¹ÛµÄ±íÊ¾ Core µÄÊýÄ¿Ëæ×Å°±»ùËá³¤¶ÈµÄ±ä»¯£¬¿ÉÒÔ°Ñ±í\ref{Cover_over_MatchType}µÄÊý¾Ý»­³ÉÈýÎ¬×ø±êÍ¼\ref{F_core_match_t}¡£
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.4]{Core_districution_over_Match_type.eps}
+\includegraphics[scale=0.3]{Core_districution_over_Match_type.eps}
 \caption{Core µÄÊýÄ¿°´²»Í¬ match-type µÄ·Ö²¼}
 \label{F_core_match_t}
 \end{figure}
 ´ÓÍ¼\ref{F_core_match_t} ¿ÉÒÔÃ÷ÏÔµÄ¿´³ö£¬Ëæ×Å°±»ùËáÐòÁÐ³¤¶ÈµÄÔö¼Ó£¬Core µÄÊýÄ¿ÔÚ¼õÉÙ¡£
 
-¹ýÈ¥µÄÑÐ¾¿±íÃ÷ÖØÁ´ÉÏµÄ CDR3 ÇøÓòÔÚ¿¹Ô­¿¹ÌåÊ¶±ðµÄ¹ý³ÌÖÐÍùÍù°çÑÝ×Å±ÈÆäËûµÄ CD R¸üÎªÖØÒªµÄ½ÇÉ«£¬ÓÐÊ±ÉõÖÁÓÚ¾ö¶¨ÐÔµÄ×÷ÓÃ£¬ÄÇÃ´ÖØÁ´ÉÏµÄ CDR3 Ò²Ó¦¸Ã±ÈÆäËûµÄ CDR ³éÈ¡¸ü¶àµÄ Core¡£
+¹ýÈ¥µÄÑÐ¾¿±íÃ÷ÖØÁ´ÉÏµÄ CDR3 ÇøÓòÔÚ¿¹Ô­¿¹ÌåÊ¶±ðµÄ¹ý³ÌÖÐÍùÍù°çÑÝ×Å±ÈÆäËûµÄ CDR ¸üÎªÖØÒªµÄ½ÇÉ«£¬ÓÐÊ±ÉõÖÁÓÚ¾ö¶¨ÐÔµÄ×÷ÓÃ£¬ÄÇÃ´ÖØÁ´ÉÏµÄ CDR3 Ò²Ó¦¸Ã±ÈÆäËûµÄ CDR ³éÈ¡¸ü¶àµÄ Core¡£
 
 \begin{table}[H]\centering
+\caption{\small{²»Í¬ match-type µÄ Core ÔÚ²»Í¬CDRÉÏµÄ·Ö²¼}}
+
 \begin{tabular}{ccccc ccccc}
 \hline\hline
 &(1,1)&(1,2)&(1,3)&(2,1)&(2,2)&(2,3)&(3,1)&(3,2)&(3,3) \\
@@ -517,10 +571,11 @@ CDRL2&84&59&32&61&44&24&27&23&14\\
 CDRL3&258&271&167&306&283&192&238&231&171\\
 \hline
 \end{tabular}
-\caption{²»Í¬ match-type µÄ Core ÔÚ²»Í¬CDRÉÏµÄ·Ö²¼}\label{Core_CDR}
+\label{Core_CDR}
 \end{table}
-´Ó±í\ref{Core_CDR}ÖÐµÄÊý¾ÝÒ²¿ÉÒÔ¿´³ö£¬ÔÚ¾ø¶ÔÊýÁ¿ÉÏ£¬ÖØÁ´ÉÏ CDR3 Õ¼ÓÐÃ÷ÏÔµÄ¶àÊý¡£Èç¹ûÎÒÃÇ°ÑÖØÁ´ºÍÇáÁ´µÄÊý¾Ý·Ö¿ª£¬ËüÃÇµÄ CDR3 ¶¼Õ¼ÓÐÃ÷ÏÔÓÅÊÆ¡£´ÓÌáÈ¡ CDR µÄ·¶Î§ÉÏËµ£¬CDR3 ±È CDR1 ºÍ CDR2 ¶¼Òª³¤£¬¾¡¹Ü±¾ÂÛÎÄ CDR µÄ³¤¶È²»ÊÇÔì³É³éÈ¡ Core ²îÒìµÄÔ­Òò£¬µ«ÊÇÎªÁËÑÏ½÷£¬ÓÐ±ØÒªÔÚ Normalize Ö®ºóÔÙ±È½Ï£¨±í\ref{P_value_CDR3_Domi}£©¡£
+´Ó±í\ref{Core_CDR}ÖÐµÄÊý¾ÝÒ²¿ÉÒÔ¿´³ö£¬ÔÚ¾ø¶ÔÊýÁ¿ÉÏ£¬ÖØÁ´ÉÏ CDR3 Õ¼ÓÐÃ÷ÏÔµÄ¶àÊý¡£Èç¹ûÎÒÃÇ°ÑÖØÁ´ºÍÇáÁ´µÄÊý¾Ý·Ö¿ª£¬ÖØÁ´ÉÏµÄ CDR3 ÔÚÖØÁ´µÄ3¸ö CDR ÉÏÕ¼ÓÐÃ÷ÏÔÓÅÊÆ£¬ ÇáÁ´µÄ CDR3 ÔÚÇáÁ´µÄ3¸ö CDR ÉÏÕ¼ÓÐÃ÷ÏÔÓÅÊÆ¡£´ÓÌáÈ¡ CDR µÄ·¶Î§ÉÏËµ£¬CDR3 ±È CDR1 ºÍ CDR2 ¶¼Òª³¤£¬¸ù¾Ý¸÷¸ö CDR µÄ³¤¶È Normalize Ö®ºó£¬Core ÔÚ²»Í¬ CDR ÉÏµÄ·Ö²¼Çé¿ö¼û±í\ref{P_value_CDR3_Domi}¡£
 \begin{table}[H]\centering
+\caption{Normalize ºó£¬²»Í¬ match-type µÄ Core ÔÚ²»Í¬CDRÉÏµÄ·Ö²¼}
 \resizebox{0.9\textwidth}{10mm}{
 \begin{tabular}{ccccc ccccc}
 \hline\hline
@@ -531,11 +586,13 @@ CDRL3&0.226&5.41E-8&9.73E-8&1.89E-15&0&0&6.3E-15&0&0\\
 \hline
 \end{tabular}
 }
-\caption{±íÖÐÁÐ³öµÄÊÇ¶Ô²»Í¬µÄ match-type Çé¿öÏÂ×ö¼ÙÉè¼ìÑé£¬µÃµ½µÄPÖµ¡£¶ÔÓÚ¸ø¶¨µÄ match-type ºÍ¿¹ÌåÁ´£¨ÇáÁ´»òÕßÖØÁ´£©£¬×ö¼ÙÉè¼ìÑé£¬ $H_0:$ CDR3 ÉÏ Core µÄÃÜ¶È´óÓÚ ÆäËûÁ½¸öCDR¡£ÕâÀïÃÜ¶È£¬ÊÇÓÃCore µÄÊýÄ¿³ýÒÔ CDR µÄ³¤¶È¡£ }
 \label{P_value_CDR3_Domi}
 \end{table}
-´Ó±í\ref{P_value_CDR3_Domi}¿ÉÒÔ¿´³ö£¬³ýÁË match-type Îª £¨1£¬1£©µÄÇé¿öÍâ£¬ÆäËû match-type ÏÂ£¬ CDR3 ÉÏ Core µÄÃÜ¶ÈÃ÷ÏÔ´óÓÚÆäËû CDR¡£Õâ´ÓÁíÍâÒ»¸ö½Ç¶ÈÑéÖ¤ÁË CDR3 ÔÚ¿¹Ô­¿¹Ìå×÷ÓÃ¹ý³ÌÖÐµÄÖØÒªÐÔ¡£
-\item \textbf{Core ÖÐ°±»ùËáµÄ·Ö²¼}
+±í\ref{P_value_CDR3_Domi} ÖÐÁÐ³öµÄÊÇ¶Ô²»Í¬µÄ match-type Çé¿öÏÂ×ö¼ÙÉè¼ìÑé£¬µÃµ½µÄPÖµ¡£¶ÔÓÚ¸ø¶¨µÄ match-type ºÍ¿¹ÌåÁ´£¨ÇáÁ´»òÕßÖØÁ´£©£¬×ö¼ÙÉè¼ìÑé£¬ $H_a:$ CDR3 ÉÏ Core µÄÃÜ¶È´óÓÚÍ¬Ò»ÌõÁ´ÉÏµÄÆäËûÁ½¸ö CDR¡£ÕâÀïÃÜ¶È£¬ÊÇÓÃ Core µÄÊýÄ¿³ýÒÔ CDR µÄ³¤¶È¡£ ´Ó±í\ref{P_value_CDR3_Domi} ¿ÉÒÔ¿´³ö£¬³ýÁË match-type Îª £¨1£¬1£©µÄÇé¿öÍâ£¬ÆäËû match-type ÏÂ£¬ CDR3 ÉÏ Core µÄÃÜ¶ÈÃ÷ÏÔ´óÓÚÆäËû CDR¡£Õâ´ÓÁíÍâÒ»¸ö½Ç¶ÈÑéÖ¤ÁË CDR3 ÔÚ¿¹Ô­¿¹Ìå×÷ÓÃ¹ý³ÌÖÐµÄÖØÒªÐÔ¡£
+
+%\item \textbf{Core ÖÐ°±»ùËáµÄ·Ö²¼}
+\newpage
+\subsection{Core ÖÐ°±»ùËáµÄ·Ö²¼}
 Èç¹û¹Û²ìËùÓÐ Core ÖÐ¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËáµÄ·Ö²¼£¨Í¼\ref{AA_distr_all}£©£¬»á·¢ÏÖÓÐÃ÷ÏÔ²îÒì¡£
 \begin{figure}[H]
 \centering
@@ -543,9 +600,11 @@ CDRL3&0.226&5.41E-8&9.73E-8&1.89E-15&0&0&6.3E-15&0&0\\
 \caption{¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËáÔÚËùÓÐCoreÖÐµÄ·Ö²¼Çé¿ö}
 \label{AA_distr_all}
 \end{figure}
-´ÓÍ¼\ref{AA_distr_all}ÖÐ¿ÉÒÔ·¢ÏÖ£¬TYR ÔÚ Core ÖÐ¿¹Ìå°±»ùËáµÄ·Ö²¼Ã÷ÏÔÆ«¸ß£¬ËùÕ¼±ÈÀý¾¹È»³¬³öÁË20\%£¡¶ÔÓÚ match-type Îª£¨1£¬1£©µÄ Core À´½²£¬ÆµÂÊ×î¸ßµÄÇ° 8 ¸ö·Ö±ðÎª ([TYR], [ARG]), ([TYR], [LYS]), ([TYR], [HIS]), ([TYR], [ASN]), ([TYR], [GLU]), ([TYR], [PRO]), ([TYR], [ASP], ([TYR], [GLN])£¬ ÔÚ¿¹Ìå°±»ùËá¾¹È»È«²¿ÊÇTYR£¡Èç¹û°Ñ²»Í¬ match-type ÏÂµÄ¿¹Ìå°±»ùËáµÄ·Ö²¼·Ö±ðÀ´¿¼ÂÇ£¬´Ó±í\ref{Top_5_Antibody}¿ÉÒÔ¿´³ö£¬ÔÚÈÎºÎ match-type µÄÇé¿öÏÂ£¬ TYR µÄ±ÈÀýÔÚ Core µÄ¿¹Ìå°±»ùËáÖÐ·Ö²¼±ÈÀý¶¼ÊÇ×î¸ßµÄ¡£ÎÄÏ×\cite{TYR_important1, TYR_important2} ¶Ô TYR µÄÖØÒªÐÔÒ²ÓÐ¹ýÃèÊö¡£ÆäÖÐÒ»¸ö½âÊÍ£¬ÊÇËµ TYR µÄ²àÁ´ÓÐÒ»¸öôÇ»ù±½£¬±½»·µÄÊèË®×÷ÓÃ£¬Ê¹µÃôÇ»ùÐÎ³ÉµÄÇâ¼ü·Ç³£ÀÎ¹Ì¡£
+´ÓÍ¼\ref{AA_distr_all}ÖÐ¿ÉÒÔ·¢ÏÖ£¬TYR ÔÚ Core ÖÐ¿¹Ìå°±»ùËáµÄ·Ö²¼Ã÷ÏÔÆ«¸ß£¬ËùÕ¼±ÈÀý¾¹È»³¬³öÁË20\%£¡¶ÔÓÚ match-type Îª£¨1£¬1£©µÄ Core À´½²£¬ÆµÂÊ×î¸ßµÄÇ° 8 ¸ö·Ö±ðÎª ([TYR], [ARG])¡¢ ([TYR], [LYS])¡¢ ([TYR], [HIS])¡¢ ([TYR], [ASN])¡¢ ([TYR], [GLU])¡¢ ([TYR], [PRO])¡¢ ([TYR], [ASP])¡¢ ([TYR], [GLN])£¬ ËüÃÇµÄ¿¹Ìå°±»ùËá¾¹È»È«²¿ÊÇTYR£¡Èç¹û°Ñ²»Í¬ match-type ÏÂµÄ¿¹Ìå°±»ùËáµÄ·Ö²¼·Ö±ðÀ´¿¼ÂÇ£¬´Ó±í\ref{Top_5_Antibody}¿ÉÒÔ¿´³ö£¬ÔÚÈÎºÎ match-type µÄÇé¿öÏÂ£¬ TYR µÄ±ÈÀýÔÚ Core µÄ¿¹Ìå°±»ùËáÖÐ·Ö²¼±ÈÀý¶¼ÊÇ×î¸ßµÄ¡£ÎÄÏ×\cite{TYR_important1, TYR_important2} ¶Ô TYR µÄÖØÒªÐÔÒ²ÓÐ¹ýÃèÊö¡£ÆäÖÐÒ»¸ö½âÊÍ£¬ÊÇËµ TYR µÄ²àÁ´ÓÐÒ»¸öôÇ»ù±½£¬±½»·µÄÊèË®×÷ÓÃ£¬Ê¹µÃôÇ»ùÐÎ³ÉµÄÇâ¼ü·Ç³£ÀÎ¹Ì¡£
 
 \begin{table}[H]\centering
+\caption{²»Í¬ match-type ÏÂ£¬Ç°Îå¸ö·Ö²¼ÆµÂÊ×î¸ßµÄ¿¹Ìå°±»ùËá}
+\scalebox{0.9}{
 \begin{tabular}{ccccc c}
 \hline\hline
 Match-type&\multicolumn{5}{c}{Top five most frequent antibody amino acids}\\
@@ -561,14 +620,16 @@ Match-type&\multicolumn{5}{c}{Top five most frequent antibody amino acids}\\
 (3,3)& (TYR, 0.193)& (SER, 0.128)& (GLY, 0.111)& (ASN, 0.075)& (THR, 0.065)\\
 \hline
 \end{tabular}
-\caption{²»Í¬ match-type ÏÂ£¬Ç°Îå¸ö·Ö²¼ÆµÂÊ×î¸ßµÄ¿¹Ìå°±»ùËá}
+}
 \label{Top_5_Antibody}
 \end{table}
-\end{enumerate}
-Èç¹û×ÐÏ¸¹Û²ì±í¸ñ\ref{Top_5_Antibody}£¬ÎÒÃÇ·¢ÏÖµ±¿¹Ìå°±»ùËáµÄÐòÁÐµÄ³¤¶È´Ó 1 ±ä³É 2 »òÕß 3 Ê±ºò£¬Ç°Èý¸öÆµÂÊ×î¸ßµÄ°±»ùËáÓÉ TYR, TRP, ASN/ARG ±ä³É TYR, SER, GLY (ÔÚmatch-type ÊÇ £¨2£¬3£© Ê±ºò£¬GLY ´¦ÓÚµÚËÄÎ»£¬µ«ÊÇºÍµÚÈýÎ»µÄ GLN ÔÚ±ÈÀýÉÏºÜ½ü)¡£ÕâÖÖ GLY ºÍ SER ÆµÂÊµÄÉÏÉý£¬¿ÉÒÔ½âÊÍÎªËüÃÇµÄ²àÁ´ºÜÐ¡£¬·½±ãµ÷½Ú¾Ö²¿µÄ¹¹Ïó£¬ËùÒÔ¿ÉÒÔÍÆ¶Ï GLY ºÍ SER Ð­Í¬ TYR ²ÎÓë¶Ô¿¹Ô­±íÎ»µÄÊ¶±ð¡£Sara Birtalan µÈÑÐ¾¿·¢ÏÖ£¬Ö»ÓÃ TYR, SER ºÍ GLY ÕâÈýÖÖ°±»ùËá¾Í¿ÉÒÔÔì³öÇ×ºÍÁ¦½üÓÚ pM µÄ¿¹Ìå\cite{Tyr_Ser_Gly}¡£Õâ¸ö½áÂÛÔÚ±í\ref{Top_5_Antibody}ÖÐµÃµ½³ä·ÖµÄÖ§³Ö¡£Frederic A. Fellouse µÈÓÃ TYR, SER, GLY ºÍ ASP ËÄÖÖ°±»ùËá¹¹½¨¿¹Ìå library, ³É¹¦É¸Ñ¡³ö¿¹ hVEGF µÄÌØÒìÐÔ¿¹Ìå\cite{Four_aa_Lib}£¬²¢Ö¸³öÁË TYR µÄÖ÷µ¼×÷ÓÃ\cite{Four_Tyr_Dom}¡£±í\ref{Top_5_Antibody} Ò²ÎªÕâÐ©½áÂÛÌá¹©ÁË³ä·ÖµÄÖ§³Ö£¬²¢ÇÒÒ²¿ÉÒÔÖ¸µ¼ÐÂµÄ¿¹Ìå Library µÄ½¨Á¢¡£¸ù¾ÝÉÏÃæµÄ±í¸ñ£¬Èç¹ûÏëÓÃËÄ¸ö°±»ùËáÀ´½¨Éè¿¹Ìå Library£¬ ÏÔÈ»×îºÃµÄÑ¡ÔñÊÇ TYR, SER, GLY ºÍ ASN£¬ ¶ø²»ÊÇFrederic A. Fellouse µÈÊ¹ÓÃµÄTYR, SER, GLY ºÍ ASP¡£
+%\end{enumerate}
+
+Èç¹û×ÐÏ¸¹Û²ì±í¸ñ\ref{Top_5_Antibody}£¬ÎÒÃÇ·¢ÏÖµ±¿¹Ìå°±»ùËáµÄÐòÁÐµÄ³¤¶È´Ó 1 ±ä³É 2 »òÕß 3 Ê±ºò£¬Ç°Èý¸öÆµÂÊ×î¸ßµÄ°±»ùËáÓÉ TYR¡¢ TRP¡¢ ASN/ARG ±ä³É TYR¡¢ SER¡¢ GLY (ÔÚmatch-type ÊÇ £¨2£¬3£© Ê±ºò£¬GLY ´¦ÓÚµÚËÄÎ»£¬µ«ÊÇºÍµÚÈýÎ»µÄ GLN ÔÚ±ÈÀýÉÏºÜ½ü)¡£ÕâÖÖ GLY ºÍ SER ÆµÂÊµÄÉÏÉý£¬¿ÉÒÔ½âÊÍÎªËüÃÇµÄ²àÁ´ºÜÐ¡£¬·½±ãµ÷½Ú¾Ö²¿µÄ¹¹Ïó£¬ËùÒÔ GLY ºÍ SER Ð­Í¬ TYR ²ÎÓë¶Ô¿¹Ô­±íÎ»µÄÊ¶±ð¡£Sara Birtalan µÈÑÐ¾¿·¢ÏÖ£¬Ö»ÓÃ TYR¡¢ SER ºÍ GLY ÕâÈýÖÖ°±»ùËá¾Í¿ÉÒÔÔì³öÇ×ºÍÁ¦½üÓÚ pM µÄ¿¹Ìå\cite{Tyr_Ser_Gly}¡£Õâ¸ö½áÂÛÔÚ±í\ref{Top_5_Antibody}ÖÐµÃµ½³ä·ÖµÄÖ§³Ö¡£Frederic A. Fellouse µÈÓÃ TYR¡¢ SER¡¢ GLY ºÍ ASP ËÄÖÖ°±»ùËá¹¹½¨¿¹Ìå library£¬ ³É¹¦É¸Ñ¡³ö¿¹ hVEGF µÄÌØÒìÐÔ¿¹Ìå\cite{Four_aa_Lib}£¬²¢Ö¸³öÁË TYR µÄÖ÷µ¼×÷ÓÃ\cite{Four_Tyr_Dom}¡£±í\ref{Top_5_Antibody} Ò²ÎªÕâÐ©½áÂÛÌá¹©ÁË³ä·ÖµÄÖ§³Ö£¬²¢ÇÒÒ²¿ÉÒÔÖ¸µ¼ÐÂµÄ¿¹Ìå Library µÄ½¨Á¢¡£¸ù¾ÝÉÏÃæµÄ±í¸ñ£¬Èç¹ûÏëÓÃËÄ¸ö°±»ùËáÀ´½¨Éè¿¹Ìå Library£¬ ÏÔÈ»×îºÃµÄÑ¡ÔñÊÇ TYR¡¢SER¡¢GLY ºÍ ASN£¬ ¶ø²»ÊÇFrederic A. Fellouse µÈÊ¹ÓÃµÄTYR¡¢SER¡¢GLY ºÍ ASP¡£
 
 ±í\ref{Top_5_Antigen}¸ø³öÁË Core ÖÐ¿¹Ô­±íÎ»°±»ùËáÔÚ²»Í¬ match-type ÏÂµÄ·Ö²¼¡£ ¿ÉÒÔ¿´³öÀ´£¬ÔÚËùÓÐµÄ match-type Çé¿öÏÂ£¬ARG ºÍ ASP µÄ³öÏÖÆµÂÊÒ»Ö±Î»ÓÚ Core ÖÐ¿¹Ô­°±»ùËáµÄÇ°5¡£¶øÇÒµ±¿¹Ô­°±»ùËáµÄ³¤¶ÈÓÉ 1 ±ä³É 2 »ò 3 µÄÊ±ºò£¬GLY ºöÈ»´Ó 5 ÃûÖ®Íâ±ä³É³öÏÖÆµÂÊ×î¸ßµÄ°±»ùËá£¨ÔÚmatch-type(2,3)ÏÂ£¬GLY Î»ÓÚµÚ¶þµÄÎ»ÖÃ£¬µ«ÊÇºÍ³öÏÖÆµÂÊ×î¸ßµÄ ASN Ïà²îÖ»ÓÐ0.001£©¡£³ýÁË GLY Ö®Íâ£¬ÆäËûÅÅÔÚÇ°5µÄ°±»ùËá£¬¶¼ÊÇÇ×Ë®ÐÔ°±»ùËá£¬¶øÇÒÓÐ±È½Ï³¤µÄ²àÁ´¡£ÓÉ´Ë¿ÉÒÔËµ£¬ÔÚ GLY µÄµ÷½ÚÏÂ£¬¾ßÓÐ±È½Ï´óµÄÇ×Ë®µÄ°±»ùËáÍùÍù¿ÉÒÔ³ÉÎª¿¹Ô­±íÎ»£¬ÌØ±ðÊÇ ARG ºÍ ASP¡£
 \begin{table}[H]\centering
+\caption{²»Í¬ match-type ÏÂ£¬Ç°Îå¸ö·Ö²¼ÆµÂÊ×î¸ßµÄ¿¹Ô­°±»ùËá}
 \resizebox{\textwidth}{3cm}{
 \begin{tabular}{ccccc c}
 \hline\hline
@@ -586,11 +647,11 @@ Match-type&\multicolumn{5}{c}{Top five most frequent antigen amino acids}\\
 \hline
 \end{tabular}
 }
-\caption{²»Í¬ match-type ÏÂ£¬Ç°Îå¸ö·Ö²¼ÆµÂÊ×î¸ßµÄ¿¹Ô­°±»ùËá}
 \label{Top_5_Antigen}
 \end{table}
-ÎªÁË¸ü½øÒ»²½ËµÃ÷ Core ÖÐ¿¹Ô­°±»ùËáµÄ·Ö²¼Çé¿ö£¬±¾ÂÛÎÄ°Ñ Core ÖÐÆµÂÊ×î¸ßµÄ 5 ¸ö¿¹Ô­°±»ùËá ºÍÆµÂÊ×îµÍµÄ 5 ¸ö°±»ùËá£¬ºÍ ËüÃÇÔÚËùÓÐ¿¹Ô­°±»ùËáÖÐµÄ·Ö²¼Çé¿ö×öÁË¶Ô±È£¬¿´¿´ËüÃÇÕâÐ©·Ö²¼µÄ¸»¼¯ºÍÏ¡ÊÍÊÇ²»ÊÇÏÔÖø£¨±í\ref{Top_5_Antigen_Q},  \ref{Bottom_5_Antigen_Q}£©¡£´Ó±í\ref{Top_5_Antigen_Q}ÖÐÒ²¿ÉÒÔ¿´³ö±»¸»¼¯µÄ°±»ùËá³ýÁË GLY Ö®Íâ¶¼ÊÇÇ×Ë®ÐÔµÄ°±»ùËá£¬ ÌØ±ðÊÇ ARG¡£GLY Ôò°ïÖúÕâÐ©Ç×Ë®ÐÔµÄ°±»ùËáÐÎ³ÉºÏÊÊµÄ½á¹¹¡£´Ó±í\ref{Bottom_5_Antigen_Q}ÖÐ¿ÉÒÔ¿´µ½, ÔÚËùÓÐµÄ match-type ÖÐ£¬VAL, LEU, ILE ºÍ CYS Î»ÓÚ±»Ï¡ÊÍµÄÇ°ÎåÃûÖ®ÁÐ¡£CYSÈÝÒ×±»±»Ñõ»¯£¬ÐÎ³É¶þÁò¼ü£¬ËùÒÔ²»ÊÊºÏ×ö¿¹Ô­±íÎ»¡£ÆäËûÈý¸ö¶¼ÊÇÊèË®ÐÔµÄ°±»ùËá¡£¹Û²ì±í\ref{Bottom_5_Antigen_Q}, ¼¸ºõËùÓÐµÄ¶¼ÊÇÊèË®ÐÔµÄ°±»ùËá£¨Ö»ÓÐÔÚ match-type(3,2)µÄµÚÎåÃû³öÏÖSER£©¡£ÕâÐ©½á¹ûËµÃ÷£¬Ç×Ë®²¢ÇÒÓÐ±È½Ï´óµÄ²àÁ´µÄ°±»ùËáÈÝÒ×ÐÎ³É¿¹Ô­±íÎ»£¬¶øÊèË®ÐÔµÄ²»ÈÝÒ×ÐÎ³É¡£ÕâºÍÆÕÍ¨µÄµ°°×ÖÊºÍµ°°×ÖÊÖ®¼äµÄÏà»¥×÷ÓÃ²»Í¬\cite{Hydrophobic}£¬Í¬Ê±Ò²½âÊÍÁËË®·Ö×ÓÔÚ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ¹ý³ÌÖÐµÄÖØÒªÐÔ\cite{Add_water}¡£
+ÎªÁË¸ü½øÒ»²½ËµÃ÷ Core ÖÐ¿¹Ô­°±»ùËáµÄ·Ö²¼Çé¿ö£¬±¾ÂÛÎÄ°Ñ Core ÖÐÆµÂÊ×î¸ßµÄ 5 ¸ö¿¹Ô­°±»ùËá ºÍÆµÂÊ×îµÍµÄ 5 ¸ö°±»ùËá£¬ºÍ ËüÃÇÔÚËùÓÐ¿¹Ô­°±»ùËáÖÐµÄ·Ö²¼Çé¿ö×öÁË¶Ô±È£¬¿´¿´ËüÃÇÕâÐ©·Ö²¼µÄ¸»¼¯ºÍÏ¡ÊÍÊÇ²»ÊÇÏÔÖø£¨±í\ref{Top_5_Antigen_Q}¡¢ \ref{Bottom_5_Antigen_Q}£©¡£´Ó±í\ref{Top_5_Antigen_Q} ÖÐÒ²¿ÉÒÔ¿´³ö±»¸»¼¯µÄ°±»ùËá³ýÁË GLY Ö®Íâ¶¼ÊÇÇ×Ë®ÐÔµÄ°±»ùËá£¬ ÌØ±ðÊÇ ARG¡£GLY Ôò°ïÖúÕâÐ©Ç×Ë®ÐÔµÄ°±»ùËáÐÎ³ÉºÏÊÊµÄ½á¹¹¡£´Ó±í\ref{Bottom_5_Antigen_Q}ÖÐ¿ÉÒÔ¿´µ½£¬ÔÚËùÓÐµÄ match-type ÖÐ£¬VAL¡¢ LEU¡¢ ILE ºÍ CYS Î»ÓÚ±»Ï¡ÊÍµÄÇ°ÎåÃûÖ®ÁÐ¡£CYSÈÝÒ×±»±»Ñõ»¯£¬ÐÎ³É¶þÁò¼ü£¬ËùÒÔ²»ÊÊºÏ×ö¿¹Ô­±íÎ»¡£ÆäËûÈý¸ö¶¼ÊÇÊèË®ÐÔµÄ°±»ùËá¡£¹Û²ì±í\ref{Bottom_5_Antigen_Q}£¬ ¼¸ºõËùÓÐµÄ¶¼ÊÇÊèË®ÐÔµÄ°±»ùËá£¨Ö»ÓÐÔÚ match-type(3,2)µÄµÚÎåÃû³öÏÖSER£©¡£ÕâÐ©½á¹ûËµÃ÷£¬Ç×Ë®²¢ÇÒÓÐ±È½Ï´óµÄ²àÁ´µÄ°±»ùËáÈÝÒ×ÐÎ³É¿¹Ô­±íÎ»£¬¶øÊèË®ÐÔµÄ²»ÈÝÒ×ÐÎ³É¡£ÕâºÍÆÕÍ¨µÄµ°°×ÖÊºÍµ°°×ÖÊÖ®¼äµÄÏà»¥×÷ÓÃ²»Í¬\cite{Hydrophobic}£¬Í¬Ê±Ò²½âÊÍÁËË®·Ö×ÓÔÚ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ¹ý³ÌÖÐµÄÖØÒªÐÔ\cite{Add_water}¡£
 \begin{table}[H]\centering
+\caption{\small{ºÍËùÓÐ¿¹Ô­°±»ùËáÏà±È£¬¸»¼¯×îÎªÏÔÖøµÄ¿¹Ô­°±»ùËá£¨°´ÕÕq value ÅÅÐò£©¡£}}
 \resizebox{\textwidth}{3cm}{
 \begin{tabular}{ccccc c}
 \hline\hline
@@ -608,11 +669,12 @@ Match-type&\multicolumn{5}{c}{Top 5 enriched residues in the Core Antigen residu
 \hline
 \end{tabular}
 }
-\caption{ºÍËùÓÐ¿¹Ô­°±»ùËáÏà±È£¬¸»¼¯×îÎªÏÔÖøµÄ¿¹Ô­°±»ùËá£¨°´ÕÕq value ÅÅÐò£©¡£¸»¼¯ÊÇÖ¸ºÍËùÓÐ¿¹Ô­°±»ùËáµÄ·Ö²¼Ïà±È£¬Ïà¶ÔÆµÂÊÔö¸ßµÄ°±»ùËá¡£}
+
 \label{Top_5_Antigen_Q}
 \end{table}
 
 \begin{table}[H]\centering
+\caption{\small{ºÍËùÓÐ¿¹Ô­°±»ùËáÏà±È£¬Ï¡ÊÍ×îÎªÏÔÖøµÄ¿¹Ô­°±»ùËá£¨°´ÕÕq value ÅÅÐò£©¡£}}
 \resizebox{\textwidth}{3cm}{
 \begin{tabular}{ccccc c}
 \hline\hline
@@ -630,10 +692,32 @@ Match-type&\multicolumn{5}{c}{Top 5 diluted residues in the Core Antigen residue
 \hline
 \end{tabular}
 }
-\caption{ºÍËùÓÐ¿¹Ô­°±»ùËáÏà±È£¬ÊÍÏ£×îÎªÏÔÖøµÄ¿¹Ô­°±»ùËá£¨°´ÕÕq value ÅÅÐò£©¡£ÕâÀïÏ¡ÊÍÊÇºÍËùÓÐ¿¹Ô­°±»ùËáµÄ·Ö²¼Ïà±È£¬Ïà¶ÔÆµÂÊÏÂ½µµÄ°±»ùËá¡£}
 \label{Bottom_5_Antigen_Q}
 \end{table}
-ÔÚËùÓÐµÄÏà»¥×÷ÓÃµÄ¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËá¶ÔÖÐ£¬Èç¹ûÁ½¸ö²ÎÓëÏà»¥×÷ÓÃµÄ°±»ùËá£¬ÖÐ¼ä¼ä¸ôÒ»¸ö°±»ùËá£¬ÎÒÃÇ°ÑÕâ¸ö¼ä¸ôµÄ°±»ùËá³ÆÎªÖÐ¼ä°±»ùËá(middle amino acid)¡£°ÑËùÓÐµÄÖÐ¼ä°±»ùËá¶¼ÌáÈ¡³öÀ´½øÐÐ±È½Ï£¬¿ÉÒÔ»­³öÍ¼\ref{Middle_aa}¡£ Í¨¹ý·ÖÎö·¢ÏÖ£¬¿¹ÌåÉÏµÄÖÐ¼ä°±»ùËáÇ°ÆµÂÊ×î¸ßµÄÇ°5Ãû·Ö±ðÊÇ GLY, PRO, ILE, THR ºÍ SER £¬¿¹Ô­ÉÏµÄ°±»ùËáÔòÊÇ LEU£¬ILE, VAL, ALA, GLY¡£ Ç°ÃæµÄ·ÖÎö½á¹û±íÃ÷ LEU£¬ILE, VAL ÊÇ¿¹Ô­±íÎ»ËùÅÅ³âµÄ£¬È»¶øÈ´ÊÇÖÐ¼ä°±»ùËáÏ²»¶µÄ¡£ËùÒÔ£¬ºÜÓÐ¿ÉÄÜÕâÐ©ÊèË®ÐÔµÄ°±»ùËá¾ÍÏñÃªÒ»Ñù²åÈëµ½¿¹Ô­µÄÄÚ²¿£¬°ÑÁ½²à¿ÉÒÔ²ÎÓë¿¹Ô­¿¹ÌåÊ¶±ðµÄ°±»ùËáÃª¶¨ÔÚ±íÃæ¡£ÔÚ¿¹Ô­µÄÖÐ¼ä°±»ùËáÖÐ£¬PRO Õ¼ÓÐ±È½Ï´óµÄ±ÈÀý£¬PRO ÓÐÐÎ³É×ª½ÇµÄ×÷ÓÃ£¬ºÜÓÐ¿ÉÄÜÐ­µ÷ËüÁ½²àµÄ°±»ùËá¹²Í¬²ÎÓë¶Ô¿¹Ô­µÄÊ¶±ð¡£
+ÔÚËùÓÐµÄÏà»¥×÷ÓÃµÄ¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËá¶ÔÖÐ£¬Èç¹ûÁ½¸ö²ÎÓëÏà»¥×÷ÓÃµÄ°±»ùËá£¬ÖÐ¼ä¼ä¸ôÒ»¸ö°±»ùËá£¬ÎÒÃÇ°ÑÕâ¸ö¼ä¸ôµÄ°±»ùËá³ÆÎªÖÐ¼ä°±»ùËá(middle amino acid)¡£°ÑËùÓÐµÄÖÐ¼ä°±»ùËá¶¼ÌáÈ¡³öÀ´½øÐÐ±È½Ï£¬¿ÉÒÔ»­³öÍ¼\ref{Middle_aa}¡£ÎªÁË¸üÓÉÁ¦µÄËµÃ÷¿¹Ô­µÄÖÐ¼ä°±»ùËáµÄ·Ö²¼ÌØÕ÷£¬ÎÒÃÇ°Ñ¿¹Ô­µÄÖÐ¼ä°±»ùËáºÍ¿¹Ô­°±»ùËáµÄ·Ö²¼×öÁË±È½Ï£¬½á¹ûÈç±í\ref{Top_concentrated_diluted_middle_aa}¡£´ÓÖÐ¿ÉÒÔ¿´³ö£¬×î²»ÈÝÒ×ÐÎ³ÉÖÐ¼ä°±»ùËáµÄÒ²ÍùÍùÊÇ Core ÖÐ±È½Ï¸»¼¯µÄ¿¹Ô­°±»ùËá£¨±í\ref{Top_5_Antigen_Q}£©¡£ ·´¹ýÀ´£¬ÄÇÐ©×îÒ×ÐÎ³ÉÖÐ¼ä°±»ùËáµÄÒ²ÍùÍùÊÇ Core ÖÐ±È½ÏÏ¡ÊÍµÄ¿¹Ô­°±»ùËá£¨±í\ref{Bottom_5_Antigen_Q}£©¡£¶ÔÓÚ±»¸»¼¯µÄ¿¹Ô­µÄÖÐ¼ä°±»ùËá£¬³ýÁË CYS ºÍ MET Á½¸ö±È½ÏÌØÊâµÄ°±»ùËáÖ®Íâ£¬ÆäÓàµÄÈý¸ö¶¼ÊÇÊèË®ÐÔµÄ°±»ùËá¡£ºÜÓÐ¿ÉÄÜÕâÐ©ÊèË®ÐÔµÄ°±»ùËá¾ÍÏñÃªÒ»Ñù²åÈëµ½¿¹Ô­µÄÄÚ²¿£¬°ÑÁ½²à¿ÉÒÔ²ÎÓë¿¹Ô­¿¹ÌåÊ¶±ðµÄ°±»ùËáÃª¶¨ÔÚ±íÃæ¡£
+
+ÓÉÓÚ±¾ÂÛÎÄ¶Ô CDR ÇøÓòµÄ¶¨ÒåÊÇÒ»ÖÖ¾¡¿ÉÄÜ°üº¬ËùÓÐ¿ÉÄÜÇé¿öµÄ×î´ó»¯µÄ¶¨Òå£¨±í\ref{CDRL_Range}, \ref{CDRH_Range}£©£¬ÒÔÖÁÓÚ¿ÉÄÜ°üº¬ CDR ÇøÓòÁ½±ßµÄÌØÕ÷°±»ùËá£¬´Ó¶øÊ¹µÃ CDR ÉÏ°±»ùËáµÄ·Ö²¼ÓÐËùÆ«²î¡£ËùÒÔ£¬ÕâÀï²¢Ã»ÓÐ°Ñ¿¹ÌåÖÐ¼ä°±»ùËáµÄ·Ö²¼Çé¿öºÍ CDR ÉÏ°±»ùËáµÄ·Ö²¼½øÐÐ±È½Ï¡£Èç¹û½ö½ö´ÓÖÐ¼ä°±»ùËáµÄÆµÂÊÀ´·ÖÎö£¨Í¼\ref{Middle_aa}£©£¬¿¹ÌåÉÏµÄÖÐ¼ä°±»ùËáÆµÂÊ×î¸ßµÄÇ°5Ãû·Ö±ðÊÇ GLY¡¢PRO¡¢ILE¡¢THR ºÍ SER ¡£Ç°ÃæµÄ·ÖÎö GLY ºÍ SER ÓÐÀûÓÚµ÷ÕûËüÃÇÁ½²àµÄ¿¹Ìå°±»ùËá²ÎÓë¿¹Ô­µÄÏà»¥×÷ÓÃ£¬ÕâÀïµÄÖÐ¼ä°±»ùËáÒ²¿ÉÒÔ×öÀàËÆ½âÊÍ¡£Í¬Ñù£¬ PRO ÓÐÐÎ³É×ª½ÇµÄ×÷ÓÃ£¬ºÜÓÐ¿ÉÄÜÐ­µ÷ËüÁ½²àµÄ°±»ùËá¹²Í¬²ÎÓë¶Ô¿¹Ô­µÄÊ¶±ð¡£
+\begin{table}[H]
+\centering
+\caption{\small{°Ñ¿¹Ô­µÄÖÐ¼ä°±»ùËáºÍËùÓÐµÄ¿¹Ô­°±»ùËá±È½Ï¡£}}
+\begin{threeparttable}
+\resizebox{\textwidth}{1cm}{
+\begin{tabular}{ccccc c }
+\hline\hline
+\multicolumn{6}{c}{Top 5 concentrated/diluted antigen middle amino acids}\\
+\hline
+Concentrated&(CYS, 3.4E-09)&(PHE, 2.9E-06)&(ILE, 6.9E-05)&(MET, 2.6E-03)&(LEU, 1.0E-02))\\
+Diluted&(GLU, 7.6E-04)&(THR, 1.8E-03)&(ARG, 1.5E-03)&(LYS, 1.6E-02)&(SER, 2E-02))\\
+\hline
+\end{tabular}
+}
+\begin{tablenotes}
+\item \small{±íÖÐ¸ø³öÁË°´ÕÕ q-value ÅÅÁÐµÄ×î±»¸»¼¯»òÕßÏ¡ÊÍµÄÇ°ÎåÃû°±»ùËá¼°¶ÔÓ¦µÄ q-value¡£}
+\end{tablenotes}
+\end{threeparttable}
+\label{Top_concentrated_diluted_middle_aa}
+\end{table}
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{The_Middle_aa.eps}
@@ -641,23 +725,22 @@ Match-type&\multicolumn{5}{c}{Top 5 diluted residues in the Core Antigen residue
 \label{Middle_aa}
 \end{figure}
 
-\chapter{RBFN µÄ¹¹½¨}
-Dash µÈ\cite{Quantifiable} ÓÃ10ÖÖ²»Í¬µÄ¿¹Ô­ÃâÒß²úÉúÁË4600¶à¸ö$\alpha\beta$TCR, Í¨¹ý¶ÔÕâÐ© $\alpha\beta$TCR µÄ·ÖÎö£¬ ×÷ÕßÊýÁ¿»¯µÄ¿Ì»­ÁË¿¹Ô­ºÍ$\alpha\beta$TCRÖ®¼äµÄ¹ØÏµ£¬²¢ÇÒµÃ³ö½áÂÛËµ£¬ Í¬Ò»¸ö¿¹Ô­ËùÓÕµ¼²úÉúµÄ TCR ÔÚÐòÁÐÉÏÏàËÆ¡£¶ÔÓÚ¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÓÐÍ¬ÑùµÄÎÊÌâ£ºÏàËÆµÄ¿¹Ô­±íÎ»ÊÇ²»ÊÇ¶ÔÓ¦ÏàËÆµÄ¿¹Ìå±íÎ»ÄØ£¿µ«ÊÇµ½¾ÝÎÒÃÇËùÖª£¬ µ½Ä¿Ç°»¹Ã»ÓÐÀàËÆµÄ¿Ì»­¿¹Ô­¿¹Ìå×÷ÓÃµÄÄ£ÐÍ£¬±¾ÕÂÄÚÈÝ¾ÍÊÇ´Ó Core µÄ½Ç¶ÈÈ¥½¨Á¢ÕâÑùÒ»¸öÄ£ÐÍ¡£
+\chapter{¾¶Ïò»ùº¯ÊýÍøÂç£¨RBFN£© µÄ¹¹½¨}
+Dash µÈ\cite{Quantifiable} ÓÃ10ÖÖ²»Í¬µÄ¿¹Ô­ÃâÒß²úÉúÁË4600¶à¸ö$\alpha\beta$TCR£¬Í¨¹ý¶ÔÕâÐ© $\alpha\beta$TCR µÄ·ÖÎö£¬ ×÷ÕßÊýÁ¿»¯µÄ¿Ì»­ÁË¿¹Ô­ºÍ$\alpha\beta$TCRÖ®¼äµÄ¹ØÏµ£¬²¢ÇÒµÃ³ö½áÂÛËµ£ºÍ¬Ò»¸ö¿¹Ô­ËùÓÕµ¼²úÉúµÄ TCR ÔÚÐòÁÐÉÏÏàËÆ¡£¶ÔÓÚ¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÓÐÍ¬ÑùµÄÎÊÌâ£ºÏàËÆµÄ¿¹Ô­±íÎ»ÊÇ²»ÊÇ¶ÔÓ¦ÏàËÆµÄ¿¹Ìå±íÎ»ÄØ£¿¾Ý±¾ÂÛÎÄ×÷ÕßËùÖª£¬ µ½Ä¿Ç°»¹Ã»ÓÐÀàËÆµÄ¿Ì»­¿¹Ô­¿¹Ìå×÷ÓÃµÄÄ£ÐÍ£¬±¾ÕÂÄÚÈÝ¾ÍÊÇ´Ó Core µÄ½Ç¶ÈÈ¥½¨Á¢ÕâÑùÒ»¸öÄ£ÐÍ¡£
 \section{Core Ö®¼ä¾àÀëµÄ¶¨Òå}
-¾¶Ïò»ùº¯ÊýÍøÂç(RBFN, radial basis function network)Òª½¨Á¢ÔÚ¾¶Ïò»ùº¯ÊýÉÏ£¬¶ø¾¶Ïò»ùº¯ÊýµÄÊäÈëÖµÊÇÒ»¸ö¾àÀë¡£Æäº¬Òå¾ÍÊÇ£¬¶ÔÓÚÒ»¸öÑ¡¶¨µÄ center£¬ ÔÚ¾¶Ïò»ùº¯ÊýÏÂ£¬ºÍËü¾àÀëÏàÍ¬µÄµã¾ßÓÐÏàÍ¬µÄÐÔÖÊ£¬»òÕßËµÕâ¸ö center ¶ÔËüÖÜÎ§µÄÓ°ÏìÖ»Óë¾àÀëÓÐ¹Ø£¬ºÍ·½ÏòÎÞ¹Ø¡£Òª½¨Á¢ RBFN £¬ µÚÒ»²½¾ÍÊÇÒª¶¨Òå¾àÀë£¬¾àÀëµÄºÃ»µÖ±½Ó¹ØÏµµ½ RBFN µÄºÃ»µ¡£Dash µÈ\cite{Quantifiable} ÔÚ½¨Á¢Ä£ÐÍÊ±ºòÓÃµ½ BLOSUM62£¬ µ«ÊÇÈ´ÊÇÒ»¸ö½Ø¶ÏµÄ BLOSUM62£¬»ù±¾¹æÔòÈçÏÂ£º
+¾¶Ïò»ùº¯ÊýÍøÂç(RBFN, radial basis function network)Òª½¨Á¢ÔÚ¾¶Ïò»ùº¯ÊýÉÏ£¬¶ø¾¶Ïò»ùº¯ÊýµÄÊäÈëÖµÊÇÒ»¸ö¾àÀë¡£Æäº¬Òå¾ÍÊÇ£¬¶ÔÓÚÒ»¸öÑ¡¶¨µÄ center£¬ ÔÚ¾¶Ïò»ùº¯ÊýÏÂ£¬ºÍËü¾àÀëÏàÍ¬µÄµã¾ßÓÐÏàÍ¬µÄÐÔÖÊ£¬»òÕßËµÕâ¸ö center ¶ÔËüÖÜÎ§µÄÓ°ÏìÖ»Óë¾àÀëÓÐ¹Ø£¬ºÍ·½ÏòÎÞ¹Ø¡£Òª½¨Á¢ RBFN£¬ µÚÒ»²½¾ÍÊÇÒª¶¨Òå¾àÀë£¬¾àÀëµÄºÃ»µÖ±½Ó¹ØÏµµ½ RBFN µÄºÃ»µ¡£Dash µÈ\cite{Quantifiable} ÔÚ½¨Á¢Ä£ÐÍÊ±ºòÓÃµ½ BLOSUM62£¬ µ«ÊÇÈ´ÊÇÒ»¸ö½Ø¶ÏµÄ BLOSUM62£¬»ù±¾¹æÔòÈçÏÂ£º
 \begin{enumerate}[label=(\arabic*)]
 	\item AAdist(a, a)=0
 	\item AAdist(a, b)=min(4,4-BLOSSUM62(a,b))
 	\item AAdist(a, -)= 4, if a is in CDR1 or CDR2
 	\item AAdist(a, -) = 8, if a is in CDR3
 \end{enumerate}
-ÔÚÉÏÃæµÄ¹æÔòÖÐ£¬ AAdist ±íÊ¾°±»ùËáºÍ°±»ùËáÖ®¼äµÄ¾àÀë¡£- ±íÊ¾¿ÕÈ±¡£ÉÏÃæµÄ¶¨ÒåÓÐÁ½¸ö²»×ã¡£
-Ò»ÊÇ£¬ÉÏÃæµÄ¼ÆËã¾àÀëµÄÊ±ºòÊÇÔÚ align Ö®ºó£¬È»¶ø align ±¾Éí¾ÍÓÐ×Ô¼ºµÄ´ò·Ö¹æÔò£¬ÏÖÔÚÓÖÔÙ´Î½øÐÐ´ò·Ö£¬Âß¼­ÉÏ²»¿ÉÐÐ£¬²»ÈçÖ±½ÓÓÃÉÏÃæµÄ¹æÔò½øÐÐ align¡£¶þÊÇ£¬¶Ô BLOSUM62 ½øÐÐ½Ø¶ÏµÄÀíÓÉ²»×ã¡£BLOSUM62 ÊÇÍ¨¹ý´óÁ¿Í¬Ô´°±»ùËáÖ®¼äµÄ±È½ÏµÃµ½µÄÒ»¸ö´ò·Ö¾ØÕó£¬·´Ó¦µÄÊÇ°±»ùËáÖ®¼ä²îÒìµÄÒ»¸ö×ÛºÏ·ÖÊý£¬Õâ¸ö¾ØÕóµÄ×î´óÖµÊÇ TRP ºÍ TRP Ö®¼äµÄÏàËÆ·ÖÊý 11£¬ ×îÐ¡ÖµÊÇ CYS ºÍ GLU Ö®¼äµÄÏàËÆ·ÖÊý -4¡£Èç¹û°Ñ  BLOSUM62 ÖÖÐ¡ÓÚ 0 µÄµÃ·Ö½øÐÐ½Ø¶Ï£¬¿ÉÄÜ»áÊ¹µÃ±¾¸Ã·´Ó¦³öÀ´µÄ²îÒìµÃ²»µ½³ä·Ö·´Ó¦¡£ËùÒÔ±¾ÂÛÎÄÃ»ÓÐ¶Ô BLOSUM62 ½øÐÐ½Ø¶Ï¡£ÎÒÃÇÄ£ÐÍµÄ¹¦ÄÜÊÇ£¬¸ø¶¨¶ÌµÄ¿¹Ìå°±»ùËáµÄÐòÁÐºÍ¶ÌµÄ¿¹Ô­°±»ùËáµÄÐòÁÐ£¬À´ÅÐ¶¨ËüÃÇÊÇ·ñ¿ÉÒÔ³ÉÎª Core, Ò²¾ÍÊÇËµÊÇ·ñÄÜÔÚ¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÖÐ°çÑÝÖØÒª×÷ÓÃ¡£ËùÒÔ£¬Òª¶¨Òå¶ÌÐòÁÐ¶ÔºÍ¶ÌÐòÁÐ¶ÔÖ®¼äµÄ¾àÀë¡£Éè£¨Ab1, Ag1£© ºÍ £¨Ab2, Ag2£©Îª match-type£¨m, n£© µÄÁ½¸ö¶ÌÐòÁÐ¶Ô£¬ÄÇÃ´ËüÃÇÖ®¼äµÄ¾àÀë¿ÉÒÔÍ¨¹ýÏÂÃæµÄ²½ÖèÀ´¶¨Òå£º
+ÔÚÉÏÃæµÄ¹æÔòÖÐ£¬ AAdist ±íÊ¾°±»ùËáºÍ°±»ùËáÖ®¼äµÄ¾àÀë¡£- ±íÊ¾¿ÕÈ±¡£ÉÏÃæµÄ¶¨ÒåÓÐÒ»¸ö²»×ãÖ®´¦£¬ÄÇ¾ÍÊÇ¶Ô BLOSUM62 ½øÐÐ½Ø¶ÏµÄÀíÓÉ²»×ã¡£BLOSUM62 ÊÇÍ¨¹ý´óÁ¿Í¬Ô´°±»ùËáÖ®¼äµÄ±È½ÏµÃµ½µÄÒ»¸ö´ò·Ö¾ØÕó£¬·´Ó³µÄÊÇ°±»ùËáÖ®¼ä²îÒìµÄÒ»¸ö×ÛºÏ·ÖÊý£¬Õâ¸ö¾ØÕóµÄ×î´óÖµÊÇ TRP ºÍ TRP Ö®¼äµÄÏàËÆ·ÖÊý 11£¬ ×îÐ¡ÖµÊÇ CYS ºÍ GLU Ö®¼äµÄÏàËÆ·ÖÊý -4¡£Èç¹û°Ñ  BLOSUM62 ÖÐÐ¡ÓÚ 0 µÄµÃ·Ö½øÐÐ½Ø¶Ï£¬¿ÉÄÜ»áÊ¹µÃ±¾¸Ã·´Ó¦³öÀ´µÄ²îÒìµÃ²»µ½³ä·Ö·´Ó¦¡£ËùÒÔ±¾ÂÛÎÄÃ»ÓÐ¶Ô BLOSUM62 ½øÐÐ½Ø¶Ï¡£Í¬Ê±£¬ÓÉÓÚ±¾ÂÛÎÄÄ£ÐÍµÄ¹¦ÄÜÊÇ£¬ÅÐ¶Ï¸ø¶¨¶ÌµÄ¿¹Ìå°±»ùËáµÄÐòÁÐºÍ¶ÌµÄ¿¹Ô­°±»ùËáµÄÐòÁÐÊÇ·ñ¿ÉÒÔ³ÉÎª Core£¬ Ò²¾ÍÊÇËµÊÇ·ñÄÜÔÚ¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÖÐ°çÑÝÖØÒª×÷ÓÃ¡£ËùÒÔ£¬Òª¶¨Òå¶ÌÐòÁÐ¶ÔºÍ¶ÌÐòÁÐ¶ÔÖ®¼äµÄ¾àÀë¡£Éè£¨Ab1, Ag1£© ºÍ £¨Ab2, Ag2£©Îª match-type£¨m, n£© µÄÁ½¸ö¶ÌÐòÁÐ¶Ô£¬ÄÇÃ´ËüÃÇÖ®¼äµÄ¾àÀë¿ÉÒÔÍ¨¹ýÏÂÃæµÄ²½ÖèÀ´¶¨Òå£º
 \begin{enumerate}[label=(\arabic*)]
 	\item ¶¨Òå Ab1 ºÍ Ab2 Ö®¼äµÄÏàËÆ¶È£¬Æ½ÒÆ³É·Ç¸ºÖµ£¬ ²¢ Normalize£¬ÈçÏÂ£º
 		\begin{align}
-			\label{sim}\mathrm{S_{Ab}} &= \mathrm{Aln}(\mathrm{Ab}_1, \mathrm{Ab}_2)\\		
-			\label{positive}\mathrm{S_{Ab}}^+ &= \frac{\mathrm{S_{Ab}} + 4\times m}{15 \times m}		
+			\label{sim}S_{Ab} &= \mathrm{Aln}(\mathrm{Ab}_1, \mathrm{Ab}_2)\\		
+			\label{positive}S_{Ab}^{+} &= \frac{\mathrm{S_{Ab}} + 4\times m}{15 \times m}		
 		\end{align}
 		ÔÚ¹«Ê½(\ref{sim})ÖÐ£¬Aln ±íÊÇÐòÁÐ±È¶Ô£¨sequence alignment)µÄ·ÖÊý£¬ÐòÁÐ±È¶ÔËùÓÃµÄ¹æÔòÊÇ£º
 		\begin{align*}
@@ -666,25 +749,30 @@ Dash µÈ\cite{Quantifiable} ÓÃ10ÖÖ²»Í¬µÄ¿¹Ô­ÃâÒß²úÉúÁË4600¶à¸ö$\alpha\beta$TCR, Í
 			\text{extended gap} &= Hp_2\\
 		\end{align*}
 		ÔÚÉÏÃæµÄ¹æÔòÖÐ£¬ ÎÒÃÇÍêÈ«²ÉÓÃÁË BLOSUM62£» $Hp_1$ ºÍ $Hp_2$ ±íÊ¾Á½¸ö³¬²ÎÊý£¨hyperparameter£©£¬ ËüÃÇµÄÈ¡Öµ·¶Î§ÊÇ $\{-1, -2, -3, -4, -5\}$¡£ÔÚ¹«Ê½£¨\ref{positive}£©ÖÐ£¬$4\times m$ ºÍ $15\times m$ À´×ÔÓÚ Substitution Matrix ÖÐ×îÐ¡µÄÖµÊÇ -4£¬×î´óÖµÊÇ 11.
-		\item ÒÔÍ¬ÑùµÄ·½Ê½¶¨Òå Ag1 ºÍ Ag2 Ö®¼äµÄÏàËÆ¶È£¬ Æ½ÒÆ³É·Ç¸º£¬²¢ Normalize£¬µÃµ½ $\text{S}_{Ag}^+$
-		\item ¶¨Òå £¨Ab1, Ag1£© ºÍ £¨Ab2, Ag2£©Ö®¼äµÄÏàËÆÃæ»ý£º
+		\item ÒÔÍ¬ÑùµÄ·½Ê½¶¨Òå Ag1 ºÍ Ag2 Ö®¼äµÄÏàËÆ¶È£¬ Æ½ÒÆ³É·Ç¸º£¬²¢ Normalize£¬µÃµ½ $S_{Ag}^+$¡£
+		\item ¶¨Òå £¨Ab1, Ag1£© ºÍ £¨Ab2, Ag2£©Ö®¼äµÄÏàËÆ¶ÈµÄ³Ë»ý£º
 			\begin{align}
-			S=\text{S}_{Ab}^+ \times \text{S}_{Ag}^+
+			S=S_{Ab}^+ \times S_{Ag}^+
 			\end{align}
-		 ÕâÀïÎÒÃÇ¼ÆËãÃæ»ý£¬¶øÃ»ÓÐ¼ÆËã³¤¶È£¬ÊÇÒòÎª $\text{S}_{Ab}^+ $ ºÍ $\text{S}_{Ag}^+$ ÊÇÐ­Í¬×÷ÓÃµÄ£¬¶ø²»ÊÇ¶ÀÁ¢×÷ÓÃµÄ¡£Õâ¸öÂÛ¶ÏÀ´×ÔÒ»¸ö¼òµ¥µÄÊÂÊµ£¬ µ± (Ab1, Ag1) ÓÐÇ¿ÁÒµÄÏà»¥×÷ÓÃ£¬²¢ÇÒ Ag2 ºÍ Ag1 ÍêÈ«Ïà·´Ê±£¬ (Ab1, Ag2) Ö®¼äµÄÏà»¥×÷ÓÃÓ¦¸ÃÊÇ0¡£Ò²¾ÍÊÇËµ£¬Ab1 ºÍ Ab2 Ö®¼äµÄÏàËÆ³Ì¶ÈËùÆðµ½µÄ×÷ÓÃºÍ Ag1 ºÍ Ag2 Ö®¼äµÄÏàËÆÐÔÏà¹Ø¡£·´¹ýÀ´Ò²Ò»Ñù¡£
+		 ÕâÀïÎÒÃÇ¼ÆËã³Ë»ý£¬¶øÃ»ÓÐÇóºÍ£¬ÊÇÒòÎª $S_{Ab}^+ $ ºÍ $S_{Ag}^+$ ÊÇÐ­Í¬×÷ÓÃµÄ£¬¶ø²»ÊÇ¶ÀÁ¢×÷ÓÃµÄ¡£Õâ¸öÂÛ¶ÏÀ´×ÔÒ»¸ö¼òµ¥µÄÊÂÊµ£¬ µ± (Ab1, Ag1) ÓÐÇ¿ÁÒµÄÏà»¥×÷ÓÃ£¬²¢ÇÒ Ag1 ºÍ Ag2 ÏàËÆ¶ÈºÜÐ¡Ê±£¬ (Ab1, Ag2) Ö®¼äµÄÏà»¥×÷ÓÃÓ¦¸ÃºÜÐ¡¡£Ò²¾ÍÊÇËµ£¬Ab1 ºÍ Ab2 Ö®¼äµÄÏàËÆ³Ì¶ÈËùÆðµ½µÄ×÷ÓÃºÍ Ag1 ºÍ Ag2 Ö®¼äµÄÏàËÆ¶ÈÏà¹Ø¡£·´¹ýÀ´Ò²Ò»Ñù¡£³Ë·¨¿ÉÒÔ·´Ó¦³öÕâÖÖÏàËÆ¶ÈÖ®¼äµÄÏà¹Ø¹ØÏµ£¬¶ø¼Ó·¨Ôò²»¿ÉÒÔ¡£
 		 \item ¼ÆËã£¨Ab1, Ag1£© ºÍ £¨Ab2, Ag2£©Ö®¼äµÄ¾àÀë£º
 		 	\begin{align}
 				D= 1- S
 			\end{align}
 \end{enumerate}
+\newpage
+
 \section{RBFN Ä£ÐÍ}
 \subsection{RBFN Ä£ÐÍµÄ¹¹½¨}
-´Ó¿¹Ô­¿¹Ìå¸´ºÏÖÐÌáÈ¡³öÀ´µÄ Core ÊÇ¾ßÓÐÏà»¥×÷ÓÃµÄÕýÑù±¾¡£Ã¿ÖÖ match-type ÏÂµÄ¸ºÑù±¾ÊÇËæ»ú²úÉúµÄ²¢ÇÒ²»ÔÚÕýÑù±¾ÖÐµÄ°±»ùËáÐòÁÐ¶Ô¡£±¾ÎÄÔÚÃ¿ÖÖ match-type ÏÂ¶ÀÁ¢µÄ²úÉú 10 ×é¸ºÑù±¾£¬Ã¿×é¸ºÑù±¾µÄÑù±¾Á¿ºÍÕýÑù±¾Ò»Ñù¡£\\
-RBFN µÄ¾¶Ïò»ùº¯ÊýÑ¡ÔñÎª¸ßË¹º¯Êý, ¶ÔÓÚ center c À´Ëµ¿ÉÒÔ±íÊ¾ÎªÈçÏÂ£º
+´Ó¿¹Ô­¿¹Ìå¸´ºÏÖÐÌáÈ¡³öÀ´µÄ Core ÊÇ¾ßÓÐÏà»¥×÷ÓÃµÄÕýÑù±¾¡£Ã¿ÖÖ match-type ÏÂµÄ¸ºÑù±¾ÊÇËæ»ú²úÉúµÄ²¢ÇÒ²»ÔÚÕýÑù±¾ÖÐµÄ°±»ùËáÐòÁÐ¶Ô¡£\\
+RBFN µÄ¾¶Ïò»ùº¯ÊýÑ¡ÔñÎª¸ßË¹º¯Êý£¬ ¶ÔÓÚ center c À´Ëµ¿ÉÒÔ±íÊ¾ÎªÈçÏÂ£º
 	$$f(x,r,c) = exp\{d(x,c)^2/r^2\}$$
 RBFN ¿ÉÒÔ±íÊ¾Îª£º
-$$\text{RBFN}(x)= \sum w_if(x,r_i,c_i)$$
-ÆäÖÐ $w_i$ ºÍ $r_i$ ÊÇÒªÔÚÄ£ÐÍÑµÁ·¹ý³ÌÖÐÈ·¶¨µÄ²ÎÊý¡£ÔÚÂÛÎÄÖÐ£¬$r_i$ ¹Ì¶¨Îª 1¡£¶ÔÓÚ RBFN µÄ center µÄÑ¡È¡£¬±¾ÂÛÎÄ²ÉÓÃ Alexandridis µÈÔÚÎÄÏ×\cite{FastCenter} ÖÐÌá¹©µÄ·½·¨¡£¾ßÌå²½Öè¿ÉÒÔ¸ÅÀ¨Á÷³ÌÍ¼\ref{Coverage_Center}£º
+\begin{align}
+\text{RBFN}(x)= \sum w_if(x,r_i,c_i)
+\label{RBFN}
+\end{align}
+ÆäÖÐ $w_i$ ºÍ $r_i$ ÊÇÒªÔÚÄ£ÐÍÑµÁ·¹ý³ÌÖÐÈ·¶¨µÄ²ÎÊý¡£ÔÚÂÛÎÄÖÐ£¬$r_i$ ¹Ì¶¨Îª 1¡£¶ÔÓÚ RBFN µÄ center µÄÑ¡È¡£¬ Alexandridis µÈÔÚÎÄÏ×\cite{FastCenter} ÖÐÌá¹©ÁËÒ»¸öÔÚ¼ÆËãËÙ¶ÈÉÏ¸ßÐ§µÄ·½·¨¡£¾ßÌå²½Öè¿ÉÒÔ¸ÅÀ¨Á÷³ÌÍ¼\ref{Coverage_Center}£º
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Coverage_Center.eps}
@@ -692,18 +780,80 @@ $$\text{RBFN}(x)= \sum w_if(x,r_i,c_i)$$
 	\label{Coverage_Center}
 \end{figure}
 
-´Ó±¾ÖÊÉÏÀ´½²£¬ÉÏÃæµÄ center Ñ¡Ôñ·½·¨ÊÇ¾ÛÀàµÄ·½·¨£¬Ê×ÏÈ¶ÔÑù±¾½øÐÐ¾ÛÀà£¬È»ºóÔÚÃ¿¸öÀàÖÐÈÎÒâÑ¡³öÒ»¸ö´ú±í¡£±¾ÂÛÎÄ¾ÍÊÇ²ÉÓÃµÄ¾ÛÀà·½·¨£¬ÕâÑù×ö²»µ«¿ÉÒÔ¸ù¾Ý°ë¾¶µÄ´óÐ¡À´È·¶¨ center, ¶øÇÒ¿ÉÒÔ¸ù¾ÝËùÒªÑ¡Ôñ center ÊýÄ¿µÄ¶àÉÙÀ´È·¶¨ center¡£
+´Ó±¾ÖÊÉÏÀ´½²£¬ÉÏÃæµÄ center Ñ¡Ôñ·½·¨ÊÇ¾ÛÀàµÄ·½·¨£¬Ê×ÏÈ¶ÔÑù±¾½øÐÐ¾ÛÀà£¬È»ºóÔÚÃ¿¸öÀàÖÐÈÎÒâÑ¡³öÒ»¸ö´ú±í¡£¿ÉÊÇÕâÖÖÑ¡È¡·½·¨µÄÒ»¸öÖØ´óÈ±µãÊÇ¾ÛÀàÖ®ºó£¬Ñ¡È¡´ú±íµÄËæ»úÐÔ¡£ÕâÑùºÜ¿ÉÄÜÂ©µôÒ»Ð©±È½ÏÖØÒªµÄ center ¡£Í¬Ê± Alexandridis µÈÈËµÄ·½·¨£¨Í¼\ref{Coverage_Center}£© »¹ÔÚÒ»¶¨³Ì¶ÈÉÏ¼ÙÉèÁË center ·Ö²¼µÄ¾ùÔÈÐÔ£¬Ò²¾ÍÊÇÃ¿¸ö°ë¾¶Îª $r$ µÄ·¶Î§ÄÚ£¬Ñ¡È¡Ò»¸ö center ¡£ÕâÖÖ¼ÙÉè¿ÉÄÜºÍÊµ¼ÊÇé¿öÓÐºÜ´ó²î±ð¡£
 
-±¾ÂÛÎÄ³¢ÊÔÁËÁ½ÖÖ¹Û²âÖµ£¬Ò»ÖÖÊÇ¶þ·ÖÀà¹Û²â£¬Ò²¾ÍÊÇ´Ó¸´ºÏÎïÖÐÌáÈ¡³öÀ´µÄ Core µÄ¹Û²âÖµ¶¼¶¨Îª 1£¬ Ëæ»ú²úÉúµÄ¸ºÑù±¾µÄ¹Û²âÖµ¶¨Îª 1¡£µÚ¶þÖÖÊÇ°ÑÃ¿¸ö Core µÄ CN Êý×÷Îª¹Û²âÖµ£¬¸ºÑù±¾µÄ CN Êý¼ÇÎª 0. ¶ÔÓÚ¶þ·ÖÀàµÄ¹Û²âÖµ£¬ËðÊ§º¯ÊýÑ¡Îª Sigmoid º¯Êý²¢¼ÓÉÏÕýÔòÏî£¬ ¶ÔÓÚ CN ×÷Îª¹Û²âÖµ£¬ÓÃ·½²î×÷ÎªËðÊ§º¯Êý²¢¼ÓÉÏÕýÔòÏî¡£¶ÔÓÚÑµÁ·¼¯£¬±¾ÂÛÎÄ²ÉÓÃ 5-fold µÄ½»²æ¼ìÑé(cross validation)¡£Ä£ÐÍµÄ³¬²ÎÊýÓÐÒÔÏÂ£º
+ËùÎ½Ñ¡È¡ºÃµÄ center £¬ ¾ÍÊÇÕâÐ© center ¿ÉÒÔ±È½ÏºÃµÄ¿Ì»­Êý¾Ý£¬´Ó¶øÊ¹ÎÒÃÇµÄÄ£ÐÍÔÚ½øÐÐÔ¤²âÊ±£¬ÄÜ¹»×ö³ö¸ü×¼È·µÄÅÐ¶Ï¡£´ÓÁíÍâÒ»¸ö½Ç¶È½²£¬ºÃµÄ center ¶¼ÊÇ¶ÔËðÊ§º¯ÊýÓ°Ïì±È½Ï´óµÄÑù±¾¡£¼ÙÉèËðÊ§º¯ÊýÊÇ $L$£¬ center $c_i$ ¶Ô $L$ µÄÓ°ÏìÍ¨¹ý 
+$\displaystyle{\bigg|\frac{\partial L}{\partial f(x,r_i, c_i)}\bigg|}$ À´ºâÁ¿£¬ÔòÓÉÁ´Ê½·¨Ôò£¬ÓÐÏÂÃæµÄÍÆµ¼£º
+\begin{align*}
+\bigg|\frac{\partial L}{\partial f(x,r_i, c_i)}\bigg| &= \bigg|\frac{\partial L}{\partial (\text{RBFN})}\bigg|\cdot\bigg|\frac{\partial(\text{RBFN})}{\partial f(x,r_i, c_i)}\bigg|\\
+&= \bigg|\frac{\partial L}{\partial (\text{RBFN})}\bigg|\cdot |w_i|
+\end{align*}
+¶ÔÓÚËùÓÐµÄ center À´½²£¬ $\bigg|\frac{\partial L}{\partial (\text{RBFN})}\bigg|$ µÄÈ¡ÖµÏàÍ¬£¬Ò²¾ÍÊÇËµ center $c_i$ ¶ÔËðÊ§º¯Êý $L$ µÄÓ°ÏìÓÉÆä¶ÔÓ¦¾¶Ïò»ùº¯ÊýµÄÏµÊýµÄ¾ø¶ÔÖµ $|w_i|$ ¾ö¶¨¡£¸ù¾Ý±í´ïÊ½ \ref{RBFN}£¬Ò²¿ÉÒÔÖ±¾õµÄ¿´³ö£¬µ± $r_i$ ¹Ì¶¨Ê±£¬Ò»¸ö center µÄÖØÒªÐÔÔÚÒ»¶¨³Ì¶ÈÉÏ¿ÉÒÔÓÉÆä¶ÔÓ¦µÄ $|w_i|$ µÄ´óÐ¡È·¶¨¡£¼øÓÚ´Ë£¬±¾ÂÛÎÄÉè¼ÆÁËÏÂÃæµÄ center Ñ¡È¡µÄ·½·¨
+
+\alglanguage{pseudocode}
+	\begin{algorithm}
+		\caption{Center Selection Method}
+		\label{CenterSelectAlg}
+		\begin{algorithmic}
+			\State Initial $W$  \Comment $W$ is a vector of coefficients
+			\State Initial $C$ \Comment $C$ begins with all samples.
+			\State Set the target number of centers $N$.
+			\While {$len(C) < N $} \Comment $len(C)$ is the length of C.
+				\State Train the model
+				\For {$w_i \in W$}
+					\If {$|w_i| = min\{|w|: w \in W\}$ }
+						\State Del $w_i$ from $W$	  
+						\State Del $c_i$ from $C$			
+					\EndIf
+				\EndFor
+			\EndWhile			
+		\end{algorithmic}		
+	\end{algorithm}
+
+Ëã·¨ \ref{CenterSelectAlg} ÊÇÔÚËðÊ§º¯ÊýµÄÖ¸µ¼ÏÂ£¬¶Ô center ½øÐÐÑ¡È¡£¬ÎÒÃÇ³ÆÕâÖÖ·½·¨Îª LGM£¨Loss Guided Method£©¡£ LGM ÔÚÒ»¶¨³Ì¶ÈÉÏ¿Ë·þÁËËæ»úÐÔ£¬ÀíÂÛÉÏ½²£¬Ó¦¸ÃÓÅÓÚÎÄÏ×\cite{FastCenter} µÄ·½·¨¡£±¾ÂÛÎÄ²ÉÓÃ Hamming¡¢ Occurence Frequency\cite{OF_IOF}¡¢ Inverse Occurence\cite{OF_IOF} ºÍ Eskin\cite{Eskin}ËÄÖÖ¾àÀë£¬Gaussian¡¢ Inverse Multi-Quadric¡¢ Markov ºÍ Thin Plate Spline ËÄÖÖ¾¶Ïò»ùº¯Êý£¬ ÔÚ Breast Cancer Êý¾ÝÉÏ \cite{BreastCancer}£¬ ¶Ô LGM ºÍÎÄÏ× \cite{FastCenter} µÄ·½·¨£¨ÕâÀï³ÆÖ®Îª Random Cluster£©½øÐÐ±È½Ï¡£±È½ÏµÄ±ê×¼²ÉÓÃ MCC(Matthews correlation coefficient)£¬½á¹ûÈçÍ¼ \ref{Hamming_BRE}¡¢ \ref{Eskin_BRE}¡¢ \ref{OF_BRE}¡¢ \ref{IOF_BRE}¡£
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Hamming_BRE.eps}
+	\caption{Hamming distance µÄ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{FastCenter}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
+	\label{Hamming_BRE}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Eskin_BRE.eps}
+	\caption{Eskin distance µÄ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{Eskin}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
+	\label{Eskin_BRE}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{OF_BRE.eps}
+	\caption{OF ±íÊ¾ Occurence Frequency£¬ ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{OF_IOF}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
+	\label{OF_BRE}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{IOF_BRE.eps}
+	\caption{IOF ±íÊ¾ Inverse Occurence Frequency£¬ ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{OF_IOF}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
+	\label{IOF_BRE}
+\end{figure}
+
+´ÓÍ¼ \ref{Hamming_BRE}¡¢ \ref{Eskin_BRE}¡¢ \ref{OF_BRE}¡¢ \ref{IOF_BRE} ÖÐµÄ½á¹û¿ÉÒÔ¿´³ö£¬µ± center µÄÊýÄ¿±È½Ï¶àµÄÊ±ºò£¬LGM ²¢²»ÓÅÓÚÎÄÏ×\cite{FastCenter} ÖÐµÄ·½·¨¡£µ± center µÄÊýÄ¿±È½ÏÉÙµÄÊ±ºò£¬LGM µÄ·½·¨ÔòÃ÷ÏÔÕ¼ÓÅ¡£ÕâÆäÖÐµÄÔ­Òò¾ÍÊÇ£¬µ± center ÊýÄ¿ºÜÉÙÊ±£¬ÎÄÏ×\cite{FastCenter} ·½·¨µÄËæ»úÐÔºÜÈÝÒ×¶ªµô±È½ÏÖØÒªµÄ center ¡£µ± center ÊýÄ¿±È½Ï¶àÊ±£¬ÎÄÏ×\cite{FastCenter} µÄ·½·¨ËäÈ»ÓÐËæ»úÐÔ£¬µ«ÊÇÒ²ÄÜÒÔ½Ï´óµÄ¸ÅÂÊÑ¡³ö±È½ÏÖØÒªµÄ center¡£ LGM ·½·¨ËäÈ»ÔÚ center ÊýÄ¿±È½ÏÉÙÊ±Ã÷ÏÔÓÅÓÚÎÄÏ×\cite{FastCenter} µÄ·½·¨£¬µ«ÊÇµ±Êý¾Ý±È½Ï´óÊ±£¬LGM ·½·¨ÐèÒªºÜ¸ßµÄ¼ÆËãÁ¿£¬ÏÔµÃ·Ç³£±¿×¾¡£±¾ÂÛÎÄµÄÄ¿µÄÊÇ¹¹½¨ºÃµÄ RBFN Ä£ÐÍ£¬¶ø²»ÊÇÑ¡Ôñ¸üÉÙµÄ center£¬ Í¬Ê±ÓÖ¿¼ÂÇµ½¼ÆËãµÄËÙ¶È£¬±¾ÂÛÎÄÑ¡ÔñÁËÎÄÏ×\cite{FastCenter}µÄ center Ñ¡È¡·½·¨¡£
+
+±¾ÂÛÎÄ³¢ÊÔÁËÁ½ÖÖ¹Û²âÖµ£¬Ò»ÖÖÊÇ¶þ·ÖÀà¹Û²â£¬Ò²¾ÍÊÇ´Ó¸´ºÏÎïÖÐÌáÈ¡³öÀ´µÄ Core µÄ¹Û²âÖµ¶¼¶¨Îª 1£¬ Ëæ»ú²úÉúµÄ¸ºÑù±¾µÄ¹Û²âÖµ¶¨Îª -1¡£µÚ¶þÖÖÊÇ°ÑÃ¿¸ö Core µÄ CN Êý×÷Îª¹Û²âÖµ£¬¸ºÑù±¾µÄ CN Êý¼ÇÎª 0. ¶ÔÓÚ¶þ·ÖÀàµÄ¹Û²âÖµ£¬ËðÊ§º¯ÊýÑ¡Îª Sigmoid º¯Êý²¢¼ÓÉÏÕýÔòÏî£¬ ¶ÔÓÚ CN ×÷Îª¹Û²âÖµ£¬ÓÃ·½²î×÷ÎªËðÊ§º¯Êý²¢¼ÓÉÏÕýÔòÏî¡£¶ÔÓÚÑµÁ·¼¯£¬±¾ÂÛÎÄ²ÉÓÃ 5-fold µÄ½»²æ¼ìÑé(cross validation)¡£Ä£ÐÍµÄ³¬²ÎÊýÓÐÒÔÏÂ£º
 \begin{enumerate}[label = (\arabic*)]
-	\item ÔÚ¾àÀë¶¨Òå¹æÔòÖÐ gap µÄ·ÖÊý $Hp_1$, È¡Öµ·¶Î§ÊÇ $\{-1, -2, -3, -4, -5\}$
-	\item ÔÚ¾àÀë¶¨Òå¹æÔòÖÐ extended gap µÄ·ÖÊý $Hp_2$, È¡Öµ·¶Î§ÊÇ $\{-1, -2, -3, -4, -5\}$
-	\item ÕýÔòÏîµÄÏµÊý $r$, È¡Öµ·¶Î§ÊÇ $\{0.0001, 0.001, 0.01, 0.1\}$¡£
+	\item ÔÚ¾àÀë¶¨Òå¹æÔòÖÐ gap µÄ·ÖÊý $Hp_1$£¬È¡Öµ·¶Î§ÊÇ $\{-1, -2, -3, -4, -5\}$¡£
+	\item ÔÚ¾àÀë¶¨Òå¹æÔòÖÐ extended gap µÄ·ÖÊý $Hp_2$£¬ È¡Öµ·¶Î§ÊÇ $\{-1, -2, -3, -4, -5\}$¡£
+	\item ÕýÔòÏîµÄÏµÊý $r$£¬ È¡Öµ·¶Î§ÊÇ $\{0.0001, 0.001, 0.01, 0.1\}$¡£
 	\item Center ÊýÄ¿Õ¼ÑµÁ·¼¯µÄ±ÈÀý $p$£¬ È¡Öµ·¶Î§ÊÇ $\{0.8, 0.4, 0.2, 0.1, 0.05, 0.02\}$¡£
 	\item ¹Û²âÖµÑ¡ Binary ÀàÐÍ »¹ÊÇ CN ¡£
 \end{enumerate}
-±í\ref{Best_para_Numerical} ºÍ ±í\ref{Best_para_Binary} ·Ö±ð¸ø³öÁËÔÚ CN Îª¹Û²âÖµ ºÍ ¶þ·ÖÀàÎª¹Û²âÖµÇé¿öÏÂ£¬½»²æ¼ìÑéµÄ×îÓÅ±íÏÖºÍ¶ÔÓ¦µÄ³¬²ÎÊý¡£ ¿ÉÒÔ¿´³ö£¬¶þ·ÖÀà¹Û²âÖµÔÚ¸÷ÖÖ match-type ÏÂ¶¼ÓÅÓÚ CN ¹Û²âÖµ¡£±¾ÂÛÎÄµÄÄ£ÐÍÈ·¶¨Îª¶þ·ÖÀàÄ£ÐÍ£¬³¬²ÎÊýÈ¡ÖµÒ²¶¼¶ÔÓ¦ÓÚ¶þ·ÖÀàÄ£ÐÍÏÂµÄ×îÓÅÈ¡Öµ¡£
+±í\ref{Best_para_Numerical} ºÍ ±í\ref{Best_para_Binary} ·Ö±ð¸ø³öÁËÔÚ CN Îª¹Û²âÖµ ºÍ ¶þ·ÖÀàÎª¹Û²âÖµÇé¿öÏÂ£¬½»²æ¼ìÑéµÄ×îÓÅ±íÏÖºÍ¶ÔÓ¦µÄ³¬²ÎÊý¡£ ¿ÉÒÔ¿´³ö£¬¶þ·ÖÀà¹Û²âÖµÔÚ¸÷ÖÖ match-type ÏÂ¶¼ÓÅÓÚ CN ¹Û²âÖµ¡£±¾ÂÛÎÄµÄÄ£ÐÍÈ·¶¨Îª¶þ·ÖÀàÄ£ÐÍ£¬³¬²ÎÊýÈ¡ÖµÒ²¶¼¶ÔÓ¦ÓÚ¶þ·ÖÀàÄ£ÐÍÏÂµÄ×îÓÅÈ¡Öµ¡£ÓÉÓÚ±¾ÂÛÎÄÊý¾ÝÁ¿²¢²»ÊÇÌØ±ð´ó£¬ÔÚÑµÁ·Ä£ÐÍµÄÊ±ºòÑ¡ÓÃµÄÄâÅ£¶Ù·¨£¨quasi-Newton£©½áºÏ Ramijo ÏßËÑË÷·½·¨\cite{BFGS}¡£¾ßÌåµÄ³ÌÐòºÍÓÐ¹Ø½»²æ¼ìÑéºÍÄ£ÐÍÑµÁ·µÄ½á¹ûÇë²Î¿´ \texttt{https://github.com/Leochuanxing/Paritope\_Epitope}¡£
 \begin{table}[H]\centering
+\caption{\small{ÔÚ¹Û²âÖµÎª CN Ê±£¬ÔÚ¸÷ÖÖ match-type ÏÂµÄ ½»²æ¼ìÑéµÄ×îÓÅ±íÏÖºÍ¶ÔÓ¦³¬²ÎÊýÈ¡Öµ¡£}}
+\begin{threeparttable}
 \begin{tabular}{ccccc c}
 \hline\hline
 match-type   &  $Hp_1$     & $Hp_2$    & $r$   & $p$&Æ½¾ùAUC\\
@@ -719,11 +869,16 @@ match-type   &  $Hp_1$     & $Hp_2$    & $r$   & $p$&Æ½¾ùAUC\\
 (3,3)  & -1  & -1 &0.01&0.8&0.842\\
 \hline
 \end{tabular}
-\caption{ÔÚ¹Û²âÖµÎª CN Ê±£¬ÔÚ¸÷ÖÖ match-type ÏÂµÄ ½»²æ¼ìÑéµÄ×îÓÅ±íÏÖ¡£ÕâÀïµÄ×îÓÅÊÇ°´ÕÕ½»²æ¼ìÑé¹ý³ÌÖÐÆ½¾ù AUC À´ºâÁ¿µÄ¡£}
+\begin{tablenotes}
+\item \small{ÕâÀïµÄ×îÓÅÊÇ°´ÕÕ½»²æ¼ìÑé¹ý³ÌÖÐÆ½¾ù AUC À´ºâÁ¿µÄ¡£}
+\end{tablenotes}
+\end{threeparttable}
 \label{Best_para_Numerical}
 \end{table}
 
 \begin{table}[H]\centering
+\caption{\small{ÔÚ¹Û²âÖµÎª 0, 1 Ê±£¬ÔÚ¸÷ÖÖ match-type ÏÂµÄ ½»²æ¼ìÑéµÄ×îÓÐ±íÏÖºÍ¶ÔÓ¦³¬²ÎÊýÈ¡Öµ¡£}}
+\begin{threeparttable}
 \begin{tabular}{ccccc c}
 \hline\hline
 match-type   &  $Hp_1$     & $Hp_2$    & $r$   & $p$&Æ½¾ùAUC\\
@@ -739,35 +894,37 @@ match-type   &  $Hp_1$     & $Hp_2$    & $r$   & $p$&Æ½¾ùAUC\\
 (3,3)  & -1  & -1 &0.001&0.8&0.862\\
 \hline
 \end{tabular}
-\caption{ÔÚ¹Û²âÖµÎª 0, 1 Ê±£¬ÔÚ¸÷ÖÖ match-type ÏÂµÄ ½»²æ¼ìÑéµÄ×îÓÐ±íÏÖ¡£ÕâÀïµÄ×îÓÅÊÇ°´ÕÕ½»²æ¼ìÑé¹ý³ÌÖÐÆ½¾ù AUC À´ºâÁ¿µÄ¡£}
+\begin{tablenotes}
+\item \small{ÕâÀïµÄ×îÓÅÊÇ°´ÕÕ½»²æ¼ìÑé¹ý³ÌÖÐÆ½¾ù AUC À´ºâÁ¿µÄ¡£}
+\end{tablenotes}
+\end{threeparttable}
 \label{Best_para_Binary}
 \end{table}
 
-¼øÓÚÑù±¾Á¿²¢²»ÊÇÌØ±ð´ó£¬ÔÚÑµÁ·Ä£ÐÍµÄÊ±ºòÑ¡ÓÃµÄÄâÅ£¶Ù·¨£¨quasi-Newton£©½áºÏ Ramijo ÏßËÑË÷·½·¨\cite{BFGS}¡£¾ßÌåµÄ³ÌÐòºÍÓÐ¹Ø½»²æ¼ìÑéºÍÄ£ÐÍÑµÁ·µÄ½á¹ûÇë²Î¿´ \texttt{https://github.com/Leochuanxing/Paritope\_Epitope}
 
 \newpage
 \subsection{RBFN Ä£ÐÍµÄ¼ìÑé}
-ÕýÈçÇ°ÃæËùËµµÄ£¬ÔÚÌáÈ¡Êý¾ÝµÄÊ±ºòÓÐ10\% µÄ¿¹Ô­¿¹Ìå¸´ºÏÎï±»Áô×÷Õý²âÊÔ¼¯£¬´ÓÖÐ³éÈ¡µÄ Core ÊÇÕýµÄ²âÊÔ¼¯¡£¸º²âÊÔ¼¯µÄÉú³ÉºÍ¸ºÑù±¾µÄÉú³É²ÉÓÃÍ¬ÑùµÄ·½·¨£¬Ëæ»úÉú³É²¢ÇÒ²»ÔÚÕýÑù±¾ÖÐµÄ×÷Îª¸º²âÊÔ¼¯¡£ÔÚÃ¿Ò»ÖÖ match-type ÏÂ£¬±¾ÂÛÎÄ¶ÀÁ¢µÄ²úÉúÁË 10 ×é¸º²âÊÔ¼¯£¬ÇÒÃ¿×é¸º²âÊÔ¼¯µÄ´óÐ¡ºÍ¶ÔÓ¦Õý²âÊÔ¼¯µÄ´óÐ¡Ò»Ñù¡£°ÑÕý²âÊÔ¼¯·Ö±ðºÍÕâ10×é¸º²âÊÔ¼¯»ìºÏ²úÉú 10 ×é²âÊÔ¼¯£¬È»ºóÓÃ¹¹½¨µÄ RBFN Ä£ÐÍ½øÐÐÇø·Ö£¬ROC ÈçÍ¼\ref{Discrimination}
+ÕýÈçÇ°ÃæËùËµµÄ£¬ÔÚÌáÈ¡Êý¾ÝµÄÊ±ºòÓÐ10\% µÄ¿¹Ô­¿¹Ìå¸´ºÏÎï±»Áô×÷²âÊÔ¼¯£¬´ÓÖÐ³éÈ¡µÄ Core ÊÇÕýµÄ²âÊÔ¼¯¡£¸º²âÊÔ¼¯µÄÉú³ÉºÍ¸ºÑù±¾µÄÉú³É²ÉÓÃÍ¬ÑùµÄ·½·¨¡£ÔÚÃ¿Ò»ÖÖ match-type ÏÂ£¬±¾ÂÛÎÄ¶ÀÁ¢µÄ²úÉúÁË 10 ×é¸º²âÊÔ¼¯£¬ÇÒÃ¿×é¸º²âÊÔ¼¯µÄ´óÐ¡ºÍ¶ÔÓ¦Õý²âÊÔ¼¯µÄ´óÐ¡Ò»Ñù¡£°ÑÕý²âÊÔ¼¯·Ö±ðºÍÕâ10×é¸º²âÊÔ¼¯»ìºÏ²úÉú 10 ×é²âÊÔ¼¯£¬È»ºóÓÃ¹¹½¨µÄ RBFN Ä£ÐÍ½øÐÐÇø·Ö£¬ROC ÈçÍ¼\ref{Discrimination}¡£
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{Discrimination.eps}
 	\caption{ÔÚ²»Í¬ match-type ÏÂ RBFN Ä£ÐÍÕý¸º²âÊÔ¼¯µÄÇø·Ö¡£ÔÚÃ¿ÖÖ match-type ÏÂ£¬ÓÐ 10 Ìõ ROC ÇúÏß¶ÔÓ¦ 10 ×é²âÊÔ¼¯£¬Average AUC ÊÇÕâ 10 ¸ö²âÊÔ¼¯ AUC µÄÆ½¾ù¡£}
 	\label{Discrimination}
 \end{figure}
-´ÓÍ¼\ref{Discrimination}ÖÐ¿ÉÒÔ¿´³ö£¬¶ÔÓÚËùÓÐ match-type£¬ Æ½¾ù AUC ¶¼²»µÍÓÚ 0.8£¬ ÔÚ match-type Îª £¨1£¬1£©Ê±£¬ Æ½¾ù AUC ¸ß´ï 0.97 £¡ Ò²¾ÍÊÇËµ£¬ÈÎÒâ¸ø¶¨Ò»¸ö°±»ùËá¶ÔºÍÒ»¸ö match-type Îª(1,1) µÄ Core, ±¾ÂÛÎÄµÄÄ£ÐÍ¿ÉÒÔ°Ñ¶þÕßÇø·Ö¿ªµÄ¸ÅÂÊÊÇ0.97¡£ ÔÚ match-type Îª £¨1£¬3£©Ê±±íÏÖ×î²î£¬ÄÜ¹»°ÑÕæÕýµÄ Core ºÍËæ»ú²úÉúµÄ°±»ùËáÐòÁÐ¶ÔÇø·Ö¿ªµÄ¸ÅÂÊÊÇ0.8£¬ Ò²ÒÑ¾­±È½Ï¸ßÁË¡£´ÓÕâÐ©½á¹ûÖÐ£¬¿ÉÒÔ¿´³ö RBFN Ä£ÐÍ±È½ÏºÃµÄ¿Ì»­ÁË Core µÄÐÔÖÊ£¬Ò²¾ÍÊÇËµ±È½ÏºÃµÄ¿Ì»­ÁË¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ¹ý³ÌÖÐÆð¹Ø¼ü×÷ÓÃµÄ¶ÌµÄ¿¹Ìå°±»ùËáÐòÁÐºÍ¶ÌµÄ¿¹Ô­°±»ùËáÐòÁÐÖ®¼äµÄ¹ØÏµ¡£µ±È»¸üÊÇ¿ÉÒÔµÃ³ö£¬¿¹Ô­ºÍ¿¹Ìå¹Ø¼ü°±»ùËáÖ®¼äµÄ×÷ÓÃÊÇÓÐ¹æÂÉµÄÕâÑùµÄÍÆÂÛ¡£
+´ÓÍ¼\ref{Discrimination}ÖÐ¿ÉÒÔ¿´³ö£¬¶ÔÓÚËùÓÐ match-type£¬ Æ½¾ù AUC ¶¼²»µÍÓÚ 0.8£¬ ÔÚ match-type Îª £¨1£¬1£©Ê±£¬ Æ½¾ù AUC ¸ß´ï 0.97£¡ ÔÚ match-type Îª £¨1£¬3£©Ê±±íÏÖ×î²î£¬AUC Îª 0.8£¬ Ò²ÒÑ¾­±È½Ï¸ßÁË¡£´ÓÕâÐ©½á¹ûÖÐ¿ÉÒÔ¿´³ö£¬±¾ÂÛÎÄ¹¹½¨µÄ RBFN Ä£ÐÍ±È½ÏºÃµÄ¿Ì»­ÁË Core µÄÐÔÖÊ£¬Ò²¾ÍÊÇËµ±È½ÏºÃµÄ¿Ì»­ÁË¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃ¹ý³ÌÖÐÆð¹Ø¼ü×÷ÓÃµÄ¶ÌµÄ¿¹Ìå°±»ùËáÐòÁÐºÍ¶ÌµÄ¿¹Ô­°±»ùËáÐòÁÐÖ®¼äµÄ¹ØÏµ¡£µ±È»¸üÊÇ¿ÉÒÔµÃ³ö£¬¿¹Ô­ºÍ¿¹Ìå¹Ø¼ü°±»ùËáÖ®¼äµÄ×÷ÓÃÊÇÓÐ¹æÂÉµÄÕâÑùµÄÍÆÂÛ¡£
 
-ÉÏÃæÄ£ÐÍÓÐÒ»¸öÈÃÈËÚ¸²¡µÄµØ·½£¬¾ÍÊÇ¶ÔÃ¿Ò»ÖÖ match-type ¶¼Òª½¨Á¢Ò»¸öÄ£ÐÍ£¬Ïàµ±ÓÚ9¸öÄ£ÐÍ¡£±¾ÎÄ»¹×öÁËÒ»¸ö°ÑÕâÐ©Ä£ÐÍÕûºÏ³ÉÒ»¸öÄ£ÐÍµÄ³¢ÊÔ¡£¼øÓÚ match-type£¨1£¬1£©Çé¿öÏÂ£¬Ä£ÐÍµÄ±íÏÖÈç´ËÓÅÐã£¬±¾ÎÄ³¢ÊÔÒÔ match-type(1,1) µÄÄ£ÐÍÎª»ù´¡À´½âÊÍÆäËûÄ£ÐÍ¡£¼ÙÉè $([a_1, a_2], [b_1, b_2])$ ÊÇÒ»¸ö match-type(2,2) µÄ Core£¬ ÄÇÃ´Õâ¸ö Core ¿ÉÒÔ×éºÏ³É 4 ¸ö match-type(1,1) µÄ Core. 
+ÉÏÃæÄ£ÐÍÓÐÒ»¸öÈÃÈËÚ¸²¡µÄµØ·½£¬¾ÍÊÇ¶ÔÃ¿Ò»ÖÖ match-type ¶¼Òª½¨Á¢Ò»¸öÄ£ÐÍ£¬Ïàµ±ÓÚ9¸öÄ£ÐÍ¡£±¾ÎÄ»¹×öÁËÒ»¸ö°ÑÕâÐ©Ä£ÐÍÕûºÏ³ÉÒ»¸öÄ£ÐÍµÄ³¢ÊÔ¡£¼øÓÚ match-type£¨1£¬1£©Çé¿öÏÂ£¬Ä£ÐÍµÄ±íÏÖÈç´ËÓÅÐã£¬±¾ÎÄ³¢ÊÔÒÔ match-type(1,1) µÄÄ£ÐÍÎª»ù´¡À´½âÊÍÆäËûÄ£ÐÍ¡£¼ÙÉè $([a_1, a_2], [b_1, b_2])$ ÊÇÒ»¸ö match-type(2,2) µÄ Core£¬ ÄÇÃ´Õâ¸ö Core ¿ÉÒÔ×éºÏ³É 4 ¸ö match-type(1,1) µÄ Core£º
 $$([a_1], [b_1])\;\;\;([a_1], [b_2])\;\;\;([a_2], [b_1])\;\;\;([a_2], [b_2])$$
 Éè $\text{RBFN}_{(1,1)}$ Îª match-type(1,1) µÄ RBFN Ä£ÐÍ£¬ ÄÇÃ´ $([a_1, a_2], [b_1, b_2])$ µÄÄ£ÐÍ·µ»ØÖµ¿ÉÒÔ¶¨ÒåÎª
 $$\frac{\sum\limits_{i=1}^2\sum\limits_{j=1}^2\text{RBFN}_{(1,1)}([a_i], [b_j])}{4}$$
-¶ÔÓÚÆäËû match-type µÄ Core Ò²×öÈçÉÏÃæÀàËÆµÄ¶¨Òå¡£Ò²¾ÍÊÇËµ£¬ÓÃmatch-type(1,1)µÄÄ£ÐÍÀ´½âÊÍËùÓÐ match-type µÄÄ£ÐÍ£¬±¾ÎÄ³ÆÕâ¸öÄ£ÐÍÎªÕûºÏÄ£ÐÍ¡£Í¼\ref{Integrated}¸ø³öÁËÕûºÏÄ£ÐÍµÄÔ¤²âÐ§¹û¡£
+¶ÔÓÚÆäËû match-type µÄ Core Ò²×öÈçÉÏÃæÀàËÆµÄ¶¨Òå¡£Ò²¾ÍÊÇËµ£¬ÓÃmatch-type(1,1)µÄÄ£ÐÍÀ´½âÊÍËùÓÐ match-type µÄÄ£ÐÍ£¬±¾ÎÄ³ÆÕâ¸öÄ£ÐÍÎªÕûºÏ£¨Integrated£©Ä£ÐÍ¡£Í¼\ref{Integrated}¸ø³öÁËÕûºÏÄ£ÐÍµÄÔ¤²âÐ§¹û¡£
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{Integrated_Discriminate.eps}
 	\caption{ÔÚ²»Í¬ match-type ÏÂ ÕûºÏ Ä£ÐÍÕý¸º²âÊÔ¼¯µÄÇø·Ö¡£ÔÚÃ¿ÖÖ match-type ÏÂ£¬ÓÐ 10 Ìõ ROC ÇúÏß¶ÔÓ¦ 10 ×é²âÊÔ¼¯£¬Average AUC ÊÇÕâ 10 ¸ö²âÊÔ¼¯ AUC µÄÆ½¾ù¡£}
 	\label{Integrated}
 \end{figure}
-´ÓÍ¼\ref{Integrated}¿ÉÒÔ¿´³ö£¬ÕûºÏÄ£ÐÍºÍÇ°ÃæµÄRBFNÄ£ÐÍÔÚ match-type(1,1) ÉÏµÄÔ¤²âÐ§¹ûÒ»Ñù£¬ÕâÒ²ÊÇÏÔÈ»µÄ¡£µ«ÊÇ£¬¶ÔÓÚÆäËûµÄ match-type, ÕûºÏÄ£ÐÍÃ÷ÏÔ´¦ÓÚÁÓÊÆ£¬Æ½¾ù AUC ²î¾àÎª 4.6\% ¡£×î¸ßµÄÎª match-type(3,3), ²î¾à´ïµ½ 8\% ¡£ÕâÐ©²î¾àÊÇ¾Þ´óµÄ¡£¶øÇÒËÆºõ£¬¿ÉÒÔ¿´³öËæ×Å¿¹Ô­°±»ùËá»òÕß¿¹Ìå°±»ùËáÐòÁÐµÄÔö³¤£¬ÕûºÏÄ£ÐÍ±íÏÖµÄÔ½À´Ô½²î¡£ÕâÒ²´ÓÁíÒ»¸ö½Ç¶ÈËµÃ÷£¬ÏàÁÚ°±»ùËáÖ®¼äµÄÐ­Í¬×÷ÓÃ¡£
+´ÓÍ¼\ref{Integrated}¿ÉÒÔ¿´³ö£¬ÕûºÏÄ£ÐÍºÍÇ°ÃæµÄRBFNÄ£ÐÍÔÚ match-type(1,1) ÉÏµÄÔ¤²âÐ§¹ûÒ»Ñù£¬ÕâÒ²ÊÇÏÔÈ»µÄ¡£µ«ÊÇ£¬¶ÔÓÚÆäËûµÄ match-type, ÕûºÏÄ£ÐÍÃ÷ÏÔ´¦ÓÚÁÓÊÆ£¬Æ½¾ù AUC ²î¾àÎª 4.6\% ¡£×î¸ßµÄÎª match-type(3,3), ²î¾à´ïµ½ 8\% ¡£ÕâÐ©²î¾àÊÇ¾Þ´óµÄ¡£¶øÇÒ¿ÉÒÔ¿´³öËæ×Å¿¹Ô­°±»ùËá»òÕß¿¹Ìå°±»ùËáÐòÁÐµÄÔö³¤£¬ÕûºÏÄ£ÐÍ±íÏÖµÄÔ½À´Ô½²î¡£ÕâÒ²´ÓÁíÒ»¸ö½Ç¶ÈËµÃ÷£¬ÏàÁÚ°±»ùËáÖ®¼äµÄÐ­Í¬×÷ÓÃ¡£ÔÚÔ¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå¸´ºÏÎïµÄÇ×ºÍÁ¦µÄÓ°ÏìÊ±£¬Ã»ÓÐÓÃµ½ÕûºÏÄ£ÐÍ¡£
 
 %ÏÂÃæÊÇÁíÍâµÄÀý×Ó£ºµÚÒ»¸ö¹«Ê½²»±êºÅ, Çë×¢ÒâÃüÁî\texttt{\textbackslash
 %nonumber}µÄÊ¹ÓÃ£º
@@ -814,14 +971,14 @@ $$\frac{\sum\limits_{i=1}^2\sum\limits_{j=1}^2\text{RBFN}_{(1,1)}([a_i], [b_j])}
 %¶¨Òå¡¢¶¨Àí¡¢Àý×ÓµÈµÄ±àºÅ¸ñÊ½Ò²¿ÉÒÔÓÃÀàËÆÃüÁî.
 
 \chapter{RBFN Ä£ÐÍµÄÓ¦ÓÃ}
-Ç°ÃæÒ»ÕÂ½¨Á¢ÁË RBFN Ä£ÐÍ£¬²¢ÇÒÕâ¸öÄ£ÐÍÔÚ²âÊÔ¼¯ÉÏ±íÏÖÁ¼ºÃ¡£Í¬Ê±»¹²âÊÔÁËÒ»¸öÕûºÏÄ£ÐÍ£¬Õâ¸öÄ£ÐÍºÍ RBFN Ä£ÐÍÏà±È£¬ÏÔµÃÑ·É«¡£ÕâÒ»ÕÂ½«»á°ÑÉÏÃæ½¨Á¢µÄÄ£ÐÍÓÃÀ´½â¾öÁ½¸öÎÊÌâ£¬Ò»¸öÊÇÇø±ð Core µÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐ£¬Ò»¸öÊÇÔ¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå¸´ºÏÎïµÄÓ°Ïì¡£ÔÚÇ°Ãæ½éÉÜ±¾ÂÛÎÄ±³¾°Ê±£¬ÓÐ²»ÉÙÆª·ùÊÇÓÃÀ´½éÉÜ¶Ô¿¹Ô­±íÎ»(epitope) Ô¤²âµÄÑÐ¾¿£¬ÆäÖÐÔ­Òò¾ÍÊÇÒòÎª¿¹Ô­±íÎ»µÄÔ¤²âÐèÒª¶Ô¿¹Ô­¿¹Ìå×÷ÓÃ¹æÂÉ½øÐÐÑÐ¾¿¡£È»¶øÔÚÕâÀï£¬±¾ÂÛÎÄ²¢Ã»ÓÐ°ÑÄ£ÐÍÓÃÓÚ¶Ô¿¹Ô­±íÎ»µÄÔ¤²â¡£
+Ç°ÃæÒ»ÕÂ½¨Á¢ÁË RBFN Ä£ÐÍ£¬²¢ÇÒÕâ¸öÄ£ÐÍÔÚ²âÊÔ¼¯ÉÏ±íÏÖÁ¼ºÃ¡£Í¬Ê±»¹²âÊÔÁËÒ»¸öÕûºÏÄ£ÐÍ£¬Õâ¸öÄ£ÐÍºÍ RBFN Ä£ÐÍÏà±È£¬ÏÔµÃÑ·É«¡£ÕâÒ»ÕÂ½«»á°ÑÉÏÃæ½¨Á¢µÄÄ£ÐÍÓÃÀ´½â¾öÁ½¸öÎÊÌâ£¬Ò»¸öÊÇÇø±ð Core µÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐ£¬Ò»¸öÊÇÔ¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå¸´ºÏÎïµÄÇ×ºÍÁ¦(affinit) µÄÓ°Ïì¡£ÔÚÇ°Ãæ½éÉÜ±¾ÂÛÎÄ±³¾°Ê±£¬ÓÐ²»ÉÙÆª·ùÊÇÓÃÀ´½éÉÜ¹ØÓÚ¿¹Ô­±íÎ»(epitope) Ô¤²âµÄÑÐ¾¿£¬¾ÍÊÇÒòÎª¿¹Ô­±íÎ»µÄÔ¤²âÐèÒª¶Ô¿¹Ô­¿¹Ìå×÷ÓÃ¹æÂÉ½øÐÐÑÐ¾¿¡£±¾ÂÛÎÄ²¢Ã»ÓÐ°ÑÄ£ÐÍÓÃÓÚ¶Ô¿¹Ô­±íÎ»µÄÔ¤²â¡£
 
 \section{Core ÖÐ¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËáµÄÇø·Ö}
-ÔÚÇ°Ò»ÕÂ½¨Á¢µÄÄ£ÐÍÖÐ£¬ÊäÈëÖµÊÇÁ½¸ö¶ÌµÄ°±»ùËáÐòÁÐ×é³ÉµÄ¶Ô(AbSeq, AgSeq), ÆäÖÐ AbSeq ÊÇ¶ÌµÄ¿¹Ìå°±»ùËáÐòÁÐ£¬AgSeq ÊÇ¶ÌµÄ¿¹Ô­°±»ùËáÐòÁÐ¡£ÄÇÃ´£¬´Ó×ÜÌåÊý¾ÝÉÏÀ´¿´£¬AbSeq ºÍ AgSeq ÓÐÃ»ÓÐÇø±ðÄØ£¿Õâ¾ÍÊÇ±¾½ÚÄÚÈÝËùÒª½â¾öµÄÎÊÌâ¡£
+ÔÚÇ°Ò»ÕÂ½¨Á¢µÄÄ£ÐÍÖÐ£¬ÊäÈëÖµÊÇÁ½¸ö¶ÌµÄ°±»ùËáÐòÁÐ×é³ÉµÄ¶Ô(AbSeq, AgSeq)£¬ ÆäÖÐ AbSeq ÊÇ¶ÌµÄ¿¹Ìå°±»ùËáÐòÁÐ£¬AgSeq ÊÇ¶ÌµÄ¿¹Ô­°±»ùËáÐòÁÐ¡£±¾½Ú³¢ÊÔ¶Ô AgSeq ºÍ Agseq ×ö³öÇø·Ö¡£
 
 Éè (AbSeq, AgSeq) ÊÇ match-type(m, n) µÄ Core£¬ Èç¹û AbSeq ºÍ AgSeq Ã»ÓÐÇø±ð£¬ ÄÇÃ´µ±½»»»  AbSeq ºÍ AgSeq µÄÇ°ºó´ÎÐòºó£¬µÃµ½µÄ (AgSeq, AbSeq) ºÍÕæÕýµÄ match-type(n, m) µÄ Core Ó¦¸ÃÃ»ÓÐÇø±ð£¬Ò²¾ÍÊÇËµÇ°Ò»ÕÂÖÐ¹¹½¨µÄÄ£ÐÍ²»ÄÜ¶Ô¶þÕß×ö³öÓÐÐ§Çø·Ö¡£ÕâÀï£¬Ò»¸ö match-type(m, n) µÄ²âÊÔ¼¯£¬ ËüÊÇÓÉ match-type(m, n) µÄÕý²âÊÔ¼¯£¬ºÍ match-type(n, m) µÄÕý²âÊÔ¼¯Í¨¹ý½»»»¿¹Ô­ÐòÁÐºÍ¿¹ÌåÐòÁÐµÄ´ÎÐòºóµÃµ½µÄ²âÊÔ¼¯£¬×éºÏ¶ø³É¡£Îª±íÊöÇå³þ£¬ÎÒÃÇÓÃÏÂÃæµÄÊýÑ§ÓïÑÔ±íÊ¾ match-type(n,m) µÄ²âÊÔ¼¯µÄÉú³É¡£
 \begin{align*}
-	\text{TR}_{(n, m)} &= \{(AgSeq, AbSeq):(AbSeq, AbSeq)\in \text{T}_{(m, n)}\}\\
+	\text{TR}_{(n, m)} &= \{(AgSeq, AbSeq):(AbSeq, AgSeq)\in \text{T}_{(m, n)}\}\\
 	\text{T} &=\text{TR}_{(n, m)} \cup \text{T}_{(n, m)}
 \end{align*}
 ÔÚÉÏÃæµÄ±íÊöÖÐ£¬ $\text{T}_{(m, n)}$ ºÍ $ \text{T}_{(n, m)}$ ·Ö±ðÎªÇ°Ò»ÕÂÖÐ match-type(m,n) ºÍ  match-type(n,m) µÄÕý²âÊÔ¼¯£¬ $\text{TR}_{(n, m)}$ Îª $\text{T}_{(m, n)}$ ÖÐµÄÔªËØÍ¨¹ý½»»»¿¹Ô­ºÍ¿¹Ìå°±»ùËáÐòÁÐµÄÇ°ºóË³ÐòµÃµ½£¬¼ò³ÆÎª TR £¨reverse testing set£©¡£ Í¼\ref{reverse}  ¸ø³öÁË RBFN Ä£ÐÍµÄÇø·ÖÐ§¹û¡£
@@ -831,17 +988,19 @@ $$\frac{\sum\limits_{i=1}^2\sum\limits_{j=1}^2\text{RBFN}_{(1,1)}([a_i], [b_j])}
 	\caption{RBFN ÓÃÀ´Çø·Ö²âÊÔ¼¯ T ºÍ TR µÄROCÇúÏßºÍ¶ÔÓ¦ AUC Öµ¡£}
 	\label{reverse}
 \end{figure}
-´ÓÍ¼\ref{reverse}¿ÉÒÔ¿´³ö£¬ÔÚ²»Í¬µÄ match-type ÏÂ£¬RBFN Ä£ÐÍ¿ÉÒÔ¶Ô T Óë TR ×ö³ö½ÏºÃµÄÇø·Ö£¬¶ÔÓ¦ ROC µÄ AUC Öµ´Ó 0.7 µ½ 0.78 ²»µÈ¡£Õâ¸ö½á¹ûËµÃ÷£¬Core ÖÐµÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐÓÐÃ÷ÏÔµÄÇø±ð¡£µ«ÊÇ£¬Õâ¸öÇø·ÖÐ§¹ûÈõÓÚ T ÓëËæ»ú²úÉúµÄ¸º²âÊÔ¼¯Ö®¼äµÄÇø·ÖÐ§¹û£¨Í¼\ref{Discrimination}£©£¬Æ½¾ùµÄAUC ²î±ðÎª 9.6 \% ¡£Õâ¸ö²îÖµ¿ÉÒÔÀí½âÎªÓÉ Core ÖÐµÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐµÄÏàËÆÐÔÔì³É£¬Ò²¾ÍÊÇ£¬´Ó AUC µÄ½Ç¶ÈÀ´½²£¬Core ÖÐµÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐµÄÏàËÆÐÔÊ¹µÃ¶ÔËüÃÇµÄÇø·ÖÐ§¹ûÏÂ½µÔ¼9.6 \%¡£
+´ÓÍ¼\ref{reverse}¿ÉÒÔ¿´³ö£¬ÔÚ²»Í¬µÄ match-type ÏÂ£¬RBFN Ä£ÐÍ¿ÉÒÔ¶Ô T Óë TR ×ö³ö½ÏºÃµÄÇø·Ö£¬AUC Öµ´Ó 0.7 µ½ 0.78 ²»µÈ¡£Õâ¸ö½á¹ûËµÃ÷ Core ÖÐµÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐÓÐÃ÷ÏÔµÄÇø±ð¡£µ«ÊÇ£¬Õâ¸öÇø·ÖÐ§¹ûÈõÓÚ T ÓëËæ»ú²úÉúµÄ¸º²âÊÔ¼¯Ö®¼äµÄÇø·ÖÐ§¹û£¨Í¼\ref{Discrimination}£¬Æ½¾ùµÄAUC ²î±ðÎª 9.6 \% ¡£Õâ¸ö²îÖµ¿ÉÒÔÀí½âÎªÓÉ Core ÖÐµÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐµÄÏàËÆÐÔÔì³É£¬Ò²¾ÍÊÇ£¬´Ó AUC µÄ½Ç¶ÈÀ´½²£¬Core ÖÐµÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐµÄÏàËÆÐÔÊ¹µÃ¶ÔËüÃÇµÄÇø·ÖÐ§¹ûÏÂ½µÔ¼9.6 \%¡£
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{Integrated_Reverse.eps}
 	\caption{ÕûºÏÄ£ÐÍÓÃÀ´Çø·Ö²âÊÔ¼¯ T ºÍ TR µÄROCÇúÏßºÍ¶ÔÓ¦ AUC Öµ¡£ }
 	\label{Integrated_Reverse}
 \end{figure}
-Í¬Ê±±¾ÂÛÎÄ»¹³¢ÊÔÓÃÕûºÏÄ£ÐÍ¶Ô T Óë TR ×ö³öÇø·Ö£¨Í¼\ref{Integrated_Reverse}£©¡£ÓÉÓÚÕûºÏÄ£ÐÍÔÚÇø·Ö T ÓëËæ»ú²úÉúµÄ¸º²âÊÔµÄ±íÏÖÉÏ²»Èç RBFN Ä£ÐÍ£¬Ò²¿ÉÒÔÍÆ²âÕûºÏÄ£ÐÍÔÚÇø·Ö T Óë TR Ê±²»Èç RBFN Ä£ÐÍ¡£ÕûºÏÄ£ÐÍºÍ RBFN Ä£ÐÍÔÚÇø·Ö T Óë TR Ê±µÄ AUC Æ½¾ù²î¾àÎª 7.1\% ¡£ÕûºÏÄ£ÐÍÔÚÇø·Ö T ÓëËæ»ú²úÉúµÄ¸ºÑù±¾ÉÏµÄ±íÏÖ£¨Í¼\ref{Integrated}£©Ò²ÓÅÓÚÔÚÇø·Ö T Óë TR Ê±µÄ±íÏÖ£¬Æ½¾ù AUC  ²î¾àÎª 12.8\% ¡£
+Í¬Ê±±¾ÂÛÎÄ»¹³¢ÊÔÓÃÕûºÏÄ£ÐÍ¶Ô T Óë TR ×ö³öÇø·Ö£¨Í¼\ref{Integrated_Reverse}¡£ÓÉÓÚÕûºÏÄ£ÐÍÔÚÇø·Ö T ÓëËæ»ú²úÉúµÄ¸º²âÊÔµÄ±íÏÖÉÏ²»Èç RBFN Ä£ÐÍ£¬Ò²¿ÉÒÔÍÆ²âÕûºÏÄ£ÐÍÔÚÇø·Ö T Óë TR Ê±²»Èç RBFN Ä£ÐÍ¡£ÕûºÏÄ£ÐÍºÍ RBFN Ä£ÐÍÔÚÇø·Ö T Óë TR Ê±µÄ AUC Æ½¾ù²î¾àÎª 7.1\%¡£ÕûºÏÄ£ÐÍÔÚÇø·Ö T ÓëËæ»ú²úÉúµÄ¸ºÑù±¾ÉÏµÄ±íÏÖ£¨Í¼\ref{Integrated}£©Ò²ÓÅÓÚÔÚÇø·Ö T Óë TR Ê±µÄ±íÏÖ£¬Æ½¾ù AUC  ²î¾àÎª 12.8\%¡£
 
 ¸üÎªÓÐÒâË¼µÄÊÇ£¬ÕâÁ½¸öÄ£ÐÍÔÚÇø·Ö T Óë TR ÒÔ¼° T Óë Ëæ»ú¸ºÑù±¾ Ê±µÄ AUC ²îÒìËÆºõÂú×ã½»»»¹ØÏµ¡£ÎªÁË¸üºÃµÄËµÃ÷£¬ÏÈ°Ñ¸÷ÖÖÇé¿öÏÂ AUC µÄÖµÁÐ³öÀ´£¨±í\ref{AUC_Commutative}£©¡£
 \begin{table}[H]\centering
+\caption{¸÷ÖÖÇé¿öÏÂµÄAUCÖµ}
+\begin{threeparttable}
 \begin{tabular}{ccccc}
 \hline\hline
 match-type & AUC(R,T,N)& AUC(R,T,TR)& AUC(I,T,N)&AUC(I,T,TR) \\
@@ -857,9 +1016,13 @@ match-type & AUC(R,T,N)& AUC(R,T,TR)& AUC(I,T,N)&AUC(I,T,TR) \\
 (3,3)  & 0.83   & 0.78  & 0.75    & 0.67 \\
 \hline
 \end{tabular}
-\caption{¸÷ÖÖÇé¿öÏÂµÄAUCÖµ¡£ÕâÐ©ÊýÖµÀ´×ÔÍ¼ \ref{Discrimination}, \ref{Integrated}, \ref{reverse}, \ref{Integrated_Reverse}¡£R ±íÊ¾ RBFN Ä£ÐÍ£¬I ±íÊ¾ÕûºÏÄ£ÐÍ£¬T ±íÊ¾Õý²âÊÔ¼¯£¬ TR ±íÊ¾ÓÉ T ÖÐÔªËØµÄ¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐ½»»»´ÎÐòµÃµ½µÄ²âÊÔ¼¯£¬ N ±íÊ¾Ëæ»úÉú³ÉµÄ¸ºÑù±¾¡£AUC(R,T,N) ±íÊ¾ÓÃ RBFNÄ£ÐÍ£¨R£©Çø·Ö T ºÍ N Ê±µÄ AUC Öµ¡£}
+\begin{tablenotes}
+\item \small{ÊýÖµÀ´×ÔÍ¼ \ref{Discrimination}¡¢ \ref{Integrated}¡¢\ref{reverse}¡¢ \ref{Integrated_Reverse}¡£R ±íÊ¾ RBFN Ä£ÐÍ£¬I ±íÊ¾ÕûºÏÄ£ÐÍ£¬T ±íÊ¾Õý²âÊÔ¼¯£¬ TR ±íÊ¾Í¨¹ý½»»»¿¹Ô­°±»ùËáÐòÁÐºÍ¿¹Ìå°±»ùËáÐòÁÐµÄ´ÎÐòµÃµ½µÄ²âÊÔ¼¯£¬ N ±íÊ¾Ëæ»úÉú³ÉµÄ¸ºÑù±¾¡£AUC(R,T,N) ±íÊ¾ÓÃ RBFNÄ£ÐÍ£¨R£©Çø·Ö T ºÍ N Ê±µÄ AUC Öµ£¬ ÆäËû AUC ×öÀàËÆ½âÊÍ¡£}
+\end{tablenotes}
+\end{threeparttable}
 \label{AUC_Commutative}
 \end{table}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Commutative.pdf}
@@ -868,36 +1031,36 @@ match-type & AUC(R,T,N)& AUC(R,T,TR)& AUC(I,T,N)&AUC(I,T,TR) \\
 \end{figure}
 ´ÓÍ¼ \ref{Commutative} ¿ÉÒÔ¿´³ö 
 $$0.1277 + 0.0411 = 0.0722 + 0.0966$$
- ¾¹È»ÊÇ½»»»µÄ(commutative)! Õâ¸öÏÖÏó²¢²» trivial, µ¥µ¥´ÓÊýÑ§µÄ½Ç¶ÈËÆºõµÃ²»µ½ÕâÑùµÄµÈÊ½£¬Í¬Ê±Í¨¹ý±È½ÏÔÚ¸÷ÖÖ match-type ÏÂµÄÊý¾ÝÒ²¶¼²»ÊÇÑÏ¸ñ³ÉÁ¢¡£
+ ¾¹È»ÊÇ½»»»µÄ(commutative)! Õâ¸öÏÖÏó²¢²» trivial, µ¥µ¥´ÓÊýÑ§µÄ½Ç¶ÈµÃ²»µ½ÕâÑùµÄµÈÊ½£¬Í¬Ê±ÔÚ¸÷ÖÖ match-type ÏÂµÄÊý¾ÝÒ²¶¼Ã»ÓÐÑÏ¸ñµÄ½»»»¹ØÏµ¡£
  \begin{figure}[H]
  \centering
  \includegraphics[scale=0.5]{Commutative_Explanation.pdf}
  \caption{¶ÔÍ¼ \ref{Commutative} ½»»»¹ØÏµµÄ½âÊÍ}
  \label{Commutative_Explanation}
  \end{figure}
- Í¼ \ref{Commutative_Explanation} ¸ø³öÁË½»»»¹ØÏµµÄÒ»¸ö½âÊÍ¡£ÕâÀï½èÓÃÐÄÀíÑ§ÉÏãÐÏÞ£¨sensory threshold£©µÄ¸ÅÄî£¬Ò²¾ÍÊÇÁ½¸ö´Ì¼¤ÄÜ¹»±»¸Ð¾õÆ÷¹ÙÇø·Ö¿ªµÄ×îÐ¡´Ì¼¤Ç¿¶ÈµÄ²î¡£´Ë´¦ÔòÓÃãÐÏÞÀ´±íÊ¾Ä£ÐÍµÄºÃ»µ¡£ÄÇÃ´£¬Ò»¸ö²âÊÔ¼¯ÖÐÄÜ¹»±»Çø·Ö¿ªµÄÑù±¾µÄÊýÄ¿Ëæ×ÅÄ£ÐÍãÐÏÞµÄ½µµÍ¶øÔö¼Ó¡£ÎÒÃÇ¿ÉÒÔ°Ñ²âÊÔ¼¯¹ØÓÚãÐÏÞµÄ·Ö²¼»­³öÀ´£¬ÈçÍ¼ \ref{Commutative_Explanation} ÖÐµÄÁ½¸öÇúÏß£¬·Ö±ð±íÊ¾²âÊÔ¼¯ T ºÍ TR ÒÔ¼° T ºÍ N ÑØãÐÏÞµÄ·Ö²¼£» ÈçÍ¼ \ref{Commutative_Explanation} ÖÐµÄÁ½ÌõÖ±Ïß·Ö±ð±íÊ¾ RBFN Ä£ÐÍ(R)ºÍÕûºÏÄ£ÐÍ(I)£¬ËüÃÇÔÚ x ÖáÉÏµÄ½Ø¾à±íÊ¾ÕâÁ½¸öÄ£ÐÍµÄãÐÏÞ¡£ÏÔÈ»ÕûºÏÄ£ÐÍµÄãÐÏÞ´óÓÚRBFNµÄãÐÏÞ£¬Ò²¾ÍÊÇRBFNÄ£ÐÍÒªÓÅÐã¡£ÎÒÃÇ°ÑÁ½¸ö·Ö²¼ÇúÏßÔÚÖ±ÏßÓÒ²àµÄÃæ»ý¼òµ¥Àí½â³ÉÕâ¸öÄ£ÐÍÔÚ¶ÔÓ¦²âÊÔ¼¯ÖÐµÄAUC£¬ÄÇÃ´ÕâÑù¾Í¿ÉÒÔ½âÊÍÍ¼ \ref{Commutative} µÄ½»»»¹ØÏµ¡£¶øÇÒ£¬ÕâÁ½¸öÄ£ÐÍÔÚÇø·Ö¶È±È½Ï²îµÄ²âÊÔ¼¯£¨T ºÍ TR£©ÉÏµÄ AUC Öµ²î¾à±È½Ï´ó£¬ÔÚÇø·Ö¶È±È½Ï¸ßµÄ²âÊÔ¼¯ÉÏ²î¾à±È½ÏÐ¡¡£ÕâÀï£¬ËùÎ½µÄÇø·Ö¶È£¬¿ÉÒÔÀí½âÎªãÐÏÞÔÚÒ»¶¨ÒâÒåÏÂµÄÆ½¾ù¡£ Èç¹ûÉÏÃæµÄ½âÊÍ³ÉÁ¢£¬ÄÇÃ´µ±²âÊÔ¼¯µÄ·Ö²¼È·¶¨Ê±ºò£¬ÎÒÃÇ¾Í¿ÉÒÔÈ·¶¨Ä£ÐÍµÄ²îÒì¡£·´¹ýÀ´£¬µ±Ä£ÐÍµÄ²îÒìÈ·¶¨Ê±£¬²âÊÔ¼¯Ö®ÖÐ¸öÌåµÄ²îÒì¾ÍÓÐÁËÒ»¸öºâÁ¿¡£
+ Í¼ \ref{Commutative_Explanation} ¸ø³öÁË½»»»¹ØÏµµÄÒ»¸ö½âÊÍ¡£ÕâÀï½èÓÃÐÄÀíÑ§ÉÏãÐÏÞ£¨sensory threshold£©µÄ¸ÅÄî£¬Ò²¾ÍÊÇÁ½¸ö´Ì¼¤ÄÜ¹»±»¸Ð¾õÆ÷¹ÙÇø·Ö¿ªµÄ×îÐ¡´Ì¼¤Ç¿¶ÈµÄ²î¡£´Ë´¦ÔòÓÃãÐÏÞÀ´±íÊ¾Ä£ÐÍµÄºÃ»µ¡£Ò»¸ö²âÊÔ¼¯ÖÐ£¬ÄÜ¹»±»Çø·Ö¿ªµÄÑù±¾µÄÊýÄ¿Ëæ×ÅÄ£ÐÍãÐÏÞµÄ½µµÍ¶øÔö¼Ó¡£ÎÒÃÇ¿ÉÒÔ°Ñ²âÊÔ¼¯¹ØÓÚãÐÏÞµÄ·Ö²¼»­³öÀ´£¬ÈçÍ¼ \ref{Commutative_Explanation} ÖÐµÄÁ½¸öÇúÏß£¬·Ö±ð±íÊ¾²âÊÔ¼¯ T ºÍ TR ÒÔ¼° T ºÍ N ÑØãÐÏÞµÄ·Ö²¼£» ÈçÍ¼ \ref{Commutative_Explanation} ÖÐµÄÁ½ÌõÖ±Ïß·Ö±ð±íÊ¾ RBFN Ä£ÐÍ(R)ºÍÕûºÏÄ£ÐÍ(I)£¬ËüÃÇÔÚ x ÖáÉÏµÄ½Ø¾à±íÊ¾ÕâÁ½¸öÄ£ÐÍµÄãÐÏÞ¡£ÏÔÈ»ÕûºÏÄ£ÐÍµÄãÐÏÞ´óÓÚRBFNµÄãÐÏÞ£¬Ò²¾ÍÊÇRBFNÄ£ÐÍÒªÓÅÐã¡£ÎÒÃÇ°ÑÁ½¸ö·Ö²¼ÇúÏßÔÚÖ±ÏßÓÒ²àµÄÃæ»ý¼òµ¥Àí½â³ÉÕâ¸öÄ£ÐÍÔÚ¶ÔÓ¦²âÊÔ¼¯ÖÐµÄAUC£¬ÄÇÃ´ÕâÑù¾Í¿ÉÒÔ½âÊÍÍ¼ \ref{Commutative} µÄ½»»»¹ØÏµ¡£¶øÇÒ£¬ÕâÁ½¸öÄ£ÐÍÔÚÇø·Ö¶È±È½Ï²îµÄ²âÊÔ¼¯£¨T ºÍ TR£©ÉÏµÄ AUC Öµ²î¾à±È½Ï´ó£¬ÔÚÇø·Ö¶È±È½Ï¸ßµÄ²âÊÔ¼¯ÉÏ²î¾à±È½ÏÐ¡¡£ÕâÀï£¬ËùÎ½µÄ²âÊÔ¼¯µÄÇø·Ö¶È£¬¿ÉÒÔÀí½âÎªãÐÏÞ°´ÕÕ²âÊÔ¼¯µÄÆ½¾ù¡£ Èç¹ûÉÏÃæµÄ½âÊÍ³ÉÁ¢£¬ÄÇÃ´µ±²âÊÔ¼¯µÄ·Ö²¼È·¶¨Ê±ºò£¬ÎÒÃÇ¾Í¿ÉÒÔÈ·¶¨Ä£ÐÍµÄ²îÒì¡£·´¹ýÀ´£¬µ±Ä£ÐÍµÄ²îÒìÈ·¶¨Ê±£¬²âÊÔ¼¯Ö®ÖÐ¸öÌåµÄ²îÒì¾ÍÓÐÁËÒ»¸öºâÁ¿¡£
  
- ÕâÀïÖ»ÊÇ¶Ô½»»»ÐÔÖÊ×ö³öµÄÒ»¸ö´óµ¨½âÊÍ£¬³ýÁË±¾ÎÄµÄÀý×ÓÖ®Íâ»¹Ã»ÓÐÓÃÆäËûÀý×ÓÀ´ÑéÖ¤£¬µ«ÊÇ±¾ÎÄÇ¿ÁÒ»³ÒÉ£¬Õâ¸ö½âÊÍ¶Ô¶àÊýµÄÄ£ÐÍºÍ²âÊÔ¼¯¶¼³ÉÁ¢¡£
+ ÕâÀïÖ»ÊÇ¶Ô½»»»ÐÔÖÊ×ö³öµÄÒ»¸ö´óµ¨½âÊÍ£¬³ýÁË±¾ÎÄµÄÀý×ÓÖ®Íâ»¹Ã»ÓÐÓÃÆäËûÀý×ÓÀ´ÑéÖ¤£¬µ«ÊÇ±¾ÎÄ×÷ÕßÇ¿ÁÒ»³ÒÉ£¬Õâ¸ö½âÊÍ¶Ô¶àÊýµÄÄ£ÐÍºÍ²âÊÔ¼¯¶¼³ÉÁ¢¡£
 
 \newpage
 \section{Ô¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå¸´ºÏÎïÇ×ºÍÁ¦µÄÓ°Ïì}
-×ÔÈ»²úÉúµÄ¿¹Ìå£¬ÍùÍùÔÚÇ×ºÍÁ¦(affinity)ÉÏÓÐÒ»¶¨µÄÏÞÖÆ\cite{AffinityLimit}¡£ÎªÁË»ñµÃ¸üºÃµÄÁÆÐ§£¬ÔÚÖÎÁÆÐÔ¿¹ÌåµÄÉú²úºÍÉè¼Æ¹ý³ÌÖÐ£¬ÍùÍùÒªÉæ¼°µ½Ç×ºÍÁ¦³ÉÊì(affinity maturation)¡£ËùÎ½µÄÇ×ºÍÁ¦µÄ³ÉÊì¾ÍÊÇËµ£¬ÔÚÔ­À´¿¹ÌåµÄ»ù´¡ÉÏ£¬Í¨¹ý¸ÄÔì CDR ÉÏ°±»ùËáµÄÐòÁÐ£¬´Ó¶øÊ¹µÃ¿¹Ô­ºÍ¿¹ÌåÖ®¼äÓÐ¸ü¸ßµÄÇ×ºÍÁ¦\cite{AffinityMaturation}¡£´«Í³µÄÊµÑéÊÖ¶Î£¬±ÈÈçËµÍ»±äºÍ¸÷ÖÖ¸÷ÑùµÄÕ¹Ê¾¼¼Êõ£¬¿ÉÒÔ±»ÓÃÀ´Ñ°ÕÒ¾ßÓÐ¸ü¸ßÇ×ºÍÁ¦µÄ¿¹Ìå\cite{PhageDisplay}, ÓÐ²»ÉÙµÄÇ×ºÍÁ¦(affinity)¿ÉÒÔ±»Ìá¸ßµ½ nM µÄ¼¶±ð\cite{PhageDisplay1}¡£µ«ÊÇÕâÐ©ÊµÑéµÄÊÖ¶Î£¬ÐèÒªºÜ´óµÄ¹¤×÷Á¿£¬Ò²»á³ÖÐøºÜ³¤µÄÊ±¼ä¡£Ò²ÓÐÒ»Ð©Í¨¹ý¼ÆËãµÄÊÖ¶Î£¬À´Ö¸µ¼ CDR ÉÏ°±»ùËáµÄÐòÁÐµÄ¸ÄÔì¡£ÕâÑùµÄ·½·¨Ò²±È½Ï¶à£¬±ÈÈçÍ¨¹ý·Ö×ÓÄ£Äâ¡¢Í¨¹ý×ÔÓÉÄÜµÄÈÅ¶¯(free energy perturbation)\cite{EnergyPerturb1},Í¨¹ý potential-of-mean force(PMF)\cite{EnergyPerturb2}£¬ËäÈ»Ä¿Ç°ÏÖÔÚÕâÐ©Í¨¹ý¼ÆËãÌá¸ßÇ×ºÍÁ¦µÄ·½·¨Ð§¹û»¹²»ÊÇÌ«ÀíÏë£¬µ«ÊÇ£¬ÕâÊÇÒ»Æ¬¹ãÀ«µÄÌìµØ\cite{Insilico1}¡£Ê×ÏÈ£¬¼ÆËãµÄ·½·¨¿ÉÒÔ´ó´óÌá¸ßËÙ¶È¡£´«Í³·½·¨¼¸¸öÔÂ²ÅÄÜÍê³ÉµÄÊÂÇé£¬¼ÆËãµÄ·½·¨¿ÉÄÜ¼¸Ìì¾Í¿ÉÒÔÍê³É¡£Æä´Î£¬Ëæ×ÅÊý¾ÝÁ¿µÄ»ýÀÛºÍ¼ÆËãË®Æ½µÄÌá¸ß£¬¼ÆËãµÄ½á¹û±ØÈ»»áÔ½À´Ô½×¼È·¡£Í¨¹ý¼ÆËãµÄ·½·¨½â¾öÇ×ºÍÁ¦µÄÎÊÌâ£¬¸ÅÀ¨µÄ½²À´£¬´ó¸ÅÓÐÁ½¸öË¼Â·£¬Ò»¸öÊÇÍ³¼ÆÑ§µÄ½Ç¶È£¬Ò»¸öÊÇ´ÓÎïÀí»¯Ñ§Ô­ÀíµÄ½Ç¶È¡£ÉÏÃæËµµÄ·Ö×ÓÄ£ÄâµÈ·½·¨¶¼ÊÇ´ÓÎïÀí»¯Ñ§µÄ½Ç¶È£¬À´½øÐÐµÄ¼ÆËã¡£Ò²¿ÉÒÔ´ÓÍ³¼ÆÑ§µÄ½Ç¶ÈÀ´½â¾öÕâ¸öÎÊÌâ£¬±ÈÈçËµ¹Û²ìµ½ A ºÍ B ¾­³£Ïà»¥×÷ÓÃ£¬¶ø A ºÍ C ²»¾­³£Ïà»¥×÷ÓÃ¡£Èç¹û°Ñ C Í»±ä³É B ¾ÍºÜÓÐ¿ÉÄÜÔö¼Ó·Ö×ÓµÄÇ×ºÍÁ¦¡£Lippow µÈ\cite{Lippow}£¬¼¯ÖÐ·ÖÎö°±»ùËáÓë°±»ùËáÖ®¼äµÄ¾²µç×÷ÓÃ£¬¸ßÐ§µÄ°Ñ¿¹ EGFR µÄÖÎÁÆÐÔ¿¹Ìå Erbitux µÄÇ×ºÍÁ¦Ìá¸ß10±¶£¬´ïµ½52pM £» °Ñ¿¹µ°ÇåÈÜ¾úÃ¸µÄ¿¹Ìå D44.1 µÄÇ×ºÍÁ¦Ìá¸ßÁË 140 ±¶£¬´ïµ½ 30pM £»Í¬Ê±ËûÃÇ·½·¨µÄÓÐÐ§ÐÔ»¹ÔÚÖÎÁÆÐÔ¿¹Ìå Avastin £¬ÒÔ¼°¿¹Ó«¹âµ°°×(fluorescein) µÄ¿¹Ìå 4-4-20 ÉÏµÃµ½ÑéÖ¤¡£Õâ¸ö½á¹ûÊÇ¾ªÈËµÄ£¬ ÊÇ¼ÆËã»ú¸¨ÖúÇ×ºÍÁ¦³ÉÊìµÄÒ»´Î³É¹¦³¢ÊÔ¡£µ«ÊÇ£¬Õâ¸ö·½·¨ÐèÒª¿¹Ô­ºÍ¿¹Ìå¸´ºÏÎïµÄ½á¹¹£¬Í¬Ê±Ò²Ö»·ÖÎöÁËÒ»¶ÔÒ»µÄ¾²µçÏà»¥×÷ÓÃ£¬²¢Ã»ÓÐÉæ¼°µ½¶à¸ö°±»ùËáÐ­Í¬×÷ÓÃºÍÆäËûÖÖÀàµÄÏà»¥×÷ÓÃÁ¦µÄÇé¿ö¡£Sarah Sirin µÈ\cite{AB-Bind}¹¹½¨ÁËÒ»¸ö¿¹Ô­¿¹Ìå¸´ºÏÎïÍ»±äÊý¾Ý¿â£¬Éæ¼°µ½ 32 ¸ö¿¹Ô­¿¹Ìå¸´ºÏÎï£¬1101 ¸öÍ»±ä£¬²¢ÇÒÃ¿¸öÍ»±ä¶¼ÓÐÊµÑéÊÖ¶ÎµÃµ½µÄÇ×ºÍÁ¦¡£Í¨¹ý±È½Ï dDFIRE, DFIRE, STATIUM, Rosetta, FoldX, Discovery Studio, ÔÚÔ¤²âÇ×ºÍÁ¦ÉÏµÄ±íÏÖ£¬Sarah Sirin µÈÈÏÎª£¬×ÜµÄÀ´Ëµ£¬Ä¿Ç°µÄÔ¤²â·½·¨Ð§¹û¶¼²»¹»ºÃ£¬ Êµ¼Ê $\Delta\Delta G$ (¼ª²¼Ë¹×ÔÓÉÄÜµÄ±ä»¯)ºÍÔ¤²âµÄ $\Delta\Delta G$ Ö®¼äµÄÏà¹ØÏµÊý $r$ ÔÚ 0.16 µ½ 0.45 Ö®¼ä£¬ºÜÄÑÂú×ãÊµ¼ÊµÄÐèÇó£¬µ«ÊÇÔÚ×÷³öÇ×ºÍÁ¦ÊÇÔö¼Ó»¹ÊÇ¼õÐ¡ÕâÑùµÄ¶þ·ÖÀàÅÐ¶ÏÊ±ºò£¬ÕâÐ©·½·¨¾ßÓÐÒ»¶¨µÄÒâÒå¡£ÔÚÉÏÃæµÄ·½·¨ÖÐ£¬ FoldX ºÍ Discovery Studio ÊÇÐ§¹û½ÏºÃµÄÁ½¸ö¡£ÔÚÉÏÃæµÄËùÓÐ·½·¨ÖÐ£¬STATIUM Ê¹ÓÃÁËÍ³¼ÆÑ§µÄ·½·¨£¬Í¨¹ý¼ÆËãÁ½¸ö°±»ùËáÖ®¼ä $C^\alpha$ ºÍ $C^\beta$ Ö®¼äµÄ¾àÀëºÍ¼Ð½ÇµÄ¹ØÏµ£¬À´¼ÆËã°±»ùËáÖ®¼äµÄ STATIUM potential£¬½ø¶ø¹À¼ÆÍ»±ä¶ÔÇ×ºÍÁ¦µÄÓ°Ïì\cite{STATIUM}¡£
+×ÔÈ»²úÉúµÄ¿¹Ìå£¬ÍùÍùÔÚÇ×ºÍÁ¦(affinity)ÉÏÓÐÒ»¶¨µÄÏÞÖÆ\cite{AffinityLimit}¡£ÎªÁË»ñµÃ¸üºÃµÄÁÆÐ§£¬ÔÚÖÎÁÆÐÔ¿¹ÌåµÄÉú²úºÍÉè¼Æ¹ý³ÌÖÐ£¬ÍùÍùÒªÉæ¼°µ½Ç×ºÍÁ¦³ÉÊì(affinity maturation)¡£ËùÎ½µÄÇ×ºÍÁ¦µÄ³ÉÊì£¬¾ÍÊÇÔÚÔ­À´¿¹ÌåµÄ»ù´¡ÉÏ£¬Í¨¹ý¸ÄÔì CDR ÉÏ°±»ùËáµÄÐòÁÐ£¬´Ó¶øÊ¹µÃ¿¹Ô­ºÍ¿¹ÌåÖ®¼äÓÐ¸ü¸ßµÄÇ×ºÍÁ¦\cite{AffinityMaturation}¡£´«Í³µÄÊµÑéÊÖ¶Î£¬±ÈÈçËµÍ»±äºÍ¸÷ÖÖ¸÷ÑùµÄÕ¹Ê¾¼¼Êõ£¬¿ÉÒÔ±»ÓÃÀ´Ñ°ÕÒ¾ßÓÐ¸ü¸ßÇ×ºÍÁ¦µÄ¿¹Ìå\cite{PhageDisplay}£¬ ÓÐ²»ÉÙµÄÇ×ºÍÁ¦(affinity)¿ÉÒÔ±»Ìá¸ßµ½ nM µÄ¼¶±ð\cite{PhageDisplay1}¡£µ«ÊÇÕâÐ©ÊµÑéµÄÊÖ¶Î£¬ÐèÒªºÜ´óµÄ¹¤×÷Á¿£¬Ò²»á³ÖÐøºÜ³¤µÄÊ±¼ä¡£Ò²ÓÐÒ»Ð©Í¨¹ý¼ÆËãµÄÊÖ¶Î£¬À´Ö¸µ¼ CDR ÉÏ°±»ùËáµÄÐòÁÐµÄ¸ÄÔì¡£ÕâÑùµÄ·½·¨Ò²±È½Ï¶à£¬±ÈÈçÍ¨¹ý·Ö×ÓÄ£Äâ¡¢Í¨¹ý×ÔÓÉÄÜµÄÈÅ¶¯(free energy perturbation)\cite{EnergyPerturb1},Í¨¹ý potential-of-mean force(PMF)\cite{EnergyPerturb2}£¬ËäÈ»Ä¿Ç°ÏÖÔÚÕâÐ©Í¨¹ý¼ÆËãÌá¸ßÇ×ºÍÁ¦µÄ·½·¨Ð§¹û»¹²»ÊÇÌ«ÀíÏë£¬µ«ÊÇ£¬ÕâÊÇÒ»Æ¬¹ãÀ«µÄÌìµØ\cite{Insilico1}¡£Ê×ÏÈ£¬¼ÆËãµÄ·½·¨¿ÉÒÔ´ó´óÌá¸ßËÙ¶È¡£´«Í³·½·¨¼¸¸öÔÂ²ÅÄÜÍê³ÉµÄÊÂÇé£¬¼ÆËãµÄ·½·¨¿ÉÄÜ¼¸Ìì¾Í¿ÉÒÔÍê³É¡£Æä´Î£¬Ëæ×ÅÊý¾ÝÁ¿µÄ»ýÀÛºÍ¼ÆËãË®Æ½µÄÌá¸ß£¬¼ÆËãµÄ½á¹û±ØÈ»»áÔ½À´Ô½×¼È·¡£Í¨¹ý¼ÆËãµÄ·½·¨½â¾öÇ×ºÍÁ¦µÄÎÊÌâ£¬¸ÅÀ¨µÄ½²À´£¬´ó¸ÅÓÐÁ½¸öË¼Â·£¬Ò»¸öÊÇÍ³¼ÆÑ§µÄ½Ç¶È£¬Ò»¸öÊÇ´ÓÎïÀí»¯Ñ§Ô­ÀíµÄ½Ç¶È¡£ÉÏÃæËµµÄ·Ö×ÓÄ£ÄâµÈ·½·¨¶¼ÊÇ´ÓÎïÀí»¯Ñ§µÄ½Ç¶È£¬À´½øÐÐµÄ¼ÆËã¡£Ò²¿ÉÒÔ´ÓÍ³¼ÆÑ§µÄ½Ç¶ÈÀ´½â¾öÕâ¸öÎÊÌâ£¬±ÈÈçËµ¹Û²ìµ½ A ºÍ B ¾­³£Ïà»¥×÷ÓÃ£¬¶ø A ºÍ C ²»¾­³£Ïà»¥×÷ÓÃ¡£Èç¹û°Ñ C Í»±ä³É B ¾ÍºÜÓÐ¿ÉÄÜÔö¼Ó·Ö×ÓµÄÇ×ºÍÁ¦¡£Lippow µÈ\cite{Lippow}£¬¼¯ÖÐ·ÖÎö°±»ùËáÓë°±»ùËáÖ®¼äµÄ¾²µç×÷ÓÃ£¬¸ßÐ§µÄ°Ñ¿¹ EGFR µÄÖÎÁÆÐÔ¿¹Ìå Erbitux µÄÇ×ºÍÁ¦Ìá¸ß10±¶£¬´ïµ½52pM£» °Ñ¿¹µ°ÇåÈÜ¾úÃ¸µÄ¿¹Ìå D44.1 µÄÇ×ºÍÁ¦Ìá¸ßÁË 140 ±¶£¬´ïµ½ 30pM£»Í¬Ê±ËûÃÇ·½·¨µÄÓÐÐ§ÐÔ»¹ÔÚÖÎÁÆÐÔ¿¹Ìå Avastin£¬ÒÔ¼°¿¹Ó«¹âµ°°×(fluorescein) µÄ¿¹Ìå 4-4-20 ÉÏµÃµ½ÑéÖ¤¡£Õâ¸ö½á¹ûÊÇ¾ªÈËµÄ£¬ ÊÇ¼ÆËã»ú¸¨ÖúÇ×ºÍÁ¦³ÉÊìµÄÒ»´Î³É¹¦³¢ÊÔ¡£µ«ÊÇ£¬Õâ¸ö·½·¨ÐèÒª¿¹Ô­ºÍ¿¹Ìå¸´ºÏÎïµÄ½á¹¹£¬Í¬Ê±Ò²Ö»·ÖÎöÁËÒ»¶ÔÒ»µÄ¾²µçÏà»¥×÷ÓÃ£¬²¢Ã»ÓÐÉæ¼°µ½¶à¸ö°±»ùËáÐ­Í¬×÷ÓÃºÍÆäËûÖÖÀàµÄÏà»¥×÷ÓÃÁ¦µÄÇé¿ö¡£Sarah Sirin µÈ\cite{AB-Bind}¹¹½¨ÁËÒ»¸ö¿¹Ô­¿¹Ìå¸´ºÏÎïÍ»±äÊý¾Ý¿â£¬Éæ¼°µ½ 32 ¸ö¿¹Ô­¿¹Ìå¸´ºÏÎï£¬1101 ¸öÍ»±ä£¬²¢ÇÒÃ¿¸öÍ»±ä¶¼ÓÐÊµÑéµÃµ½µÄÇ×ºÍÁ¦¡£Í¨¹ý±È½Ï dDFIRE¡¢ DFIRE¡¢ STATIUM¡¢ Rosetta¡¢ FoldX ºÍ Discovery Studio ÔÚÔ¤²âÇ×ºÍÁ¦ÉÏµÄ±íÏÖ£¬Sarah Sirin µÈÈÏÎª£¬×ÜµÄÀ´Ëµ£¬Ä¿Ç°µÄÔ¤²â·½·¨Ð§¹û¶¼²»¹»ºÃ£¬ Êµ¼Ê $\Delta\Delta G$ (¼ª²¼Ë¹×ÔÓÉÄÜµÄ±ä»¯)ºÍÔ¤²âµÄ $\Delta\Delta G$ Ö®¼äµÄÏà¹ØÏµÊý $r$ ÔÚ 0.16 µ½ 0.45 Ö®¼ä£¬ºÜÄÑÂú×ãÊµ¼ÊµÄÐèÇó£¬µ«ÊÇÔÚ×÷³öÇ×ºÍÁ¦ÊÇÔö¼Ó»¹ÊÇ¼õÐ¡ÕâÑùµÄ¶þ·ÖÀàÅÐ¶ÏÊ±ºò£¬ÕâÐ©·½·¨¾ßÓÐÒ»¶¨µÄÒâÒå¡£ÔÚÉÏÃæµÄ·½·¨ÖÐ£¬ FoldX ºÍ Discovery Studio ÊÇÐ§¹û½ÏºÃµÄÁ½¸ö¡£ÔÚÉÏÃæµÄËùÓÐ·½·¨ÖÐ£¬STATIUM Ê¹ÓÃÁËÍ³¼ÆÑ§µÄ·½·¨£¬Í¨¹ý¼ÆËãÁ½¸ö°±»ùËáÖ®¼ä $C^\alpha$ ºÍ $C^\beta$ Ö®¼äµÄ¾àÀëºÍ¼Ð½ÇµÄ¹ØÏµ£¬À´¼ÆËã°±»ùËáÖ®¼äµÄ STATIUM potential£¬½ø¶ø¹À¼ÆÍ»±ä¶ÔÇ×ºÍÁ¦µÄÓ°Ïì\cite{STATIUM}¡£
 %
 %Ôö¼Ó¿¹Ô­ºÍ¿¹ÌåµÄÇ×ºÍÁ¦£¬ÔÚÖÎÁÆÐÔ¿¹ÌåµÄÉú²ú¹ý³ÌÖÐÆð×ÅÖÁ¹ØÖØÒªµÄ×÷ÓÃ¡£ÊµÑéÊÒÖÐµÄ¸÷ÖÖÕ¹Ê¾¼¼ÊõÊÇÉ¸Ñ¡¾ßÓÐ¸ßÇ×ºÍÁ¦¿¹ÌåµÄÓÐÐ§ÊÖ¶Î£¬µ«ÊÇ³É±¾¸ß£¬¹ý³Ì¸´ÔÓ¡£ÓÃ¼ÆËãµÄ·½·¨À´Éè¼Æ¸ßÇ×ºÍÁ¦µÄ¿¹Ìå£¬¿ÉÒÔ´ó´óÌá¸ßÉ¸Ñ¡µÄÐ§ÂÊ¡£ËäÈ»Ä¿Ç°¼ÆËãµÄÊÖ¶Î¾«È·¶ÈÓÐ´ýÌá¸ß£¬È´ÊÇÒ»¸ö¹ãÀ«µÄÌìµØ£¬ÊÇÎ´À´·¢Õ¹µÄ·½Ïò¡£ÓÃ¼ÆËãµÄ·½·¨Éè¼Æ¸ßÇ×ºÍÁ¦µÄ¿¹Ìå£¬ÔÚÒ»¶¨ÒâÒåÉÏ¿ÉÒÔ¹é½áÎª¶ÔÇ×ºÍÁ¦±ä»¯µÄÔ¤²â£¬Ò²¾ÍÊÇ£¬µ±ÓÐÒ»ÏµÁÐ¿ÉÄÜµÄÍ»±äÊ±£¬ÓÃ¼ÆËãµÄ·½·¨À´ÅÐ¶¨ÄÇÒ»¸öÍ»±ä»áÔö¼Ó¿¹Ô­¿¹ÌåµÄÇ×ºÍÁ¦¡£Sirin µÈ±È½ÏÁË 7 ¸ö²»Í¬µÄ·½·¨\cite{AB-Bind}, ËäÈ»ÕâÐ©·½·¨µÄÔ¤²âµÄÇ×ºÍÁ¦(affinity) ºÍÊµ¼ÊÊµÑé²âµÃµÄÇ×ºÍÁ¦µÄÏà¹ØÏµÊý²¢²»¸ß£¬µ«ÊÇÔÚµ¥µ¥ÅÐ¶ÏÒ»¸öÍ»±äÊÇ·ñ»áÔö¼ÓÇ×ºÍÁ¦µÄÎÊÌâÉÏ»¹ÊÇ¾ßÓÐÊµ¼Ê²Î¿¼¼ÛÖµ£¬ÌØ±ðÊÇ±íÏÖÓÅÐãµÄ FoldX ºÍ Discovery Studio¡£
 
-±¾ÂÛÎÄ´ÓÉÏÃæ¹¹½¨µÄ RBFN Ä£ÐÍ³ö·¢£¬¶ÔÍ»±äµÄÇ×ºÍÁ¦×ö³öÔ¤²â¡£Ò»¸ö»ù±¾µÄ¼ÙÉè¾ÍÊÇ£¬Èç¹ûÍ»±äÊ¹µÃ²ÎÓë¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ°±»ùËá³¯×Å Core µÄ·½Ïò±ä»¯£¬ÄÇÃ´Õâ¸öÍ»±ä¾Í¿ÉÒÔÔö¼Ó¿¹Ô­¿¹ÌåµÄÇ×ºÍÁ¦£¬·ñÔò¾Í¼õÈõ¿¹Ô­¿¹ÌåµÄÇ×ºÍÁ¦¡£ÄÇÃ´£¬ÓÃ RBFN Ä£ÐÍ½øÐÐÇ×ºÍÁ¦±ä»¯Ô¤²âµÄµÚÒ»²½¾ÍÊÇÕÒ³öÏà»¥×÷ÓÃµÄ¶ÌµÄ°±»ùËáÐòÁÐ¡£ÔÚÏÖÊµµÄÍ»±ä¹ý³ÌÖÐ£¬ÍùÍù¶¼ÊÇµ¥¸öÍ»±ä£¬È»ºóÖð´Îµþ¼Ó£¬ Sirin µÈ\cite{AB-Bind} ÊÕ¼¯µÄÊý¾ÝÖÐ¾ø´ó¶àÊýÎªµ¥Î»µãÍ»±ä£¨1101 ¸öÍ»±äÖÐÓÐ 645 ¸öÎ»µ¥Î»µãÍ»±ä£©¡£
+±¾ÂÛÎÄ´ÓÉÏÃæ¹¹½¨µÄ RBFN Ä£ÐÍ³ö·¢£¬¶ÔÍ»±äµÄÇ×ºÍÁ¦×ö³öÔ¤²â¡£Ò»¸ö»ù±¾µÄ¼ÙÉè¾ÍÊÇ£¬Èç¹ûÍ»±äÊ¹µÃ²ÎÓë¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ°±»ùËáÐòÁÐ¶Ô³¯×Å Core µÄ·½Ïò±ä»¯£¬ÄÇÃ´Õâ¸öÍ»±ä¾Í¿ÉÒÔÔö¼Ó¿¹Ô­¿¹ÌåµÄÇ×ºÍÁ¦£¬·ñÔò¾Í¼õÈõ¿¹Ô­¿¹ÌåµÄÇ×ºÍÁ¦¡£ÄÇÃ´£¬ÓÃ RBFN Ä£ÐÍ½øÐÐÇ×ºÍÁ¦±ä»¯Ô¤²âµÄµÚÒ»²½¾ÍÊÇÕÒ³öÏà»¥×÷ÓÃµÄ¶ÌµÄ°±»ùËáÐòÁÐ¡£ÔÚÏÖÊµµÄÍ»±ä¹ý³ÌÖÐ£¬ÍùÍù¶¼ÊÇµ¥¸öÍ»±ä£¬È»ºóÖð´Îµþ¼Ó£¬ Sirin µÈ\cite{AB-Bind} ÊÕ¼¯µÄÊý¾ÝÖÐ¾ø´ó¶àÊýÎªµ¥Î»µãÍ»±ä£¨1101 ¸öÍ»±äÖÐÓÐ 645 ¸öÎ»µ¥Î»µãÍ»±ä£©¡£
 %Í¬Ê±¿¼ÂÇµ½ RBFN ÖÐµÄ match-type(1,1)Ä£ÐÍµÄ×¼È·ÐÔ£¬ÒÔ¼°ÔÚÓÃ ÆäËû match-type ÏÂ±íÏÖ²¢²»ºÃ£¬ÓÚÊÇ¾Í²ÉÓÃÁË match-type(1,1)ÏÂµÄRBFNÄ£ÐÍ¡£
 
 \subsection{¿ÉÔ¤²â°±»ùËá¶ÔµÄÌáÈ¡}
 Í»±ä°±»ùËá¶ÔµÄÌáÈ¡·ÖÎªÈý¸ö²½Öè£º¸´ºÏÎïµÄÉ¸Ñ¡£¬Ïà»¥×÷ÓÃ°±»ùËá¶ÔµÄÌáÈ¡£¬¿ÉÔ¤²â°±»ùËá¶ÔµÄ×é×°ºÍÉ¸Ñ¡¡£
 \begin{enumerate}[label = (\arabic*)]
-	\item \textbf{¸´ºÏÎïµÄÉ¸Ñ¡¡£}ÔÚÊý¾Ý¿â AB-Bind ÖÐµÄÍ»±ä£¬ÓÐµÄÀ´×ÔÓÚÔÚ PDB ÖÐÓÐÈýÎ¬½á¹¹µÄ¸´ºÏÎï£¬ÓÐµÄÔòÀ´×ÔÓÚºÍ PDB ÖÐÒ»Ð©¸´ºÏÎïÏàËÆµÄ¸´ºÏÎï¡£ÓÉÓÚÏà»¥×÷ÓÃµÄ°±»ùËá¶ÔµÄÌáÈ¡ÐèÒª¿¹Ô­¿¹Ìå¸´ºÏÎï½á¹¹£¬ÎÒÃÇÔòÖ»Ñ¡È¡ÄÄÐ©À´×Ô PDB ÖÐ¸´ºÏÎïµÄÍ»±ä¡£Ò»¹²ÓÐÒÔÏÂ 17 ¸ö¡£
+	\item \textbf{¸´ºÏÎïµÄÉ¸Ñ¡¡£}ÔÚÊý¾Ý¿â AB-Bind ÖÐµÄÍ»±ä£¬ÓÐµÄÀ´×ÔÓÚÔÚ PDB ÖÐÓÐÈýÎ¬½á¹¹µÄ¸´ºÏÎï£¬ÓÐµÄÔòÀ´×ÔÓÚºÍ PDB ÖÐÒ»Ð©¸´ºÏÎïÏàËÆµÄ¸´ºÏÎï¡£ÓÉÓÚÏà»¥×÷ÓÃµÄ°±»ùËá¶ÔµÄÌáÈ¡ÐèÒª¿¹Ô­¿¹Ìå¸´ºÏÎï½á¹¹£¬ÎÒÃÇÔòÖ»Ñ¡È¡ÄÇÐ©À´×Ô PDB ÖÐÓÐÈýÎ¬½á¹¹µÄ¸´ºÏÎï¡£Ò»¹²ÓÐÒÔÏÂ 17 ¸ö¸´ºÏÎï£º
 \begin{center}
 1bj1, icz8, 1dqj, 1mhp, 1mlc, 1vfb, 1yy9, 2jel
 
 2ny7, 2nyy, 2nz9, 3bdy, 3be1, 3bn9, 3hfm, 3ngb, 1dvf
 \end{center}
-	\item \textbf{Ïà»¥×÷ÓÃÍ»±ä°±»ùËá¶ÔµÄÌáÈ¡}¡£±¾ÂÛÎÄÔÚÇ°Ãæ³éÈ¡ Core µÄ¹ý³ÌÖÖ£¬Ñ¡È¡ÔÚ½Ø¶Ï¾àÀëÊÇ 4\si{\angstrom} µÄÊ±ºò£¬CN ÊýÖµ×î´óµÄÄÇ¸ö°±»ùËáÐòÁÐ¶Ô¡£ÕâÀï£¬ÓÉÓÚÎÒÃÇµÄÄ¿µÄ²»ÊÇ³éÈ¡ Core, ¶øÊÇÅÐ¶ÏÍ»±äºó£¬°±»ùËá¶ÔÊÇ²»ÊÇ¸üÇ÷Ïò Core, ËùÒÔÎÒÃÇµÄ½Ø¶Ï¾àÀëÑ¡ÓÃÁËÒÆ¶¯µÄ½Ø¶Ï¾àÀë¡£ ÕâÀï£¬ ½Ø¶Ï¾àÀëµÄ±ä»¯·¶Î§´Ó 3\si{\angstrom} ±ä»¯µ½ 8\si{\angstrom}£¬ ÇÒ²½³¤ÊÇ 0.25\si{\angstrom}. ¶ÔÓÚÃ¿Ò»¸öÍ»±äÎ»ÖÃ£¬Í¨¹ýÈçÍ¼ \ref{ContactingPairs} µÄ¹ý³ÌÕÒ³öÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô¡£
+	\item \textbf{Ïà»¥×÷ÓÃÍ»±ä°±»ùËá¶ÔµÄÌáÈ¡}¡£±¾ÂÛÎÄÔÚÇ°Ãæ³éÈ¡ Core µÄ¹ý³ÌÖÖ£¬Ñ¡È¡ÔÚ½Ø¶Ï¾àÀëÊÇ 4\si{\angstrom} µÄÊ±ºò£¬CN ÊýÖµ×î´óµÄÄÇ¸ö°±»ùËáÐòÁÐ¶Ô¡£ÕâÀï£¬ÓÉÓÚÎÒÃÇµÄÄ¿µÄ²»ÊÇ³éÈ¡ Core£¬ ¶øÊÇÅÐ¶ÏÍ»±äºó£¬°±»ùËá¶ÔÊÇ²»ÊÇ¸üÇ÷Ïò Core£¬ ËùÒÔÎÒÃÇµÄ½Ø¶Ï¾àÀëÑ¡ÓÃÁËÒÆ¶¯µÄ½Ø¶Ï¾àÀë¡£ ÕâÀï£¬ ½Ø¶Ï¾àÀëµÄ±ä»¯·¶Î§´Ó 3\si{\angstrom} ±ä»¯µ½ 8\si{\angstrom}£¬ ÇÒ²½³¤ÊÇ 0.25\si{\angstrom}¡£ ¶ÔÓÚÃ¿Ò»¸öÍ»±äÎ»ÖÃ£¬Í¨¹ýÈçÍ¼ \ref{ContactingPairs} µÄ¹ý³ÌÕÒ³öÏà»¥×÷ÓÃµÄ°±»ùËá¶Ô¡£
 	\begin{figure}[H]
     	\hspace{3cm}
     	\includegraphics[scale=0.3]{ContactingPairs.eps}
@@ -915,7 +1078,7 @@ $$0.1277 + 0.0411 = 0.0722 + 0.0966$$
 			\label{Predictable}
 		\end{figure}
 		\item multiple\_WithinRange\_False :   Í¬Ò»¸öÍ»±ä¸´ºÏÎïÖÐËùÓÐÍ»±ä°±»ùËá¶Ô¶¼×÷ÎªÅÐ¶ÏÒÀ¾Ý¡£
-		\item multiple\_WithinRange\_True :   ¶ÔÍ¬Ò»¸öÍ»±ä¸´ºÏÎïÖÐËùÓÐÍ»±ä°±»ùËá¶Ô°´ÕÕÍ¼ \ref{Predictable} ÖÐµÄ¹æÔò½øÐÐÉ¸Ñ¡¡£Èç¹ûÕâ¸öÍ»±ä¸´ºÏÎïÖÐÓÐÒ»¸öÍ»±ä°±»ùËá¶Ô²»Âú×ãÒªÇó£¬ÄÇÃ´Õâ¸öÕâ¸öÍ»±ä·ûºÏÎïÖÐµÄËùÓÐ°±»ùËá¶Ô¶¼²»¿ÉÔ¤²â¡£
+		\item multiple\_WithinRange\_True :   ¶ÔÍ¬Ò»¸öÍ»±ä¸´ºÏÎïÖÐËùÓÐÍ»±ä°±»ùËá¶Ô£¬°´ÕÕÍ¼ \ref{Predictable} ÖÐµÄ¹æÔò½øÐÐÉ¸Ñ¡¡£Èç¹ûÕâ¸öÍ»±ä¸´ºÏÎïÖÐÓÐÒ»¸öÍ»±ä°±»ùËá¶Ô²»Âú×ãÒªÇó£¬ÄÇÃ´Õâ¸öÕâ¸öÍ»±ä·ûºÏÎïÖÐµÄËùÓÐ°±»ùËá¶Ô¶¼²»¿ÉÔ¤²â¡£
 		\item flanked\_WithinRange\_False : µ± multiple\_WithinRange\_False µÄ°±»ùËá¶ÔÑ¡¶¨ºó£¬Ã¿¸ö°±»ùËáÁ¬Í¬ËüÇ°ÃæºÍºóÃæµÄ°±»ùËáÒ»Æð¿¼ÂÇ¡£ÀýÈç£¬£¨[Ab1], [Ag1]£©ÊÇ multiple\_WithinRange\_False ÖÐÑ¡¶¨µÄ¿ÉÔ¤²âµÄ°±»ùËá¶Ô£¬ÄÇÃ´ £¨[Ab0, Ab1, Ab2], [Ag0, Ag1, Ag2]£©¾ÍÊÇ flanked\_WithinRange\_False ÖÐÑ¡¶¨µÄ¿ÉÒÔÔ¤²âµÄ°±»ùËá¶Ô¡£
 		\item flanked\_WithinRange\_True : µ± multiple\_WithinRange\_True µÄ°±»ùËá¶ÔÑ¡¶¨ºó£¬Ã¿¸ö°±»ùËáÁ¬Í¬ËüÇ°ÃæºÍºóÃæµÄ°±»ùËáÒ»Æð¿¼ÂÇ¡£
 	\end{enumerate}
@@ -934,6 +1097,8 @@ $$0.1277 + 0.0411 = 0.0722 + 0.0966$$
 Èç¹û $\Delta > 0$ ÔòËµÃ÷Ç×ºÍÁ¦Ôö¼Ó£»Èç¹û $\Delta < 0$ ÔòËµÃ÷Ç×ºÍÁ¦½µµÍ¡£
 
 \begin{table}[H]\centering
+\begin{threeparttable}
+\caption{\small{$\Delta\Delta G$ Î»ÓÚ²»Í¬·¶Î§µÄÍ»±ä¸´ºÏÎïµÄÇ×ºÍÁ¦µÄÔ¤²âÐ§¹û¡£}}
 \begin{tabular}{ccccc c}
 \hline\hline
 Mode            & $\Delta\Delta G < 0.5$  & $\Delta\Delta G >0$ & $\Delta\Delta G > 0.5$ & $\Delta\Delta G > 1$& n   \\
@@ -946,7 +1111,10 @@ flanked\_WithinRange\_True & 0.544 & 0.506 & 0.427 & 0.458 & 463\\
 flanked\_WithinRange\_False & 0.529 & 0.489 & 0.408 & 0.429 & 497\\
 \hline
 \end{tabular}
-\caption{$\Delta\Delta G$ Î»ÓÚ²»Í¬·¶Î§µÄÍ»±ä¸´ºÏÎïµÄÇ×ºÍÁ¦µÄÔ¤²âÐ§¹û¡£ ÆäÖÐ $\Delta\Delta G$ Îª¼ª²¼Ë¹×ÔÓÉÄÜµÄ±ä»¯£¬µ¥Î»ÊÇ KJ/mol ¡£ n ±íÊ¾Ô¤²âµÄÍ»±ä¸´ºÏÎïµÄÊýÄ¿¡£Ô¤²âÐ§¹ûµÄºÃ»µÓÃ AUC À´ºâÁ¿¡£}
+\begin{tablenotes}
+\item \small{ÆäÖÐ $\Delta\Delta G$ Îª¼ª²¼Ë¹×ÔÓÉÄÜµÄ±ä»¯£¬µ¥Î»ÊÇ KJ/mol ¡£ n ±íÊ¾Ô¤²âµÄÍ»±ä¸´ºÏÎïµÄÊýÄ¿¡£Ô¤²âÐ§¹ûµÄºÃ»µÓÃ AUC À´ºâÁ¿¡£}
+\end{tablenotes}
+\end{threeparttable}
 \label{Affinity_Pred}
 \end{table}
 ´Ó±í¸ñ\ref{Affinity_Pred} ¿ÉÒÔ¿´³ö£¬one\_WithinRange\_True ºÍ one\_WithinRange\_False ÎªÔ¤²âÐ§¹û×îºÃµÄÁ½¸ö£¬¶øÇÒÕâÁ½Õß£¬³ýÁË $\Delta\Delta G > 1$ µÄÇé¿öÍâ£¬ one\_WithinRange\_True ÀàÐÍµÄÔ¤²âÐ§¹ûÉÔÓÅ£¬ µ«ÊÇÓÅÊÆ²»Ã÷ÏÔ¡£ÆäÖÐÒ»¸öÔ­Òò¾ÍÊÇ¶àÊýÇé¿öÏÂ£¬Ïà»¥×÷ÓÃµÄ°±»ùËá¶Ô¶¼Âú×ãÍ¼ \ref{Predictable} µÄÒªÇó¡£ÓÉÓÚ±¾ÎÄµÄÄ£ÐÍÊÇ½¨Á¢ÔÚ CDR ÉÏµÄ°±»ùËáºÍ¿¹Ô­°±»ùËáÖ®¼äÏà»¥×÷ÓÃµÄ»ù´¡ÉÏ£¬ÎªÁË±£³ÖÒ»ÖÂ£¬Ñ¡ÔñÀàÐÍ one\_WithinRange\_True ¶ÔÍ»±ä¸´ºÏÎïÇ×ºÍÁ¦µÄ±ä»¯½øÐÐÔ¤²â¡£
@@ -954,14 +1122,16 @@ flanked\_WithinRange\_False & 0.529 & 0.489 & 0.408 & 0.429 & 497\\
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.65]{Affinity_Predict.eps}
-		\caption{¸÷ÖÖ·½·¨µÄÔ¤²âÐ§¹û¡£CN£ºÖ¸µÄÊÇ±¾ÎÄµÄ·½·¨£¬ÊÇ Contacting Number Ê××ÖÄ¸µÄËõÐ´¡£ÆäËûµÄ·½·¨Çë²Î¿¼ÎÄÏ× \cite{AB-Bind}¡£Í»±äÌå¸´ºÏÎïµÄÑ¡ÔñÊÇÔÚ one\_WithinRang\_True µÄÀàÐÍÏÂµÄÍ»±äÌå¸´ºÏÎï¡£$\Delta\Delta G$ µÄµ¥Î»ÊÇ KJ/mol ¡£}
+		\caption{¸÷ÖÖ·½·¨µÄÔ¤²âÐ§¹û¡£CN£ºÊÇ±¾ÎÄµÄ·½·¨, Contacting Number Ê××ÖÄ¸ËõÐ´¡£ÆäËû·½·¨Çë²Î¿¼ÎÄÏ× \cite{AB-Bind}¡£Í»±äÌå¸´ºÏÎïµÄÑ¡ÔñÊÇÔÚ one\_WithinRang\_True µÄÀàÐÍÏÂ¡£$\Delta\Delta G$ µÄµ¥Î»ÊÇ KJ/mol ¡£}
 		\label{Affinity_Predict}
 	\end{figure}
 
-Í¼ \ref{Affinity_Predict} ¸ø³öÁË²»Í¬·½·¨µÄÔ¤²âÐ§¹û¡£´ÓÍ¼ÖÐ¿ÉÒÔ¿´³ö£¬±¾ÎÄµÄ·½·¨ CN Óë³ý foldX ÒÔ¼° Discovery Studio ÍâµÄÆäËûÎåÖÖ·½·¨Ïà±È£¬ÔÚ²»Í¬µÄ $\Delta\Delta G$ µÄ×Ó¼¯ÉÏ»¥ÓÐÓÅÁÓ¡£ÎªÁË×¼È·µÄºâÁ¿±¾ÎÄµÄ·½·¨ÓëÆäËû·½·¨Ïà½ÏÖ®ÏÂµÄÓÅÁÓ£¬±¾ÎÄÓÃ Bootstrap µÄ·½·¨¹¹½¨ÁË AUC µÄÖÃÐÅÇø¼ä£¬Èç±í \ref{Bootstrap}¡£´ÓÖÐ¿ÉÒÔ¿´³ö£¬Discovery Studio ÔÚ $\Delta\Delta G > 0$, FoldX ÔÚ $\Delta\Delta G>0$, $\Delta\Delta G>0.5$, $\Delta\Delta G>1$ ¶¼ÓÅÓÚ CN £¬ËùÓÐÆäËûÇé¿öºÍ·½·¨£¬ÔÚ95\%ÖÃÐÅÇø¼äÒâÒåÏÂ¶¼²»±ÈCN ÓÐÃ÷ÏÔÓÅÊÆ¡£×ÛºÏÒÔÉÏ½á¹û£¬bASA, dfir, dDfir, Rosetta, STATIUM ºÍ CN ÔÚ one\_WithinRange\_True µÃµ½µÄ²âÊÔ¼¯ÖÐ£¬Æì¹ÄÏàµ±¡£
+Í¼ \ref{Affinity_Predict} ¸ø³öÁË²»Í¬·½·¨µÄÔ¤²âÐ§¹û¡£´ÓÍ¼ÖÐ¿ÉÒÔ¿´³ö£¬±¾ÎÄµÄ·½·¨ CN Óë³ý foldX ÒÔ¼° Discovery Studio ÍâµÄÆäËûÎåÖÖ·½·¨Ïà±È£¬ÔÚ²»Í¬µÄ $\Delta\Delta G$ µÄ×Ó¼¯ÉÏ»¥ÓÐÓÅÁÓ¡£ÎªÁË×¼È·µÄºâÁ¿±¾ÎÄµÄ·½·¨ÓëÆäËû·½·¨Ïà½ÏÖ®ÏÂµÄÓÅÁÓ£¬±¾ÎÄÓÃ Bootstrap µÄ·½·¨¹¹½¨ÁË AUC µÄÖÃÐÅÇø¼ä£¬Èç±í \ref{Bootstrap}¡£´ÓÖÐ¿ÉÒÔ¿´³ö£¬Discovery Studio ÔÚ $\Delta\Delta G > 0$, FoldX ÔÚ $\Delta\Delta G>0$, $\Delta\Delta G>0.5$, $\Delta\Delta G>1$ ¶¼ÓÅÓÚ CN £¬ËùÓÐÆäËûÇé¿öºÍ·½·¨£¬ÔÚ95\%ÖÃÐÅÇø¼äÒâÒåÏÂ¶¼²»±ÈCN ÓÐÃ÷ÏÔÓÅÊÆ¡£×ÛºÏÒÔÉÏ½á¹û£¬bASA¡¢ dfir¡¢ dDfir¡¢ Rosetta¡¢ STATIUM ºÍ CN ÔÚ one\_WithinRange\_True µÃµ½µÄ²âÊÔ¼¯ÖÐ£¬Æì¹ÄÏàµ±¡£
 
 \begin{table}[H]
 \centering
+\caption{\small{Bootstrap ·½·¨¹¹½¨¸÷ÖÖ²»Í¬·½·¨ AUC 95\% µÄÖÃÐÅÇø¼ä¡£}}
+\begin{threeparttable}
 \begin{tabular}{ccccc}
 \hline\hline
             & $\Delta\Delta G < 0.5$  & $\Delta\Delta G >0$ & $\Delta\Delta G > 0.5$ & $\Delta\Delta G > 1$  \\
@@ -984,99 +1154,109 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 \\
 \hline
 \end{tabular}
-\caption{Bootstrap ·½·¨¹¹½¨¸÷ÖÖ²»Í¬·½·¨ AUC 95\% µÄÖÃÐÅÇø¼ä¡£Boostrap µÄÈ¡Ñù´ÎÊýÎª 10,000 ¡£D Studio Îª Discovery Studio ¡£}
+\begin{tablenotes}
+\item \small{Boostrap µÄÈ¡Ñù´ÎÊýÎª 10,000¡£D Studio Îª Discovery Studio ¡£}
+\end{tablenotes}
+\end{threeparttable}
 \label{Bootstrap}
 \end{table}
 
 \chapter{ÌÖÂÛ}
 
-±¾ÂÛÎÄµÄºËÐÄ¾ÍÊÇÍ¨¹ý¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ Core µÄÑÐ¾¿, Ò²¾ÍÊÇ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¹Ø¼üµÄ°±»ùËáµÄÑÐ¾¿£¬½¨Á¢ÁË¿¹Ô­ºÍ¿¹ÌåÏà»¥×÷ÓÃµÄÒ»¸öÊýÁ¿¹ØÏµ¡£ÕâÊÇµÚÒ»´Î¡£ÔÚÕâÖ®Ç°µÄÑÐ¾¿¶¼ÊÇÁãÉ¢µÄ£¬²»³ÉÌåÏµµÄ£¬ºÜÄÑÍÆ¹ãµÄ¡£ÆäÖÐ×îÖ÷ÒªµÄÔ­ÒòÊÇ¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃµÄ°±»ùËáÊÇÒ»¸ö¿Õ¼äµÄ¹ØÏµ£¬¶ø²»ÊÇÏßÐÔµÄ¹ØÏµ£¬¶ø±¾ÎÄ´Ó Core µÄ½Ç¶È³É¹¦µÄÈÆ¹ýÁËÕâ¸öÕÏ°­¡£±¾ÎÄµÄÄ£ÐÍÔÚÇø·Ö Core ÖÐµÄ¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËá£¬ÒÔ¼°Ô¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå¸´ºÏÎïÇ×ºÍÁ¦µÄÓ°ÏìÉÏ£¬È¡µÃÒ»¶¨µÄ³É¹¦¡£
+±¾ÂÛÎÄµÄºËÐÄ¾ÍÊÇÍ¨¹ý¶Ô¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ Core µÄÑÐ¾¿£¬Ò²¾ÍÊÇ¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¹Ø¼üµÄ°±»ùËáµÄÑÐ¾¿£¬½¨Á¢ÁË¿¹Ô­ºÍ¿¹ÌåÏà»¥×÷ÓÃµÄÒ»¸öÊýÁ¿¹ØÏµ¡£ÕâÊÇµÚÒ»´Î¡£ÔÚÕâÖ®Ç°µÄÑÐ¾¿¶¼ÊÇÁãÉ¢µÄ£¬²»³ÉÌåÏµµÄ£¬ºÜÄÑÍÆ¹ãµÄ¡£ÆäÖÐ×îÖ÷ÒªµÄÔ­ÒòÊÇ¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃµÄ°±»ùËáÊÇÒ»¸ö¿Õ¼äµÄ¹ØÏµ£¬¶ø²»ÊÇÏßÐÔµÄ¹ØÏµ£¬¶ø±¾ÎÄ´Ó Core µÄ½Ç¶È³É¹¦ÈÆ¹ýÁËÕâ¸öÕÏ°­¡£±¾ÎÄµÄÄ£ÐÍÔÚÇø·Ö Core ÖÐµÄ¿¹Ô­°±»ùËáºÍ¿¹Ìå°±»ùËá£¬ÒÔ¼°Ô¤²âÍ»±ä¶Ô¿¹Ô­¿¹Ìå¸´ºÏÎïÇ×ºÍÁ¦µÄÓ°ÏìÉÏ£¬È¡µÃÒ»¶¨µÄ³É¹¦¡£
 
-ÓÃ Core µÄ¸ÅÄîÀ´ÑÐ¾¿¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ£¬¾Ý±¾ÂÛÎÄ×÷ÕßËùÁË½âµÄÖªÊ¶·¶Î§À´½²£¬Ò²ÊÇµÚÒ»´Î¡£Core µÄ¸ÅÄîÊÇ½¨Á¢ÔÚÁíÍâÒ»¸öÖØÒªµÄ¸ÅÄîÖ®ÉÏ£ºCN(contact number)¡£µ±ÎÒÃÇ°´ÕÕ 4\si{\angstrom} µÄ¾àÀë½øÐÐ½Ø¶Ï£¬µÃµ½Ïà»¥×÷ÓÃµÄ°±»ùËáºó£¬±¾ÂÛÎÄÓÃ CN µÄ´óÐ¡À´ºâÁ¿Ïà»¥×÷ÓÃµÄÇ¿Èõ¡£ÕâÖÖºâÁ¿·½·¨Ò²ÊÇµÚÒ»´Î£¬Çø±ðÓÚÒÔÍù ½Ó´¥Ãæ»ýµÄ¶ÈÁ¿·½·¨\cite{rASA1, rASA2}¡£°´ÕÕ CN ·½·¨À´¶¨Òå¹Ø¼üµÄÏà»¥×÷ÓÃµÄ°±»ùËáÔÚÖ±¹ÛÉÏÊÇºÏÇéºÏÀíµÄ£¬×îºó½¨Á¢µÄÄ£ÐÍÐ§¹ûÒ²¶Ô CN µÄÓÐÐ§ÐÔ×öÁË¼ä½ÓµÄÖ¤Ã÷¡£ÆäÊµ£¬Ò²¿ÉÒÔÍ¨¹ý·ÖÎöÊµÑéÊý¾ÝÀ´¶Ô CN µÄÓÐÐ§ÐÔ×ö×îÖ±½ÓµÄÅÐ¶¨¡£
+ÓÃ Core µÄ¸ÅÄîÀ´ÑÐ¾¿¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ£¬¾Ý±¾ÂÛÎÄ×÷ÕßËùÁË½âµÄÖªÊ¶·¶Î§À´½²£¬Ò²ÊÇµÚÒ»´Î¡£Core µÄ¸ÅÄîÊÇ½¨Á¢ÔÚÁíÍâÒ»¸öÖØÒªµÄ¸ÅÄîÖ®ÉÏ£ºCN(contact number)¡£µ±ÎÒÃÇ°´ÕÕ 4\si{\angstrom} µÄ¾àÀë½øÐÐ½Ø¶Ï£¬µÃµ½Ïà»¥×÷ÓÃµÄ°±»ùËáºó£¬±¾ÂÛÎÄÓÃ CN µÄ´óÐ¡À´ºâÁ¿Ïà»¥×÷ÓÃµÄÇ¿Èõ¡£ÕâÖÖºâÁ¿·½·¨Ò²ÊÇµÚÒ»´Î£¬Çø±ðÓÚÒÔÍù ½Ó´¥Ãæ»ýµÄ¶ÈÁ¿·½·¨\cite{rASA1, rASA2}¡£°´ÕÕ CN ·½·¨À´¶¨Òå¹Ø¼üµÄÏà»¥×÷ÓÃµÄ°±»ùËáÔÚÖ±¹ÛÉÏÊÇºÏÇéºÏÀíµÄ£¬×îºó½¨Á¢µÄÄ£ÐÍµÄÐ§¹ûÒ²¶Ô CN µÄÓÐÐ§ÐÔ×öÁË¼ä½ÓµÄÖ¤Ã÷¡£ÆäÊµ£¬Ò²¿ÉÒÔÍ¨¹ý·ÖÎöÊµÑéÊý¾ÝÀ´¶Ô CN µÄÓÐÐ§ÐÔ×ö×îÖ±½ÓµÄÅÐ¶¨¡£
 
-±¾ÂÛÎÄÄ£ÐÍ³ÉÁ¢µÄÁíÍâÒ»¸öÖØÒª¼ÙÉèÊÇ BLOSUM62 ¿ÉÒÔ×ÛºÏµÄ·´Ó¦°±»ùËáÖ®¼äÐÔÖÊµÄ²îÒì¡£ÓÐºÜ¶àÎÄÕÂÍ¨¹ýµ¥¶ÀÑÐ¾¿Ä³Ò»ÖÖÀàÐÍµÄÏà»¥×÷ÓÃ£¬±ÈÈçÇâ¼ü£¬ÊèË®×÷ÓÃ£¬ÑÎÇÅµÈ£¬µ«ÊÇÕâÐ©µ¥¶ÀµÄÏà»¥×÷ÓÃºÜÄÑ¶Ô°±»ùËáµÄÏà»¥×÷ÓÃ×öÒ»¸öÈ«ÃæµÄÃèÊö£¬Í¬Ê±Ò²ºÜÄÑËµÒ»¸öÈ«ÃæµÄÃèÊöÓ¦¸Ã°üº¬ÄÄÐ©ÀàÐÍµÄÏà»¥×÷ÓÃ£¬»¹ÓÐ¾ÍÊÇÕâÐ©µ¥¶ÀµÄÏà»¥×÷ÓÃºÜÄÑÁ¿»¯¡£±¾ÎÄÈÏÎª£¬ BLOSUM62 ¶Ô°±»ùËáÖ®¼äµÄ²îÒì×öÁËÒ»¸öÈ«Ãæ×ÛºÏµÄÃèÊö£¬ÒòÎª BLOSUM62 ÊÇÔÚ·ÖÎöÁË´óÁ¿Í¬Ô´°±»ùËáÐòÁÐÖ®¼äµÄÌæ»»¹ØÏµºóµÃµ½µÄ¡£¾ÍºÃ±ÈÒ»Á¾Æû³µ£¬¿ÉÒÔÍ¨¹ý·ÖÎöÈ¼ÁÏµÄÄÜÁ¿Öµ¡¢È¼ÁÏµÄÈ¼ÉÕÐ§ÂÊ¡¢Ä¦²ÁÁ¦¡¢Æû³µ±¾ÉíµÄÖØÁ¿¡¢Æû³µµÄÍâÐÎµÈµÃµ½×îÖÕÆû³µµÄÀ­Á¦£¬Ò²¿ÉÒÔÖ±½ÓÈÃÆû³µÅÜÒ»ÅÜ£¬Ö±½Ó²âµÃÆû³µµÃÀ­Á¦¡£
+±¾ÂÛÎÄÄ£ÐÍ³ÉÁ¢µÄÁíÍâÒ»¸öÖØÒª¼ÙÉèÊÇ£º BLOSUM62 ¿ÉÒÔ×ÛºÏµÄ·´Ó¦°±»ùËáÖ®¼äÐÔÖÊµÄ²îÒì¡£ÓÐºÜ¶àÎÄÕÂÍ¨¹ýµ¥¶ÀÑÐ¾¿Ä³Ò»ÖÖÀàÐÍµÄÏà»¥×÷ÓÃ£¬±ÈÈçÇâ¼ü¡¢ÊèË®×÷ÓÃ¡¢ÑÎÇÅµÈ£¬µ«ÊÇÕâÐ©µ¥¶ÀµÄÏà»¥×÷ÓÃºÜÄÑ¶Ô°±»ùËáµÄÏà»¥×÷ÓÃ×öÒ»¸öÈ«ÃæµÄÃèÊö£¬Í¬Ê±Ò²ºÜÄÑËµÒ»¸öÈ«ÃæµÄÃèÊöÓ¦¸Ã°üº¬ÄÄÐ©ÀàÐÍµÄÏà»¥×÷ÓÃ£¬»¹ÓÐ¾ÍÊÇÕâÐ©µ¥¶ÀµÄÏà»¥×÷ÓÃºÜÄÑÁ¿»¯¡£±¾ÎÄÈÏÎª£¬ BLOSUM62 ¶Ô°±»ùËáÖ®¼äµÄ²îÒì×öÁËÒ»¸öÈ«Ãæ×ÛºÏµÄÃèÊö£¬ÒòÎª BLOSUM62 ÊÇÔÚ·ÖÎöÁË´óÁ¿Í¬Ô´°±»ùËáÐòÁÐÖ®¼äµÄÌæ»»¹ØÏµºóµÃµ½µÄ¡£
 
-ÔÚ½¨Á¢ RBFN Ä£ÐÍµÄ¹ý³ÌÖÐ£¬ÓÐÒ»¸öÖØÒªµÃ»·½Ú£¬¾ÍÊÇÖÐÐÄµÃÑ¡È¡¡£±¾ÂÛÎÄ²ÉÓÃÁËÒ»¸ö¼ÆËãÉÏ¸üÓÐÐ§µÄ£¬ÓÉÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£Õâ¸ö·½·¨×îÖÕµÄÈ·¶¨£¬Ò²¾­ÀúÁËºÜ¶àµÄÌ½Ë÷¡£µÚÒ»¸öÒªÎÊµÄÎÊÌâ£¬ÓÐÃ»ÓÐ¸üºÃµÄ·½·¨£¿½áºÏ¶Ô¾¶Ïò»ùº¯ÊýÍøÂçÔÚÉúÎïÉÏµÄÓ¦ÓÃµÄË¼¿¼£¬±¾ÂÛÎÄ¸ø³öÁËÏÂÃæ³õ²½µÄÌ½Ë÷¡£
+ÔÚ½¨Á¢ RBFN Ä£ÐÍµÄ¹ý³ÌÖÐ£¬ÓÐÒ»¸öÖØÒªµÃ»·½Ú£¬¾ÍÊÇ center µÄÑ¡È¡¡£±¾ÂÛÎÄ²ÉÓÃÁËÒ»¸ö¼ÆËãÉÏ¸üÓÐÐ§µÄ£¬ÓÉÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£Í¬ÊÇ»¹Ì½Ë÷ÁËÒ»¸öÔÚËðÊ§º¯ÊýÖ¸µ¼ÏÂµÄ center µÄÑ¡È¡·½·¨£ºLGM¡£LGM ÔÚÑ¡È¡µÄ center ÊýÄ¿ºÜÉÙµÄÊ±ºò£¬±ÈÎÄÏ× \cite{FastCenter} µÄ·½·¨ÓÐÃ÷ÏÔÓÅÊÆ£¬µ«ÊÇ LGM ÐèÒªºÜ´óµÄ¼ÆËãÁ¿£¬ÌØ±ðÊÇÑù±¾ÊýÄ¿¶àµÄÊ±ºò¡£µ«ÊÇ£¬Õâ²¢²»Ó°Ïì LGM µÄÖØÒªÐÔ¡£ÉúÎïÑ§ÉÏµÄºÜ¶àÎÊÌâ£¬¶¼ÊÇÑ°ÕÒÒò¹û¹ØÏµ£¬»òÕß¶ÔÒ»¸öÉúÎïÏÖÏóÆðÖØÒª×÷ÓÃµÄÒòËØ¡£ÔÚ RBFN Ä£ÐÍÖÐ£¬ÕâÐ©ÖØÒªµÄÒòËØ¿ÉÒÔ½â¶ÁÎªÖØÒªµÄ center¡£Õâ¾ÍÉæ¼°µ½ÉÙÊý¼¸¸ö center µÄÑ¡È¡¡£±ÈÈçËµÔÚ TCGA Êý¾Ý¿âÖÐ£¬ÎÒÃÇ¿ÉÒÔÓÃ RBFN À´ÃèÊöÍ»±äºÍ°©Ö¢Ö®¼äµÄ¹ØÏµ£¬Í¨¹ý LGM ¾Í¿ÉÒÔÕÒµ½Æð¹Ø¼ü×÷ÓÃµÄÍ»±ä¡£
 
-ÓÃÊýÑ§À´ÑÐ¾¿ÉúÎïÎÊÌâ£¬µÚÒ»¼þÒª×öµÄÊÂÇé¾ÍÊÇ°ÑÉúÎï¶ÔÏóÖ®¼äµÄ¹ØÏµÓÃÊý×ÖÀ´ÃèÊö£¬ÕâÊÇÊýÑ§Ä£ÐÍµÄ¿ªÊ¼¡£¾àÀë£¬×÷ÎªÃèÊöÏà»¥¹ØÏµµÄÒ»¸öÖ¸±ê£¬ÔÚÉúÎïÎÊÌâÉÏ±È½ÏÈÝÒ×»ñµÃ¡£±ÈÈçËµµ°°×ÖÊÖ®¼äµÄ¾àÀë£¬¿ÉÒÔÍ¨¹ýËüÃÇËùÔÚµÄµ°°×ÖÊ×÷ÓÃÍøÂçÀ´ÃèÊö£¬Ò²¿ÉÒÔÍ¨¹ýÐòÁÐµÄÏàËÆÐÔ£¬ÓÉBLOSUM62À´¿Ì»­¡£ÔÙ±ÈÈçËµDNAÐòÁÐÖ®¼äµÄ¾àÀë¿ÉÒÔÍ¨¹ý¸÷ÖÖÄ£ÐÍÏÂºËËáÖ®¼äµÄÌæ»»¸ÅÂÊÀ´¼ÆËã\cite{Sub_Mat1,Sub_Mat2,Sub_Mat3,Sub_Mat4}¡£ÔÙ±ÈÈç£¬ÉúÎïÍøÂç¸÷¸ö½ÚµãÖ®¼äµÄ¹ØÏµÒ²¿ÉÒÔÍ¨¹ý¾àÀëÀ´ºâÁ¿¡£µ±ÓÐÁË¾àÀëÖ®ºó£¬¾¶Ïò»ùº¯ÊýÍøÂç¾ÍÏÔµÃ×ÔÈ»¶øÈ»£¬ÒòÎªËüµÄÊäÈëÖµ¾ÍÊÇ¾àÀë¡£ÔÚ¹¹½¨¾¶Ïò»ùº¯ÊýÍøÂçµÄÊ±ºò£¬Ò»¸öÖØÒªµÄ²½Öè¾ÍÊÇÖÐÐÄ(center)µÄÑ¡È¡¡£µ±ÖÐÐÄÑ¡¶¨Ö®ºó£¬¶ÔÃ¿¸öÑù±¾µÄÃèÊö¶¼ÓÉËüºÍÕâÐ©ÖÐÐÄÖ®¼äµÄ¹ØÏµ¾ö¶¨¡£ËùÒÔ£¬Ñ¡ÔñºÃµÄÖÐÐÄ£¬¿ÉÒÔÓÐÐ§µÄÑ¹ËõºÍÃèÊöÊý¾Ý¡£ÔÚÉúÎïÑ§ÉÏ£¬ÕâÐ©ÖÐÐÄÓ¦¸ÃÊÇ¾ßÓÐÖØÒªÉúÎïÒâÒåµÄ¶ÔÏó¡£±ÈÈç£¬ÔÚÑÐ¾¿°©Ö¢ºÍ»ùÒòÖ®¼äµÄ¹ØÏµÊ±£¬ºÃµÄÖÐÐÄ¿ÉÄÜÊÇ¶Ô°©Ö¢²úÉúÖØÒªÓ°ÏìµÄ»ùÒò¡£Alexandridis µÈ¸ø³öÁËÒ»¸ö¸ßÐ§µÄÑ¡È¡ CRBFN ÖÐÐÄµÄ·½·¨\cite{FastCenter}¡£ »ù±¾Ë¼Ïë¾ÍÊÇ¶ÔÑù±¾½øÐÐ¾ÛÀà£¬È»ºó´ÓÃ¿¸ö¾ÛÀàÖÐËæ»ú³éÈ¡ÖÐÐÄ¡£Õâ¸ö·½·¨ÊÜµ½Ëæ»úÒòËØµÄÓ°Ïì£¬ÌØ±ðÊÇ³éÈ¡µÄÖÐÐÄÊýÄ¿±È½ÏÉÙÊ±£¬ ÕâÖÖËæ»ú³éÈ¡µÄ·½·¨¸üÊÇÈÝÒ×Â©µôÕæÕýÓÐÖØÒªÒâÒåµÄÖÐÐÄ¡£ËùÒÔ£¬Èç¹ûÄÜÔÚËðÊ§º¯ÊýµÄÖ¸µ¼ÏÂ³éÈ¡ÖÐÐÄ£¬Çé¿ö¾Í»áºÃºÜ¶à¡£
+±¾ÂÛÎÄ»¹³¢ÊÔÁËÓÃÒ»¸öÕûºÏÄ£ÐÍ°Ñ²»Í¬ match-type ÏÂµÄÄ£ÐÍ¶¼°üº¬½øÀ´£¬µ«ÊÇÕâ¸öÄ£ÐÍÔÚÇø·ÖÕæÕýµÄ core ºÍËæ»ú¸ºÑù±¾µÄÄÜÁ¦ÉÏÓÐÁË´ó·ù¶ÈµÄÏÂ½µ£¬AUC Æ½¾ùÏÂ½µÔ¼ 4\%¡£µ«ÊÇÕâÑùµÄ³¢ÊÔÊÇºÃµÄ³¢ÊÔ£¬ÉõÖÁÊÇÁíÒ»¸ö¸üÎªÕýÈ·µÄ·½ÏòµÄ¿ª¶Ë£¬ÒòÎª match-type ±¾Éí¾ÍÊÇÒ»¸öÈËÔìµÄÓÃÓÚÃèÊö¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃµÄ¸ÅÄî£¬°Ñ match-type ÏÞ¶¨ÔÚÖµÓò $\{(m,n), m,n = 1,2,3\}$ ÊÇÃ»ÓÐµÀÀíµÄ¡£ÔÙÕß£¬¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃÖ»ÓÐÒ»ÖÖÕæÊµµÄÏà»¥×÷ÓÃ£¬Ò»¸öÕæÊµµÄÏà»¥×÷ÓÃÈ´ÓÃ²»Í¬µÄ match-type ÏÂµÄ RBFN Ä£ÐÍÀ´ÃèÊö£¬ËÆºõ²»Ì«ºÏÀí¡£
+%Õâ¸ö·½·¨×îÖÕµÄÈ·¶¨£¬Ò²¾­ÀúÁËºÜ¶àµÄÌ½Ë÷¡£µÚÒ»¸öÒªÎÊµÄÎÊÌâ£¬ÓÐÃ»ÓÐ¸üºÃµÄ·½·¨£¿½áºÏ¶Ô¾¶Ïò»ùº¯ÊýÍøÂçÔÚÉúÎïÉÏµÄÓ¦ÓÃµÄË¼¿¼£¬±¾ÂÛÎÄ¸ø³öÁËÏÂÃæ³õ²½µÄÌ½Ë÷¡£
 
-¼ÙÉèËðÊ§º¯ÊýÊÇ $L(C, W)$ , ÆäÖÐ$C = (c_1, c_2, \cdots, c_n)$ ÊÇ n ¸öÖÐÐÄ£¬ $W=(w_1, w_2, \cdots, w_n)$ ÊÇ¶ÔÓ¦ÓÚÕâ n ¸öÖÐÐÄµÄÏµÊý¡£ ²¢ÇÒ¼ÙÉè $c_i$ µÄÖØÒªÐÔ¿ÉÒÔÓÉ $|\frac{\partial L}{\partial w_i}|$ µÄ´óÐ¡À´¶¨Òå£¬$|\frac{\partial L}{\partial w_i}|$ Ô½´ó£¬ $c_i$ ÔÚÄ£ÐÍÖÐÔ½ÖØÒª¡£µ«ÊÇ£¬ÓÅ»¯Ä£ÐÍÊ±£¬$|\frac{\partial L}{\partial w_i}|$ Ç÷ÓÚ 0 £¬ÕâÑù¾Í²»ÈÝÒ×¶Ô²»Í¬ÖÐÐÄµÄÖØÒªÐÔ×öÓÐÐ§µÄÇø·Ö¡£ÎªÁË½â¾öÕâ¸öÎÊÌâ£¬¿ÉÒÔ¶ÔËðÊ§º¯Êý¼ÓÉÏÒ»¸öºÜÐ¡µÄÕýÔòÏî¡£
-	\begin{align}
-	 	\label{eq1} L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2
-	\end{align}
-%$$L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2$$
-È»ºó°´ÕÕÐÂµÄËðÊ§º¯Êý $L_{\delta}$ À´ÑµÁ·Ä£ÐÍ£¬ÔòÓÐ
-	\begin{align}
-	\label{eq2}	&\frac{\partial L_{\delta}}{\partial w_i} = \frac{\partial 	L(W, C)}{\partial w_i} + \delta w_i = 0\\
-		\label{eq3}&\delta |w_i| = \left\vert\frac{\partial L_{\delta}}{\partial w_i}\right\vert
-	\end{align}
+%ÓÃÊýÑ§À´ÑÐ¾¿ÉúÎïÎÊÌâ£¬µÚÒ»¼þÒª×öµÄÊÂÇé¾ÍÊÇ°ÑÉúÎï¶ÔÏóÖ®¼äµÄ¹ØÏµÓÃÊý×ÖÀ´ÃèÊö£¬ÕâÊÇÊýÑ§Ä£ÐÍµÄ¿ªÊ¼¡£¾àÀë£¬×÷ÎªÃèÊöÏà»¥¹ØÏµµÄÒ»¸öÖ¸±ê£¬ÔÚÉúÎïÎÊÌâÉÏ±È½ÏÈÝÒ×»ñµÃ¡£±ÈÈçËµµ°°×ÖÊÖ®¼äµÄ¾àÀë£¬¿ÉÒÔÍ¨¹ýËüÃÇËùÔÚµÄµ°°×ÖÊ×÷ÓÃÍøÂçÀ´ÃèÊö£¬Ò²¿ÉÒÔÍ¨¹ýÐòÁÐµÄÏàËÆÐÔ£¬ÓÉBLOSUM62À´¿Ì»­¡£ÔÙ±ÈÈçËµDNAÐòÁÐÖ®¼äµÄ¾àÀë¿ÉÒÔÍ¨¹ý¸÷ÖÖÄ£ÐÍÏÂºËËáÖ®¼äµÄÌæ»»¸ÅÂÊÀ´¼ÆËã\cite{Sub_Mat1,Sub_Mat2,Sub_Mat3,Sub_Mat4}¡£ÔÙ±ÈÈç£¬ÉúÎïÍøÂç¸÷¸ö½ÚµãÖ®¼äµÄ¹ØÏµÒ²¿ÉÒÔÍ¨¹ý¾àÀëÀ´ºâÁ¿¡£µ±ÓÐÁË¾àÀëÖ®ºó£¬¾¶Ïò»ùº¯ÊýÍøÂç¾ÍÏÔµÃ×ÔÈ»¶øÈ»£¬ÒòÎªËüµÄÊäÈëÖµ¾ÍÊÇ¾àÀë¡£ÔÚ¹¹½¨¾¶Ïò»ùº¯ÊýÍøÂçµÄÊ±ºò£¬Ò»¸öÖØÒªµÄ²½Öè¾ÍÊÇÖÐÐÄ(center)µÄÑ¡È¡¡£µ±ÖÐÐÄÑ¡¶¨Ö®ºó£¬¶ÔÃ¿¸öÑù±¾µÄÃèÊö¶¼ÓÉËüºÍÕâÐ©ÖÐÐÄÖ®¼äµÄ¹ØÏµ¾ö¶¨¡£ËùÒÔ£¬Ñ¡ÔñºÃµÄÖÐÐÄ£¬¿ÉÒÔÓÐÐ§µÄÑ¹ËõºÍÃèÊöÊý¾Ý¡£ÔÚÉúÎïÑ§ÉÏ£¬ÕâÐ©ÖÐÐÄÓ¦¸ÃÊÇ¾ßÓÐÖØÒªÉúÎïÒâÒåµÄ¶ÔÏó¡£±ÈÈç£¬ÔÚÑÐ¾¿°©Ö¢ºÍ»ùÒòÖ®¼äµÄ¹ØÏµÊ±£¬ºÃµÄÖÐÐÄ¿ÉÄÜÊÇ¶Ô°©Ö¢²úÉúÖØÒªÓ°ÏìµÄ»ùÒò¡£Alexandridis µÈ¸ø³öÁËÒ»¸ö¸ßÐ§µÄÑ¡È¡ CRBFN ÖÐÐÄµÄ·½·¨\cite{FastCenter}¡£ »ù±¾Ë¼Ïë¾ÍÊÇ¶ÔÑù±¾½øÐÐ¾ÛÀà£¬È»ºó´ÓÃ¿¸ö¾ÛÀàÖÐËæ»ú³éÈ¡ÖÐÐÄ¡£Õâ¸ö·½·¨ÊÜµ½Ëæ»úÒòËØµÄÓ°Ïì£¬ÌØ±ðÊÇ³éÈ¡µÄÖÐÐÄÊýÄ¿±È½ÏÉÙÊ±£¬ ÕâÖÖËæ»ú³éÈ¡µÄ·½·¨¸üÊÇÈÝÒ×Â©µôÕæÕýÓÐÖØÒªÒâÒåµÄÖÐÐÄ¡£ËùÒÔ£¬Èç¹ûÄÜÔÚËðÊ§º¯ÊýµÄÖ¸µ¼ÏÂ³éÈ¡ÖÐÐÄ£¬Çé¿ö¾Í»áºÃºÜ¶à¡£
 
-ÆäÖÐ $\delta > 0$, ÊÇÒ»¸ö³£Êý¡£ ¹«Ê½ (\ref{eq1}), (\ref{eq2}), (\ref{eq3}) ¾ÍÊÇËµ£º°´ $|\frac{\partial L}{\partial w_i}|$ ÅÅÐò ºÍ °´ $|w_i|$ ÅÅÐòµÄ½á¹ûÒ»Ñù£¬Ò²¾ÍÊÇ£º
-\begin{align}\label{eqiv}
-\left\vert\frac{\partial L}{\partial w_i}\right\vert > \left\vert\frac{\partial L}{\partial w_j}\right\vert \iff \left\vert w_i \right \vert > \left\vert w_j \right \vert
-\end{align}
-ÒÀ¾Ý¹«Ê½£¨\ref{eqiv}£©£¬ÓÐËã·¨ \ref{CenterSelectAlg}£¬±¾ÎÄ³ÆÕâ¸ö·½·¨Îª LGM(Loss Guided Method) ¡£
+%¼ÙÉèËðÊ§º¯ÊýÊÇ $L(C, W)$ , ÆäÖÐ$C = (c_1, c_2, \cdots, c_n)$ ÊÇ n ¸öÖÐÐÄ£¬ $W=(w_1, w_2, \cdots, w_n)$ ÊÇ¶ÔÓ¦ÓÚÕâ n ¸öÖÐÐÄµÄÏµÊý¡£ ²¢ÇÒ¼ÙÉè $c_i$ µÄÖØÒªÐÔ¿ÉÒÔÓÉ $|\frac{\partial L}{\partial w_i}|$ µÄ´óÐ¡À´¶¨Òå£¬$|\frac{\partial L}{\partial w_i}|$ Ô½´ó£¬ $c_i$ ÔÚÄ£ÐÍÖÐÔ½ÖØÒª¡£µ«ÊÇ£¬ÓÅ»¯Ä£ÐÍÊ±£¬$|\frac{\partial L}{\partial w_i}|$ Ç÷ÓÚ 0 £¬ÕâÑù¾Í²»ÈÝÒ×¶Ô²»Í¬ÖÐÐÄµÄÖØÒªÐÔ×öÓÐÐ§µÄÇø·Ö¡£ÎªÁË½â¾öÕâ¸öÎÊÌâ£¬¿ÉÒÔ¶ÔËðÊ§º¯Êý¼ÓÉÏÒ»¸öºÜÐ¡µÄÕýÔòÏî¡£
+%	\begin{align}
+%	 	\label{eq1} L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2
+%	\end{align}
+%%$$L_{\delta} = L(W, C) + \frac{\delta}{2}\sum w_i^2$$
+%È»ºó°´ÕÕÐÂµÄËðÊ§º¯Êý $L_{\delta}$ À´ÑµÁ·Ä£ÐÍ£¬ÔòÓÐ
+%	\begin{align}
+%	\label{eq2}	&\frac{\partial L_{\delta}}{\partial w_i} = \frac{\partial 	L(W, C)}{\partial w_i} + \delta w_i = 0\\
+%		\label{eq3}&\delta |w_i| = \left\vert\frac{\partial L_{\delta}}{\partial w_i}\right\vert
+%	\end{align}
 
-	\alglanguage{pseudocode}
-	\begin{algorithm}
-		\caption{Center Selection Method}
-		\label{CenterSelectAlg}
-		\begin{algorithmic}
-			\State Initial $W$  \Comment $W$ is a vector of coefficients
-			\State Initial $C$ \Comment $C$ begins with all samples.
-			\State Set the target number of centers $N$.
-			\While {$len(C) < N $} \Comment $len(C)$ is the length of C.
-				\State Train the model
-				\For {$w_i \in W$}
-					\If {$|w_i| = min\{|w|: w \in W\}$ }
-						\State Del $w_i$ from $W$	  
-						\State Del $c_i$ from $C$			
-					\EndIf
-				\EndFor
-			\EndWhile			
-		\end{algorithmic}		
-	\end{algorithm}
+%ÆäÖÐ $\delta > 0$, ÊÇÒ»¸ö³£Êý¡£ ¹«Ê½ (\ref{eq1}), (\ref{eq2}), (\ref{eq3}) ¾ÍÊÇËµ£º°´ $|\frac{\partial L}{\partial w_i}|$ ÅÅÐò ºÍ °´ $|w_i|$ ÅÅÐòµÄ½á¹ûÒ»Ñù£¬Ò²¾ÍÊÇ£º
+%\begin{align}\label{eqiv}
+%\left\vert\frac{\partial L}{\partial w_i}\right\vert > \left\vert\frac{\partial L}{\partial w_j}\right\vert \iff \left\vert w_i \right \vert > \left\vert w_j \right \vert
+%\end{align}
+%ÒÀ¾Ý¹«Ê½£¨\ref{eqiv}£©£¬ÓÐËã·¨ \ref{CenterSelectAlg}£¬±¾ÎÄ³ÆÕâ¸ö·½·¨Îª LGM(Loss Guided Method) ¡£
 
-±¾ÂÛÎÄ²ÉÓÃÁË Hamming, Occurence Frequency\cite{OF_IOF}, Inverse Occurence\cite{OF_IOF} ºÍ Eskin\cite{Eskin}, Frequency ËÄÖÖ¾àÀë£¬Gaussian, Inverse Multi-Quadric, Markov ºÍ Thin Plate Spline ËÄÖÖ¾¶Ïò»ùº¯Êý£¬ ÔÚ Breast Cancer Êý¾ÝÉÏ \cite{BreastCancer} £¬ ¶Ô LGM ºÍÎÄÏ× \cite{FastCenter} µÄ·½·¨£¨ÕâÀï³ÆÖ®Îª Random Cluster £©½øÐÐ±È½Ï¡£±È½ÏµÄµÄ±ê×¼²ÉÓÃ MCC(Matthews correlation coefficient)£¬½á¹ûÈçÍ¼ \ref{Hamming_BRE}, \ref{Eskin_BRE}, \ref{OF_BRE}, \ref{IOF_BRE} ¡£´ÓÕâÐ©Í¼ÖÐ¿ÉÒÔ¿´³ö£¬µ±ÖÐÐÄµÄÊýÄ¿±È½Ï¶àÊ±£¬LGM ºÍ Random Cluster ±íÏÖÇ÷ÓÚÒ»ÖÂ£¬µ«ÊÇµ±ÖÐÐÄµÄÊýÄ¿±»Ñ¹Ëõµ½ºÜÉÙ£¬LGM µÄ±íÏÖÒªÃ÷ÏÔºÃÓÚ Random Cluster. 
+%	\alglanguage{pseudocode}
+%	\begin{algorithm}
+%		\caption{Center Selection Method}
+%		\label{CenterSelectAlg}
+%		\begin{algorithmic}
+%			\State Initial $W$  \Comment $W$ is a vector of coefficients
+%			\State Initial $C$ \Comment $C$ begins with all samples.
+%			\State Set the target number of centers $N$.
+%			\While {$len(C) < N $} \Comment $len(C)$ is the length of C.
+%				\State Train the model
+%				\For {$w_i \in W$}
+%					\If {$|w_i| = min\{|w|: w \in W\}$ }
+%						\State Del $w_i$ from $W$	  
+%						\State Del $c_i$ from $C$			
+%					\EndIf
+%				\EndFor
+%			\EndWhile			
+%		\end{algorithmic}		
+%	\end{algorithm}
 
-ÕâÀïÖ»¸ø³öÁËÔÚ Breast Cancer Êý¾ÝÉÏµÄ±È½Ï½á¹û£¬ ÔÚ ±¾ÂÛÎÄÖÐ Core µÄÊý¾ÝÉÏ£¬Ò²ÓÐÍ¬ÑùµÄ½áÂÛ£¬Ò²¾ÍÊÇµ±ÖÐÐÄµÄÊýÄ¿±È½ÏÉÙÊ±£¬LGM ÓÐÃ÷ÏÔÓÅÊÆ£¬µ±ÖÐÐÄÊýÄ¿±È½Ï¶àµÄÊ±ºò£¬¶þÕß±íÏÖÇ÷Í¬¡£¶øÇÒ¿ÉÒÔÔ¤ÁÏ£¬Õâ¸ö½áÂÛÊÇÆÕ±é³ÉÁ¢µÄ£¬ÒòÎª LGM ÊÇÓÐÄ¿µÄµÄÈ¥Ñ¡ÔñÖÐÐÄ¡£ µ«ÊÇ±¾ÂÛÎÄµÄÄ¿µÄÊÇ¹¹½¨ºÃµÄÄ£ÐÍ£¬¶ø²»ÊÇÑ¡Ôò×îÉÙµÄÖÐÐÄ£¬ËùÒÔ²ÉÓÃÁËÎÄÏ× \cite{FastCenter} µÄ·½·¨£¬ÒòÎªÕâÖÖ·½·¨ÔÚ¼ÆËãÉÏ¸ü¸ßÐ§¡£ÕâÒ²ÊÇ LGM µÄÒ»¸öÖØ´óÈ±µã£¬ÌØ±ðÊÇµ±Êý¾Ý¼¯±È½Ï´óµÄÊ±ºò£¬LGM ÏÔµÃ±¿×¾¡£µ«ÊÇ£¬Õâ¸öÎÊÌâ¿ÉÒÔ²ÉÈ¡ÕÛÖÐµÄ·½·¨À´½â¾ö£¬¿ÉÒÔÏÈ²ÉÓÃ ÎÄÏ× \cite{FastCenter} µÄ·½·¨ É¸Ñ¡³öÒ»²¿·ÖÖÐÐÄ£¬È»ºóÔÙÀûÓÃ LGM ½Ó×ÅÉ¸Ñ¡¡£
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{Hamming_BRE.eps}
-	\caption{Hamming distance µÄ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{FastCenter}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
-	\label{Hamming_BRE}
-\end{figure}
+%±¾ÂÛÎÄ²ÉÓÃÁË Hamming, Occurence Frequency\cite{OF_IOF}, Inverse Occurence\cite{OF_IOF} ºÍ Eskin\cite{Eskin}, Frequency ËÄÖÖ¾àÀë£¬Gaussian, Inverse Multi-Quadric, Markov ºÍ Thin Plate Spline ËÄÖÖ¾¶Ïò»ùº¯Êý£¬ ÔÚ Breast Cancer Êý¾ÝÉÏ \cite{BreastCancer} £¬ ¶Ô LGM ºÍÎÄÏ× \cite{FastCenter} µÄ·½·¨£¨ÕâÀï³ÆÖ®Îª Random Cluster £©½øÐÐ±È½Ï¡£±È½ÏµÄµÄ±ê×¼²ÉÓÃ MCC(Matthews correlation coefficient)£¬½á¹ûÈçÍ¼ \ref{Hamming_BRE}, \ref{Eskin_BRE}, \ref{OF_BRE}, \ref{IOF_BRE} ¡£´ÓÕâÐ©Í¼ÖÐ¿ÉÒÔ¿´³ö£¬µ±ÖÐÐÄµÄÊýÄ¿±È½Ï¶àÊ±£¬LGM ºÍ Random Cluster ±íÏÖÇ÷ÓÚÒ»ÖÂ£¬µ«ÊÇµ±ÖÐÐÄµÄÊýÄ¿±»Ñ¹Ëõµ½ºÜÉÙ£¬LGM µÄ±íÏÖÒªÃ÷ÏÔºÃÓÚ Random Cluster. 
+%
+%ÕâÀïÖ»¸ø³öÁËÔÚ Breast Cancer Êý¾ÝÉÏµÄ±È½Ï½á¹û£¬ ÔÚ ±¾ÂÛÎÄÖÐ Core µÄÊý¾ÝÉÏ£¬Ò²ÓÐÍ¬ÑùµÄ½áÂÛ£¬Ò²¾ÍÊÇµ±ÖÐÐÄµÄÊýÄ¿±È½ÏÉÙÊ±£¬LGM ÓÐÃ÷ÏÔÓÅÊÆ£¬µ±ÖÐÐÄÊýÄ¿±È½Ï¶àµÄÊ±ºò£¬¶þÕß±íÏÖÇ÷Í¬¡£¶øÇÒ¿ÉÒÔÔ¤ÁÏ£¬Õâ¸ö½áÂÛÊÇÆÕ±é³ÉÁ¢µÄ£¬ÒòÎª LGM ÊÇÓÐÄ¿µÄµÄÈ¥Ñ¡ÔñÖÐÐÄ¡£ µ«ÊÇ±¾ÂÛÎÄµÄÄ¿µÄÊÇ¹¹½¨ºÃµÄÄ£ÐÍ£¬¶ø²»ÊÇÑ¡Ôò×îÉÙµÄÖÐÐÄ£¬ËùÒÔ²ÉÓÃÁËÎÄÏ× \cite{FastCenter} µÄ·½·¨£¬ÒòÎªÕâÖÖ·½·¨ÔÚ¼ÆËãÉÏ¸ü¸ßÐ§¡£ÕâÒ²ÊÇ LGM µÄÒ»¸öÖØ´óÈ±µã£¬ÌØ±ðÊÇµ±Êý¾Ý¼¯±È½Ï´óµÄÊ±ºò£¬LGM ÏÔµÃ±¿×¾¡£µ«ÊÇ£¬Õâ¸öÎÊÌâ¿ÉÒÔ²ÉÈ¡ÕÛÖÐµÄ·½·¨À´½â¾ö£¬¿ÉÒÔÏÈ²ÉÓÃ ÎÄÏ× \cite{FastCenter} µÄ·½·¨ É¸Ñ¡³öÒ»²¿·ÖÖÐÐÄ£¬È»ºóÔÙÀûÓÃ LGM ½Ó×ÅÉ¸Ñ¡¡£
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.5]{Hamming_BRE.eps}
+%	\caption{Hamming distance µÄ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{FastCenter}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
+%	\label{Hamming_BRE}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.5]{Eskin_BRE.eps}
+%	\caption{Eskin distance µÄ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{Eskin}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
+%	\label{Eskin_BRE}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.5]{OF_BRE.eps}
+%	\caption{OF ±íÊ¾ Occurence Frequency £¬ ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{OF_IOF}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
+%	\label{OF_BRE}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.5]{IOF_BRE.eps}
+%	\caption{IOF ±íÊ¾ Inverse Occurence Frequency £¬ ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{OF_IOF}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
+%	\label{IOF_BRE}
+%\end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{Eskin_BRE.eps}
-	\caption{Eskin distance µÄ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{Eskin}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
-	\label{Eskin_BRE}
-\end{figure}
+ÔÚÔ¤²âÍ»±ä¶Ô¿¹Ô­¿¹ÌåÇ×ºÍÁ¦µÄÓ°ÏìÊ±£¬±¾ÂÛÎÄµÄ·½·¨ CN ²»ÈõÓÚÆäËûµÄÐí¶à·½·¨(STATIUM¡¢ Rosetta¡¢ dfire¡¢ dDfire¡¢ rASA)(±í\ref{Bootstrap})£¬µ«ÊÇÒ²Ã»ÓÐ±¾ÖÊµÄÌáÉý£¬ºÍÆäËûµÄÐí¶à·½·¨Ò»Ñù±íÏÖÆ½Æ½£¬²»ÄÜÌá¹©¾«×¼µÄÔ¤²â£¬Ö»ÄÜÔÚÄ³Ð©Ê±ºò£¬ÎªÏÖÊµµÄÓ¦ÓÃÌá¹©ÉÙÐí°ïÖú¡£
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{OF_BRE.eps}
-	\caption{OF ±íÊ¾ Occurence Frequency £¬ ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{OF_IOF}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
-	\label{OF_BRE}
-\end{figure}
+×îºóÒªËµµÄÊÇ£¬±¾ÂÛÎÄÔÚ´´ÐÂµÄ½â¾öÁË¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃÁìÓòµÄÒ»Ð©ÖØÒªÎÊÌâµÄÍ¬Ê±£¬Ò²Ìá³öÁËºÜ¶àÎÊÌâ¡£CN ÔÚÅÐ¶ÏÏà»¥×÷ÓÃÇ¿ÈõÉÏµÄÓÐÐ§ÐÔ¿É²»¿ÉÒÔÍ¨¹ýÊµÑé²âµÃµÄÊý¾Ý½øÐÐÑéÖ¤£¿ËäÈ»Ô¤¼Æ±¾ÎÄµÄÄ£ÐÍ±»ÓÃÀ´Ô¤²â¿¹Ô­±íÎ»»áÌá¸ßÔ¤²âµÄ×¼È·ÐÔ£¬ÄÜ²»ÄÜÉè¼ÆÒ»ÖÖ·½·¨ÊÔÊÔ£¿Core ·´Ó³ÁË¶ÌµÄ°±»ùËáÐòÁÐÖ®¼äµÄÏà»¥×÷ÓÃ£¬µ«ÊÇ¹é¸ù½áµ×£¬¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ»¹ÊÇ¿Õ¼äÉÏµÄ£¬ÄÜ²»ÄÜ°Ñ Core µÄ¸ÅÄîÍÆ¹ãµ½¿Õ¼äÉÏ£¬½¨Á¢¸ü·ûºÏÊµ¼ÊµÄÄ£ÐÍ£¿ÕâÐ©¶¼ÊÇ¾ßÓÐÖØÒªÒâÒåµÄÎÊÌâ¡£
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{IOF_BRE.eps}
-	\caption{IOF ±íÊ¾ Inverse Occurence Frequency £¬ ¶¨Òå¿ÉÒÔ²Î¿´ÎÄÏ×\cite{OF_IOF}¡£Loss Guided ±íÊ¾ LGM ·½·¨£¬ Random Cluster ±íÊ¾ÎÄÏ× \cite{FastCenter} ¸ø³öµÄ·½·¨¡£}
-	\label{IOF_BRE}
-\end{figure}
-
-ÔÚÔ¤²âÍ»±ä¶Ô¿¹Ô­¿¹ÌåÇ×ºÍÁ¦µÄÓ°ÏìÊ±£¬±¾ÂÛÎÄµÄ·½·¨ CN ²»ÈõÓÚÆäËûµÄÐí¶à·½·¨(STATIUM, Rosetta, dfire, dDfire, rASA)£¬µ«ÊÇÒ²Ã»ÓÐ±¾ÖÊµÄÌáÉý£¬ºÍÆäËûµÄÐí¶à·½·¨Ò»Ñù±íÏÖÆ½Æ½£¬²»ÄÜÌá¹©¾«×¼µÄÔ¤²â£¬Ö»ÄÜÔÚÄ³Ð©Ê±ºò£¬ÎªÏÖÊµµÄÓ¦ÓÃÌá¹©ÉÙÐí°ïÖú¡£
-
-×îºóÒªËµµÄÊÇ£¬±¾ÂÛÎÄÔÚ´´ÐÂµÄ½â¾öÁË¿¹Ô­¿¹ÌåÏà»¥×÷ÓÃÁìÓòµÄÒ»Ð©ÖØÒªÎÊÌâµÄÍ¬Ê±£¬Ò²Ìá³öÁËºÜ¶àÎÊÌâ¡£CN ÔÚÅÐ¶ÏÏà»¥×÷ÓÃÇ¿ÈõÉÏµÄÓÐÐ§ÐÔ¿É²»¿ÉÒÔÍ¨¹ýÊµÑé²âµÃµÄÊý¾Ý½øÐÐÑéÖ¤£¿ËäÈ»Ô¤¼Æ±¾ÎÄµÄÄ£ÐÍ±»ÓÃÀ´Ô¤²â¿¹Ô­±íÎ»»áÌá¸ßÔ¤²âµÄ×¼È·ÐÔ£¬ÄÜ²»ÄÜÉè¼ÆÒ»ÖÖ·½·¨ÊÔÊÔ£¿Core ·´Ó³ÁË¶ÌµÄ°±»ùËáÐòÁÐÖ®¼äµÄÏà»¥×÷ÓÃ£¬µ«ÊÇ¹é¸ù½áµ×£¬¿¹Ô­¿¹ÌåµÄÏà»¥×÷ÓÃ»¹ÊÇ¿Õ¼äÉÏµÄ£¬ÄÜ²»ÄÜ°Ñ Core µÄ¸ÅÄîÍÆ¹ãµ½¿Õ¼äÉÏ£¬½¨Á¢¸ü·ûºÏÊµ¼ÊµÄÄ£ÐÍ£¿ÕâÐ©¶¼ÊÇ¾ßÓÐÖØÒªÒâÒåµÄÎÊÌâ£¬Ò²¶¼ÊÇ¿ÉÒÔ½â¾öµÄÎÊÌâ£¬²¢²»ÊÇÒ£²»¿É¼°¡£
-
-±¾ÂÛÎÄÓÐ¹ØµÄÊý¾ÝºÍ´úÂë£¬Çë²Î¿´ 
+±¾ÂÛÎÄµÄÊý¾ÝºÍ´úÂë£¬Çë²Î¿´£º 
 \begin{center}
 \texttt{https://github.com/Leochuanxing/Paritope\_Epitope}
 \end{center}
 
+\chapter*{ÖÂÐ»}
+±¾¿ÎÌâµÄÑÐ¾¿¿´ÉÏÈ¥ºÜ¼òµ¥£¬µ«ºÜ¶àÊÇÈ«ÐÂµÄÏë·¨£¬ËùÒÔÌ½Ë÷µÄ¹ý³ÌÓÐ¸÷ÖÖÇúÕÛ£¬»¹ÓÐ¶Ô½á¹û²»È·¶¨ÐÔµÄ¿Ö¾å¡£ÄÜ¼á³ÖÏÂÀ´£¬Ò»ÊÇ»ùÓÚ¶ÔËùÑÐ¾¿ÄÚÈÝÖØÒªÐÔµÄÈÏÊ¶£¬Ò»ÊÇºÍºÜ¶àÐ¡»ï°é½»Á÷£¬ÈÃÎÒÓÐ¸ü¶àµÄ×ÔÐÅ²¢ÇÒ·ÅËÉÁËÐÄÇé¡£ÔÚÕâÖ®ÖÐ£¬ÎÒ×îÓ¦¸Ã¸ÐÐ»µÄÊÇÁºÐ¡¶¡¡£
+
+»¹Òª¸ÐÐ»ÖìÉ½·çÀÏÊ¦ÔÚÕû¸ö¿ÆÑÐ¹ý³ÌÖÐµÄ°ïÖú¡£ÖìÀÏÊ¦½¨ÒéÎÒÑÐ¾¿Ò»ÏÂ¿¹Ô­ºÍ¿¹ÌåÖ®¼äµÄÏà»¥×÷ÓÃ£¬ºóÀ´Ò»ÆðÈ¥ÉÏº£½»´óÒ»¸öºÍ¿¹ÌåÓÐ¹ØµÄÊµÑéÊÒ½»Á÷£¬È»ºóÂýÂýÓÐÁËÕû¸ö¿ÎÌâµÄË¼Â·¡£»¹Òª¸ÐÐ»Ëï·áÖéÀÏÊ¦ÔÚÕâ¸ö¹ý³ÌÖÐÌá¹©µÄ¸÷ÖÖ°ïÖú£¬ÌØ±ðÊÇÔÚÎÄÕÂºóÆÚµÄÐÞ¸Ä£¬ÒÔ¼°Ò»Ð©Í³¼Æ·½·¨ÉÏµÄ½¨Òé¡£
 
 
 %\section{ÌâÍ·}
@@ -1111,8 +1291,8 @@ FoldX&(0.51, 0.71)& (0.69, 0.8)&(0.79, 0.91)&(0.86, 0.98)
 %
 %\textbf{×¢Òâ``²Î¿¼ÎÄÏ×"²»Ð´³ÉÂÛÎÄµÄÒ»ÕÂ. }
 
-\chapter*{\heiti ÖÂÐ»}
-ÔÚ±¾ÂÛÎÄÏà¹ØµÄÑÐ¾¿¹ý³ÌÖÐ£¬µÃµ½ÁËÖìÉ½·çÀÏÊ¦ºÍËï·áÖéÀÏÊ¦µÄ´óÁ¿°ïÖú¡£ÔÚ´Ë±í´ï³ÏÖ¿µÄ¸ÐÐ»¡£»¹Òª¸ÐÐ» MIT µÄ Keating ½ÌÊÚÎÞË½µÄÌá¹©ÁËËýÃÇ×éµÄÊµÑéÊý¾Ý¡£¸ÐÐ»Îâ×ÚÃôÀÏÊ¦ÔÚÊýÑ§ÉÏµÄÖ¸µ¼¡£»¹Òª¸ÐÐ»¹ýÈ¥²¢Ã»ÓÐÖ±½Ó²ÎÓëµ½±¾ÂÛÎÄµÄÀÏÊ¦ºÍÅóÓÑÃÇ£¬ËäÈ»ËûÃÇÃ»ÓÐÖ±½Ó²ÎÓëÂÛÎÄµÄÐ´×÷£¬µ«ÊÇËûÃÇµÄ´æÔÚÊ¹ÎÒ¸üÏñÒ»¸öÉç»áÐÔµÄ¶¯Îï£¬ÈÃÎÒµÄ´æÔÚÓÐÒ»¶¨µÄÒâÒå¡£
+%\chapter*{\heiti ÖÂÐ»}
+%ÔÚ±¾ÂÛÎÄÏà¹ØµÄÑÐ¾¿¹ý³ÌÖÐ£¬µÃµ½ÁËÖìÉ½·çÀÏÊ¦ºÍËï·áÖéÀÏÊ¦µÄ´óÁ¿°ïÖú¡£ÔÚ´Ë±í´ï³ÏÖ¿µÄ¸ÐÐ»¡£»¹Òª¸ÐÐ» MIT µÄ Keating ½ÌÊÚÎÞË½µÄÌá¹©ÁËËýÃÇ×éµÄÊµÑéÊý¾Ý¡£¸ÐÐ»Îâ×ÚÃôÀÏÊ¦ÔÚÊýÑ§ÉÏµÄÖ¸µ¼¡£»¹Òª¸ÐÐ»¹ýÈ¥²¢Ã»ÓÐÖ±½Ó²ÎÓëµ½±¾ÂÛÎÄµÄÀÏÊ¦ºÍÅóÓÑÃÇ£¬ËûÃÇµÄ´æÔÚÊ¹ÎÒ¸üÏñÒ»¸öÉç»áÐÔµÄ¶¯Îï£¬ÈÃÎÒµÄ´æÔÚÓÐÒ»¶¨µÄÒâÒå¡£
 %\begin{table}[htbp]\centering
 %\begin{tabular}{llll}
 %\hline\hline

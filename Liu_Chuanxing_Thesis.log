@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  2 MAR 2020 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.30)  20 MAY 2020 15:31
 entering extended mode
 **./Liu_Chuanxing_Thesis.tex
 (Liu_Chuanxing_Thesis.tex
@@ -652,13 +652,31 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks30
 \@floatcapt=\box57
 )
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty"
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.sty
+"
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen168
+\captionmargin@=\dimen169
+\captionwidth=\dimen170
+\caption@tempdima=\dimen171
+\caption@indent=\dimen172
+\caption@parindent=\dimen173
+\caption@hangindent=\dimen174
+)
+\c@caption@flags=\count276
+\c@ContinuedFloat=\count277
+Package caption Info: float package is loaded.
+)
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\multirow.st
 y"
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip62
-\multirow@cntb=\count276
+\multirow@cntb=\count278
 \multirow@dima=\skip63
-\bigstrutjot=\dimen168
+\bigstrutjot=\dimen175
 )
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\rotating.st
 y"
@@ -666,7 +684,7 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
  ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count277
+\c@r@tfl@t=\count279
 \rotFPtop=\skip64
 \rotFPbot=\skip65
 \rot@float@box=\box58
@@ -674,66 +692,71 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\hhline.sty"
 Package: hhline 2014/10/28 v2.03 Table rule package (DPC)
 )
+("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/threeparttable\three
+parttable.sty"
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box59
+)
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/enumitem\enumitem.st
 y"
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip66
-\enit@outerparindent=\dimen169
+\enit@outerparindent=\dimen176
 \enit@toks=\toks32
-\enit@inbox=\box59
-\enit@count@id=\count278
-\enitdp@description=\count279
+\enit@inbox=\box60
+\enit@count@id=\count280
+\enitdp@description=\count281
 )
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/siunitx\siunitx.sty"
 Package: siunitx 2019/10/10 v2.7t A comprehensive (SI) units package
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen170
-\ar@mcellbox=\box60
-\extrarowheight=\dimen171
+\col@sep=\dimen177
+\ar@mcellbox=\box61
+\extrarowheight=\dimen178
 \NC@list=\toks33
 \extratabsurround=\skip67
 \backup@length=\skip68
-\ar@cellbox=\box61
+\ar@cellbox=\box62
 )
-\l__siunitx_tmp_box=\box62
-\l__siunitx_tmp_dim=\dimen172
-\l__siunitx_tmp_int=\count280
-\l__siunitx_number_mantissa_length_int=\count281
-\l__siunitx_number_uncert_length_int=\count282
-\l__siunitx_round_int=\count283
-\l__siunitx_process_decimal_int=\count284
-\l__siunitx_process_uncertainty_int=\count285
-\l__siunitx_process_fixed_int=\count286
-\l__siunitx_process_integer_min_int=\count287
-\l__siunitx_process_precision_int=\count288
-\l__siunitx_group_min_int=\count289
-\l__siunitx_angle_marker_box=\box63
-\l__siunitx_angle_unit_box=\box64
-\l__siunitx_angle_marker_dim=\dimen173
-\l__siunitx_angle_unit_dim=\dimen174
-\l__siunitx_unit_int=\count290
-\l__siunitx_unit_denominator_int=\count291
-\l__siunitx_unit_numerator_int=\count292
-\l__siunitx_unit_prefix_int=\count293
-\l__siunitx_unit_prefix_base_int=\count294
-\l__siunitx_unit_prefix_gram_int=\count295
-\l__siunitx_number_product_int=\count296
+\l__siunitx_tmp_box=\box63
+\l__siunitx_tmp_dim=\dimen179
+\l__siunitx_tmp_int=\count282
+\l__siunitx_number_mantissa_length_int=\count283
+\l__siunitx_number_uncert_length_int=\count284
+\l__siunitx_round_int=\count285
+\l__siunitx_process_decimal_int=\count286
+\l__siunitx_process_uncertainty_int=\count287
+\l__siunitx_process_fixed_int=\count288
+\l__siunitx_process_integer_min_int=\count289
+\l__siunitx_process_precision_int=\count290
+\l__siunitx_group_min_int=\count291
+\l__siunitx_angle_marker_box=\box64
+\l__siunitx_angle_unit_box=\box65
+\l__siunitx_angle_marker_dim=\dimen180
+\l__siunitx_angle_unit_dim=\dimen181
+\l__siunitx_unit_int=\count292
+\l__siunitx_unit_denominator_int=\count293
+\l__siunitx_unit_numerator_int=\count294
+\l__siunitx_unit_prefix_int=\count295
+\l__siunitx_unit_prefix_base_int=\count296
+\l__siunitx_unit_prefix_gram_int=\count297
+\l__siunitx_number_product_int=\count298
 \c__siunitx_one_fill_skip=\skip69
 \l__siunitx_table_unit_align_skip=\skip70
-\l__siunitx_table_exponent_dim=\dimen175
-\l__siunitx_table_integer_dim=\dimen176
-\l__siunitx_table_mantissa_dim=\dimen177
-\l__siunitx_table_marker_dim=\dimen178
-\l__siunitx_table_result_dim=\dimen179
-\l__siunitx_table_uncert_dim=\dimen180
-\l__siunitx_table_fill_pre_dim=\dimen181
-\l__siunitx_table_fill_post_dim=\dimen182
-\l__siunitx_table_fill_mid_dim=\dimen183
-\l__siunitx_table_pre_box=\box65
-\l__siunitx_table_post_box=\box66
-\l__siunitx_table_mantissa_box=\box67
-\l__siunitx_table_result_box=\box68
+\l__siunitx_table_exponent_dim=\dimen182
+\l__siunitx_table_integer_dim=\dimen183
+\l__siunitx_table_mantissa_dim=\dimen184
+\l__siunitx_table_marker_dim=\dimen185
+\l__siunitx_table_result_dim=\dimen186
+\l__siunitx_table_uncert_dim=\dimen187
+\l__siunitx_table_fill_pre_dim=\dimen188
+\l__siunitx_table_fill_post_dim=\dimen189
+\l__siunitx_table_fill_mid_dim=\dimen190
+\l__siunitx_table_pre_box=\box66
+\l__siunitx_table_post_box=\box67
+\l__siunitx_table_mantissa_box=\box68
+\l__siunitx_table_result_box=\box69
 \l__siunitx_table_number_align_skip=\skip71
 \l__siunitx_table_text_align_skip=\skip72
 
@@ -750,15 +773,15 @@ hmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count297
-\c@ALG@rem=\count298
-\c@ALG@nested=\count299
+\c@ALG@line=\count299
+\c@ALG@rem=\count300
+\c@ALG@nested=\count301
 \ALG@tlm=\skip73
 \ALG@thistlm=\skip74
-\c@ALG@Lnr=\count300
-\c@ALG@blocknr=\count301
-\c@ALG@storecount=\count302
-\c@ALG@tmpcounter=\count303
+\c@ALG@Lnr=\count302
+\c@ALG@blocknr=\count303
+\c@ALG@storecount=\count304
+\c@ALG@tmpcounter=\count305
 \ALG@tmplength=\skip75
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
@@ -768,7 +791,7 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 \@float@every@algorithm=\toks34
-\c@algorithm=\count304
+\c@algorithm=\count306
 )
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/abstract\abstract.st
 y"
@@ -832,16 +855,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen184
-\Hy@linkcounter=\count305
-\Hy@pagecounter=\count306
+\@linkdim=\dimen191
+\Hy@linkcounter=\count307
+\Hy@pagecounter=\count308
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
 File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count307
+\Hy@SavedSpaceFactor=\count309
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.cf
 g"
@@ -857,16 +880,16 @@ Package hyperref Info: Plain pages OFF on input line 4555.
 Package hyperref Info: Backreferencing OFF on input line 4560.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4793.
-\c@Hy@tempcnt=\count308
+\c@Hy@tempcnt=\count310
  ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5152.
-\XeTeXLinkMargin=\dimen185
-\Fld@menulength=\count309
-\Field@Width=\dimen186
-\Fld@charsize=\dimen187
+\XeTeXLinkMargin=\dimen192
+\Fld@menulength=\count311
+\Field@Width=\dimen193
+\Fld@charsize=\dimen194
 Package hyperref Info: Hyper figures OFF on input line 6423.
 Package hyperref Info: Link nesting OFF on input line 6428.
 Package hyperref Info: Hyper index ON on input line 6431.
@@ -876,17 +899,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6448.
 Package hyperref Info: PDF/A mode OFF on input line 6453.
 LaTeX Info: Redefining \ref on input line 6493.
 LaTeX Info: Redefining \pageref on input line 6497.
-\Hy@abspage=\count310
-\c@Item=\count311
-\c@Hfootnote=\count312
+\Hy@abspage=\count312
+\c@Item=\count313
+\c@Hfootnote=\count314
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def
 "
 File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
-\Fld@listcount=\count313
-\c@bookmark@seq@number=\count314
+\Fld@listcount=\count315
+\c@bookmark@seq@number=\count316
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfilech
 eck.sty"
@@ -899,13 +922,13 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcjk2uni\xCJK2uni.st
 y"
 Package: xCJK2uni 2019/04/07 v0.8 Convert CJK character to Unicode.
-\l__CJKtu_i_min_int=\count315
-\l__CJKtu_i_max_int=\count316
-\l__CJKtu_ii_min_int=\count317
-\l__CJKtu_ii_max_int=\count318
-\l__CJKtu_gap_begin_int=\count319
-\l__CJKtu_gap_end_int=\count320
-\l__CJKtu_plane_int=\count321
+\l__CJKtu_i_min_int=\count317
+\l__CJKtu_i_max_int=\count318
+\l__CJKtu_ii_min_int=\count319
+\l__CJKtu_ii_max_int=\count320
+\l__CJKtu_gap_begin_int=\count321
+\l__CJKtu_gap_end_int=\count322
+\l__CJKtu_plane_int=\count323
 Package hyperref Info: Option `unicode' set `true' on input line 223.
  ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\puenc.def"
 File: puenc.def 2019/09/28 v7.00a Hyperref: PDF Unicode definition (HO)
@@ -918,8 +941,8 @@ Package hyperref Info: Option `CJKbookmarks' set `false' on input line 223.
 BK.def"
 File: xCJK2uni-UGBK.def 2019/04/07 v0.8 Convert CJK character to Unicode.
 ))
-\c@definition=\count322
-\c@remark=\count323
+\c@definition=\count324
+\c@remark=\count325
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cjk\extended.enc"
 File: extended.enc 2015/04/18 4.8.4
@@ -934,90 +957,90 @@ LaTeX Warning: Label `EpiPred' multiply defined.
 )
 \openout1 = `Liu_Chuanxing_Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 110.
+LaTeX Info: Redefining \selectfont on input line 115.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1057,16 +1080,16 @@ LaTeX Info: Redefining \selectfont on input line 110.
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf
 .mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
-\scratchdimen=\dimen188
-\scratchbox=\box69
-\nofMPsegments=\count325
-\nofMParguments=\count326
+\scratchcounter=\count326
+\scratchdimen=\dimen195
+\scratchbox=\box70
+\nofMPsegments=\count327
+\nofMParguments=\count328
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count327
-\MPscratchDim=\dimen189
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen196
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
 \everyMPtoPDFconversion=\toks36
 )
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-ba
@@ -1083,6 +1106,12 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\translato
 r-basic-dictionary-English.dict"
 Dictionary: translator-basic-dictionary, Language: English 
@@ -1091,7 +1120,7 @@ Dictionary: translator-basic-dictionary, Language: English
 eviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-\AtBeginShipoutBox=\box70
+\AtBeginShipoutBox=\box71
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -1102,7 +1131,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 110.
+Package hyperref Info: Link coloring ON on input line 115.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty
 "
@@ -1112,23 +1141,23 @@ Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 tring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count330
+\c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 110.
-LaTeX Info: Redefining \pageref on input line 110.
-LaTeX Info: Redefining \nameref on input line 110.
+LaTeX Info: Redefining \ref on input line 115.
+LaTeX Info: Redefining \pageref on input line 115.
+LaTeX Info: Redefining \nameref on input line 115.
  (Liu_Chuanxing_Thesis.out) (Liu_Chuanxing_Thesis.out)
 \@outlinefile=\write3
 \openout3 = `Liu_Chuanxing_Thesis.out'.
 
-Package hyperref Info: Option `CJKbookmarks' set `false' on input line 110.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110
+Package hyperref Info: Option `CJKbookmarks' set `false' on input line 115.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 115
 .
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110
+LaTeX Font Info:    Trying to load font information for U+msb on input line 115
 .
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
@@ -1165,15 +1194,17 @@ Package ctex Warning: Command \CTEXoptions is deprecated.
 (ctex)                \ctexset { bibname={\heiti ≤ŒøºŒƒœ◊} } is set.
 
 LaTeX Font Info:    Trying to load font information for C19+rm on input line 13
-0.
+5.
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ctex/fd\c19rm.fd"
 File: c19rm.fd 2019/05/29 v2.4.16 Chinese font definition (CTEX)
 )<<c1951.cmap>><<c1949.cmap>> (Liu_Chuanxing_Thesis.toc<<c1940.cmap>><<c1961.cm
 ap>><<c1963.cmap>><<c1960.cmap>><<c1946.cmap>><<c1943.cmap>><<c1959.cmap>><<c19
 65.cmap>><<c1947.cmap>><<c1957.cmap>><<c1944.cmap>><<c1962.cmap>><<c1937.cmap>>
 <<c1958.cmap>><<c1964.cmap>><<c1954.cmap>><<c1941.cmap>><<c1955.cmap>><<c1938.c
-map>><<c1945.cmap>><<c1948.cmap>><<c1956.cmap>><<c1936.cmap>><<c1953.cmap>><<c1
-942.cmap>>)
+map>><<c1936.cmap>><<c1956.cmap>><<c1926.cmap>>
+Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
+quanjiao) on input line 10.
+<<c1945.cmap>><<c1948.cmap>><<c1953.cmap>><<c1942.cmap>>)
 \tf@toc=\write4
 \openout4 = `Liu_Chuanxing_Thesis.toc'.
 
@@ -1185,20 +1216,16 @@ and DVIPDFMx (CTEX)
 ) [1
 
 
-]
+]<<c1950.cmap>><<c1925.cmap>><<c1952.cmap>><<c1939.cmap>>
 LaTeX Font Info:    Trying to load font information for C19+zhhei on input line
- 132.
+ 146.
 
 ("C:\Users\leo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zhmetrics\c19zhhei.f
 d"
 File: c19zhhei.fd 2009/09/23 4.8.2
-)<<c1939.cmap>><<c1926.cmap>>
-Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (
-quanjiao) on input line 132.
-<<c1950.cmap>><<c1925.cmap>><<c1952.cmap>>
-[0
+) [0
 
-]
+] [1]
 µ⁄“ª’¬
 Package epstopdf Info: Source file: <CellImmune.eps>
 (epstopdf)                    date: 2020-02-10 20:55:42
@@ -1208,17 +1235,17 @@ Package epstopdf Info: Source file: <CellImmune.eps>
 (epstopdf)                    size: 42870 bytes
 (epstopdf)             Command: <epstopdf --outfile=CellImmune-eps-converted-to
 .pdf CellImmune.eps>
-(epstopdf)             \includegraphics on input line 157.
+(epstopdf)             \includegraphics on input line 170.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./CellImmune-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<CellImmune-eps-converted-to.pdf, id=196, 794.97pt x 614.295pt>
+<CellImmune-eps-converted-to.pdf, id=212, 794.97pt x 614.295pt>
 File: CellImmune-eps-converted-to.pdf Graphic file (type pdf)
 <use CellImmune-eps-converted-to.pdf>
-Package pdftex.def Info: CellImmune-eps-converted-to.pdf  used on input line 15
-7.
+Package pdftex.def Info: CellImmune-eps-converted-to.pdf  used on input line 17
+0.
 (pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
 Package epstopdf Info: Source file: <SerumImmune.eps>
 (epstopdf)                    date: 2020-02-10 20:55:42
@@ -1228,19 +1255,19 @@ Package epstopdf Info: Source file: <SerumImmune.eps>
 (epstopdf)                    size: 42415 bytes
 (epstopdf)             Command: <epstopdf --outfile=SerumImmune-eps-converted-t
 o.pdf SerumImmune.eps>
-(epstopdf)             \includegraphics on input line 165.
+(epstopdf)             \includegraphics on input line 178.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./SerumImmune-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<SerumImmune-eps-converted-to.pdf, id=198, 794.97pt x 614.295pt>
+<SerumImmune-eps-converted-to.pdf, id=214, 794.97pt x 614.295pt>
 File: SerumImmune-eps-converted-to.pdf Graphic file (type pdf)
 <use SerumImmune-eps-converted-to.pdf>
 Package pdftex.def Info: SerumImmune-eps-converted-to.pdf  used on input line 1
-65.
+78.
 (pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
-[1
+[2
 
  <./CellImmune-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <AntibodySchematic.eps>
@@ -1251,20 +1278,20 @@ Package epstopdf Info: Source file: <AntibodySchematic.eps>
 (epstopdf)                    size: 25871 bytes
 (epstopdf)             Command: <epstopdf --outfile=AntibodySchematic-eps-conve
 rted-to.pdf AntibodySchematic.eps>
-(epstopdf)             \includegraphics on input line 173.
+(epstopdf)             \includegraphics on input line 186.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./AntibodySchematic-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<AntibodySchematic-eps-converted-to.pdf, id=220, 794.97pt x 614.295pt>
+<AntibodySchematic-eps-converted-to.pdf, id=237, 794.97pt x 614.295pt>
 File: AntibodySchematic-eps-converted-to.pdf Graphic file (type pdf)
 <use AntibodySchematic-eps-converted-to.pdf>
 Package pdftex.def Info: AntibodySchematic-eps-converted-to.pdf  used on input 
-line 173.
+line 186.
 (pdftex.def)             Requested size: 238.49284pt x 184.28992pt.
 
-Overfull \hbox (2.08565pt too wide) in paragraph at lines 170--176
+Overfull \hbox (2.08565pt too wide) in paragraph at lines 183--189
 []\C19/rm/m/n/12.045/54 < \C19/rm/m/n/12.045/48 a \C19/rm/m/n/12.045/40  \C19/
 rm/m/n/12.045/47 | \C19/rm/m/n/12.045/57 N \C19/rm/m/n/12.045/46 ( \C19/rm/m/n/
 12.045/43  \C19/rm/m/n/12.045/55 ¥ \C19/rm/m/n/12.045/61 ò \C19/rm/m/n/12.045/
@@ -1276,54 +1303,25 @@ m/n/12.045/57 ^ \C19/rm/m/n/12.045/64 ≠ \C19/rm/m/n/12.045/48 Û\OT1/cmr/m/n/12.
 ight chain)\C19/rm/m/n/12.045/65 |
  []
 
-
-Overfull \hbox (20.7217pt too wide) in paragraph at lines 178--179
-[]\C19/rm/m/n/12.045/44 p \C19/rm/m/n/12.045/37 ÷ \C19/rm/m/n/12.045/46 ˚ \C19/
-rm/m/n/12.045/40 Ω \C19/rm/m/n/12.045/53 ´ \C19/rm/m/n/12.045/64 Ã \C19/rm/m/n/
-12.045/61 á \C19/rm/m/n/12.045/62 d\OT1/cmr/m/n/12.045 6\C19/rm/m/n/12.045/42 á
- \C19/rm/m/n/12.045/37 ' \C19/rm/m/n/12.045/46  \C19/rm/m/n/12.045/40 ·  \C19
-/rm/m/n/12.045/36 R \C19/rm/m/n/12.045/44 ƒ \C19/rm/m/n/12.045/56 å \C19/rm/m/n
-/12.045/52 ° \C19/rm/m/n/12.045/40 „ \C19/rm/m/n/12.045/65 | \C19/rm/m/n/12.045
-/38 §|\C19/rm/m/n/12.045/26 ß| \C19/rm/m/n/12.045/56 ß \C19/rm/m/n/12.045/50 Ç 
-\C19/rm/m/n/12.045/41 © \C19/rm/m/n/12.045/58 è \C19/rm/m/n/12.045/55 ¥ \C19/rm
-/m/n/12.045/48 5 \C19/rm/m/n/12.045/65 g \C19/rm/m/n/12.045/64 ≠ \C19/rm/m/n/12
-.045/48 Û \C19/rm/m/n/12.045/43 ⁄ \C19/rm/m/n/12.045/53 î \C19/rm/m/n/12.045/48
- Û \C19/rm/m/n/12.045/40 \OT1/cmr/m/n/12.045 CDR1,
- []
-
-[2 <./SerumImmune-eps-converted-to.pdf> <./AntibodySchematic-eps-converted-to.p
+[3 <./SerumImmune-eps-converted-to.pdf> <./AntibodySchematic-eps-converted-to.p
 df>]
-<Vaccine.png, id=262, 798.985pt x 389.455pt>
+<Vaccine.png, id=280, 798.985pt x 389.455pt>
 File: Vaccine.png Graphic file (type png)
 <use Vaccine.png>
-Package pdftex.def Info: Vaccine.png  used on input line 183.
+Package pdftex.def Info: Vaccine.png  used on input line 196.
 (pdftex.def)             Requested size: 319.58833pt x 155.77924pt.
 
-Overfull \hbox (23.86096pt too wide) in paragraph at lines 189--190
-\C19/rm/m/n/12.045/60 # \C19/rm/m/n/12.045/40  \C19/rm/m/n/12.045/61 Ü \C19/rm
-/m/n/12.045/58 ‘|\C19/rm/m/n/12.045/25 "| \C19/rm/m/n/12.045/40 \OT1/cmr/m/n/1
-2.045 2020\C19/rm/m/n/12.045/51 c\OT1/cmr/m/n/12.045 2\C19/rm/m/n/12.045/63  \
-C19/rm/m/n/12.045/38 –|\C19/rm/m/n/12.045/26 ß| \C19/rm/m/n/12.045/61 Æ \C19/rm
-/m/n/12.045/46 ≤ \C19/rm/m/n/12.045/37  \OT1/cmr/m/n/12.045 FDA(Food and Drug 
-Ad-min-is-tra-tion) \C19/rm/m/n/12.045/43 ⁄ \OT1/cmr/m/n/12.045 EMA(European
+Overfull \hbox (4.78311pt too wide) in paragraph at lines 202--203
+\C19/rm/m/n/12.045/38 § \C19/rm/m/n/12.045/60 # \C19/rm/m/n/12.045/40  \C19/rm
+/m/n/12.045/61 Ü \C19/rm/m/n/12.045/58 ‘|\C19/rm/m/n/12.045/25 "| \C19/rm/m/n/1
+2.045/40 \OT1/cmr/m/n/12.045 2020\C19/rm/m/n/12.045/51 c\OT1/cmr/m/n/12.045 2\
+C19/rm/m/n/12.045/63  \C19/rm/m/n/12.045/38 –|\C19/rm/m/n/12.045/26 ß| \C19/rm
+/m/n/12.045/61 Æ \C19/rm/m/n/12.045/46 ≤ \C19/rm/m/n/12.045/37  \OT1/cmr/m/n/1
+2.045 FDA(Food and Drug Ad-min-is-tra-tion) \C19/rm/m/n/12.045/43 ⁄ \OT1/cmr/m/
+n/12.045 EMA(Eu-
  []
 
-
-Overfull \hbox (7.19582pt too wide) in paragraph at lines 189--190
-\C19/rm/m/n/12.045/40 ı \C19/rm/m/n/12.045/46 ‰ \C19/rm/m/n/12.045/62 k \C19/rm
-/m/n/12.045/43 2 \C19/rm/m/n/12.045/52 Ã \C19/rm/m/n/12.045/47 | \C19/rm/m/n/12
-.045/36 J \C19/rm/m/n/12.045/65 ä \C19/rm/m/n/12.045/62 ^ \C19/rm/m/n/12.045/40
-  \C19/rm/m/n/12.045/64 £ \C19/rm/m/n/12.045/49  \C19/rm/m/n/12.045/60 5 \C19
-/rm/m/n/12.045/47 | \C19/rm/m/n/12.045/57 N|\C19/rm/m/n/12.045/26 ß| \C19/rm/m/
-n/12.045/52 Ÿ \C19/rm/m/n/12.045/64 • \C19/rm/m/n/12.045/62 k \C19/rm/m/n/12.04
-5/43 È \C19/rm/m/n/12.045/40 ı \C19/rm/m/n/12.045/55 ¥ \C19/rm/m/n/12.045/64  
-\C19/rm/m/n/12.045/40 È \C19/rm/m/n/12.045/50 ù \C19/rm/m/n/12.045/61 º \C19/rm
-/m/n/12.045/43 L \C19/rm/m/n/12.045/38 ß \C19/rm/m/n/12.045/64 • \C19/rm/m/n/12
-.045/40  \C19/rm/m/n/12.045/45 u \C19/rm/m/n/12.045/37 ˇ \C19/rm/m/n/12.045/40
- :\OT1/cmr/m/n/12.045 (checkpoint)
- []
-
-[3 <./Vaccine.png>]
+[4 <./Vaccine.png>]
 Package epstopdf Info: Source file: <MonoclonalAntibody.eps>
 (epstopdf)                    date: 2020-02-17 17:09:48
 (epstopdf)                    size: 2927002 bytes
@@ -1332,42 +1330,26 @@ Package epstopdf Info: Source file: <MonoclonalAntibody.eps>
 (epstopdf)                    size: 51073 bytes
 (epstopdf)             Command: <epstopdf --outfile=MonoclonalAntibody-eps-conv
 erted-to.pdf MonoclonalAntibody.eps>
-(epstopdf)             \includegraphics on input line 194.
+(epstopdf)             \includegraphics on input line 207.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./MonoclonalAntibody-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<MonoclonalAntibody-eps-converted-to.pdf, id=277, 794.97pt x 614.295pt>
+<MonoclonalAntibody-eps-converted-to.pdf, id=297, 794.97pt x 614.295pt>
 File: MonoclonalAntibody-eps-converted-to.pdf Graphic file (type pdf)
 <use MonoclonalAntibody-eps-converted-to.pdf>
 Package pdftex.def Info: MonoclonalAntibody-eps-converted-to.pdf  used on input
- line 194.
+ line 207.
 (pdftex.def)             Requested size: 397.48402pt x 307.14674pt.
-[4 <./MonoclonalAntibody-eps-converted-to.pdf>]<<c1980.cmap>>
-<ConformationalEpitope.png, id=325, 1213.53375pt x 553.06625pt>
+[5 <./MonoclonalAntibody-eps-converted-to.pdf>]<<c1980.cmap>>
+<ConformationalEpitope.png, id=345, 1213.53375pt x 553.06625pt>
 File: ConformationalEpitope.png Graphic file (type png)
 <use ConformationalEpitope.png>
-Package pdftex.def Info: ConformationalEpitope.png  used on input line 208.
+Package pdftex.def Info: ConformationalEpitope.png  used on input line 221.
 (pdftex.def)             Requested size: 364.06294pt x 165.92114pt.
- [5]
-Overfull \hbox (5.12802pt too wide) in paragraph at lines 214--215
-\OT1/cmr/m/n/12.045 ef-fi-cient)|\C19/rm/m/n/12.045/26 ß| \C19/rm/m/n/12.045/62
- d \C19/rm/m/n/12.045/39 d \C19/rm/m/n/12.045/48 5 \C19/rm/m/n/12.045/62 ˝ \C19
-/rm/m/n/12.045/37 ˇ \C19/rm/m/n/12.045/41 ö \C19/rm/m/n/12.045/59 Ç \C19/rm/m/n
-/12.045/60 5 \C19/rm/m/n/12.045/47 | \C19/rm/m/n/12.045/63  \C19/rm/m/n/12.045
-/37 L \C19/rm/m/n/12.045/58 †\OT1/cmr/m/n/12.045 [[]]|\C19/rm/m/n/12.045/25 "| 
-\OT1/cmr/m/n/12.045 Xu\C19/rm/m/n/12.045/40  È \OT1/cmr/m/n/12.045 CEP[[]],Dis
-coTope[[]],PEPOP[[]]|\C19/rm/m/n/12.045/25 !|
- []
-
-[6 <./ConformationalEpitope.png>]
-Missing character: There is no £ in font cmr12!
-Missing character: There is no § in font cmr12!
-Missing character: There is no £ in font cmr12!
-Missing character: There is no § in font cmr12!
-
-Overfull \hbox (12.38445pt too wide) in paragraph at lines 233--234
+ [6] [7 <./ConformationalEpitope.png>]
+Overfull \hbox (12.38445pt too wide) in paragraph at lines 246--247
 []\C19/rm/m/n/12.045/45 O \C19/rm/m/n/12.045/56 é \C19/rm/m/n/12.045/39 D \C19/
 rm/m/n/12.045/57 ⁄ \C19/rm/m/n/12.045/62 ˝ \C19/rm/m/n/12.045/37 ˇ \C19/rm/m/n/
 12.045/47 | \C19/rm/m/n/12.045/63  \C19/rm/m/n/12.045/37 L \C19/rm/m/n/12.045/
@@ -1379,8 +1361,8 @@ m/n/12.045/57 N A \C19/rm/m/n/12.045/61 … \C19/rm/m/n/12.045/40  \C19/rm/m/n/1
 ibody-specific
  []
 
-[7]
-Overfull \hbox (15.4269pt too wide) in paragraph at lines 250--252
+[8]
+Overfull \hbox (15.4269pt too wide) in paragraph at lines 263--265
 \C19/rm/m/n/12.045/52 Ÿ \C19/rm/m/n/12.045/64 • $\OML/cmm/m/it/12.045 f[]\OT1/c
 mr/m/n/12.045 (\OML/cmm/m/it/12.045 C[]; C[]\OT1/cmr/m/n/12.045 )$ \C19/rm/m/n/
 12.045/55 ¥ \C19/rm/m/n/12.045/59 É \C19/rm/m/n/12.045/44 p \C19/rm/m/n/12.045/
@@ -1394,29 +1376,8 @@ m/n/12.045/25 "| \C19/rm/m/n/12.045/48 a \C19/rm/m/n/12.045/56 q|\C19/rm/m/n/12
 C[]; C[]\OT1/cmr/m/n/12.045 )$
  []
 
-[8]
-Package epstopdf Info: Source file: <BeparFlowChart.eps>
-(epstopdf)                    date: 2020-02-18 11:28:32
-(epstopdf)                    size: 2350902 bytes
-(epstopdf)             Output file: <BeparFlowChart-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-02-18 11:33:05
-(epstopdf)                    size: 28929 bytes
-(epstopdf)             Command: <epstopdf --outfile=BeparFlowChart-eps-converte
-d-to.pdf BeparFlowChart.eps>
-(epstopdf)             \includegraphics on input line 268.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./BeparFlowChart-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<BeparFlowChart-eps-converted-to.pdf, id=420, 359.3425pt x 537.00626pt>
-File: BeparFlowChart-eps-converted-to.pdf Graphic file (type pdf)
-<use BeparFlowChart-eps-converted-to.pdf>
-Package pdftex.def Info: BeparFlowChart-eps-converted-to.pdf  used on input lin
-e 268.
-(pdftex.def)             Requested size: 215.60715pt x 322.20624pt.
-[9] [10 <./BeparFlowChart-eps-converted-to.pdf>]
-Overfull \hbox (3.9444pt too wide) in paragraph at lines 288--289
+[9] [10]
+Overfull \hbox (3.9444pt too wide) in paragraph at lines 302--303
 []\OT1/cmr/m/n/12.045 Inbal Sela-Culang \C19/rm/m/n/12.045/40  \C19/rm/m/n/12.
 045/47 m \C19/rm/m/n/12.045/41 u \C19/rm/m/n/12.045/49 
  \C19/rm/m/n/12.045/44 ƒ \C19/rm/m/n/12.045/62 u \C19/rm/m/n/12.045/42 â \C19/r
@@ -1428,27 +1389,17 @@ n/12.045/41 ê {|\C19/rm/m/n/12.045/26 µ| \OT1/cmr/m/n/12.045 PEASE[[]]|\C19/rm/
 m/n/12.045/25 "|
  []
 
-[11]
-
-LaTeX Warning: Citation `HotSpotComp' on page 12 undefined on input line 308.
-
-<HotSpot.png, id=471, 712.6625pt x 313.17pt>
-File: HotSpot.png Graphic file (type png)
-<use HotSpot.png>
-Package pdftex.def Info: HotSpot.png  used on input line 314.
-(pdftex.def)             Requested size: 356.33038pt x 156.58461pt.
-[12] [13 <./HotSpot.png>]
-Overfull \hbox (22.72981pt too wide) in paragraph at lines 328--329
-\C19/rm/m/n/12.045/44 p \C19/rm/m/n/12.045/65 ä \C19/rm/m/n/12.045/62 ^ \C19/rm
-/m/n/12.045/43 ' \C19/rm/m/n/12.045/59 X \C19/rm/m/n/12.045/44  |\C19/rm/m/n/12
-.045/26 ß| \C19/rm/m/n/12.045/54 X \C19/rm/m/n/12.045/43 € \C19/rm/m/n/12.045/4
-7 è \C19/rm/m/n/12.045/44 x \C19/rm/m/n/12.045/63 ˘ \C19/rm/m/n/12.045/42 á \C1
-9/rm/m/n/12.045/43 ' \C19/rm/m/n/12.045/59 X|\C19/rm/m/n/12.045/26 ∫| \C19/rm/m
-/n/12.045/37  \C19/rm/m/n/12.045/49 ÿ \C19/rm/m/n/12.045/58 © \C19/rm/m/n/12.0
-45/55 ƒ \C19/rm/m/n/12.045/59 k \C19/rm/m/n/12.045/57 œ \C19/rm/m/n/12.045/43 L
- \C19/rm/m/n/12.045/36 R \C19/rm/m/n/12.045/44 ƒ \C19/rm/m/n/12.045/56 å \C19/r
-m/m/n/12.045/57 O \C19/rm/m/n/12.045/44 Ü \C19/rm/m/n/12.045/46 › \C19/rm/m/n/1
-2.045/64 
+[11] [12] [13]
+Overfull \hbox (40.20349pt too wide) in paragraph at lines 342--343
+[]\OT1/cmr/bx/n/12.045 RBFN(\C19/rm/bx/n/12.045/46 ª \C19/rm/bx/n/12.045/59 ï \
+C19/rm/bx/n/12.045/44 ƒ \C19/rm/bx/n/12.045/43 º \C19/rm/bx/n/12.045/55 Í \C19/
+rm/bx/n/12.045/58  \C19/rm/bx/n/12.045/49 ‰\OT1/cmr/bx/n/12.045 ) \C19/rm/bx/n
+/12.045/51  \C19/rm/bx/n/12.045/60 . \C19/rm/bx/n/12.045/40  \C19/rm/bx/n/12.
+045/43  \C19/rm/bx/n/12.045/45 Ô|\C19/rm/m/n/12.045/25 "| \C19/rm/m/n/12.045/3
+7  \C19/rm/m/n/12.045/49 ÿ \C19/rm/m/n/12.045/58 © \C19/rm/m/n/12.045/55 ƒ \C1
+9/rm/m/n/12.045/59 k \C19/rm/m/n/12.045/57 œ \C19/rm/m/n/12.045/43 L \C19/rm/m/
+n/12.045/36 R \C19/rm/m/n/12.045/44 ƒ \C19/rm/m/n/12.045/56 å \C19/rm/m/n/12.04
+5/57 O \C19/rm/m/n/12.045/44 Ü \C19/rm/m/n/12.045/46 › \C19/rm/m/n/12.045/64 
 \OT1/cmr/m/n/12.045 (BLOSUM62),\C19/rm/m/n/12.045/40 Ω
  []
 
@@ -1462,20 +1413,20 @@ Package epstopdf Info: Source file: <DataExtraction.eps>
 (epstopdf)                    size: 19326 bytes
 (epstopdf)             Command: <epstopdf --outfile=DataExtraction-eps-converte
 d-to.pdf DataExtraction.eps>
-(epstopdf)             \includegraphics on input line 341.
+(epstopdf)             \includegraphics on input line 355.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./DataExtraction-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<DataExtraction-eps-converted-to.pdf, id=501, 719.68875pt x 82.3075pt>
+<DataExtraction-eps-converted-to.pdf, id=499, 719.68875pt x 82.3075pt>
 File: DataExtraction-eps-converted-to.pdf Graphic file (type pdf)
 <use DataExtraction-eps-converted-to.pdf>
 Package pdftex.def Info: DataExtraction-eps-converted-to.pdf  used on input lin
-e 341.
+e 355.
 (pdftex.def)             Requested size: 359.84349pt x 41.15364pt.
 
-Overfull \hbox (4.04918pt too wide) in paragraph at lines 346--347
+Overfull \hbox (4.04918pt too wide) in paragraph at lines 360--361
 []\C19/rm/bx/n/12.045/47 | \C19/rm/bx/n/12.045/63  \C19/rm/bx/n/12.045/47 | \C
 19/rm/bx/n/12.045/57 N \C19/rm/bx/n/12.045/42 E \C19/rm/bx/n/12.045/43 ‹ \C19/r
 m/bx/n/12.045/58 ‘ \C19/rm/bx/n/12.045/40  \C19/rm/bx/n/12.045/60 ¿ \C19/rm/bx
@@ -1487,28 +1438,18 @@ rm/m/n/12.045/43 L \C19/rm/m/n/12.045/62 d \OT1/cmr/m/n/12.045 Ox-ford Pro-tein
  []
 
 
-Overfull \hbox (3.30373pt too wide) in paragraph at lines 357--366
- [][] 
- []
-
-
-Overfull \hbox (7.72018pt too wide) in paragraph at lines 370--379
- [][] 
- []
-
-
-Overfull \hbox (4.53789pt too wide) in paragraph at lines 355--381
-\C19/rm/m/n/12.045/41 â \C19/rm/m/n/12.045/58 å \C19/rm/m/n/12.045/40 Ω \C19/rm
-/m/n/12.045/39 å|\C19/rm/m/n/12.045/26 ß| \C19/rm/m/n/12.045/61 è \C19/rm/m/n/1
-2.045/37 ÿ \C19/rm/m/n/12.045/40 Ω \C19/rm/m/n/12.045/60 |\C19/rm/m/n/12.045/2
-5 "| \C19/rm/m/n/12.045/57 ” \C19/rm/m/n/12.045/61  \C19/rm/m/n/12.045/40  \C
-19/rm/m/n/12.045/63  \C19/rm/m/n/12.045/61 œ|\C19/rm/m/n/12.045/26 ß| \C19/rm/
-m/n/12.045/58 ∑ \C19/rm/m/n/12.045/50 Ç \C19/rm/m/n/12.045/47 å \C19/rm/m/n/12.
-045/61 ± \C19/rm/m/n/12.045/54 ( \C19/rm/m/n/12.045/40 Ω \C19/rm/m/n/12.045/64 
-≠ \C19/rm/m/n/12.045/48 Û \C19/rm/m/n/12.045/54 ˛\OT1/cmr/m/n/12.045 CDR\C19/rm
-/m/n/12.045/40  \C19/rm/m/n/12.045/41 â \C19/rm/m/n/12.045/58 å\OT1/cmr/m/n/12
-.045 (\C19/rm/m/n/12.045/37 L[][]\OT1/cmr/m/n/12.045 2.2[][])|\C19/rm/m/n/12.04
-5/25 "|
+Overfull \hbox (2.24397pt too wide) in paragraph at lines 360--361
+\C19/rm/m/n/12.045/58 ë \C19/rm/m/n/12.045/44 o \C19/rm/m/n/12.045/40  \C19/rm
+/m/n/12.045/58  \C19/rm/m/n/12.045/63 ’ \C19/rm/m/n/12.045/59 e \C19/rm/m/n/12
+.045/63 1\OT1/cmr/m/n/12.045 [[]]|\C19/rm/m/n/12.045/25 "| \C19/rm/m/n/12.045/5
+9 e \C19/rm/m/n/12.045/63 1 \C19/rm/m/n/12.045/55 û \C19/rm/m/n/12.045/43 ˇ \C1
+9/rm/m/n/12.045/55  \C19/rm/m/n/12.045/40 Ω \C19/rm/m/n/12.045/42 E \C19/rm/m/
+n/12.045/43 ‹ \C19/rm/m/n/12.045/58 ‘ \C19/rm/m/n/12.045/40  \C19/rm/m/n/12.04
+5/41 © \C19/rm/m/n/12.045/37 E \C19/rm/m/n/12.045/49 « \C19/rm/m/n/12.045/37 ÿ 
+\C19/rm/m/n/12.045/60  \C19/rm/m/n/12.045/62 u\OT1/cmr/m/n/12.045 3[] \C19/rm/
+m/n/12.045/37 ø \C19/rm/m/n/12.045/53 Ö \C19/rm/m/n/12.045/47 | \C19/rm/m/n/12.
+045/63  \C19/rm/m/n/12.045/37 ÿ \C19/rm/m/n/12.045/60  \C19/rm/m/n/12.045/62 
+u\OT1/cmr/m/n/12.045 5\C19/rm/m/n/12.045/42 á
  []
 
 [15
@@ -1522,44 +1463,70 @@ Package epstopdf Info: Source file: <ElbowMethod.eps>
 (epstopdf)                    size: 76562 bytes
 (epstopdf)             Command: <epstopdf --outfile=ElbowMethod-eps-converted-t
 o.pdf ElbowMethod.eps>
-(epstopdf)             \includegraphics on input line 404.
+(epstopdf)             \includegraphics on input line 423.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./ElbowMethod-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<ElbowMethod-eps-converted-to.pdf, id=548, 794.97pt x 614.295pt>
+<ElbowMethod-eps-converted-to.pdf, id=547, 794.97pt x 614.295pt>
 File: ElbowMethod-eps-converted-to.pdf Graphic file (type pdf)
 <use ElbowMethod-eps-converted-to.pdf>
 Package pdftex.def Info: ElbowMethod-eps-converted-to.pdf  used on input line 4
-04.
+23.
 (pdftex.def)             Requested size: 317.98236pt x 245.71364pt.
-[17 <./ElbowMethod-eps-converted-to.pdf>] [18] [19]
+[17 <./ElbowMethod-eps-converted-to.pdf>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 467.
+
+Overfull \hbox (3.19777pt too wide) in paragraph at lines 462--483
+[]$
+ []
+
+[18]
+Overfull \hbox (26.01285pt too wide) in paragraph at lines 484--485
+\OML/cmm/m/it/12.045 CN\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 a[]; b[]\OT1/c
+mr/m/n/12.045 ) \OML/cmm/m/it/12.045 < CN\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.
+045 a[]; b[]\OT1/cmr/m/n/12.045 ) + \OML/cmm/m/it/12.045 CN\OT1/cmr/m/n/12.045 
+(\OML/cmm/m/it/12.045 a[]; b[]\OT1/cmr/m/n/12.045 )$|\C19/rm/m/n/12.045/26 ß| \
+C19/rm/m/n/12.045/51 @ \C19/rm/m/n/12.045/50 o \C19/rm/m/n/12.045/65 Å \C19/rm/
+m/n/12.045/64 ™ \C19/rm/m/n/12.045/40  \C19/rm/m/n/12.045/36 R \C19/rm/m/n/12.
+045/44 ƒ \C19/rm/m/n/12.045/56 å \C19/rm/m/n/12.045/40 È \C19/rm/m/n/12.045/61 
+á \C19/rm/m/n/12.045/60  \C19/rm/m/n/12.045/38 § $\OT1/cmr/m/n/12.045 ([\OML/c
+mm/m/it/12.045 a[]; a[]; a[]\OT1/cmr/m/n/12.045 ]\OML/cmm/m/it/12.045 ; \OT1/cm
+r/m/n/12.045 [\OML/cmm/m/it/12.045 b[]; b[]\OT1/cmr/m/n/12.045 ])$|\C19/rm/m/n/
+12.045/26 ß|
+ []
+
+[19]
+Overfull \vbox (6.43947pt too high) detected at line 533
+ []
+
 Package epstopdf Info: Source file: <Core_districution_over_Match_type.eps>
-(epstopdf)                    date: 2019-11-13 13:24:36
-(epstopdf)                    size: 40427 bytes
+(epstopdf)                    date: 2020-02-20 10:48:03
+(epstopdf)                    size: 42581 bytes
 (epstopdf)             Output file: <Core_districution_over_Match_type-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2020-02-18 15:15:53
+(epstopdf)                    date: 2020-03-04 16:28:01
 (epstopdf)                    size: 16521 bytes
 (epstopdf)             Command: <epstopdf --outfile=Core_districution_over_Matc
 h_type-eps-converted-to.pdf Core_districution_over_Match_type.eps>
-(epstopdf)             \includegraphics on input line 499.
+(epstopdf)             \includegraphics on input line 551.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Core_districution_over_Match_type-eps-converte
 d-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
-<Core_districution_over_Match_type-eps-converted-to.pdf, id=600, 722.7pt x 433.
+<Core_districution_over_Match_type-eps-converted-to.pdf, id=589, 722.7pt x 433.
 62pt>
 File: Core_districution_over_Match_type-eps-converted-to.pdf Graphic file (type
  pdf)
 <use Core_districution_over_Match_type-eps-converted-to.pdf>
 Package pdftex.def Info: Core_districution_over_Match_type-eps-converted-to.pdf
-  used on input line 499.
-(pdftex.def)             Requested size: 289.07487pt x 173.44492pt.
-[20] [21 <./Core_districution_over_Match_type-eps-converted-to.pdf>]
+  used on input line 551.
+(pdftex.def)             Requested size: 216.81166pt x 130.087pt.
+[20] [21 <./Core_districution_over_Match_type-eps-converted-to.pdf>] [22]
 Package epstopdf Info: Source file: <aa_distribution_overall.eps>
 (epstopdf)                    date: 2019-11-13 14:48:20
 (epstopdf)                    size: 35519 bytes
@@ -1569,24 +1536,24 @@ df>
 (epstopdf)                    size: 17048 bytes
 (epstopdf)             Command: <epstopdf --outfile=aa_distribution_overall-eps
 -converted-to.pdf aa_distribution_overall.eps>
-(epstopdf)             \includegraphics on input line 542.
+(epstopdf)             \includegraphics on input line 599.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./aa_distribution_overall-eps-converted-to.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<aa_distribution_overall-eps-converted-to.pdf, id=653, 1084.05pt x 433.62pt>
+<aa_distribution_overall-eps-converted-to.pdf, id=646, 1084.05pt x 433.62pt>
 File: aa_distribution_overall-eps-converted-to.pdf Graphic file (type pdf)
 <use aa_distribution_overall-eps-converted-to.pdf>
 Package pdftex.def Info: aa_distribution_overall-eps-converted-to.pdf  used on 
-input line 542.
+input line 599.
 (pdftex.def)             Requested size: 433.61232pt x 173.44492pt.
-<<c1986.cmap>>
-Overfull \hbox (23.75717pt too wide) in paragraph at lines 549--564
- [][] 
+<<c1986.cmap>> [23 <./aa_distribution_overall-eps-converted-to.pdf>] [24]
+[25]
+Overfull \hbox (98.2778pt too wide) in paragraph at lines 704--719
+ [] 
  []
 
-[22 <./aa_distribution_overall-eps-converted-to.pdf>] [23] [24]
 Package epstopdf Info: Source file: <The_Middle_aa.eps>
 (epstopdf)                    date: 2020-02-19 12:40:10
 (epstopdf)                    size: 41825 bytes
@@ -1595,23 +1562,23 @@ Package epstopdf Info: Source file: <The_Middle_aa.eps>
 (epstopdf)                    size: 18305 bytes
 (epstopdf)             Command: <epstopdf --outfile=The_Middle_aa-eps-converted
 -to.pdf The_Middle_aa.eps>
-(epstopdf)             \includegraphics on input line 639.
+(epstopdf)             \includegraphics on input line 723.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./The_Middle_aa-eps-converted-to.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<The_Middle_aa-eps-converted-to.pdf, id=747, 1084.05pt x 433.62pt>
+<The_Middle_aa-eps-converted-to.pdf, id=746, 1084.05pt x 433.62pt>
 File: The_Middle_aa-eps-converted-to.pdf Graphic file (type pdf)
 <use The_Middle_aa-eps-converted-to.pdf>
 Package pdftex.def Info: The_Middle_aa-eps-converted-to.pdf  used on input line
- 639.
+ 723.
 (pdftex.def)             Requested size: 433.61232pt x 173.44492pt.
-[25 <./The_Middle_aa-eps-converted-to.pdf>]
+[26 <./The_Middle_aa-eps-converted-to.pdf>]
 µ⁄»˝’¬
-[26
+[27
 
-] [27]
+] [28]
 Package epstopdf Info: Source file: <Coverage_Center.eps>
 (epstopdf)                    date: 2020-02-20 10:29:24
 (epstopdf)                    size: 2155630 bytes
@@ -1620,222 +1587,26 @@ Package epstopdf Info: Source file: <Coverage_Center.eps>
 (epstopdf)                    size: 24680 bytes
 (epstopdf)             Command: <epstopdf --outfile=Coverage_Center-eps-convert
 ed-to.pdf Coverage_Center.eps>
-(epstopdf)             \includegraphics on input line 690.
+(epstopdf)             \includegraphics on input line 778.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Coverage_Center-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Coverage_Center-eps-converted-to.pdf, id=832, 338.26375pt x 480.79625pt>
+<Coverage_Center-eps-converted-to.pdf, id=833, 338.26375pt x 480.79625pt>
 File: Coverage_Center-eps-converted-to.pdf Graphic file (type pdf)
 <use Coverage_Center-eps-converted-to.pdf>
 Package pdftex.def Info: Coverage_Center-eps-converted-to.pdf  used on input li
-ne 690.
+ne 778.
 (pdftex.def)             Requested size: 169.13145pt x 240.39752pt.
-[28 <./Coverage_Center-eps-converted-to.pdf>] [29] [30]
-Package epstopdf Info: Source file: <Discrimination.eps>
-(epstopdf)                    date: 2020-02-20 16:46:06
-(epstopdf)                    size: 2993618 bytes
-(epstopdf)             Output file: <Discrimination-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-02-20 17:10:18
-(epstopdf)                    size: 108928 bytes
-(epstopdf)             Command: <epstopdf --outfile=Discrimination-eps-converte
-d-to.pdf Discrimination.eps>
-(epstopdf)             \includegraphics on input line 753.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./Discrimination-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Discrimination-eps-converted-to.pdf, id=875, 504.88625pt x 511.9125pt>
-File: Discrimination-eps-converted-to.pdf Graphic file (type pdf)
-<use Discrimination-eps-converted-to.pdf>
-Package pdftex.def Info: Discrimination-eps-converted-to.pdf  used on input lin
-e 753.
-(pdftex.def)             Requested size: 403.90953pt x 409.53056pt.
-[31 <./Discrimination-eps-converted-to.pdf>]<<c1967.cmap>>
-Package epstopdf Info: Source file: <Integrated_Discriminate.eps>
-(epstopdf)                    date: 2020-02-20 17:04:36
-(epstopdf)                    size: 3546858 bytes
-(epstopdf)             Output file: <Integrated_Discriminate-eps-converted-to.p
-df>
-(epstopdf)                    date: 2020-02-20 17:12:06
-(epstopdf)                    size: 214550 bytes
-(epstopdf)             Command: <epstopdf --outfile=Integrated_Discriminate-eps
--converted-to.pdf Integrated_Discriminate.eps>
-(epstopdf)             \includegraphics on input line 766.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./Integrated_Discriminate-eps-converted-to.pdf):
- PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Integrated_Discriminate-eps-converted-to.pdf, id=892, 530.98375pt x 530.98375p
-t>
-File: Integrated_Discriminate-eps-converted-to.pdf Graphic file (type pdf)
-<use Integrated_Discriminate-eps-converted-to.pdf>
-Package pdftex.def Info: Integrated_Discriminate-eps-converted-to.pdf  used on 
-input line 766.
-(pdftex.def)             Requested size: 424.78757pt x 424.78757pt.
-[32] [33 <./Integrated_Discriminate-eps-converted-to.pdf>]
-µ⁄Àƒ’¬
-Package epstopdf Info: Source file: <reverse.eps>
-(epstopdf)                    date: 2020-02-21 10:49:58
-(epstopdf)                    size: 3307574 bytes
-(epstopdf)             Output file: <reverse-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-02-21 11:11:27
-(epstopdf)                    size: 186866 bytes
-(epstopdf)             Command: <epstopdf --outfile=reverse-eps-converted-to.pd
-f reverse.eps>
-(epstopdf)             \includegraphics on input line 830.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./reverse-eps-converted-to.pdf): PDF inclusion: 
-found PDF version <1.7>, but at most version <1.5> allowed
-<reverse-eps-converted-to.pdf, id=910, 517.935pt x 515.9275pt>
-File: reverse-eps-converted-to.pdf Graphic file (type pdf)
-<use reverse-eps-converted-to.pdf>
-Package pdftex.def Info: reverse-eps-converted-to.pdf  used on input line 830.
-(pdftex.def)             Requested size: 414.34854pt x 412.74255pt.
-
-Overfull \hbox (4.55617pt too wide) in paragraph at lines 826--833
-\C19/rm/m/n/12.045/63 3 \C19/rm/m/n/12.045/54 ˛ \C19/rm/m/n/12.045/50 ° \C19/rm
-/m/n/12.045/40  \C19/rm/m/n/12.045/37 L \C19/rm/m/n/12.045/55 „ \C19/rm/m/n/12
-.045/64 •|\C19/rm/m/n/12.045/26 ß|  $[][]$ \C19/rm/m/n/12.045/43 ⁄ $[][]$ \C19/
-rm/m/n/12.045/41 © \C19/rm/m/n/12.045/37 O \C19/rm/m/n/12.045/58 è \C19/rm/m/n/
-12.045/53 c \C19/rm/m/n/12.045/61 ò \C19/rm/m/n/12.045/63 Ÿ \C19/rm/m/n/12.045/
-64 • \OT1/cmr/m/n/12.045 match-type(m,n) \C19/rm/m/n/12.045/43 ⁄ \OT1/cmr/m/n/1
-2.045 match-type(n,m)
- []
-
-[34
-
-]
-Package epstopdf Info: Source file: <Integrated_Reverse.eps>
-(epstopdf)                    date: 2020-02-21 11:05:28
-(epstopdf)                    size: 3315826 bytes
-(epstopdf)             Output file: <Integrated_Reverse-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-02-21 11:11:31
-(epstopdf)                    size: 187368 bytes
-(epstopdf)             Command: <epstopdf --outfile=Integrated_Reverse-eps-conv
-erted-to.pdf Integrated_Reverse.eps>
-(epstopdf)             \includegraphics on input line 837.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./Integrated_Reverse-eps-converted-to.pdf): PDF 
-inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Integrated_Reverse-eps-converted-to.pdf, id=919, 519.9425pt x 520.94624pt>
-File: Integrated_Reverse-eps-converted-to.pdf Graphic file (type pdf)
-<use Integrated_Reverse-eps-converted-to.pdf>
-Package pdftex.def Info: Integrated_Reverse-eps-converted-to.pdf  used on input
- line 837.
-(pdftex.def)             Requested size: 415.95457pt x 416.75757pt.
-[35 <./reverse-eps-converted-to.pdf>]
-<Commutative.pdf, id=944, 794.97pt x 401.5pt>
-File: Commutative.pdf Graphic file (type pdf)
-<use Commutative.pdf>
-Package pdftex.def Info: Commutative.pdf  used on input line 865.
-(pdftex.def)             Requested size: 397.48402pt x 200.7495pt.
- [36 <./Integrated_Reverse-eps-converted-to.pdf>]
-<Commutative_Explanation.pdf, id=957, 545.03625pt x 382.42876pt>
-File: Commutative_Explanation.pdf Graphic file (type pdf)
-<use Commutative_Explanation.pdf>
-Package pdftex.def Info: Commutative_Explanation.pdf  used on input line 874.
-(pdftex.def)             Requested size: 272.51746pt x 191.2139pt.
- [37 <./Commutative.pdf>]<<c1974.cmap>> [38 <./Commutative_Explanation.pdf>] [3
-9]
-Package epstopdf Info: Source file: <ContactingPairs.eps>
-(epstopdf)                    date: 2020-02-23 15:37:06
-(epstopdf)                    size: 2674126 bytes
-(epstopdf)             Output file: <ContactingPairs-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-02-23 15:44:28
-(epstopdf)                    size: 17764 bytes
-(epstopdf)             Command: <epstopdf --outfile=ContactingPairs-eps-convert
-ed-to.pdf ContactingPairs.eps>
-(epstopdf)             \includegraphics on input line 903.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./ContactingPairs-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<ContactingPairs-eps-converted-to.pdf, id=1031, 862.22125pt x 517.935pt>
-File: ContactingPairs-eps-converted-to.pdf Graphic file (type pdf)
-<use ContactingPairs-eps-converted-to.pdf>
-Package pdftex.def Info: ContactingPairs-eps-converted-to.pdf  used on input li
-ne 903.
-(pdftex.def)             Requested size: 258.66837pt x 155.38168pt.
-[40 <./ContactingPairs-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Predictable.eps>
-(epstopdf)                    date: 2019-12-01 20:35:54
-(epstopdf)                    size: 1975166 bytes
-(epstopdf)             Output file: <Predictable-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-02-23 11:26:42
-(epstopdf)                    size: 20851 bytes
-(epstopdf)             Command: <epstopdf --outfile=Predictable-eps-converted-t
-o.pdf Predictable.eps>
-(epstopdf)             \includegraphics on input line 913.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./Predictable-eps-converted-to.pdf): PDF inclusi
-on: found PDF version <1.7>, but at most version <1.5> allowed
-<Predictable-eps-converted-to.pdf, id=1047, 391.4625pt x 206.7725pt>
-File: Predictable-eps-converted-to.pdf Graphic file (type pdf)
-<use Predictable-eps-converted-to.pdf>
-Package pdftex.def Info: Predictable-eps-converted-to.pdf  used on input line 9
-13.
-(pdftex.def)             Requested size: 195.73076pt x 103.38599pt.
-[41 <./Predictable-eps-converted-to.pdf>]
-Overfull \hbox (3.11514pt too wide) in paragraph at lines 937--949
- [][] 
- []
-
-Package epstopdf Info: Source file: <Affinity_Predict.eps>
-(epstopdf)                    date: 2020-02-23 18:46:44
-(epstopdf)                    size: 3697134 bytes
-(epstopdf)             Output file: <Affinity_Predict-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-02-23 18:52:03
-(epstopdf)                    size: 201633 bytes
-(epstopdf)             Command: <epstopdf --outfile=Affinity_Predict-eps-conver
-ted-to.pdf Affinity_Predict.eps>
-(epstopdf)             \includegraphics on input line 956.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./Affinity_Predict-eps-converted-to.pdf): PDF in
-clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Affinity_Predict-eps-converted-to.pdf, id=1072, 457.71pt x 909.3975pt>
-File: Affinity_Predict-eps-converted-to.pdf Graphic file (type pdf)
-<use Affinity_Predict-eps-converted-to.pdf>
-Package pdftex.def Info: Affinity_Predict-eps-converted-to.pdf  used on input l
-ine 956.
-(pdftex.def)             Requested size: 297.50798pt x 591.10138pt.
-[42] [43 <./Affinity_Predict-eps-converted-to.pdf>] [44]
-µ⁄ŒÂ’¬
-[45
-
-]
-Overfull \hbox (21.70699pt too wide) in paragraph at lines 1003--1004
-[]\C19/rm/m/n/12.045/45 b \C19/rm/m/n/12.045/55  \C19/rm/m/n/12.045/56 õ \C19/
-rm/m/n/12.045/55 î \C19/rm/m/n/12.045/43 º \C19/rm/m/n/12.045/55 Í ¥ $\OML/cmm/
-m/it/12.045 L\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 C; W\OT1/cmr/m/n/12.045 
-)$ , \C19/rm/m/n/12.045/52 Ÿ \C19/rm/m/n/12.045/64 •$\OML/cmm/m/it/12.045 C \OT
-1/cmr/m/n/12.045 = (\OML/cmm/m/it/12.045 c[]; c[]; []  ; c[]\OT1/cmr/m/n/12.045
- )$ \C19/rm/m/n/12.045/55 ¥ \OT1/cmr/m/n/12.045 n \C19/rm/m/n/12.045/42 á \C19/
-rm/m/n/12.045/64 • \C19/rm/m/n/12.045/60 %|\C19/rm/m/n/12.045/26 ß|  $\OML/cmm/
-m/it/12.045 W \OT1/cmr/m/n/12.045 = (\OML/cmm/m/it/12.045 w[]; w[]; []  ; w[]\O
-T1/cmr/m/n/12.045 )$
- []
-
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1022.
-
-Overfull \hbox (12.84435pt too wide) in paragraph at lines 1040--1041
-[]\C19/rm/m/n/12.045/37  \C19/rm/m/n/12.045/49 ÿ \C19/rm/m/n/12.045/58 © \C19/
-rm/m/n/12.045/37 Ê \C19/rm/m/n/12.045/62 ^ \C19/rm/m/n/12.045/49 
- \OT1/cmr/m/n/12.045 Ham-ming, Oc-curence Frequency[[]], In-verse Occurence[[]]
- \C19/rm/m/n/12.045/43 ⁄ \OT1/cmr/m/n/12.045 Eskin[[]],
+[29 <./Coverage_Center-eps-converted-to.pdf>]
+Overfull \hbox (3.66441pt too wide) in paragraph at lines 813--814
+\C19/rm/m/n/12.045/59 z\OT1/cmr/m/n/12.045 [[]] \C19/rm/m/n/12.045/40  \C19/rm
+/m/n/12.045/41 ê {|\C19/rm/m/n/12.045/25 "| \C19/rm/m/n/12.045/37  \C19/rm/m/n
+/12.045/49 ÿ \C19/rm/m/n/12.045/58 © \C19/rm/m/n/12.045/37 Ê \C19/rm/m/n/12.045
+/62 ^ \OT1/cmr/m/n/12.045 Ham-ming|\C19/rm/m/n/12.045/25 !|  \OT1/cmr/m/n/12.04
+5 Oc-curence Frequency[[]]|\C19/rm/m/n/12.045/25 !|  \OT1/cmr/m/n/12.045 In-ver
+se Occurence[[]]
  []
 
 Package epstopdf Info: Source file: <Hamming_BRE.eps>
@@ -1846,19 +1617,19 @@ Package epstopdf Info: Source file: <Hamming_BRE.eps>
 (epstopdf)                    size: 111002 bytes
 (epstopdf)             Command: <epstopdf --outfile=Hamming_BRE-eps-converted-t
 o.pdf Hamming_BRE.eps>
-(epstopdf)             \includegraphics on input line 1045.
+(epstopdf)             \includegraphics on input line 817.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Hamming_BRE-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<Hamming_BRE-eps-converted-to.pdf, id=1131, 683.55376pt x 457.71pt>
+<Hamming_BRE-eps-converted-to.pdf, id=870, 683.55376pt x 457.71pt>
 File: Hamming_BRE-eps-converted-to.pdf Graphic file (type pdf)
 <use Hamming_BRE-eps-converted-to.pdf>
-Package pdftex.def Info: Hamming_BRE-eps-converted-to.pdf  used on input line 1
-045.
+Package pdftex.def Info: Hamming_BRE-eps-converted-to.pdf  used on input line 8
+17.
 (pdftex.def)             Requested size: 341.77605pt x 228.85445pt.
-[46]
+[30]
 Package epstopdf Info: Source file: <Eskin_BRE.eps>
 (epstopdf)                    date: 2020-02-24 06:47:10
 (epstopdf)                    size: 2913954 bytes
@@ -1867,19 +1638,18 @@ Package epstopdf Info: Source file: <Eskin_BRE.eps>
 (epstopdf)                    size: 109560 bytes
 (epstopdf)             Command: <epstopdf --outfile=Eskin_BRE-eps-converted-to.
 pdf Eskin_BRE.eps>
-(epstopdf)             \includegraphics on input line 1052.
+(epstopdf)             \includegraphics on input line 824.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Eskin_BRE-eps-converted-to.pdf): PDF inclusion
 : found PDF version <1.7>, but at most version <1.5> allowed
-<Eskin_BRE-eps-converted-to.pdf, id=1153, 664.4825pt x 456.70625pt>
+<Eskin_BRE-eps-converted-to.pdf, id=887, 664.4825pt x 456.70625pt>
 File: Eskin_BRE-eps-converted-to.pdf Graphic file (type pdf)
 <use Eskin_BRE-eps-converted-to.pdf>
-Package pdftex.def Info: Eskin_BRE-eps-converted-to.pdf  used on input line 105
-2.
+Package pdftex.def Info: Eskin_BRE-eps-converted-to.pdf  used on input line 824
+.
 (pdftex.def)             Requested size: 332.24043pt x 228.35255pt.
-[47 <./Hamming_BRE-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <OF_BRE.eps>
 (epstopdf)                    date: 2020-02-24 07:15:32
 (epstopdf)                    size: 2925062 bytes
@@ -1888,17 +1658,18 @@ Package epstopdf Info: Source file: <OF_BRE.eps>
 (epstopdf)                    size: 107793 bytes
 (epstopdf)             Command: <epstopdf --outfile=OF_BRE-eps-converted-to.pdf
  OF_BRE.eps>
-(epstopdf)             \includegraphics on input line 1059.
+(epstopdf)             \includegraphics on input line 831.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./OF_BRE-eps-converted-to.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<OF_BRE-eps-converted-to.pdf, id=1168, 682.55pt x 455.7025pt>
+<OF_BRE-eps-converted-to.pdf, id=892, 682.55pt x 455.7025pt>
 File: OF_BRE-eps-converted-to.pdf Graphic file (type pdf)
 <use OF_BRE-eps-converted-to.pdf>
-Package pdftex.def Info: OF_BRE-eps-converted-to.pdf  used on input line 1059.
+Package pdftex.def Info: OF_BRE-eps-converted-to.pdf  used on input line 831.
 (pdftex.def)             Requested size: 341.27417pt x 227.85068pt.
+[31 <./Hamming_BRE-eps-converted-to.pdf> <./Eskin_BRE-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <IOF_BRE.eps>
 (epstopdf)                    date: 2020-02-24 07:09:28
 (epstopdf)                    size: 2988038 bytes
@@ -1907,40 +1678,243 @@ Package epstopdf Info: Source file: <IOF_BRE.eps>
 (epstopdf)                    size: 118933 bytes
 (epstopdf)             Command: <epstopdf --outfile=IOF_BRE-eps-converted-to.pd
 f IOF_BRE.eps>
-(epstopdf)             \includegraphics on input line 1066.
+(epstopdf)             \includegraphics on input line 838.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./IOF_BRE-eps-converted-to.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
-<IOF_BRE-eps-converted-to.pdf, id=1173, 686.565pt x 456.70625pt>
+<IOF_BRE-eps-converted-to.pdf, id=911, 686.565pt x 456.70625pt>
 File: IOF_BRE-eps-converted-to.pdf Graphic file (type pdf)
 <use IOF_BRE-eps-converted-to.pdf>
-Package pdftex.def Info: IOF_BRE-eps-converted-to.pdf  used on input line 1066.
-
+Package pdftex.def Info: IOF_BRE-eps-converted-to.pdf  used on input line 838.
 (pdftex.def)             Requested size: 343.28166pt x 228.35255pt.
-[48 <./Eskin_BRE-eps-converted-to.pdf> <./OF_BRE-eps-converted-to.pdf>]
-[49 <./IOF_BRE-eps-converted-to.pdf>] [50
+[32 <./OF_BRE-eps-converted-to.pdf> <./IOF_BRE-eps-converted-to.pdf>] [33]
+[34]
+Package epstopdf Info: Source file: <Discrimination.eps>
+(epstopdf)                    date: 2020-02-20 16:46:06
+(epstopdf)                    size: 2993618 bytes
+(epstopdf)             Output file: <Discrimination-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-20 17:10:18
+(epstopdf)                    size: 108928 bytes
+(epstopdf)             Command: <epstopdf --outfile=Discrimination-eps-converte
+d-to.pdf Discrimination.eps>
+(epstopdf)             \includegraphics on input line 910.
+Package epstopdf Info: Output file is already uptodate.
 
-]<<c1929.cmap>><<c1930.cmap>> [51
+
+pdfTeX warning: pdflatex (file ./Discrimination-eps-converted-to.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<Discrimination-eps-converted-to.pdf, id=962, 504.88625pt x 511.9125pt>
+File: Discrimination-eps-converted-to.pdf Graphic file (type pdf)
+<use Discrimination-eps-converted-to.pdf>
+Package pdftex.def Info: Discrimination-eps-converted-to.pdf  used on input lin
+e 910.
+(pdftex.def)             Requested size: 403.90953pt x 409.53056pt.
+[35 <./Discrimination-eps-converted-to.pdf>]<<c1967.cmap>>
+Package epstopdf Info: Source file: <Integrated_Discriminate.eps>
+(epstopdf)                    date: 2020-02-20 17:04:36
+(epstopdf)                    size: 3546858 bytes
+(epstopdf)             Output file: <Integrated_Discriminate-eps-converted-to.p
+df>
+(epstopdf)                    date: 2020-02-20 17:12:06
+(epstopdf)                    size: 214550 bytes
+(epstopdf)             Command: <epstopdf --outfile=Integrated_Discriminate-eps
+-converted-to.pdf Integrated_Discriminate.eps>
+(epstopdf)             \includegraphics on input line 923.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Integrated_Discriminate-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Integrated_Discriminate-eps-converted-to.pdf, id=980, 530.98375pt x 530.98375p
+t>
+File: Integrated_Discriminate-eps-converted-to.pdf Graphic file (type pdf)
+<use Integrated_Discriminate-eps-converted-to.pdf>
+Package pdftex.def Info: Integrated_Discriminate-eps-converted-to.pdf  used on 
+input line 923.
+(pdftex.def)             Requested size: 424.78757pt x 424.78757pt.
+
+Overfull \hbox (11.16801pt too wide) in paragraph at lines 919--926
+\C19/rm/m/n/12.045/51  \C19/rm/m/n/12.045/60 . \C19/rm/m/n/12.045/48 5 \C19/rm
+/m/n/12.045/46 ) \C19/rm/m/n/12.045/55 ∫ \C19/rm/m/n/12.045/56 § \C19/rm/m/n/12
+.045/62 k \OT1/cmr/m/n/12.045 match-type \C19/rm/m/n/12.045/40  \C19/rm/m/n/12
+.045/51  \C19/rm/m/n/12.045/60 .|\C19/rm/m/n/12.045/26 ß| \C19/rm/m/n/12.045/3
+7  \C19/rm/m/n/12.045/58 © \C19/rm/m/n/12.045/38 ° \C19/rm/m/n/12.045/63 ˘ \C1
+9/rm/m/n/12.045/42 á \C19/rm/m/n/12.045/51  \C19/rm/m/n/12.045/60 . \C19/rm/m/
+n/12.045/58 è \C19/rm/m/n/12.045/64  \C19/rm/m/n/12.045/43 ‹ |\C19/rm/m/n/12.0
+45/26 £|\OT1/cmr/m/n/12.045 Integrated|\C19/rm/m/n/12.045/26 §| \C19/rm/m/n/12.
+045/51  \C19/rm/m/n/12.045/60 .|\C19/rm/m/n/12.045/25 "| \C19/rm/m/n/12.045/57
+ „[][]\OT1/cmr/m/n/12.045 3.7[][]\C19/rm/m/n/12.045/42 â
+ []
+
+[36] [37 <./Integrated_Discriminate-eps-converted-to.pdf>]
+µ⁄Àƒ’¬
+Package epstopdf Info: Source file: <reverse.eps>
+(epstopdf)                    date: 2020-02-21 10:49:58
+(epstopdf)                    size: 3307574 bytes
+(epstopdf)             Output file: <reverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-21 11:11:27
+(epstopdf)                    size: 186866 bytes
+(epstopdf)             Command: <epstopdf --outfile=reverse-eps-converted-to.pd
+f reverse.eps>
+(epstopdf)             \includegraphics on input line 987.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./reverse-eps-converted-to.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<reverse-eps-converted-to.pdf, id=998, 517.935pt x 515.9275pt>
+File: reverse-eps-converted-to.pdf Graphic file (type pdf)
+<use reverse-eps-converted-to.pdf>
+Package pdftex.def Info: reverse-eps-converted-to.pdf  used on input line 987.
+(pdftex.def)             Requested size: 414.34854pt x 412.74255pt.
+
+Overfull \hbox (4.55617pt too wide) in paragraph at lines 983--990
+\C19/rm/m/n/12.045/63 3 \C19/rm/m/n/12.045/54 ˛ \C19/rm/m/n/12.045/50 ° \C19/rm
+/m/n/12.045/40  \C19/rm/m/n/12.045/37 L \C19/rm/m/n/12.045/55 „ \C19/rm/m/n/12
+.045/64 •|\C19/rm/m/n/12.045/26 ß|  $[][]$ \C19/rm/m/n/12.045/43 ⁄ $[][]$ \C19/
+rm/m/n/12.045/41 © \C19/rm/m/n/12.045/37 O \C19/rm/m/n/12.045/58 è \C19/rm/m/n/
+12.045/53 c \C19/rm/m/n/12.045/61 ò \C19/rm/m/n/12.045/63 Ÿ \C19/rm/m/n/12.045/
+64 • \OT1/cmr/m/n/12.045 match-type(m,n) \C19/rm/m/n/12.045/43 ⁄ \OT1/cmr/m/n/1
+2.045 match-type(n,m)
+ []
+
+[38
 
 ]
-[52] [53pdfTeX warning (ext4): destination with the same identifier (name{cite.
-EpiPred}) has been already used, duplicate ignored
+Package epstopdf Info: Source file: <Integrated_Reverse.eps>
+(epstopdf)                    date: 2020-02-21 11:05:28
+(epstopdf)                    size: 3315826 bytes
+(epstopdf)             Output file: <Integrated_Reverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-21 11:11:31
+(epstopdf)                    size: 187368 bytes
+(epstopdf)             Command: <epstopdf --outfile=Integrated_Reverse-eps-conv
+erted-to.pdf Integrated_Reverse.eps>
+(epstopdf)             \includegraphics on input line 994.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Integrated_Reverse-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Integrated_Reverse-eps-converted-to.pdf, id=1007, 519.9425pt x 520.94624pt>
+File: Integrated_Reverse-eps-converted-to.pdf Graphic file (type pdf)
+<use Integrated_Reverse-eps-converted-to.pdf>
+Package pdftex.def Info: Integrated_Reverse-eps-converted-to.pdf  used on input
+ line 994.
+(pdftex.def)             Requested size: 415.95457pt x 416.75757pt.
+[39 <./reverse-eps-converted-to.pdf>] [40 <./Integrated_Reverse-eps-converted-t
+o.pdf>]
+<Commutative.pdf, id=1037, 794.97pt x 401.5pt>
+File: Commutative.pdf Graphic file (type pdf)
+<use Commutative.pdf>
+Package pdftex.def Info: Commutative.pdf  used on input line 1028.
+(pdftex.def)             Requested size: 397.48402pt x 200.7495pt.
+<Commutative_Explanation.pdf, id=1039, 545.03625pt x 382.42876pt>
+File: Commutative_Explanation.pdf Graphic file (type pdf)
+<use Commutative_Explanation.pdf>
+Package pdftex.def Info: Commutative_Explanation.pdf  used on input line 1037.
+(pdftex.def)             Requested size: 272.51746pt x 191.2139pt.
+ [41 <./Commutative.pdf>]<<c1974.cmap>> [42 <./Commutative_Explanation.pdf>] [4
+3]
+Package epstopdf Info: Source file: <ContactingPairs.eps>
+(epstopdf)                    date: 2020-02-23 15:37:06
+(epstopdf)                    size: 2674126 bytes
+(epstopdf)             Output file: <ContactingPairs-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-23 15:44:28
+(epstopdf)                    size: 17764 bytes
+(epstopdf)             Command: <epstopdf --outfile=ContactingPairs-eps-convert
+ed-to.pdf ContactingPairs.eps>
+(epstopdf)             \includegraphics on input line 1066.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./ContactingPairs-eps-converted-to.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<ContactingPairs-eps-converted-to.pdf, id=1116, 862.22125pt x 517.935pt>
+File: ContactingPairs-eps-converted-to.pdf Graphic file (type pdf)
+<use ContactingPairs-eps-converted-to.pdf>
+Package pdftex.def Info: ContactingPairs-eps-converted-to.pdf  used on input li
+ne 1066.
+(pdftex.def)             Requested size: 258.66837pt x 155.38168pt.
+[44 <./ContactingPairs-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Predictable.eps>
+(epstopdf)                    date: 2019-12-01 20:35:54
+(epstopdf)                    size: 1975166 bytes
+(epstopdf)             Output file: <Predictable-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-23 11:26:42
+(epstopdf)                    size: 20851 bytes
+(epstopdf)             Command: <epstopdf --outfile=Predictable-eps-converted-t
+o.pdf Predictable.eps>
+(epstopdf)             \includegraphics on input line 1076.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Predictable-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<Predictable-eps-converted-to.pdf, id=1132, 391.4625pt x 206.7725pt>
+File: Predictable-eps-converted-to.pdf Graphic file (type pdf)
+<use Predictable-eps-converted-to.pdf>
+Package pdftex.def Info: Predictable-eps-converted-to.pdf  used on input line 1
+076.
+(pdftex.def)             Requested size: 195.73076pt x 103.38599pt.
+[45 <./Predictable-eps-converted-to.pdf>]
+Overfull \hbox (3.11514pt too wide) in paragraph at lines 1101--1119
+ [] 
+ []
+
+
+Package caption Warning: \label without proper reference on input line 1118.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `Affinity_Pred' on page 46 undefined on input line 112
+0.
+
+Package epstopdf Info: Source file: <Affinity_Predict.eps>
+(epstopdf)                    date: 2020-02-23 18:46:44
+(epstopdf)                    size: 3697134 bytes
+(epstopdf)             Output file: <Affinity_Predict-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-02-23 18:52:03
+(epstopdf)                    size: 201633 bytes
+(epstopdf)             Command: <epstopdf --outfile=Affinity_Predict-eps-conver
+ted-to.pdf Affinity_Predict.eps>
+(epstopdf)             \includegraphics on input line 1124.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Affinity_Predict-eps-converted-to.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Affinity_Predict-eps-converted-to.pdf, id=1156, 457.71pt x 909.3975pt>
+File: Affinity_Predict-eps-converted-to.pdf Graphic file (type pdf)
+<use Affinity_Predict-eps-converted-to.pdf>
+Package pdftex.def Info: Affinity_Predict-eps-converted-to.pdf  used on input l
+ine 1124.
+(pdftex.def)             Requested size: 297.50798pt x 591.10138pt.
+[46] [47 <./Affinity_Predict-eps-converted-to.pdf>] [48]
+µ⁄ŒÂ’¬
+[49
+
+] [50] [51
+
+]<<c1929.cmap>><<c1930.cmap>> [52
+
+] [53] [54pdfTeX warning (ext4): destination with the same identifier (name{cit
+e.EpiPred}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1292 	
-        ] [54]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1395.
- [55]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1395.
+l.1472 	
+        ] [55]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1575.
+ [56]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1575.
  (Liu_Chuanxing_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1395.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1395.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1575.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1575.
 
 Package rerunfilecheck Info: File `Liu_Chuanxing_Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6244ACBA68EA1094B9DE55E92E01F0DE;2222.
+(rerunfilecheck)             Checksum: 7E6929DD0AA00D7DFFB4F6A9BFF5A5F9;2554.
 
 
 LaTeX Warning: There were undefined references.
@@ -1948,73 +1922,76 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1395.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1575.
  ) 
 Here is how much of TeX's memory you used:
- 30353 strings out of 492453
- 555413 string characters out of 3121009
- 687045 words of memory out of 3000000
- 33764 multiletter control sequences out of 15000+200000
- 602224 words of font info for 284 fonts, out of 3000000 for 9000
+ 31482 strings out of 492453
+ 576341 string characters out of 3121009
+ 702760 words of memory out of 3000000
+ 34867 multiletter control sequences out of 15000+200000
+ 610501 words of font info for 317 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,15n,67p,2624b,1060s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,17n,67p,2621b,1067s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
 imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS
 /Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:
-/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun
-.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Font
-s/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WIND
-OWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc>
+/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun
+.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Font
+s/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WIND
+OWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc>
 <C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sim
-sun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/F
+sun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/F
 onts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/W
 INDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.t
 tc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/
 simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOW
-S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
-:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhe
-i.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fon
+S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C
+:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsu
+n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
 ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
-DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf
+DOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc
 ><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
-msun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
-Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/
-WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.
+mhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/
+Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/
+WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.
 ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts
-/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
-WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><
+/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDO
+WS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><
 C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sims
 un.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
 nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
 NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.tt
-c><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
-imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
+c><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
+imsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
 /Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
 /WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei
-.ttf><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/leo/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/leo/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/leo/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/
-leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-<C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr17.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/leo/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/leo/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/leo/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users
-/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmti9.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmtt12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Liu_Chuanxing_Thesis.pdf (57 pages, 6822992 bytes).
+.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Font
+s/simhei.ttf><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmbx12.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/leo/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/leo/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/le
+o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi6.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/leo/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/leo/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/leo/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/le
+o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><
+C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb><C:/Users/leo/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/leo/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/leo/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Liu_Chuanxing_Thesis.pdf (58 pages, 5923711 bytes).
 PDF statistics:
- 1632 PDF objects out of 1728 (max. 8388607)
- 289 named destinations out of 1000 (max. 500000)
- 432 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1647 PDF objects out of 1728 (max. 8388607)
+ 284 named destinations out of 1000 (max. 500000)
+ 438 words of extra memory for PDF output out of 10000 (max. 10000000)
 
